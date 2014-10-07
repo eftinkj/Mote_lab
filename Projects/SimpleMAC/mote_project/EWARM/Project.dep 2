@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>3585733766</fileChecksum>
+  <configuration>
+    <name>MB851_TALK</name>
+    <outputs>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\system-timer.c</file>
+      <file>$PROJ_DIR$\..\talk.c</file>
+      <file>$PROJ_DIR$\..\stm32W108xx_it.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_misc.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_pwr.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_gpio.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\SimpleMAC\Binary\simplemac-library.a</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_flash.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\CMSIS\Device\ST\STM32W108xx\Source\Templates\system_stm32w108xx.c</file>
+      <file>$PROJ_DIR$\startup_stm32w108xx.s</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_rst.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_sc.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_adc.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_exti.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_clk.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\mfg-token.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\stm32w108\low_level_init.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\hal_uart.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\hal_flash.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\hal_clocks.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\hal_adc.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\context-switch.s79</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32_EVAL\MB954\mb954.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32_EVAL\MB951\mb951.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32_EVAL\MB950\mb950.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32_EVAL\MB851\mb851.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\board.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_wdg.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_tim.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_slptim.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\sleep.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\nvm.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\micro.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\micro-common.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\micro-common-internal.c</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\system_stm32w108xx.o</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\hal.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\memmap-fat.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\stm32w108xx_rst.h</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\stm32w108xx_rst.o</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\system_stm32w108xx.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\stm32w108xx_misc.o</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\mpu.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\nvm-def.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\token-manufacturing.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\hal_adc.h</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\stm32w108xx_tim.pbi</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\mfg-token.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\stm32W108xx_it.pbi</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\system-timer.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\ystdio.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\iap_bootloader.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\SimpleMAC\Include\phy-library.h</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\stm32w108xx_tim.o</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\stm32w108xx_wdg.h</file>
+      <file>$PROJ_DIR$\MB851_TALK\Exe\Project.out</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\stm32w108xx_exti.pbi</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\CMSIS\Include\core_cmFunc.h</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\sleep.o</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\stm32w108xx_flash.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\stm32w108xx_sc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\stm32w108xx_exti.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\talk.pbi</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\stm32w108xx_clk.h</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\stm32w108xx_flash.pbi</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\stm32w108xx_pwr.o</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\stm32w108xx_gpio.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\yfuns.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\hal_uart.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\error-def.h</file>
+      <file>$PROJ_DIR$\MB851_TALK\Exe\talk.s37</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\Project.pbd</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\stm32w108xx_tim.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\stm32w108xx_sc.pbi</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\sleep.pbi</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\hal_adc.pbi</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\stm32w108xx_wdg.pbi</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\micro-common-internal.pbi</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\mfg-token.pbi</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\low_level_init.pbi</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\micro-common.pbi</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\micro.pbi</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32_EVAL\MB851\mb851.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\CMSIS\Include\core_cm3.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\compiler\iar.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\CMSIS\Device\ST\STM32W108xx\Include\stm32w108xx.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\CMSIS\Include\core_cmInstr.h</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\mb851.pbi</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\system-timer.o</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\stm32w108xx_adc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\CMSIS\Device\ST\STM32W108xx\Include\system_stm32w108xx.h</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\hal_clocks.pbi</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\mfg-token.o</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\hal_flash.o</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\nvm.o</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\stm32w108xx_clk.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\bootloader\fib-bootloader.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\stm32w108\board.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+      <file>$PROJ_DIR$\..\stm32w108xx_it.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\error.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\generic\compiler\platform-common.h</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\stm32w108xx_flash.o</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\stm32w108xx_slptim.h</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\stm32w108xx_slptim.o</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\stm32w108xx_sc.o</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\stm32w108xx_misc.h</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\stm32w108xx_rst.pbi</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\stm32w108xx_gpio.pbi</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\stm32w108xx_gpio.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\stm32w108xx_adc.pbi</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\stm32w108xx_exti.o</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\stm32w108xx_misc.pbi</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\stm32w108xx_pwr.pbi</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\board.pbi</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\stm32w108xx_clk.pbi</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\nvm.pbi</file>
+      <file>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\stm32w108xx_pwr.h</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\stm32w108xx_wdg.o</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\hal_uart.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\micro-common-internal.o</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\hal_adc.o</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\board.o</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\low_level_init.o</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\micro-common.o</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\micro.o</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\mb851.o</file>
+      <file>$PROJ_DIR$\..\stm32w108xx_conf.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\hal_clocks.o</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\stm32W108xx_it.o</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\stm32w108xx_slptim.pbi</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\talk.o</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\hal_flash.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\startup_stm32w108xx.o</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\context-switch.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\hal_uart.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdarg.h</file>
+      <file>$PROJ_DIR$\MB851_TALK\Obj\stm32w108xx_adc.o</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\hal_flash.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\system-timer.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\micro-common.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\assert.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\memmap.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\nvm.h</file>
+    </outputs>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\system-timer.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 95</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 51</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 91 155 148 78 75 107 119 130 145 139 150 92 90 77 93 89 59 97 138 96 38 118 63 62 61 76 56 112 127 66 115 110 109 72 154 153</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\talk.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 143</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 65</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 91 155 148 78 75 107 119 130 145 139 150 92 90 77 93 89 59 97 138 96 38 118 63 62 61 76 56 112 127 66 115 110 106 36 88 154 153 157 156 37 104 44 109 72 71 70 64 46 105 52 103 54</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\stm32W108xx_it.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 141</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 50</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 108 92 90 77 148 78 75 107 119 130 145 93 89 139 59 97 138 96 38 118 63 62 61 76 56 112 127 66 115 91 155 150 110</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_misc.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 42</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 122</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 115 92 90 77 148 78 75 107 119 130 145 93 89 139 59 97 138 96 38 118 63 62 61 76 56 112 127 66</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_pwr.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 68</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 123</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 127 92 90 77 148 78 75 107 119 130 145 93 89 139 59 97 138 96 38 118 63 62 61 76 56 112 66 115</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_gpio.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 69</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 117</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 118 92 90 77 148 78 75 107 119 130 145 93 89 139 59 97 138 96 38 63 62 61 76 56 112 127 66 115</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_flash.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 111</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 67</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 61 92 90 77 148 78 75 107 119 130 145 93 89 139 59 97 138 96 38 118 63 62 76 56 112 127 66 115</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\Libraries\CMSIS\Device\ST\STM32W108xx\Source\Templates\system_stm32w108xx.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 35</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 40</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 92 90 77 148 78 75 107 119 130 145 93 89 139 59 97 138 96 38 118 63 62 61 76 56 112 127 66 115</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\startup_stm32w108xx.s</name>
+      <outputs>
+        <tool>
+          <name>AARM</name>
+          <file> 146</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_rst.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 39</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 116</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 38 92 90 77 148 78 75 107 119 130 145 93 89 139 59 97 138 96 118 63 62 61 76 56 112 127 66 115</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_sc.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 114</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 79</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 62 92 90 77 148 78 75 107 119 130 145 93 89 139 59 97 138 96 38 118 63 61 76 56 112 127 66 115</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_adc.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 151</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 120</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 96 92 90 77 148 78 75 107 119 130 145 93 89 139 59 97 138 38 118 63 62 61 76 56 112 127 66 115</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_exti.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 121</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 58</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 63 92 90 77 148 78 75 107 119 130 145 93 89 139 59 97 138 96 38 118 62 61 76 56 112 127 66 115</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_clk.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 102</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 125</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 66 92 90 77 148 78 75 107 119 130 145 93 89 139 59 97 138 96 38 118 63 62 61 76 56 112 127 115</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\mfg-token.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 99</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 84</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 91 155 148 78 75 107 119 130 145 139 150 92 90 77 93 89 59 97 138 96 38 118 63 62 61 76 56 112 127 66 115 110 109 72 152 156 37 104 48 45</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\stm32w108\low_level_init.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 134</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 85</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 91 155 148 78 75 107 119 130 145 139 150 92 90 77 93 89 59 97 138 96 38 118 63 62 61 76 56 112 127 66 115 110 156 37 104</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\hal_uart.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 129</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 149</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 91 155 148 78 75 107 119 130 145 139 150 92 90 77 93 89 59 97 138 96 38 118 63 62 61 76 56 112 127 66 115 110 154 71 70 64 36 88 153 157 156 37 104 44 109 72 46</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\hal_flash.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 100</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 144</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 91 155 148 78 75 107 119 130 145 139 150 92 90 77 93 89 59 97 138 96 38 118 63 62 61 76 56 112 127 66 115 110 109 72 104 43 156 37 152</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\hal_clocks.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 140</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 98</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 91 155 148 78 75 107 119 130 145 139 150 92 90 77 93 89 59 97 138 96 38 118 63 62 61 76 56 112 127 66 115 110 109 72 36 88 154 153 157 156 37 104 44 71 70 64 46 43 48 45</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\hal_adc.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 132</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 81</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 91 155 148 78 75 107 119 130 145 139 150 92 90 77 93 89 59 97 138 96 38 118 63 62 61 76 56 112 127 66 115 110 109 72 36 88 154 153 157 156 37 104 44 71 70 64 46</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\context-switch.s79</name>
+      <outputs>
+        <tool>
+          <name>AARM</name>
+          <file> 147</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\Utilities\STM32_EVAL\MB851\mb851.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 137</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 94</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 88 92 90 77 148 78 75 107 119 130 145 93 89 139 59 97 138 96 38 118 63 62 61 76 56 112 127 66 115</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\board.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 133</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 124</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 91 155 148 78 75 107 119 130 145 139 150 92 90 77 93 89 59 97 138 96 38 118 63 62 61 76 56 112 127 66 115 110 106 36 88 154 153 157 156 37 104 44 109 72 71 70 64 46 48 45 49 41</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_wdg.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 128</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 82</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 56 92 90 77 148 78 75 107 119 130 145 93 89 139 59 97 138 96 38 118 63 62 61 76 112 127 66 115</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_tim.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 55</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 47</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 76 92 90 77 148 78 75 107 119 130 145 93 89 139 59 97 138 96 38 118 63 62 61 56 112 127 66 115</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_slptim.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 113</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 142</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 112 92 90 77 148 78 75 107 119 130 145 93 89 139 59 97 138 96 38 118 63 62 61 76 56 127 66 115</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\sleep.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 60</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 80</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 91 155 148 78 75 107 119 130 145 139 150 92 90 77 93 89 59 97 138 96 38 118 63 62 61 76 56 112 127 66 115 110 154</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\nvm.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 101</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 126</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 91 155 148 78 75 107 119 130 145 139 150 92 90 77 93 89 59 97 138 96 38 118 63 62 61 76 56 112 127 66 115 110 109 72 152 156 37 104 157 44</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\micro.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 136</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 87</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 91 155 148 78 75 107 119 130 145 139 150 92 90 77 93 89 59 97 138 96 38 118 63 62 61 76 56 112 127 66 115 110 106 36 88 154 153 157 156 37 104 44 109 72 71 70 64 46 53 103 49 41</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\micro-common.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 135</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 86</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 91 155 148 78 75 107 119 130 145 139 150 92 90 77 93 89 59 97 138 96 38 118 63 62 61 76 56 112 127 66 115 110 106 36 88 154 153 157 156 37 104 44 109 72 71 70 64 46</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\micro-common-internal.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 131</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 83</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 91 155 148 78 75 107 119 130 145 139 150 92 90 77 93 89 59 97 138 96 38 118 63 62 61 76 56 112 127 66 115 110 109 72 154 48 45 46</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MB851_TALK\Exe\Project.out</name>
+      <outputs>
+        <tool>
+          <name>OBJCOPY</name>
+          <file> 73</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 57</file>
+        </tool>
+      </outputs>
+    </file>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
+  </configuration>
+  <configuration>
+    <name>MB950_TALK</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
+  </configuration>
+  <configuration>
+    <name>MB951_TALK</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
+  </configuration>
+  <configuration>
+    <name>MB954_TALK</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+

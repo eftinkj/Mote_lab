@@ -1,0 +1,133 @@
+Coding guidelines for UMR Mote platform (8051 variant)
+DRAFT 0.A
+by Maciej Zawodniok
+2007, March 24
+
+
+0) Use "Changelog.txt" to report changes made to the code
+	- do not include too many details 
+		(for example, "added new file XXX.h to store extra constants" is enough,
+		the detailed list of defined constants is not needed)
+	- add date and author for the set of changes that "enclose" a particular milestone
+		and which shall be commited to the SVN repository
+	- see for examples in the "Changelog.txt" file itself
+
+
+0) Use "TODO.txt" file to keep all ideas and needed modifications
+
+
+1) Additions of a new functionality sould be optional at compilation time
+	- this includes all allocated variables and functions
+	- NO errors shall occure during compilation AND warnings should be avoided
+		(TODO: NEED POLICY ON MANAGING THEM!!!)
+	- NO errors and warning shall occure during linking
+		(AT LEAST THE NUMBER OF WARNINGS SHALL NOT INCREASE)
+	- each optional module NEEDS to have "#define" for "FEAT_ENABLE_<name>" string
+		when this variable is not set (#undef) then the code shall not compile in!!!
+	- usage of "FEAT_ENABLE_<name>" string with "#ifdef" is suggested throughout the code
+		this should
+
+2) Separate HEADER (declarations) files from CODE (definitions) files
+	- in header files ".h" declare all variables as "externs"
+	- in header files ".h" declare function (name and variable types)
+	- in code files ".h" define variables (NO "extern") to allocate memory
+	- in code files ".h" define function's content
+
+
+3) Variables and functions shall have common module-specific prefix 
+	- prefix shall include about 3 letters that uniquelly identify the module
+	- the prefix and the proper name shall be separated by underscore "_" sign
+	- for example, module for Congestion Control uses "cc_"
+	- TODO: what about unifying filenames' prefixes??
+
+
+4) "#define"s shall be used for any constants
+	- the constants that have "meaning" for other applications and platforms 
+		shall be stored in "common_constants.h" 
+		(for exaple message flags since they are use in 8051 code and for Qt4 GUI)
+	- usage of "0" is acceptable if it refers to ABSOLUTE value 
+		(for example begining of the table index - in C it is always "0')
+
+
+5) Conditions shall be written to avoid usage of lone variable on left-side!!
+	- the constant or formula shall be placed on the left-side of the condition chars
+	FOR EXAMPLE:
+		if (x==0)  <--- BAD since easy to make mistake "if (x=0)" that compiler will accept
+		if (0==x)  <--- GOOD (the misspelling "if (0=x)" will give copilation error)
+
+
+6) Code indentations
+	- indentation shall be done using tabulation character 
+		(usage of space " " shall be avoided)
+	- blocks shall be indented with respect to the current one
+	- curly brackets shall be placed at at the begining of the next line (PREFERED)
+		OR the end of corresponding command	(for example, "if (0==x) {")
+	- curly brackets themselves shall not be indented
+	
+	FOR EXAMPLE:
+-- BEGIN -------------------------------------------------------
+void main()
+{
+	int i;
+	while (MAX_I > i)
+	{
+		if (10 > i)
+		{
+			i++;
+		}
+		else
+		{
+			i += 2;
+		}
+		// Sample of a "lone" block - always executed!!
+		//   ! usefull for definition of temporary variables in the middle of a block
+		{
+			int j = 0;
+			for (j=0; j < i; j++)
+			{
+				// DO SOMETHING
+			}
+		}
+	}
+}
+-- END ---------------------------------------------------------
+
+7) Coments and descriptions shall be used to help understanding the algorithm
+	- use following format for function description:
+-- BEGIN -------------------------------------------------------
+/**
+  * <func_name> ( <parameters> ) - description
+  * 	more description if needed
+  */
+void <func_name> ( <type> <parameters> );
+-- END ---------------------------------------------------------
+	- do not put comments for every line of the code
+	- use "// @TODO: something to be done later" to point out where to add 
+		some code later on (usefull during bigger project to temporarly 
+		skip implementation of some cases - e.g. during initial testing)
+	
+8) Use "hw_specific.h" for paltform and hardware specific defines
+	- avoid using constanst, variables, or functions in there
+	- used among others in "esnl_pub.h" to adopt coding to platform (8051 vs Qt4)
+
+9) Use "esnl_pub.h" at each file to include 
+	- it shall include all basic type definitions, 
+		for example 8-bit signed int (==char) is defined as "int8_t" and "sint8_t"
+	- the types that explicilty define size of variable shall be used
+		for example:
+-- BEGIN -------------------------------------------------------
+		char temp[MAX_TEMP];  <-- is DISCOURAGED
+		int8_t temp[MAX_TEMP]; <-- is PREFERED
+
+		unsigned int j;	<-- is BAD (sometimes is will be 16-bit, but sometims 32-bit!!!)
+		unit16_t j;	<-- is GOOD because it explicitly defines it as 16-bit
+-- END ---------------------------------------------------------
+
+
+
+
+
+
+-- BEGIN -------------------------------------------------------
+-- END ---------------------------------------------------------
+

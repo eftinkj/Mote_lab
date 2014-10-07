@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<dpInst>
+    <language code="0x0409">
+        <dpinstTitle>STMicroelectronics Communication Device Class driver Update</dpinstTitle>
+        <welcomeTitle>Setup For installing STMicroelectronics CDC device !</welcomeTitle>
+        <welcomeIntro>This wizard will walk you through updating the drivers for your STMicroelectronics CDC device.</welcomeIntro> 
+        <installHeaderTitle>Installing the software drivers for your Device  ..</installHeaderTitle>
+        <finishTitle>Congratulations! You have finished installing your Device .</finishTitle>
+        <finishText>Enjoy using STMicroelectronics CDC Device .</finishText>
+     </language>
+     <enableNotListedLanguages/>
+     <legacyMode/>
+</dpInst>
+

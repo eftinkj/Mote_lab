@@ -1,0 +1,41 @@
+# ------------------------------------------------------------------------------
+# TODO file for G4-SSN netowrking code (OEDSR,AODV,ADFS etc)
+# ------------------------------------------------------------------------------
+# IMPORTANT: Entries should be split into groups: 
+#	SMALL changes
+#	LARGE chages, 
+#	NEW PROTOCOLS AND MAJOR FEATURES
+# ------------------------------------------------------------------------------
+#
+
+#	NEW PROTOCOLS AND MAJOR FEATURES
+P.1 - congestion control
+P.2 - power control
+
+#	LARGE chages
+L.1 - handle dropped packets (detect and count)
+L.2 - add flow statistics (e.g. throughout)
+L.3 - add queue statistics
+L.4 - modify TEST DATA packet to include statistics
+L.5 - initialization of the radio (baudrate + API)
+
+PENDING:
+void phy_start_tx_process() - add implementation of adaptive back-off
+
+
+#	SMALL changes
+
+S.1 - Update UART libraries to be modular and support UART_0 and UART_1
+S.2 - Comfort UART and SPI and ...??? (serial interfaces)
+S.3 - Create API for high level applications ("destination-" and "dest+interface-" selectabel)
+S.4 - Check NEW Config size
+S.5 - Send negative ACK to malformated New Config
+
+#	CURRENT Tasks
+C.0 - start limiting the out flow (similar to ADFS but with lower CW)
+C.1 - while dequing pkt then check if exceeded number of packets per period -> limit!??
+C.2 - handle sending of inflow limit requests (make sure that it is received)
+C.2b - check if received ACK_OK for inflow limit request
+C.3 - allow at least one packet out per period 
+
+

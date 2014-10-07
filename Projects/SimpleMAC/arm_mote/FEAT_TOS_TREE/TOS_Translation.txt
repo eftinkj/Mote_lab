@@ -1,0 +1,15 @@
+
+
+1) Filenames:
+Tree.h -> as is
+Tree.nc -> "*.pub.h" defines public functions accessible from outside
+TreeC.ns -> "*.pub.c" includes function which connects the class with the TOS functions/interfaces 
+			-> should be power_up() function of the module to tie it with system calls
+TreeM.nc -> "*.c" includes the main (private) implementation of the module/class
+
+2) C.nc
+- Added" "#include "defs/esnl_pub.h"" as first line 
+- T: "includes Tree;" => "#include "Tree.h" ??
+- T: "configuration TreeC {" => "void TreeC"
+- T: "provides interface Tree;" => "//: public Tree" (COMMENT OUT?, if CONFIGURATION is only power_up() function then there is no need for a class
+- T: "} implementation {" => " { // Implementation

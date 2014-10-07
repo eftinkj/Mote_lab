@@ -1,0 +1,308 @@
+# ------------------------------------------------------------------------------
+# Changelog for G4-SSN netowrking code (OEDSR,AODV,ADFS etc)
+# ------------------------------------------------------------------------------
+# IMPORTANT: Add entries at the begining!!
+# ------------------------------------------------------------------------------
+#
+# Reporting format:
+# -------------------------
+#   <date> - <author(s)> 
+#      @TITLE <release number or update "code-name"/"event name"/"paper name">
+#      - <change 1>
+#      - <change 2>
+#      - <change 3>
+# -------------------------
+#
+# Tips: put short description of fix or new function, 
+#       indicate addition/deletion of files
+# ------------------------------------------------------------------------------
+
+01/21/2009 - Maciej Zawodniok
+	@ RELEASE Timer 3
+	- the code for OEDSR Hello broadcast have been switched to Scheduler mode
+	- hence, Timer 3 become free, and can be used for other purposes
+	- NOTE: UART0 should be shifted from Timer 1 to Timer 3, if UART 1 is to be used (requires Timer 1)
+ 
+01/16/2009 - Maciej Zawodniok
+	- final fix of project file "A_KEIL_project_for_F1_code_new.wsp"
+
+01/15/2009 - Maciej Zawodniok - Misc fixes
+
+12/13/2008 - Maciej Zawodniok
+	@TITLE - AODV code fix
+	- Updated "routing_AODV.c" and "hio_xbee.c" files
+
+12/09/2008 - Maciej Zawodniok
+	@TITLE - Integration of RFID-based Asset Management and started Signal Processing library
+	- Upgrade RFID-based code to support various roles in Life-cycle/Asset Management demo
+	- Added library (FEAT) for signal processing (e.g. filtering) - NOT FINISHED YET
+	- Misc corrections
+
+07/22/2008 - Maciej Zawodniok
+	@TITLE - Minor fixes for Robotics 04 application
+
+07/21/2008 - Maciej Zawodniok
+	@TITLE - Integrated Robotics 04 application with the new code
+	- Need to check scheduler (some issues with the code/xdata pointer and qualifiers)
+	- Need to add Robotics LOOP to Scheduler handler
+
+07/21/2008 - Maciej Zawodniok
+	@TITLE - Corrected F1 code for Revision 1b (with manual changes)
+	- P1.1 - deleted Z_OUT, and rerouted STRAIN_OUT from P1.5 to P1.1
+	- Rerouted TX/RX lines for XBee, and deleted RESET_ and SLEEP_ for XBee
+	- No operation using SPI is performed due to significant error in PCB design
+	- Added byte oredr SWAP for SDCC (16/32 bit variables stored in packet in reverse (to KEIL)
+	
+
+07/18/2008 - Maciej Zawodniok
+	@TITLE - Implemented (1) remote CODE Flashing and (2) basic Headset code 
+	- (1) Works with code up to 0x77FF size (with exception of final code swap)
+	- (1) accepts Intel HEX format
+	- (1) the final code swap code function is required to be located at 0x7800
+	- (1) final copying happens from bank 1 (0x8000 to 0xF7FF) to bank 0 and restarts
+	- (2) uses SPI to communicate with VOCODER chip
+	- (2) periodically sends dummy packet (HAS TO BE CHANGED - to send the vocoder data)
+	- (2) it STILL has to be tested
+	- (2) ACKNOWLEDGEMENT TO: Tim and Kelvin from REU 2008 (Missouri S&T)
+
+07/11/2008 - Maciej Zawodniok
+	@TITLE - Fixed SVN dir structure to match the curent code
+
+07/10/2008 - Maciej Zawodniok
+	@TITLE - Updated code for Scheduler and ensured G4/F120 usability
+	- Scheduler works with loop functions - need work with timeout callbacks
+	- Code compiles under Keil for G4/F120 and works correctly (responds to ping)	
+
+06/26/2008 - Maciej Zawodniok
+	@TITLE - Finish last SVN update 
+	
+06/26/2008 - Maciej Zawodniok
+	@TITLE - Modularization of the code (a lot of new #DEFINEs and #IFDEFs)
+	- Fixing code to enable flexible enabling/disabling of various code pieces/modules
+	- F1 Mote compilation fixes - !! KEIL DOES NOT WORK AT PRESENT !!
+	- for F1 compilation USE SDCC version of the project!!
+	- Still some work to do for the code fix
+	- TODO: Integrate the new ROBOTICS code (REU) with the trunk
+	- TODO: Integrate the new Quadrotor code
+	- TODO: test the scheduler and move the code to use it
+
+03/28/2008 - Maciej Zawodniok
+	@TITLE - Fix for issue with Travis Code for Quadrotor and Bots (v2)
+	- Reduced number of PWMs requested to 6 (MAX hardware capabilities!!!)
+	- Project saved
+
+03/28/2008 - Maciej Zawodniok
+	@TITLE - Integration with Travis Code for Quadrotor and Bots (v2)
+	- Added subdirectory robotics_03
+	- Updated robotics_02 files
+	- Updated all common files involved
+	
+03/28/2008 - Maciej Zawodniok
+	@TITLE - Misc updates due to architecture change
+	- Added HIO - High Input-Output module to handle the parsing of messages on any serial interface
+	- Added adc0_get_max - to read the maximum ADC value that was measured
+	- Modified XBEE baoudrate fix to include the case of SYSCLK=98MHz (DOES NOT WORK !!)
+	- Moved UART/XBEE parsing code from main.c into the HIO module
+	- Misc code clean-up
+
+10/25/2007 - Maciej Zawodniok
+	@TITLE - Prepare for Headset Project
+	- new application ID for SPI (and others)
+
+
+10/23/2007 - Maciej Zawodniok
+	@TITLE - Cleanup of merged code
+	- removed not needed "makefile" files from subdirectories
+	- fixed recent changes in "robotics 02" project (in "init" function)
+	- fixed PCA counters (for reading modules above the PWM's generators)
+	- finished basic functionality of the SCHEDULER (dynamic loop functions)
+
+10/23/2007 - Travis Dierks (Maciej Zawodniok - merged)
+	-Started Robotics_02_GR file
+	-Differential Driven Robots
+	-added function to pwm8_gen.c to return PCAOPHx and a function to reset PCA0PHx
+ 
+
+10/18/2007 - Maciej Zawodniok
+	@TITLE - Added timeout SCHeduler ("sch_" prefix)
+	- added "scheduler" subfolder with files and "Scheduler_GR" files group 
+	- to enable Scheduler - define "_ENABLE_SCH_BASIC_" in "feat_enable.h"
+	- created basic structures, variables, and functions
+	**- added basic functionality of setting timeout at specific time (RTC ticks)
+	**- added check of timeout and execution "callback" function
+
+
+07/30/2007 - Maciej Zawodniok
+	@TITLE - New Project added and more cleanup
+	- added "PRJ_CAMT_Headset_01" project (voice communication)
+	- fixed TSP support for sending a packet (reserve, access and send the packet via Queue buffer)
+	- Utility Monitoring project will periodically send all the main parameters out (3-phase power: 
+		active, reactive and apparent) plus the raw ADC data from acelerometer and temp sensor
+
+
+07/30/2007 - Maciej Zawodniok
+	@TITLE - Masive change of structure, modularization and additions
+	- added SPI interface code (API)
+	- added PWM (8-bit mode) interface (API) using PCA implementation and Timer 0 frequency control
+	- added common system functions (e.g. error reporting)
+	- added transport layer to enable pseudo-sockets
+	- project/application specific files are to be stored in subdirectories
+	   e.g. "robotics_01" contains files configuring remote control of a truck
+	   "PRJ_NEM_Utilities_01" contains code for NEM Utility Monitoring project
+	- constants and hardware definitions (ports and special registers of 8051)
+		are stored in "defs" subdir
+	- every file should include "defs/esnl_pub.h" at the very begining
+	- code becomes modular (e.g. code for robotics_01 can be excluded from compilation)
+		definition directives are stored in 
+		a) "hw_specific.h" - applications and mote hardware versions
+		b) "feat_enable.h" - modules/protocols/features 
+	- begin splitting header files into "_pub.h" and "_prv.h" sections
+	- several smaller changes
+	
+04/30/2007 - Maciej Zawodniok
+	@TITLE Enabling channel switching coordinated by BS
+	- Support for setting up a switching schedule with first timeout
+		interval, and two alternating channels
+	- Node will send JOIN message with current time after each switch
+		** The nodes send multiple JOIN messages per switch ????? (but not always -> time scewe)
+	- Added check for UART overfloww/out-of-range indexes of buffers (resets them)
+		** noticed a lot of cases when after running some time the nodes "get" these indexes out of range
+	- ** Periodically the ADC parameters get reset to some standard values
+	- Disabled tick overflow counter since it was triggered too often, and in undetermined scenarios/case
+	- Added IGNORE case for OEDSR energy from NEW CONFIG
+	- Added DISABLE energy simulation value and handling (saturate energy for OEDSR)
+		** it is actually still counted but since it is set to MAX there will be no stop in reasonable time frame
+
+
+04/20/2007 - Maciej Zawodniok
+	@TITLE Merging of code
+	- Merged with James ADFS code
+	- Fixed Merge issues
+
+
+04/02/2007 - Maciej Zawodniok
+	@TITLE Modifications to do some channel switching experiments
+	- Added beam counter to count beams
+	- Update OEDSR send counters and moved packet format to packet.h
+
+
+03/20/2007 - Maciej Zawodniok
+	@TITLE Included files for security features (key management and encryption)
+	- AES implementation is prepared by Eyad Taqieddin
+	- keys storage implementation is prepared by Eyad Taqieddin
+
+
+03/20/2007 - Maciej Zawodniok
+	@TITLE JNL version of Implementation of Predictive Congestion Control
+	- Imlemented ourgoing flow control using timeouts
+		- the adaptation is implemnted thorugh it does not use channel informations!!
+	- Modified communication to pass the inflow limit to upstream nodes via BROADCAST
+		- this limits overhead due to implementation of feedback as separate packet
+		- according to design it should be included in the ACK frame
+		- the default backoff interval for last hopnode  (before BS) is fixed at (-1) 
+		  to accomodate for the BCAST message interference
+	- Extended hoplist V2 informations to  include per period: throughout, predicted throughput, 
+		calculated inflow, droprate, 
+		and current (!!) queue level (always excluding the current packet hence [Q <= MAX-1])
+
+03/14/2007 - Maciej Zawodniok
+	@TITLE Implementation of Predictive Congestion Control
+	- Added prediction of the outgoing flow
+	- Added communication to pass the inflow limit to upstream node
+	- Applied inflow limit for own sources
+	- Implemented Hoplist v2 in the modular test packet
+	- Added configuration options for PCC for physical layer (backoff)
+	- Added configuration case for SFQ and PCC backoff
+	- Topology setup of PCC is hardcoded (upstream nodes and flows)
+	- Implemented PCC backoff using ED AT commands - BUT IT HAS ISSUES!!
+		possible causes are: interleaving with PCC upstream messages
+
+02/20/2007 - Maciej Zawodniok
+	@TITLE Merged with newest Routing and Scheduling
+
+02/20/2007 - Maciej Zawodniok
+	@TITLE Modularize CongestionControl functionality
+	- Added #ifdef's around the "cc_*" funcions and variables
+
+02/12/2007 - Maciej Zawodniok
+	@TITLE Preparing framework for the congestion control implementation
+	- Created "CongestionControl.h" and "CongestionControl.c" files
+	- Added basic periodic processing (update of all interated parameters)
+	- Added calculation of outgoing throughout
+	- Added transmission of the outgoing throughput to BS inside test messages
+	- Added New test data packet flags and corresponding data structures
+	- Cleaned up packet flags:
+		- Added Arbitrary Data flag (0x73)
+		- Added Test Data Ver. 2 flag (0x75)
+		- Added Test Data Empty flag (for reference) (0x76)
+		- Added Modular Data flag (0x74) (modular content - e.g. ADFS weights, encoding of ADC ets)
+		- Moved GOODBY flag to 0x77 (previously 0x73)
+
+02/10/2007 - Maciej Zawodniok
+	@TITLE Initialization of XBee radio -> baudrate scan and setting + enabling API mode 
+	- Added "error_lock(repeat)" function to comunicate errors via LED blinks
+	- Added "fix_XBee_baudrate()" function to "AT_scripts.*" to handle function
+	- Added Macros for sending AT commands in exclusive AT mode ("+++"->only AT cmd)
+	- After (persistently) fixing the baudrate is set to default (115kbps) and API enabled
+
+02/06/2007 - Maciej Zawodniok
+	@TITLE Merged changes from the Routing and Scheduling branch
+	- Updated TODO for Congestion control
+
+###############################################
+###  Switched to Congestion Control Branch  ###
+###############################################
+
+01/23/2007 - Maciej Zawodniok
+	@TITLE Fixed backoff setting for default case (No backoff + no SFQ queuing)
+	- Modified "app_recvConfigSensor" function for "ISN_APP_CONFIG_FLAG_PROTOCOLS" flag
+
+01/23/2007 - Maciej Zawodniok
+	@TITLE Merged the fixed power level switching
+	- Added "current_power_level_" variable to store current radio settings
+	- The meaning of the "my_power_level_" is changed to "configuration" setting
+	- Revised the power level update functions (received new_config and set power level)
+
+01/23/2007 - JWF
+	@TITLE Fixed Power Level Switching
+	- Corrected phy_set_power_level and the configuration function to preserve the power level
+		- when switching the power level the function would overwrite the default level and not return to the default/set level from maximum.
+
+01/19/2007 - JWF
+	@TITLE Fixed Routing when CH is assigned
+	- Added check at routing_receive_packet() function in the beam packet section
+		- Checks to see if it is a CH before routing, otherwise should talk to CH.	
+
+01/10/2007- James W. Fonda (JWF)
+	@TITLE Configuration Return Packet Modified
+	- Added all parameters of intrest to the app_sendConfigSensor() and corresponding structure
+	- Added the RSSI of the config packet to the app_sendConfigSensor()
+	- Global Variable last_config_rssi_rcv_ added to accomplish previous
+
+01/01/2007 - Maciej Zawodniok
+	@TITLE Clean-up the C8051f120.h file inclusion
+	- changed all #include <..> to #include ".."
+
+12/21/2006 - Maciej Zawodniok
+	@TITLE Enable remote configuration of Scheduling and Clustering
+	- NEW_CONFIG packet extended to enable
+	  - configure weights for scheduling
+	  - configure CH for a sensor node
+	- modified routing to take the CH instead of normal routing
+	- fixed the source range for ADFS to <0,9> (inclusive)
+
+
+12/20/2006 - Maciej Zawodniok
+	@TITLE Enabling the Back-off method via the API
+	- SFQ implementation is modular at compilation-lavel (can be disabled)
+	- Scheduling protocol (queuing and backoff) can be set via NEW_CONFIG
+	- Back-off-aware transmission can be enabled and configured via NEW_CONFIG
+	- Queuing scheme can be switched via NEW_CONFIG
+	- some code cleaning up
+
+
+12/06/2006 - Maciej Zawodniok
+	@TITLE Initiation of the Changelog - code for OEDSR journal paper experiments
+	- portability to SDCC resolved (still memory allocation is an issue!!)
+	- fix setting of RF power level
+	- add configuration of RF retries (in steps of 3 retries) -> Maxstream specific
