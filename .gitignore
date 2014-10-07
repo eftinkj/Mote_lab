@@ -41,6 +41,7 @@ Thumbs.db
 *.lst
 *.s37
 *.out
-*/Obj/*
+*.pbd
 *.pbi
 *.cout
+*.browse
