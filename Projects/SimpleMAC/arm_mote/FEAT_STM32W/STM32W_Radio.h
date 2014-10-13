@@ -2,6 +2,8 @@
 #define _STM32W_RADIO_H_
 
 #include "defs/esnl_pub.h"
+#include "phy-library.h"
+
 
 // #ifdef _ARM_
 	/* buffer for received packet */

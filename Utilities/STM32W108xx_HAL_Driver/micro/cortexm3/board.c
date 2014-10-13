@@ -168,7 +168,11 @@ void halBoardPowerUp(void)
   
 #ifndef USE_MB951  
   /* Configure GPIO for I2C access */
+#ifdef USE_MB_SNT_X2
+  //
+#else
   LIS302DL_LowLevel_Init();
+#endif /* else #ifdef USE_MB_SNT_X2) */
 #endif /* USE_MB951 */  
   
   /* Configure GPIO for LEDs */

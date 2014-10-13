@@ -51,6 +51,8 @@ void app_temp_1wire_loop()
   //onewire
   switch (DSState){
   case 0:
+	  	lcd_setCursor ( 0 , 0 ) ;
+		lcd_printStr ( "|" ) ;
 	OWReset(&OneWire);
 	OWWrite(&OneWire, 0xCC); // skip ROM
 	OWWrite(&OneWire, 0x44); // start conversion
@@ -59,13 +61,17 @@ void app_temp_1wire_loop()
 	break;
   case 1:
 	//if((millis() - DSTimer) >= 1000){
+	  	  	lcd_setCursor ( 0 , 0 ) ;
+			lcd_printStr ( "F=" ) ;
 	  OWReset(&OneWire);
 	  OWSelect(&OneWire, addr);
 	  OWWrite(&OneWire, 0xBE); // Read Scratchpad
 	  data[0] = OWRead(&OneWire);
 	  data[1] = OWRead(&OneWire);
 	  Ta = ((data[1] << 8) | data[0]) / 16.0;
-	  printf("Temp = %f\n", Ta);
+		char buf[15];
+	  sprintf(buf, "%f", Ta);
+	  lcd_printStr ( buf ) ;
 	  DSState = 0;
 	//}
 	break;

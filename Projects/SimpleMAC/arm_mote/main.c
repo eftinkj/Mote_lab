@@ -149,9 +149,10 @@
 
 
 #include "stm32w108xx_sc.h"
-extern void lcd_cmd ( uint8_t Address, uint8_t x );
-extern void lcd_printStr ( uint8_t Address, const char * s );
-extern void lcd_setCursor ( uint8_t Address, uint8_t x , uint8_t y );
+#define LCD_I2C_ADDR	(0x7c)
+extern void lcd_cmd ( uint8_t x );
+extern void lcd_printStr ( const char * s );
+extern void lcd_setCursor ( uint8_t x , uint8_t y );
 
 
 #ifdef _ENABLE_MAIN_
@@ -236,8 +237,9 @@ void main_power_up()
 // ***************************************************************************
 // ************************* Global Variables Init ***************************
 // ***************************************************************************
-	SET_LED(RLED);
-
+	CLEAR_LED(RLED);
+	CLEAR_LED(YLED);
+        
 	my_protocol_ = PROTOCOL_ROUTING_OEDSR ;
 	my_scheduling_ = PROTOCOL_SCHEDULING_NONE;
 	my_backoff_ = PHY_BACKOFF_DISABLE;
@@ -379,14 +381,17 @@ void main_power_up()
     microstrain_power_up();
 #endif // #if defined(_ENABLE_MICROSTRAIN_)
 
+#if defined(_ENABLE_APP_TEMP_1WIRE_)
+	app_temp_1wire_init();
+#endif // #if defined (_ENABLE_APP_TEMP_1WIRE_)
 	
 	GPIO_InitTypeDef  GPIO_InitStructure;
 	/* Configure the GPIO_LED pin */
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT_PP;
-	GPIO_Init(GPIOC, &GPIO_InitStructure);
-	GPIOC->BSR = GPIO_Pin_2; // Set pin (1)
-	GPIOC->BRR = GPIO_Pin_2; // Reset pin (0)
+//	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;
+//	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT_PP;
+//	GPIO_Init(GPIOC, &GPIO_InitStructure);
+//	GPIOC->BSR = GPIO_Pin_2; // Set pin (1)
+//	GPIOC->BRR = GPIO_Pin_2; // Reset pin (0)
   
   
 	//GPIO_InitTypeDef  GPIO_InitStructure; 
@@ -394,7 +399,8 @@ void main_power_up()
 	//I2C_Cmd(SC2_I2C, DISABLE);
  	/* _I2C DeInit */
 	//I2C_DeInit(SC2_I2C);
-
+	
+	
 	/*!< GPIO configuration */  
  	/*!< Configure _I2C pins: SCL */
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;
@@ -413,34 +419,39 @@ void main_power_up()
   
 	//SC_I2C_TypeDef* SCx_I2C;
 	I2C_InitTypeDef I2C_InitStruct;	// Create structure for SC2_I2C)
-	uint8_t Address = 0x3e; // LCD Address default?? //0x112;
+	//uint8_t Address = LCD_I2C_ADDR;//0x3e; // LCD Address default?? //0x112;
 	//uint8_t Data = 0xAA;
 	uint8_t contrast = 35;
 	
 	I2C_StructInit(&I2C_InitStruct); // Initialize SC2_I2C structure with defaults
+	I2C_InitStruct.I2C_ClockRate = 100000; // 100kHz
 	I2C_Init(SC2_I2C, &I2C_InitStruct); // Initialize SC2 to work as I2C
 	I2C_Cmd(SC2_I2C, ENABLE); // ENABLE or DISABLE SC2_I2C peripheral
 	
 	I2C_AcknowledgeConfig(SC2_I2C, ENABLE); /// Enable ACK mode
+//	I2C_AcknowledgeConfig(SC2_I2C, DISABLE); /// Enable ACK mode
 
-	lcd_cmd ( Address, 0x38 );// 0b0011 1000 ) ; // function set
-	lcd_cmd ( Address, 0x39 );// 0b0011 1001 ) ; // function set
-	lcd_cmd ( Address, 0x04 );// 0b0000 0100 ) ; // EntryModeSet
-	lcd_cmd ( Address, 0x14 );// 0b0001 0100 ) ; // interval osc
-	lcd_cmd ( Address, 0x70 | ( contrast & 0xF ) );// 0b0111 0000 | ( contrast & 0xF ) ) ; // contrast Low
-	lcd_cmd ( Address, 0x5C | ( ( contrast >> 4 ) & 0x3 ) );// 0b0101 1100 | ( ( contrast >> 4 ) & 0x3 ) ) ; // contast High/icon/power
-	lcd_cmd ( Address, 0x6C );// 0b0110 1100 ) ; // follower control
+	
+	halCommonDelayMilliseconds(10);
+
+	lcd_cmd ( 0x38 );// 0b0011 1000 ) ; // function set
+	lcd_cmd ( 0x39 );// 0b0011 1001 ) ; // function set
+	lcd_cmd ( 0x04 );// 0b0000 0100 ) ; // EntryModeSet
+	lcd_cmd ( 0x14 );// 0b0001 0100 ) ; // interval osc
+	lcd_cmd ( 0x70 | ( contrast & 0xF ) );// 0b0111 0000 | ( contrast & 0xF ) ) ; // contrast Low
+	lcd_cmd ( 0x5C | ( ( contrast >> 4 ) & 0x3 ) );// 0b0101 1100 | ( ( contrast >> 4 ) & 0x3 ) ) ; // contast High/icon/power
+	lcd_cmd ( 0x6C );// 0b0110 1100 ) ; // follower control
 	//delay ( 200 ) ;
-	halCommonDelayMilliseconds(200);
-	lcd_cmd ( Address, 0x38 );// 0b0011 1000 ) ; // function set
-	lcd_cmd ( Address, 0x0C );// 0b0000 1100 ) ; // Display On
-	lcd_cmd ( Address, 0x01 );// 0b0000 0001 ) ; // Clear Display
+	halCommonDelayMilliseconds(100);
+	lcd_cmd ( 0x38 );// 0b0011 1000 ) ; // function set
+	lcd_cmd ( 0x0C );// 0b0000 1100 ) ; // Display On
+	lcd_cmd ( 0x01 );// 0b0000 0001 ) ; // Clear Display
 	//delay ( 2 ) ; 
 	halCommonDelayMilliseconds(2);	
 
 	// Tryout displau
-	lcd_setCursor ( Address, 0 , 0 ) ;
-	lcd_printStr ( Address, "SWITCH" ) ; 
+	lcd_setCursor ( 0 , 0 ) ;
+	lcd_printStr ( "SWITCH" ) ; 
 	
 //	I2C_GenerateSTART(SC2_I2C);
 //	I2C_Send7bitAddress(SC2_I2C, Address, I2C_Direction_Transmitter); // I2C_Direction_Transmitter or I2C_Direction_Receiver
@@ -467,39 +478,98 @@ void main_power_up()
 }
 
 // Start CMD exchange
+int i2c_timeout_event = 0;
 
 #define LCD_CMD_00	0x00
-void lcd_cmd ( uint8_t Address, uint8_t x ) {
+void lcd_cmd ( uint8_t x ) {
+	uint8_t Address = LCD_I2C_ADDR;
 	I2C_GenerateSTART(SC2_I2C);
+	/* Wait until CMDFIN flag is set */
+	int countdown = 100;
+	while (I2C_GetFlagStatus(SC2_I2C, I2C_FLAG_CMDFIN) != SET)
+	{
+		if((countdown--) == 0) { i2c_timeout_event++; break; }
+	}
+
 	I2C_Send7bitAddress(SC2_I2C, Address, I2C_Direction_Transmitter); // I2C_Direction_Transmitter or I2C_Direction_Receiver
+	countdown = 100;
+	while (I2C_GetFlagStatus(SC2_I2C, I2C_FLAG_BTF) != SET)
+	{
+		if((countdown--) == 0) { i2c_timeout_event++; break; }
+	}
 //   Wire . write ( 0b00000000 ) ; // CO = 0,RS = 0
 //   Wire . write ( x ) ;
 	I2C_SendData(SC2_I2C, LCD_CMD_00);
+		countdown = 100;
+	while (I2C_GetFlagStatus(SC2_I2C, I2C_FLAG_BTF) != SET)
+	{
+		if((countdown--) == 0) { i2c_timeout_event++; break; }
+	}
 	I2C_SendData(SC2_I2C, x);
+		countdown = 100;
+	while (I2C_GetFlagStatus(SC2_I2C, I2C_FLAG_BTF) != SET)
+	{
+		if((countdown--) == 0) { i2c_timeout_event++; break; }
+	}
 	//Data=I2C_ReceiveData(SC2_I2C);
 //   Wire . endTransmission ( ) ;
 	I2C_GenerateSTOP(SC2_I2C);
+	countdown = 100;
+	while (I2C_GetFlagStatus(SC2_I2C, I2C_FLAG_CMDFIN) != SET)
+	{
+		if((countdown--) == 0) { i2c_timeout_event++; break; }
+	}
 }
 
 #define LCD_DATA_CONT	( 0xC0 )
 //( 0b11000000 )
 #define LCD_DATA_END	( 0x40 )
 //( 0b01000000 )
- void lcd_printStr ( uint8_t Address, const char * s ) {
+ void lcd_printStr ( const char * s ) {
 	I2C_GenerateSTART(SC2_I2C);
-	I2C_Send7bitAddress(SC2_I2C, Address, I2C_Direction_Transmitter); // I2C_Direction_Transmitter or I2C_Direction_Receiver
+	int countdown = 100;
+	while (I2C_GetFlagStatus(SC2_I2C, I2C_FLAG_CMDFIN) != SET)
+	{
+		if((countdown--) == 0) { i2c_timeout_event++; break; }
+	}
+	I2C_Send7bitAddress(SC2_I2C, LCD_I2C_ADDR, I2C_Direction_Transmitter); // I2C_Direction_Transmitter or I2C_Direction_Receiver
 	while ( * s ) {
 		if ( * ( s + 1 ) ) {
 			//lcd_contdata ( * s ) ;
 			I2C_SendData(SC2_I2C, LCD_DATA_CONT);
+	countdown = 100;
+	while (I2C_GetFlagStatus(SC2_I2C, I2C_FLAG_BTF) != SET)
+	{
+		if((countdown--) == 0) { i2c_timeout_event++; break; }
+	}
 			I2C_SendData(SC2_I2C, *s);
+	countdown = 100;
+	while (I2C_GetFlagStatus(SC2_I2C, I2C_FLAG_BTF) != SET)
+	{
+		if((countdown--) == 0) { i2c_timeout_event++; break; }
+	}
 		} else {
 			//lcd_lastdata ( * s ) ;
 			I2C_SendData(SC2_I2C, LCD_DATA_END);
+	countdown = 100;
+	while (I2C_GetFlagStatus(SC2_I2C, I2C_FLAG_BTF) != SET)
+	{
+		if((countdown--) == 0) { i2c_timeout_event++; break; }
+	}
 			I2C_SendData(SC2_I2C, *s);		}
+	countdown = 100;
+	while (I2C_GetFlagStatus(SC2_I2C, I2C_FLAG_BTF) != SET)
+	{
+		if((countdown--) == 0) { i2c_timeout_event++; break; }
+	}
 		s ++ ;
 	}
 	I2C_GenerateSTOP(SC2_I2C);
+	countdown = 100;
+	while (I2C_GetFlagStatus(SC2_I2C, I2C_FLAG_CMDFIN) != SET)
+	{
+		if((countdown--) == 0) { i2c_timeout_event++; break; }
+	}
 } 
 /*
 void lcd_contdata ( byte x ) {
@@ -515,8 +585,8 @@ void lcd_lastdata ( byte x ) {
  
 
 // 
-void lcd_setCursor ( uint8_t Address, uint8_t x , uint8_t y ) {
-   lcd_cmd ( Address, 0x80 | ( y * 0x40 + x ) ) ;
+void lcd_setCursor ( uint8_t x , uint8_t y ) {
+   lcd_cmd ( 0x80 | ( y * 0x40 + x ) ) ;
 } 
 
 void main_init()

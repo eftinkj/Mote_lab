@@ -251,7 +251,7 @@ void app_recvConfigSensor ( pkt_t *p , unsigned char rssi )
 //#ifdef SOURCE
 #ifdef _ARM_
 //	return; // Causes node to become disabled
-uint16_t temp_rate=500;
+//uint16_t temp_rate=500;
 #endif // _ARM_
 	//unsigned char offset = 0;
 	uint32_t offset = 0;
@@ -264,7 +264,7 @@ uint16_t temp_rate=500;
 		{
 			case ISN_APP_CONFIG_FLAG_SAMPLING:
 				{
-					config_sampling_t *cp = ( config_sampling_t * ) ( ( ( char* ) cfg_gen ) + ISN_APP_CONFIG_LEN_OVERHEAD );
+					//config_sampling_t *cp = ( config_sampling_t * ) ( ( ( char* ) cfg_gen ) + ISN_APP_CONFIG_LEN_OVERHEAD );
 					offset = ISN_APP_CONFIG_LEN_SAMPLING;
 					// transmission mode
 #if defined(_ARM_) && defined(_ENABLE_SRC_DUMMY_)
@@ -381,7 +381,7 @@ uint16_t temp_rate=500;
 				break;
 			case ISN_APP_CONFIG_FLAG_PROTOCOLS:
 				{
-					config_protocols_t *cp = ( config_protocols_t * ) ( ( ( char* ) cfg_gen ) + ISN_APP_CONFIG_LEN_OVERHEAD );
+					//config_protocols_t *cp = ( config_protocols_t * ) ( ( ( char* ) cfg_gen ) + ISN_APP_CONFIG_LEN_OVERHEAD );
 					offset = ISN_APP_CONFIG_LEN_PROTOCOLS;
 #ifndef _ARM_
 					my_protocol_ = cp->routing;
@@ -664,12 +664,12 @@ void NodeConfigure ( char *p )
 void disable_node ( unsigned char address )
 {
 	gbpkt_t *gby = ( gbpkt_t * ) packet;
-	int result; // length of received result string
-	unsigned int uint_value;
+	//int result; // length of received result string
+	//unsigned int uint_value = 0;
 //	float f = 0.222;
 
 //Set the Node Address
-	uint_value = address;
+	//uint_value = address;
 
 	if ( 1 == energy_depleted_control_ )
 	{
@@ -714,9 +714,9 @@ void enable_node ( char *p )
 	enpkt_t *pkt = ( enpkt_t * ) p;
 
 
-	int result; // length of received result string
+	//int result; // length of received result string
 	unsigned int uint_value;
-	float f = 0.222;
+	//float f = 0.222;
 //Set the Node Address
 	uint_value = MY_ADDR;
 #ifdef _ENABLE_XBEE_API_

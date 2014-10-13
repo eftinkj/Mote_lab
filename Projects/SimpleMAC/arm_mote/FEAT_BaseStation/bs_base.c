@@ -41,4 +41,4 @@ void bs_init ( void )
 
 
 
-#endif FEAT_BASE_STATION
+#endif /*FEAT_BASE_STATION */

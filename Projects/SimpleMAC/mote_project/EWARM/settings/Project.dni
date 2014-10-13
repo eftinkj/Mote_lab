@@ -1,5 +1,5 @@
 [Stack]
-FillEnabled=0
+FillEnabled=1
 OverflowWarningsEnabled=1
 WarningThreshold=90
 SpWarningsEnabled=1
@@ -9,7 +9,7 @@ TriggerName=main
 LimitSize=0
 ByteLimit=50
 [DebugChecksum]
-Checksum=1564766085
+Checksum=-1465070846
 [Exceptions]
 StopOnUncaught=_ 0
 StopOnThrow=_ 0
@@ -24,21 +24,6 @@ UseAuto=0
 TypeViolation=1
 UnspecRange=1
 ActionState=1
-[Log file]
-LoggingEnabled=_ 0
-LogFile=_ ""
-Category=_ 0
-[TermIOLog]
-LoggingEnabled=_ 0
-LogFile=_ ""
-[CallStackLog]
-Enabled=0
-[DriverProfiling]
-Enabled=0
-Mode=1
-Graph=0
-Symbiont=0
-Exclusions=
 [InterruptLog]
 LogEnabled=0
 SumEnabled=0
@@ -52,11 +37,6 @@ SumEnabled=0
 GraphEnabled=0
 ShowTimeLog=1
 ShowTimeSum=1
-[Disassemble mode]
-mode=0
-[Breakpoints2]
-Bp0=_ 1 "STD_CODE2" "{$PROJ_DIR$\..\..\arm_mote\main.c}.239.2" 0 0 1 "" 0 ""
-Count=1
 [Interrupts]
 Enabled=1
 [MemConfig]
@@ -65,13 +45,44 @@ Manual=0
 Ddf=1
 TypeViol=0
 Stop=1
-[Trace1]
-Enabled=0
-ShowSource=1
-[Aliases]
-A0=_ "C:\SVN2\STM32W108xx_RF_LibSrc\Libraries\SimpleMAC\superphy-source\stack\platform\micro\cortexm3\aes.c" ""
-Count=1
-SuppressDialog=0
 [Simulator]
 Freq=10000000
 MultiCoreRunAll=1
+[stlink]
+stlinkserialNo=EE5626A6
+stlinkfoundProbes=
+[RegisterFilter]
+FilePath=_ ""
+UseFilter=_ 0
+[Disassemble mode]
+mode=0
+[Breakpoints2]
+Bp0=_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\mote.c}.390.2" 0 0 1 "" 0 "" 0
+Bp1=_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\..\arm_mote}.102.1" 0 0 1 "" 0 "" 0
+Bp2=_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\arm_mote\main.c}.428.2" 0 0 1 "" 0 "" 0
+Count=3
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[Aliases]
+A0=_ "C:\SVN2\STM32W108xx_RF_LibSrc\Libraries\SimpleMAC\superphy-source\stack\framework\byte-utilities.c" ""
+A1=_ "C:\SVN2\STM32W108xx_RF_LibSrc\Libraries\SimpleMAC\superphy-source\stack\phy\em250class\analogue-lna.c" ""
+A2=_ "C:\SVN2\STM32W108xx_RF_LibSrc\Libraries\SimpleMAC\superphy-source\stack\phy\em250class\phy-common.c" ""
+A3=_ "C:\SVN2\STM32W108xx_RF_LibSrc\Libraries\SimpleMAC\superphy-source\stack\phy\phy-library.c" ""
+A4=_ "C:\SVN2\STM32W108xx_RF_LibSrc\Libraries\SimpleMAC\superphy-source\stack\platform\micro\cortexm3\aes.c" ""
+A5=_ "C:\SVN2\STM32W108xx_RF_LibSrc\Libraries\SimpleMAC\superphy-source\stack\platform\micro\cortexm3\cal_adc.c" ""
+A6=_ "Z:\mz_data\SNT_MOTES\STM32W108XX_SIMPLEMAC_V2.0.1\Projects\SIMPLEMAC\MOTE_PROJECT\mote.c" ""
+Count=7
+SuppressDialog=0
+[CallStackLog]
+Enabled=0
+[DriverProfiling]
+Enabled=0
+Mode=0
+Graph=0
+Symbiont=0
+Exclusions=

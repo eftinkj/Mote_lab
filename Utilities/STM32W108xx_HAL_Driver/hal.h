@@ -51,6 +51,8 @@
    #include "mb951.h"
   #elif defined (USE_MB950)
    #include "mb950.h"
+  #elif defined (USE_MB_SNT_X2)
+   #include "MB_SnT_X2/mb_snt_x2.h"
   #else 
   #error "Please select first the STM32W board to be used."
   #endif /* USE_MB851_REVA_REVB or USE_MB851_REVC or USE_MB851_REVD*/

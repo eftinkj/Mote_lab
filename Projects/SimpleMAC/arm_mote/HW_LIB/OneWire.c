@@ -1,6 +1,6 @@
 #include "OneWire.h"
 
-extern void DelayuS(uint32_t nCount);
+//extern void DelayuS(uint32_t nCount);
 
 void OWInit(OWire* owire, GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
 {
@@ -152,20 +152,20 @@ uint8_t OWReset(OWire* owire)
 	// wait until the wire is high... just in case
 	do {
 		if (--retries == 0) return 0;
-		DelayuS(2);//DelayuS(2);
+		halCommonDelayMilliseconds(2);//DelayuS(2);
 	} while ( !OWReadPin(owire));
 
 	OWNoInterrupts();
 	OWWriteLow(owire);
 	OWOutput(owire);	// drive output low
 	OWInterrupts();
-	DelayuS(500);
+	halCommonDelayMilliseconds(500);
 	OWNoInterrupts();
 	OWInput(owire);	// allow it to float
-	DelayuS(80);
+	halCommonDelayMilliseconds(80);
 	r = !OWReadPin(owire);
 	OWInterrupts();
-	DelayuS(420);
+	halCommonDelayMilliseconds(420);
 	return r;
 }
 
@@ -175,20 +175,21 @@ void OWWrite_bit(OWire* owire, uint8_t v)
 		OWNoInterrupts();
 		OWWriteLow(owire);
 		OWOutput(owire);	// drive output low
-		DelayuS(10);
+		halCommonDelayMilliseconds(10);
 		OWWriteHigh(owire);	// drive output high
 		OWInterrupts();
-		DelayuS(55);
+		halCommonDelayMilliseconds(55);
 	} else {
 		OWNoInterrupts();
 		OWWriteLow(owire);
 		OWOutput(owire);	// drive output low
-		DelayuS(65);
+		halCommonDelayMilliseconds(65);
 		OWWriteHigh(owire);	// drive output high
 		OWInterrupts();
-		DelayuS(5);
+		halCommonDelayMilliseconds(5);
 	}
 }
+
 
 uint8_t OWRead_bit(OWire* owire)
 {
@@ -197,12 +198,12 @@ uint8_t OWRead_bit(OWire* owire)
 	OWNoInterrupts();
         OWWriteLow(owire);
 	OWOutput(owire);
-	DelayuS(3);
+	halCommonDelayMilliseconds(3);
 	OWInput(owire);	// let pin float, pull up will raise
-	DelayuS(10);
+	halCommonDelayMilliseconds(10);
 	r = OWReadPin(owire);
 	OWInterrupts();
-	DelayuS(53);
+	halCommonDelayMilliseconds(53);
 	return r;
 }
 

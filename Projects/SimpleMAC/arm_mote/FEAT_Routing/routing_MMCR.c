@@ -281,7 +281,7 @@ void mmcr_rf_ch_sw ( uint8_t *channel_id )
 //	mmcr_ch_counter = 0;
 	if (mmcr_ch_counter<15)
 	{
-		sendPriorityPacket ( tpkt->length+PKT_HEADER_LENGTH, (int8_t XDATA*) tpkt, MAC_BROADCAST );//ap->mac_dst );
+		sendPriorityPacket ( tpkt->length+PKT_HEADER_LENGTH, (sint8_t XDATA*) tpkt, MAC_BROADCAST );//ap->mac_dst );
 	 	mmcr_ch_counter++;
 		// Schedule next
 		ch_sw_TIDX = sch_create_timeout(rtc_get_ticks()+MMCR_CHANNEL_SWITCH_REQ_INTERVAL, mmcr_rf_ch_sw, channel_id);
@@ -389,7 +389,7 @@ int mmcr_set_route ( uint16_t dst_id, uint16_t next_hop, uint32_t metric )
 		// Define how to remove stale ones
 		return 0;
 	}
-	return 0; // two hop id not found!!!
+	//return 0; // two hop id not found!!!
 }
 ///////////////////////////////////////////////
 ///////////////////////////////////////////////
@@ -559,4 +559,4 @@ void removeOneHop(uint16_t id)
 }
 */
 
-#endif /* FEAT_ENABLE_MMCR *//
+#endif /* FEAT_ENABLE_MMCR */
