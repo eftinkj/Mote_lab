@@ -45,7 +45,7 @@ void app_temp_1wire_init()
 * Output         : None
 * Return         : None
 *******************************************************************************/
-void app_temp_1wire_loop()
+void app_temp_1wire_loop() //__align(8)
 {
   
   //onewire
@@ -68,9 +68,14 @@ void app_temp_1wire_loop()
 	  OWWrite(&OneWire, 0xBE); // Read Scratchpad
 	  data[0] = OWRead(&OneWire);
 	  data[1] = OWRead(&OneWire);
-	  Ta = ((data[1] << 8) | data[0]) / 16.0;
+//	  Ta = 
+		int32_t total_100=((((data[1] << 8) | data[0] )*10*9) / 8) ;//+ 3200;
+		int32_t i=(total_100/100)+32;
+		int32_t f=total_100%100;
+		//i+=32;
 		char buf[15];
-	  sprintf(buf, "%f", Ta);
+		sprintf(buf, "%d.%d", i, f);
+	  //sfprintf(buf, "%f", __align(8) Ta);
 	  lcd_printStr ( buf ) ;
 	  DSState = 0;
 	//}

@@ -4,51 +4,13 @@
 
 void OWInit(OWire* owire, GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
 {
-  //uint32_t PeriphClock;
-
-  /*if (GPIOx == GPIOA)
-  {
-    PeriphClock = RCC_APB2Periph_GPIOA;
-  }
-  else if (GPIOx == GPIOB)
-  {
-    PeriphClock = RCC_APB2Periph_GPIOB;
-  }
-  else if (GPIOx == GPIOC)
-  {
-    PeriphClock = RCC_APB2Periph_GPIOC;
-  }
-  */
-  /*else if (GPIOx == GPIOD)
-  {
-    PeriphClock = RCC_APB2Periph_GPIOD;
-  }
-  else if (GPIOx == GPIOE)
-  {
-    PeriphClock = RCC_APB2Periph_GPIOE;
-  }
-  */
-  /*else if (GPIOx == GPIOF)
-  {
-    PeriphClock = RCC_APB2Periph_GPIOF;
-  }
-  else
-  {
-    if (GPIOx == GPIOG)
-    {
-      PeriphClock = RCC_APB2Periph_GPIOG;
-     }
-  }*/
-
   //RCC_APB2PeriphClockCmd(PeriphClock, ENABLE);
 
   GPIO_InitTypeDef  GPIO_InitStructure;
 
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin;
 //  GPIO_InitStructure. .GPIO_Speed = GPIO_Speed_50MHz;
-
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN;
-
   GPIO_Init(GPIOx, &GPIO_InitStructure);
 
   uint32_t pinpos = 0x00, pos = 0x00, currentpin = 0x00;
@@ -104,31 +66,42 @@ void OWInit(OWire* owire, GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
 
 void OWInput(OWire* owire)
 {
-  *owire->m_Register &= ~owire->m_RegMask;
+	  GPIO_InitTypeDef  GPIO_InitStructure;
+  GPIO_InitStructure.GPIO_Pin = owire->m_BitMask;
+  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN;
+  GPIO_Init(owire->m_Port, &GPIO_InitStructure);
+//  *owire->m_Register &= ~owire->m_RegMask;
   //*owire->m_Register |= (((GPIO_Mode_IN_FLOATING) << owire->m_RegShift) & owire->m_RegMask);
-  *owire->m_Register |= owire->m_InputMask;
+//  *owire->m_Register |= owire->m_InputMask;
 }
 void OWOutput(OWire* owire)
 {
-  *owire->m_Register &= ~owire->m_RegMask;
+		  GPIO_InitTypeDef  GPIO_InitStructure;
+  GPIO_InitStructure.GPIO_Pin = owire->m_BitMask;
+  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT_OD;
+  GPIO_Init(owire->m_Port, &GPIO_InitStructure);
+//  *owire->m_Register &= ~owire->m_RegMask;
   //*owire->m_Register |= ((((uint32_t)GPIO_Mode_Out_OD|(uint32_t)GPIO_Speed_50MHz) << owire->m_RegShift) & owire->m_RegMask);
-  *owire->m_Register |= owire->m_OutputMask;
+//  *owire->m_Register |= owire->m_OutputMask;
 
 }
 
 uint8_t OWReadPin(OWire* owire)
 {
-  return (uint8_t)((owire->m_Port->IDR & owire->m_BitMask) > 0 ? 1 : 0);
+  //return (uint8_t)((owire->m_Port->IDR & owire->m_BitMask) > 0 ? 1 : 0);
+  return GPIO_ReadInputDataBit(owire->m_Port, owire->m_BitMask);
 }
 
 void OWWriteHigh(OWire* owire)
 {
-  owire->m_Port->BSR = owire->m_BitMask;
+	GPIO_SetBits(owire->m_Port, owire->m_BitMask);
+  //owire->m_Port->BSR = owire->m_BitMask;
 }
 
 void OWWriteLow(OWire* owire)
 {
-  owire->m_Port->BRR = owire->m_BitMask;
+	GPIO_ResetBits(owire->m_Port, owire->m_BitMask);
+  //owire->m_Port->BRR = owire->m_BitMask;
 }
 
 static void OWNoInterrupts(void)
@@ -150,22 +123,22 @@ uint8_t OWReset(OWire* owire)
 	OWInput(owire);
 	OWInterrupts();
 	// wait until the wire is high... just in case
-	do {
-		if (--retries == 0) return 0;
-		halCommonDelayMilliseconds(2);//DelayuS(2);
-	} while ( !OWReadPin(owire));
+//	do {
+//		if (--retries == 0) return 0;
+		halCommonDelayMicroseconds(5);//DelayuS(2);
+//	} while ( !OWReadPin(owire));
 
 	OWNoInterrupts();
 	OWWriteLow(owire);
 	OWOutput(owire);	// drive output low
 	OWInterrupts();
-	halCommonDelayMilliseconds(500);
+	halCommonDelayMicroseconds(500);
 	OWNoInterrupts();
 	OWInput(owire);	// allow it to float
-	halCommonDelayMilliseconds(80);
+	halCommonDelayMicroseconds(80);
 	r = !OWReadPin(owire);
 	OWInterrupts();
-	halCommonDelayMilliseconds(420);
+	halCommonDelayMicroseconds(420);
 	return r;
 }
 
@@ -175,18 +148,18 @@ void OWWrite_bit(OWire* owire, uint8_t v)
 		OWNoInterrupts();
 		OWWriteLow(owire);
 		OWOutput(owire);	// drive output low
-		halCommonDelayMilliseconds(10);
+		halCommonDelayMicroseconds(10);
 		OWWriteHigh(owire);	// drive output high
 		OWInterrupts();
-		halCommonDelayMilliseconds(55);
+		halCommonDelayMicroseconds(55);
 	} else {
 		OWNoInterrupts();
 		OWWriteLow(owire);
 		OWOutput(owire);	// drive output low
-		halCommonDelayMilliseconds(65);
+		halCommonDelayMicroseconds(65);
 		OWWriteHigh(owire);	// drive output high
 		OWInterrupts();
-		halCommonDelayMilliseconds(5);
+		halCommonDelayMicroseconds(5);
 	}
 }
 
@@ -198,12 +171,12 @@ uint8_t OWRead_bit(OWire* owire)
 	OWNoInterrupts();
         OWWriteLow(owire);
 	OWOutput(owire);
-	halCommonDelayMilliseconds(3);
+	halCommonDelayMicroseconds(3);
 	OWInput(owire);	// let pin float, pull up will raise
-	halCommonDelayMilliseconds(10);
+	halCommonDelayMicroseconds(10);
 	r = OWReadPin(owire);
 	OWInterrupts();
-	halCommonDelayMilliseconds(53);
+	halCommonDelayMicroseconds(53);
 	return r;
 }
 
