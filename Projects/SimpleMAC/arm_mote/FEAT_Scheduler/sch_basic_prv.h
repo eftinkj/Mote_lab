@@ -24,6 +24,8 @@
 #define SCH_STATE_PENDING	1
 	// expired - the timeout expired and was executed (should be released quickly)
 #define SCH_STATE_EXPIRED	2
+	// Busy - the timer is reserved for use but not set yet
+#define SCH_STATE_BUSY		3
 
 
 /****************************************************************************

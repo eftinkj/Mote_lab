@@ -36,6 +36,7 @@ list_index_t	XDATA	sch_tout_head;
 list_index_t	XDATA	sch_tout_free;
 sch_cb_func_t	XDATA	sch_callback_funcs[MAX_TIMEOUTS];
 uint8_t XDATA *	XDATA	sch_callback_context[MAX_TIMEOUTS];
+char *	sch_callback_name[MAX_TIMEOUTS];
 
 //sch_loop_func_t	xdata	sch_loop_funcs[MAX_LOOPS];
 sch_loop_func_t sch_loop_funcs[MAX_LOOPS];
@@ -60,6 +61,8 @@ void sch_default_callback( uint8_t tid)
 #define SCH_FUNC_OFF	0
 #define SCH_FUNC_ON		1
 
+char str_NONE[] = "NONE";
+
 /**
   * sch_power_up () - power up (tasks/system) SCHEDULING module
   */
@@ -72,6 +75,7 @@ void sch_power_up ( void )
 		sch_timeout_state[i] = SCH_STATE_IDLE;
 		sch_timeout_order[i] = (i+1)%MAX_TIMEOUTS;
 		sch_callback_funcs[i] = (sch_cb_func_t)NULL; //sch_default_callback;
+		sch_callback_name[i] = str_NONE;
 	}
 	sch_timeout_order[MAX_TIMEOUTS - 1] = SCH_NO_TIMEOUT_ID; // last points to nothing
 	sch_timeout_count = MAX_TIMEOUTS; // initially all empty
@@ -142,10 +146,17 @@ void sch_loop( void )
 }
 
 
-void sch_remove_timeout(uint8_t tidx)
+void sch_remove_timeout(uint8_t tidx, char*name)
 {
 	uint8_t temp = sch_tout_head;
-	if (SCH_NO_TIMEOUT_ID == temp) return; // not found anything (maybe JUST executed)
+	if (SCH_NO_TIMEOUT_ID == temp) {printf("ERROR DELETING TO 255\n"); return;} // not found anything (maybe JUST executed)
+	//printf("SCH_TO_DEL= %d,%s (r=%s)\n\d", temp, sch_callback_name[temp], name);
+	//print_timeouts();
+	if (  sch_callback_name[tidx] != name ) 
+	{
+		printf("ERROR DELETING wrong name %d,%s (req=%s)\n", temp, sch_callback_name[temp], name); 
+		return; // wrong removal
+	}
 	sch_timeout_count--;
 	if (tidx == temp) // TIDX is the HEAD
 	{
@@ -189,12 +200,14 @@ void sch_correct_time_shift ( int32_t offset)
   *		executed (function has to be REENTRANT and accept timeout ID as param)
   *	RETURNS: timeout ID or "SCH_NO_TIMEOUT_ID" if unsuccesful
   */
-uint8_t sch_create_timeout( rtc_tick_t timeout, sch_cb_func_t callback_func, uint8_t* t_context)
+uint8_t sch_create_timeout( rtc_tick_t timeout, sch_cb_func_t callback_func, uint8_t* t_context, char*name)
 {
 	list_index_t tidx;
 	list_index_t order_idx = sch_tout_head;
 	// TODO: find a free timeout ID
 	tidx = get_free_timeout();
+// DEBUG
+	printf("SCH_TO_SET= %d,%s #\n", tidx, name);
 	if (SCH_NO_TIMEOUT_ID == tidx)
 	{
 		return SCH_NO_TIMEOUT_ID;
@@ -205,6 +218,7 @@ uint8_t sch_create_timeout( rtc_tick_t timeout, sch_cb_func_t callback_func, uin
 	sch_timeout_state[tidx] = SCH_STATE_PENDING;
 	sch_callback_funcs[tidx] = callback_func;
 	sch_callback_context[tidx] = t_context;
+	sch_callback_name[tidx] = name;
 
 	//		then, insert into the timeouts' list
 	if ((SCH_NO_TIMEOUT_ID == sch_tout_head) || (timeout < sch_timeout_ticks[sch_tout_head]))
@@ -272,6 +286,7 @@ void sch_init_timeout_list()
 /**
 *  get_free_timeout () - finds free slot in timeout tables,
 *       RETURN: "index", or SCH_NO_TIMEOUT_ID if no space left
+*		NOTE: Sets state of timer to SCH_STATE_BUSY
 */
 list_index_t get_free_timeout()
 {
@@ -280,10 +295,28 @@ list_index_t get_free_timeout()
 	{
 		if ( SCH_STATE_IDLE == sch_timeout_state[i] )
 		{
+			sch_timeout_state[i]= SCH_STATE_BUSY;
 			return i;
 		}
 	}
+	printf("NO TIMEOUTS LEFT = %d\n", sch_timeout_count);
 	return SCH_NO_TIMEOUT_ID;
+}
+
+/**
+*  print_timeouts () - prints state of the timeout table,
+*       uses STDOUT (mostly serial interface UART)
+*/
+void print_timeouts()
+{
+	list_index_t i;
+	for(i=0; i < MAX_TIMEOUTS-20; i++)
+	{
+		printf(" %d/%d,/%s\n" 
+			   , sch_timeout_state[i]
+				   , sch_timeout_order[i]
+				   , sch_callback_name[i]);
+	}	
 }
 
 // ############################################################################

@@ -47,6 +47,9 @@ uint32_t cs_switch_time_;// = CS_DISABLE_TIMEOUT;
 uint8_t	cs_bcast_tidx_;
 uint8_t	cs_end_tidx_;
 	
+extern char str_CS_SWITCH[] = "SC_SWITCH";
+extern char str_CS_SWITCH_END[] = "CS_SWITCH_END";
+
 pkt_mod_cs_t *mod_cs;
 // ##############################################################################
 // ## Misc counters
@@ -98,8 +101,8 @@ void cs_req_switch ( uint8_t new_ch, uint16_t timeout)
 {
 	cs_next_channel_ = new_ch;
 	cs_switch_time_ = rtc_get_ticks() + timeout;
-	cs_bcast_tidx_ = sch_create_timeout(rtc_get_ticks()+CS_REQ_REPEAT_TIMEOUT, cs_send_req_Switch, 0);
-	cs_end_tidx_ = sch_create_timeout(cs_switch_time_, cs_end_switch, 0);
+	cs_bcast_tidx_ = sch_create_timeout(rtc_get_ticks()+CS_REQ_REPEAT_TIMEOUT, cs_send_req_Switch, 0, str_CS_SWITCH);
+	cs_end_tidx_ = sch_create_timeout(cs_switch_time_, cs_end_switch, 0, str_CS_SWITCH_END);
 }
 
 
@@ -111,7 +114,8 @@ void cs_end_switch ( uint8_t *context )
 {
 	if (SCH_NO_TIMEOUT_ID != cs_bcast_tidx_)
 	{
-		sch_remove_timeout(cs_bcast_tidx_);
+		sch_remove_timeout(cs_bcast_tidx_, str_CS_SWITCH);
+		cs_bcast_tidx_ = SCH_NO_TIMEOUT_ID;
 	}
 	phy_set_RF_channel(cs_next_channel_);
 	routing_init_MMCR(); /// ?? Is it enough
@@ -155,7 +159,7 @@ void cs_send_req_Switch ( uint8_t *context )
 	uint8_t len = PAK_GET_TOTAL_LENGTH ( cs_pkt_id );
 	sendPriorityPacket(len, (sint8_t*)&(QBUFF_ACCESS(base, 0)) , MAC_BROADCAST);
 
-	cs_bcast_tidx_ = sch_create_timeout(rtc_get_ticks()+CS_REQ_REPEAT_TIMEOUT, cs_send_req_Switch, 0);
+	cs_bcast_tidx_ = sch_create_timeout(rtc_get_ticks()+CS_REQ_REPEAT_TIMEOUT, cs_send_req_Switch, 0, str_CS_SWITCH);
 }
 
 /**
@@ -169,11 +173,12 @@ void cs_recv_switching_request( char *module )
 	if (SCH_NO_TIMEOUT_ID != cs_end_tidx_)
 	{
 		//sch_remove_timeout(cs_end_tidx_);
+		// = SCH_NO_TIMEOUT_ID;
 		return;
 	}
 	cs_switching_timeout_ = rtc_get_ticks() + ENDIAN32(cs_module -> first_timeout);
 	cs_end_tidx_ = sch_create_timeout( cs_switching_timeout_,
-									  cs_end_switch, 0);
+									  cs_end_switch, 0, str_CS_SWITCH_END);
 //	cs_switching_interval_ = cs_module->interval;	
 //	cs_alternative_ch_ = cs_module->alternative_ch;
 //	cs_switching_timeout_ = cs_module->first_timeout;

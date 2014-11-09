@@ -551,6 +551,9 @@
       </file>
     </group>
     <group>
+      <name>FEAT_LCD</name>
+    </group>
+    <group>
       <name>FEAT_Networking</name>
       <file>
         <name>$PROJ_DIR$\..\..\arm_mote\FEAT_Networking\ChannelSwitching.c</name>

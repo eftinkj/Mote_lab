@@ -86,16 +86,17 @@ void sch_correct_time_shift ( int32_t offset);
   * sch_create_timeout (timeout, callback_func) - sets a new timeout at "timoeut"
   *		RTC ticks (absolute value). When timeout expires, the "callback_func" is
   *		executed (function has to be REENTRANT and accept timeout ID as param)
+  * 	optionally passes name
   *	RETURNS: timeout ID or "SCH_NO_TIMEOUT_ID" if unsuccesful
   */
-uint8_t sch_create_timeout( rtc_tick_t timeout, sch_cb_func_t callback_func, uint8_t *t_context);
+uint8_t sch_create_timeout( rtc_tick_t timeout, sch_cb_func_t callback_func, uint8_t *t_context, char* name);
 
 /**
   * sch_remove_timeout (timeout_ID) - removes a timeout from the execution list
   *		(Cancels that timout)
   *	RETURNS: NOTHING
   */
-void sch_remove_timeout(uint8_t tidx);
+void sch_remove_timeout(uint8_t tidx, char*name);
 
 /**
   * sch_add_loop( sch_loop_func_t loop_func) - sets a new loop function to
@@ -104,6 +105,13 @@ void sch_remove_timeout(uint8_t tidx);
   */
 uint8_t sch_add_loop( sch_loop_func_t loop_func);
 
+
+
+/**
+*  print_timeouts () - prints state of the timeout table,
+*       uses STDOUT (mostly serial interface UART)
+*/
+void print_timeouts();
 
 // ############################################################################
 // ############################################################################

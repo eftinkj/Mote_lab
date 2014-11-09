@@ -1287,13 +1287,20 @@ void I2C_Send7bitAddress(SC_I2C_TypeDef* SCx_I2C, uint8_t Address, uint8_t I2C_D
   {}
 }
 
+
+#define SC_MAX_FLAG_WAIT	200
+
+#define SC_OK	0
+#define SC_ERROR_BTE_FAILED	1
+#define SC_ERROR_BTF_FAILED 2
+
 /**
   * @brief  Transmits a Data through the SCx_I2C peripheral.
   * @param  SCx_I2C: where x can be 1 or 2 to select the Serial controller peripheral.
   * @param  Data: Data to be transmitted.
-  * @retval None
+  * @retval SC_OK if successful or SC_ERROR_xxx for "xxx" error
   */
-void I2C_SendData(SC_I2C_TypeDef* SCx_I2C, uint8_t Data)
+uint8_t I2C_SendData(SC_I2C_TypeDef* SCx_I2C, uint8_t Data)
 {
   uint32_t scxbase = 0x00;
 
@@ -1307,10 +1314,12 @@ void I2C_SendData(SC_I2C_TypeDef* SCx_I2C, uint8_t Data)
   /* Enable the byte Send */
   SCx_I2C->I2CCR1 |= SC_I2CCR1_BTE;
   
+  int i=SC_MAX_FLAG_WAIT;
   while ((SCx_I2C->I2CCR1 & SC_I2CCR1_BTE) != 0x00)
-  {}
+  {if (0==i--) return SC_ERROR_BTE_FAILED;}
+  i=SC_MAX_FLAG_WAIT;
   while ((SCx_I2C->I2CSR & SC_I2CSR_BTF) == 0x00)
-  {}
+  {if (0==i--) return SC_ERROR_BTF_FAILED;}
 }
 
 /**

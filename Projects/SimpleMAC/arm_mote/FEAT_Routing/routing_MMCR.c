@@ -79,16 +79,20 @@ IAR_PACKED struct
 extern void timer_cb_test1(uint8_t *x);
 extern void timer_cb_test2(uint8_t *x);
 
+char str_LED_BLINK_1[]="LED1";
+char str_LED_BLINK_2[]="LED2";
+char str_RTR_CH_SWITCH[] = "RTR_CH_SWITCH_MMCR";
+
 void timer_cb_test1(uint8_t *x)
 {
 	SET_LED(YLED);
-	sch_create_timeout(rtc_get_ticks()+1000, timer_cb_test2, 0);
+	sch_create_timeout(rtc_get_ticks()+1000, timer_cb_test2, 0, str_LED_BLINK_2);
 //	mmcr_age_tables(); // Increases the costs in neighbors and routing tables - to remove nodes over time
 }
 void timer_cb_test2(uint8_t *x)
 {
 	CLEAR_LED(YLED);
-	sch_create_timeout(rtc_get_ticks()+1000, timer_cb_test1, 0);
+	sch_create_timeout(rtc_get_ticks()+1000, timer_cb_test1, 0, str_LED_BLINK_1);
 }
 ///////////////////////////////////////////////
 /**
@@ -284,7 +288,7 @@ void mmcr_rf_ch_sw ( uint8_t *channel_id )
 		sendPriorityPacket ( tpkt->length+PKT_HEADER_LENGTH, (sint8_t XDATA*) tpkt, MAC_BROADCAST );//ap->mac_dst );
 	 	mmcr_ch_counter++;
 		// Schedule next
-		ch_sw_TIDX = sch_create_timeout(rtc_get_ticks()+MMCR_CHANNEL_SWITCH_REQ_INTERVAL, mmcr_rf_ch_sw, channel_id);
+		ch_sw_TIDX = sch_create_timeout(rtc_get_ticks()+MMCR_CHANNEL_SWITCH_REQ_INTERVAL, mmcr_rf_ch_sw, channel_id, str_RTR_CH_SWITCH);
 	}
 	else
 	{	// after last request - switch myself

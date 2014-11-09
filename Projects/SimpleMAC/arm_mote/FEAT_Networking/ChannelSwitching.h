@@ -43,7 +43,8 @@ extern uint16_t cs_switching_interval_;//xdata cs_switching_interval_;
 extern uint8_t cs_next_channel_;//xdata cs_next_channel_;
 extern uint8_t cs_alternative_ch_;//xdata cs_alternative_ch_;
 
-
+extern char str_CS_SWITCH[];
+extern char str_CS_SWITCH_END[];
 // ##############################################################################
 // ## Misc counters
 // ##############################################################################

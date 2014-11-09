@@ -595,7 +595,7 @@ void I2C_GenerateSTART(SC_I2C_TypeDef* SCx_I2C);
 void I2C_GenerateSTOP(SC_I2C_TypeDef* SCx_I2C);
 void I2C_AcknowledgeConfig(SC_I2C_TypeDef* SCx_I2C, FunctionalState NewState);
 void I2C_Send7bitAddress(SC_I2C_TypeDef* SCx_I2C, uint8_t Address, uint8_t I2C_Direction);
-void I2C_SendData(SC_I2C_TypeDef* SCx_I2C, uint8_t Data);
+uint8_t I2C_SendData(SC_I2C_TypeDef* SCx_I2C, uint8_t Data);
 uint8_t I2C_ReceiveData(SC_I2C_TypeDef* SCx_I2C);
 FlagStatus I2C_GetFlagStatus(SC_I2C_TypeDef* SCx_I2C, uint32_t I2C_FLAG);
 ITStatus I2C_GetITStatus(SC_IT_TypeDef* SCx_IT, uint32_t I2C_IT);

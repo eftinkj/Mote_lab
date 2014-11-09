@@ -77,6 +77,11 @@ uint16_t mmcr_len_sample;
 nhood_t	Neighborhood;
 
 
+char str_MMCR_sendACK[] = "MMCR_sendACK";
+char str_MMCR_HELLO[] = "MMCR_HELLO";
+char str_MMCR_TC[] = "MMCR_TC";
+char str_MMCR_startRT[] = "MMCR_startRT";
+
 ///////////////////////////////////////////////
 /**
   * routing_init - performs initial setup of routing
@@ -612,7 +617,7 @@ unsigned int mmcr_recvHELLO ( hpkt_mmcr_t XDATA *hp )
 		add_two_hop_node(i, two_hop_id);
 	}
 */
-	sch_create_timeout(rtc_get_ticks()+5, mmcr_sendACK, (uint8_t XDATA*)hp);
+	sch_create_timeout(rtc_get_ticks()+5, mmcr_sendACK, (uint8_t XDATA*)hp, str_MMCR_sendACK);
 	//mmcr_sendACK( (hpkt_mmcr_t XDATA *) hp);
 	return 1;
 
@@ -666,7 +671,7 @@ void mmcr_sendACK ( uint8_t XDATA * p)
 	my_energy_ = my_energy_ - ap->length;
 
 
-	sendPriorityPacket ( ap->length, (int8_t XDATA*) ap, MAC_BROADCAST );//ap->mac_dst );
+	sendPriorityPacket ( ap->length, (char XDATA*) ap, MAC_BROADCAST );//ap->mac_dst );
 	//mmcr_count_ack_tx_++;
 	return;
 }
@@ -758,7 +763,7 @@ void mmcr_sendTC ( uint8_t *context )
 	
 	*((uint8_t*)(&mpr_list[mpr_count_])) = PKT_MODULE_TYPE_END;
 	
-	sendPriorityPacket ( tpkt->length+PKT_HEADER_LENGTH, (int8_t XDATA*) tpkt, MAC_BROADCAST );//ap->mac_dst );
+	sendPriorityPacket ( tpkt->length+PKT_HEADER_LENGTH, (char XDATA*) tpkt, MAC_BROADCAST );//ap->mac_dst );
 }
 
 // 				ch_sw_TIDX = sch_create_timeout(rtc_get_ticks()+MMCR_CHANNEL_SWITCH_REQ_INTERVAL, mmcr_rf_ch_sw, &ch_sw_TIDX);
@@ -818,9 +823,10 @@ void mmcr_set_tx_timeout ( uint16_t ms )
 {
 	if (SCH_NO_TIMEOUT_ID != mmcr_hello_tidx)
 	{
-		sch_remove_timeout(mmcr_hello_tidx);
+		sch_remove_timeout(mmcr_hello_tidx, str_MMCR_HELLO);
+		mmcr_hello_tidx = SCH_NO_TIMEOUT_ID;
 	}
-	mmcr_hello_tidx = sch_create_timeout( rtc_get_ticks() + ms, mmcr_hello_timeout, 0);
+	mmcr_hello_tidx = sch_create_timeout( rtc_get_ticks() + ms, mmcr_hello_timeout, 0, str_MMCR_HELLO);
 //	mmcr_hello_timeout_ = rtc_get_ticks() + ms;
 //	mmcr_hello_timeout_enabled_ = 1;
 }
@@ -834,7 +840,8 @@ void mmcr_hello_timeout()
 	// Workaround - remove long Hello interval timeout - since we are already here
 	if (SCH_NO_TIMEOUT_ID != mmcr_routeStart_tidx_)
 	{
-		sch_remove_timeout(mmcr_routeStart_tidx_);
+		sch_remove_timeout(mmcr_routeStart_tidx_, str_MMCR_startRT);
+		mmcr_routeStart_tidx_ = SCH_NO_TIMEOUT_ID;
 	}
 	// Timeout reached -> is there a route found? or should I retransmit HELLO?
 	mmcr_hello_tidx = SCH_NO_TIMEOUT_ID; // Clear THIS timeout's ID - it already fired
@@ -857,8 +864,8 @@ void mmcr_hello_timeout()
 		//mmcr_request_send_HELLO_ = 0; //1;
 		//mmcr_request_send_TC_ = 0;
 		mmcr_state_ = MMCR_STATE_IDLE;
-		sch_create_timeout(rtc_get_ticks()+10, mmcr_sendTC, (uint8_t*)packet);
-		mmcr_routeStart_tidx_ = sch_create_timeout(rtc_get_ticks()+MMCR_LONG_HELLO_INTERVAL, mmcr_startRouteSearch, 0);
+		sch_create_timeout(rtc_get_ticks()+10, mmcr_sendTC, (uint8_t*)packet, str_MMCR_TC);
+		mmcr_routeStart_tidx_ = sch_create_timeout(rtc_get_ticks()+MMCR_LONG_HELLO_INTERVAL, mmcr_startRouteSearch, 0, str_MMCR_startRT);
 
 		enableDataTx_ = 1;
 	}

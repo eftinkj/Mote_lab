@@ -54,9 +54,10 @@ int32_t stradio_resend_ = -1;
 uint32_t count_resend_ = 0;
 StStatus last_status_ = 0;
 
-uint8_t txTIDX = 0xFF;
+uint8_t txTIDX = SCH_NO_TIMEOUT_ID;
 boolean stradio_retransmit_req_;
 uint32_t stradio_count_failed_retransmissions_ = 0;
+char str_stradio_PktTO[] = "STRadio_Pkt_Tx_TO";
 
 StStatus volatile result_1 = 0;
 
@@ -261,7 +262,7 @@ boolean sendPacketData(uint8_t length, sint8_t *data, uint16_t dst)
 				stradio_resend_ = STRADIO_DEFAULT_RETRANSMISSION_COUNT;
 				if(stradio_resend_ > 0)
 				{
-					txTIDX = sch_create_timeout(rtc_get_ticks()+my_tx_timeout_, hPacketTimeout, &txTIDX);
+					txTIDX = sch_create_timeout(rtc_get_ticks()+my_tx_timeout_, hPacketTimeout, &txTIDX, str_stradio_PktTO);
 				}
 			}
 		}
@@ -385,7 +386,8 @@ void ST_RadioTransmitCompleteIsrCallback(StStatus status,
 		release_pkt_in_tx(); // release packet that was sent
 	}
 	sent_DATA_ = 0;
-	sch_remove_timeout(txTIDX);
+	sch_remove_timeout(txTIDX, str_stradio_PktTO);
+	txTIDX = SCH_NO_TIMEOUT_ID;
 	ATOMIC (txComplete = TRUE;)
 }/* end ST_RadioTransmitCompleteIsrCallback() */
 

@@ -24,7 +24,9 @@
 
 //#define NODE_EUI8_RTLS_BECON
 //#define NODE_EUI8_RTLS_LSENS
-#define NODE_EUI8_RTLS_BS
+
+//MZ 2014/11/07
+////#define NODE_EUI8_RTLS_BS
 
 
 
@@ -80,7 +82,7 @@
 //#define NODE_E_MMCR_SHT
 //#define NODE_F_MMCR_SHT
 
-//#define RSSI_SNIFFING_BS
+#define RSSI_SNIFFING_BS
 //#define RSSI_SNIFFER_DOG
 
 

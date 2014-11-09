@@ -174,12 +174,20 @@ void processSerialInput( void )
 	static uint8_t buffer[BUFFER_SIZE];
 	static uint8_t bufferSize = 0;
 	static uint32_t bufferTimeout = TIMEOUT_VALUE;
-
+	
 	if ( bufferSize == 0 )
 		bufferTimeout = TIMEOUT_VALUE;
 
 	if ( serialReadByte( buffer + bufferSize ) )
 	{
+#if (1)
+		if ('?'==buffer[bufferSize])
+		{
+			//printf("Timers: temp=%d, lcd=%d\n", temp_sensor_timeout, lcd_timeout);
+			print_timeouts();
+		}
+#endif
+
 		bufferSize += 1;
 	}
 
@@ -429,7 +437,7 @@ void main( void )
 	printf( "\r\nSimpleMAC (%s) Talk Application (EUI=%x)\r\n", SIMPLEMAC_VERSION_STRING, ST_RadioGetEui64() );
 #endif
 
-        
+   sch_add_loop(processSerialInput);     
 // *********************************** Main loop *****************************
 	// This should be end of the road (inside is an infinite loop)
 	
