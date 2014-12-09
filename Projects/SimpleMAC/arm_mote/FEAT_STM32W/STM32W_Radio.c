@@ -75,6 +75,7 @@ void radio_init()
 		my_addr16_ = MY_ADDR;
 	}
 #endif
+	result_1 = ST_RadioSetPowerMode(0x00);
 #ifdef _STM32W_HIGH_POWER_
 	// For High Power Module use this
 	uint16_t txPowerMode = 0x0001; //USER_TX_POWER_MODE; // Boost and alternate Tx/RX

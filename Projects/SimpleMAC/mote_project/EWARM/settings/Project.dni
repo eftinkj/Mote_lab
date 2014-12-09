@@ -9,7 +9,7 @@ TriggerName=main
 LimitSize=0
 ByteLimit=50
 [DebugChecksum]
-Checksum=-1204242092
+Checksum=-1398258910
 [Exceptions]
 StopOnUncaught=_ 0
 StopOnThrow=_ 0
@@ -49,19 +49,13 @@ Stop=1
 Freq=10000000
 MultiCoreRunAll=1
 [stlink]
-stlinkserialNo=2798FD0D
+stlinkserialNo=5C9324E2
 stlinkfoundProbes=
 [RegisterFilter]
 FilePath=_ ""
 UseFilter=_ 0
-[Disassemble mode]
-mode=0
-[Breakpoints2]
-Bp0=_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\mote.c}.398.2" 0 0 1 "" 0 "" 0
-Bp1=_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\..\arm_mote}.102.1" 0 0 1 "" 0 "" 0
-Bp2=_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\arm_mote\main.c}.428.2" 0 0 1 "" 0 "" 0
-Bp3=_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\mote.c}.320.1" 0 0 1 "" 0 "" 0
-Count=4
+[RecentFlashDownload]
+Path=C:\temp\SnT_Mote_v2\Utilities\Prebuilt\STM32W108xB\simplemac-test.s37
 [Log file]
 LoggingEnabled=_ 0
 LogFile=_ ""
@@ -69,16 +63,6 @@ Category=_ 0
 [TermIOLog]
 LoggingEnabled=_ 0
 LogFile=_ ""
-[Aliases]
-A0=_ "C:\SVN2\STM32W108xx_RF_LibSrc\Libraries\SimpleMAC\superphy-source\stack\framework\byte-utilities.c" ""
-A1=_ "C:\SVN2\STM32W108xx_RF_LibSrc\Libraries\SimpleMAC\superphy-source\stack\phy\em250class\analogue-lna.c" ""
-A2=_ "C:\SVN2\STM32W108xx_RF_LibSrc\Libraries\SimpleMAC\superphy-source\stack\phy\em250class\phy-common.c" ""
-A3=_ "C:\SVN2\STM32W108xx_RF_LibSrc\Libraries\SimpleMAC\superphy-source\stack\phy\phy-library.c" ""
-A4=_ "C:\SVN2\STM32W108xx_RF_LibSrc\Libraries\SimpleMAC\superphy-source\stack\platform\micro\cortexm3\aes.c" ""
-A5=_ "C:\SVN2\STM32W108xx_RF_LibSrc\Libraries\SimpleMAC\superphy-source\stack\platform\micro\cortexm3\cal_adc.c" ""
-A6=_ "Z:\mz_data\SNT_MOTES\STM32W108XX_SIMPLEMAC_V2.0.1\Projects\SIMPLEMAC\MOTE_PROJECT\mote.c" ""
-Count=7
-SuppressDialog=0
 [CallStackLog]
 Enabled=0
 [DriverProfiling]
@@ -87,3 +71,21 @@ Mode=0
 Graph=0
 Symbiont=0
 Exclusions=
+[Disassemble mode]
+mode=0
+[Breakpoints2]
+Bp0=_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\..\arm_mote}.102.1" 0 0 1 "" 0 "" 0
+Bp1=_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\mote.c}.372.1" 0 0 1 "" 0 "" 0
+Bp2=_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\arm_mote\FEAT_STM32W\STM32W_Radio.c}.344.2" 0 0 1 "" 0 "" 0
+Count=3
+[Aliases]
+A0=_ "C:\SVN2\STM32W108xx_RF_LibSrc\Libraries\SimpleMAC\superphy-source\stack\framework\byte-utilities.c" ""
+A1=_ "C:\SVN2\STM32W108xx_RF_LibSrc\Libraries\SimpleMAC\superphy-source\stack\phy\em250class\analogue-lna.c" ""
+A2=_ "C:\SVN2\STM32W108xx_RF_LibSrc\Libraries\SimpleMAC\superphy-source\stack\phy\em250class\analogue.c" ""
+A3=_ "C:\SVN2\STM32W108xx_RF_LibSrc\Libraries\SimpleMAC\superphy-source\stack\phy\em250class\phy-common.c" ""
+A4=_ "C:\SVN2\STM32W108xx_RF_LibSrc\Libraries\SimpleMAC\superphy-source\stack\phy\phy-library.c" ""
+A5=_ "C:\SVN2\STM32W108xx_RF_LibSrc\Libraries\SimpleMAC\superphy-source\stack\platform\micro\cortexm3\aes.c" ""
+A6=_ "C:\SVN2\STM32W108xx_RF_LibSrc\Libraries\SimpleMAC\superphy-source\stack\platform\micro\cortexm3\cal_adc.c" ""
+A7=_ "Z:\mz_data\SNT_MOTES\STM32W108XX_SIMPLEMAC_V2.0.1\Projects\SIMPLEMAC\MOTE_PROJECT\mote.c" ""
+Count=8
+SuppressDialog=0

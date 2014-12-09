@@ -99,7 +99,7 @@
         </option>
         <option>
           <name>OGChipSelectEditMenu</name>
-          <state>STM32W108CC	ST STM32W108CC</state>
+          <state>STM32W108CB	ST STM32W108CB</state>
         </option>
         <option>
           <name>GenLowLevelInterface</name>
@@ -147,7 +147,7 @@
         </option>
         <option>
           <name>OGUseCmsis</name>
-          <state>1</state>
+          <state>0</state>
         </option>
         <option>
           <name>OGUseCmsisDspLib</name>
@@ -174,11 +174,12 @@
           <name>CCDefines</name>
           <state>USE_STDPERIPH_DRIVER</state>
           <state>USE_MB851_REVD</state>
-          <state>STM32W108CC</state>
+          <state>STM32W108CB</state>
+          <state>STM32W108</state>
           <state>PLATFORM_HEADER="Utilities\STM32W108xx_HAL_Driver/micro/cortexm3/compiler/iar.h"</state>
           <state>CORTEXM3</state>
           <state>CORTEXM3_STM32W108</state>
-          <state>CORTEXM3_STM32W108CC</state>
+          <state>CORTEXM3_STM32W108xB</state>
           <state>DISABLE_WATCHDOG</state>
           <state>__SOURCEFILE__="$FILE_FNAME$"</state>
         </option>

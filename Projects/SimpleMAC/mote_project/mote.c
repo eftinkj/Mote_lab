@@ -89,11 +89,11 @@
 RadioTransmitConfig radioTransmitConfig =
 {
 	TRUE,  // waitForAck;
-	FALSE, // checkCca;
+	TRUE, // checkCca;
 	4,     // ccaAttemptMax;
 	3,     // backoffExponentMin;
 	5,     // backoffExponentMax;
-	TRUE   // appendCrc;
+	FALSE //TRUE   // appendCrc;
 };
 
 /* generic data packet */
@@ -108,9 +108,9 @@ uint8_t txPacket[128] =
 //	0x16, // dst pan h
 	0x32, // dst pan l
 	0x33, // dst pan h
-	0x08, 0x00,
-	0x0A, // src pan l
-	0x00, // scr pan h
+	0xFF, 0xFF,
+	0x32, // src pan l
+	0x33, // scr pan h
 	0x0A, 0x00,
 /*	0x05, // dst addr l
 	0x16, // dst addr h
@@ -135,39 +135,37 @@ uint8_t last_id = 0;
 
 
 /* Private Functions ---------------------------------------------------------*/
-
+StStatus radio_call_status = 0;
 /*******************************************************************************
 * Function Name  : sendSerialData
-* Description    : It allows to transmit the data
-* Input          : - lenght of the data
+* @brief It allows to transmit the data
+* @param - lenght of the data
 *                  - data to be transmitted
-* Output         : None
-* Return         : None
+* @retval None
 *******************************************************************************/
 boolean sendSerialData( uint8_t length, uint8_t *data )
 {
-	ATOMIC(
+	//ATOMIC(
 		if ( txComplete != FALSE )
 		{//8
 			halCommonMemCopy( txPacket + 12, data, length );
 			//
-			txPacket[0] = length + 12;//2 + 7;
+			txPacket[0] = length + 13;//12;//2 + 7;
 			txPacket[3]++; /* increment sequence number */
-			txPacket[10]++; /* increment sequence number */
+			//txPacket[10]++; /* increment sequence number */
 
 			txComplete = FALSE;
-			ST_RadioTransmit( txPacket );
+			radio_call_status = ST_RadioTransmit( txPacket );
 		}
-	)
+	//)
 	return ~txComplete; //TRUE;
 }/* end sendSerialData() */
 
 /*******************************************************************************
 * Function Name  : sendSerialData
-* Description    : It processes serial commands
-* Input          : None
-* Output         : None
-* Return         : None
+* @brief It processes serial commands
+* @param None
+* @retval None
 *******************************************************************************/
 void processSerialInput( void )
 {
@@ -218,14 +216,13 @@ uint8_t add8( uint8_t*data, uint8_t len)
 
 /*******************************************************************************
 * Function Name  : ST_RadioReceiveIsrCallback
-* Description    : Radio Receiver callback function
-* Input          : - packet: received packet
+* @brief Radio Receiver callback function
+* @param - packet: received packet
 *                  - ackFramePendingSet: frame pending bit in the received packet
 *                  - time: MAC timer when the SFD was received
 *                  - errors: numbers of correlator erros in the packet
 *                  - rssi: energy detected in the packet
-* Output         : None
-* Return         : None
+* @retval None
 *******************************************************************************/
 uint16_t src;
 void ST_RadioReceiveIsrCallback( uint8_t *packet,
@@ -285,6 +282,8 @@ void ST_RadioReceiveIsrCallback( uint8_t *packet,
 		__write(_LLIO_STDOUT, (unsigned char *)&temp, 8);
 		__write(_LLIO_STDOUT, (unsigned char *)&(packet[12]), packet[0]-11);
 		__write(_LLIO_STDOUT, (unsigned char *)&sum, 1);
+	} else {
+		__write(_LLIO_STDOUT, (unsigned char *)packet, packet[0]);
 	}
 	#endif // ELSE not defined XBEE_COMPAT
 #endif // _HEX_SNIFFER_
@@ -322,10 +321,9 @@ void ST_RadioReceiveIsrCallback( uint8_t *packet,
 
 /*******************************************************************************
 * Function Name  : ST_RadioDataPendingShortIdIsrCallback
-* Description    : Callback for Radio Short Id data pending
-* Input          : shortId address
-* Output         : TRUE/FALSE
-* Return         : None
+* @brief Callback for Radio Short Id data pending
+* @param shortId address         : 
+* @retval TRUE/FALSE
 *******************************************************************************/
 boolean ST_RadioDataPendingShortIdIsrCallback( uint16_t shortId )
 {
@@ -335,10 +333,9 @@ boolean ST_RadioDataPendingShortIdIsrCallback( uint16_t shortId )
 
 /*******************************************************************************
 * Function Name  : ST_RadioDataPendingLongIdIsrCallback
-* Description    : Callback for Radio Long  Id data pending
-* Input          : long id address
-* Output         : TRUE/FALSE
-* Return         : None
+* @brief Callback for Radio Long  Id data pending
+* @param long id address
+* @retval TRUE/FALSE 
 *******************************************************************************/
 boolean ST_RadioDataPendingLongIdIsrCallback( uint8_t* longId )
 {
@@ -346,24 +343,29 @@ boolean ST_RadioDataPendingLongIdIsrCallback( uint8_t* longId )
 }/* ST_RadioDataPendingShortIdIsrCallback() */
 
 
-/*******************************************************************************
-* Function Name  : ST_RadioOverflowIsrCallback
-* Description    : Radio overflow event callback
-* Input          : None
-* Output         : None
-* Return         : None
-*******************************************************************************/
-void ST_RadioOverflowIsrCallback( void )
-{
 
+/*******************************************************************************
+ **
+  * @brief  This callback must be defined.  This callback is enabled 
+  *         using the function ST_RadioEnableOverflowNotification but should
+  *         never be called by the phy library.
+  * @param  None 
+  * @retval None
+  * @note   If the function is called, something went wrong with receive.  
+  *         Probably long latency.
+  */
+void ST_RadioOverflowIsrCallback(void)
+{
+  assert(FALSE);
 }/* end ST_RadioOverflowIsrCallback() */
+
+
 
 /*******************************************************************************
 * Function Name  : ST_RadioSfdSentIsrCallback
-* Description    : Radio SFD sent event callback
-* Input          : sfdSentTime:MAC timer when the SFD was sent
-* Output         : None
-* Return         : None
+* @brief Radio SFD sent event callback
+* @param sfdSentTime:MAC timer when the SFD was sent
+* @retval None
 *******************************************************************************/
 void ST_RadioSfdSentIsrCallback( uint32_t sfdSentTime )
 {
@@ -372,23 +374,77 @@ void ST_RadioSfdSentIsrCallback( uint32_t sfdSentTime )
 
 /*******************************************************************************
 * Function Name  : ST_RadioMacTimerCompareIsrCallback
-* Description    : Radio MAC timer comapre Event callback
-* Input          : None
-* Output         : None
-* Return         : None
+* @brief Radio MAC timer comapre Event callback
+* @param None
+* @retval None
 *******************************************************************************/
 void ST_RadioMacTimerCompareIsrCallback( void )
 {
 }/* end ST_RadioMacTimerCompareIsrCallback() */
 
+
+#define PERIODIC_MAINTENANCE_EVENTS_RATE	1000
+/**
+  * @brief  Perform periodic maintenance tasks required by STM32W108 
+  * @param  None
+  * @retval None
+  */
+void periodicMaintenanceEvents(void)
+{
+  static uint16_t lastPeriodicEventsQsTick = 0;
+
+  if (lastPeriodicEventsQsTick == 0)
+  {
+    lastPeriodicEventsQsTick = halCommonGetInt16uQuarterSecondTick();
+  }
+
+  /* Run periodic maintenance events */
+  if(elapsedTimeInt16u(lastPeriodicEventsQsTick, halCommonGetInt16uQuarterSecondTick()) > PERIODIC_MAINTENANCE_EVENTS_RATE)
+  {
+    if(ST_RadioCheckRadio()) 
+    {
+      ST_RadioCalibrateCurrentChannel();
+    }
+    halCommonCheckXtalBiasTrim();
+    halCommonCalibratePads();
+    lastPeriodicEventsQsTick = halCommonGetInt16uQuarterSecondTick();
+  }
+}
+
+#define BUTTON_CLICKED 1
+#define BUTTON_IDLE    0
+/**
+  * @brief  This function return whether a button has been pressed and released
+  * @param  button
+  * @retval BUTTON_clicked or BUTTON_IDLE
+  */
+uint8_t getButtonStatus(Button_TypeDef button)
+{
+  if (STM_EVAL_PBGetState(button) == 0x00)
+  {
+    /*  Indicate button pression detected */
+    STM_EVAL_LEDOn(LED1);
+    /* Wait for release */
+    while (STM_EVAL_PBGetState(button) == 0x00);
+    halCommonDelayMilliseconds(50);
+    while (STM_EVAL_PBGetState(button) == 0x00);
+    return BUTTON_CLICKED;
+  }
+  else
+  {
+    return BUTTON_IDLE;
+  }
+}
+
+
+
 extern int main_arm( void ); // declaration of main function with scheduler loop
 
 /*******************************************************************************
 * Function Name  : main.
-* Description    : talk main routine.
-* Input          : None
-* Output         : None
-* Return         : None
+* @brief talk main routine.
+* @param None
+* @retval None
 *******************************************************************************/
 void main( void )
 {
@@ -396,8 +452,10 @@ void main( void )
 	
 	/* Initialization */
 	halInit();
-	ST_RadioGetRandomNumbers( ( uint16_t * )&seed, 2 );
-	srand( seed );
+	ST_RadioGetRandomNumbers((uint16_t *)&seed, 2);
+	halCommonSeedRandom(seed);
+	//ST_RadioGetRandomNumbers( ( uint16_t * )&seed, 2 );
+	//srand( seed );
 
 #ifdef ENABLE_UART
 //	uartInit( UART_BAUDRATE, 8, PARITY_NONE, 1 );
@@ -414,6 +472,7 @@ void main( void )
 
 	/* Initialize radio (analog section, digital baseband and MAC).
 	Leave radio powered up in non-promiscuous rx mode */
+	  ST_RadioEnableOverflowNotification(TRUE);
 	assert( ST_RadioInit( ST_RADIO_POWER_MODE_RX_ON ) == ST_SUCCESS );
 
 	/* Setup some node and pan ids.  The packet above is also sent to a device
@@ -450,8 +509,26 @@ void main( void )
 	ST_RadioEnableAddressFiltering(FALSE);
 	/* Turn off automatic acknowledgment */
 	ST_RadioEnableAutoAck(FALSE);
+	ST_RadioSetCoordinator(TRUE);
+	ST_RadioEnableReceiveCrc(FALSE);
 	// forwarding the RSSI info is done inside the ISR
-	while (1);
+	int8_t rf_en_ = 0;
+	uint8_t chan = ST_RadioGetChannel();
+	while (1)
+	{
+#ifdef ENABLE_ENERGY_SNIFFER
+		rf_en_ = ST_RadioEnergyDetection();
+		if (-50 < rf_en_)
+		printf("Energy = %d\n",  rf_en_);
+		periodicMaintenanceEvents();
+		if(BUTTON_CLICKED == getButtonStatus(BUTTON_S1))
+		{
+			if (ST_MAX_802_15_4_CHANNEL_NUMBER < ++chan) chan = ST_MIN_802_15_4_CHANNEL_NUMBER;
+			ST_RadioSetChannel(chan);
+			printf("Channel=%d (%x)\n", chan, chan);
+		}
+#endif // #ifdef ENABLE_ENERGY_SNIFFER
+	}
         
 #else //_RSSI_SNIFFER_
 	

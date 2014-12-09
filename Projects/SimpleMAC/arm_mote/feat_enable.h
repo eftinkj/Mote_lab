@@ -76,8 +76,8 @@
 // #################################################
 // ### AODV routing specific defines
 // #################################################
-//#define FEAT_ENABLE_AODV
-#undef FEAT_ENABLE_AODV
+#define FEAT_ENABLE_AODV
+//#undef FEAT_ENABLE_AODV
 
 #define FEAT_ENABLE_MMCR
 //#undef FEAT_ENABLE_MMCR
@@ -149,6 +149,9 @@
 // Enable App to read temperature over 1-wire Dallas interface
 #define _ENABLE_APP_TEMP_1WIRE_
 //#undef _ENABLE_APP_TEMP_1WIRE_
+	  
+//#define _ENABLE_LCD_CHAR_2x8_
+#undef _ENABLE_LCD_CHAR_2x8_
 	
 #endif
 

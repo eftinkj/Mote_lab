@@ -1,8 +1,7 @@
-//#ifndef _MOD_H_
-//#define _MOD_H_
+#ifndef _LCD_CHAR2X8_H_
+#define _LCD_CHAR2X8_H_
 
 #include "defs/esnl_pub.h"
-#include "MOD.h"
 
 /****************************************************************************
 **	Includes (PRIVATE)
@@ -41,11 +40,11 @@
 ****************************************************************************/
 
 /**
-* MOD_func_name( params ) - description of function in module (MOD)
+* lcd28_func_name( params ) - description of function in module (lcd28)
 *	RETURN: 1 (SPI_R_OK) - if request has been fulfilled (SPI is freed by app)
 *			0 (SPI_R_FAIL) - if unsucceflul (e.g. used by another app or free)
 */
-void MOD_clear(uint8_t count);
+void lcd28_clear(uint8_t count);
 
 
 /****************************************************************************
@@ -53,31 +52,25 @@ void MOD_clear(uint8_t count);
 ****************************************************************************/
 
 /**
-  * MOD_power_up() - sets up MOD module
+  * lcd28_power_up() - sets up lcd28 module
   */
-void MOD_power_up ( void );
-{
-	// Internal variables initializtion (nothing from outside is assumed)
-}
+void lcd28_power_up ( void );
+
 
 /**
-  * MOD_init() - sets up MOD module
+  * lcd28_init() - sets up lcd28 module
   */
-void MOD_init ( void );
-{
-	// External initialization (e.g. setup timers, connect to other components)
-	
-	sch_add_loop(MOD_loop);
-}
+void lcd28_init ( void );
+
 
 /**
-  * MOD_loop() - sets up MOD module
+  * lcd28_loop() - sets up lcd28 module
   */
-void MOD_loop ( void );
+void lcd28_loop ( void );
 
 
 
-#endif //#ifndef _MOD_H_
+#endif // #ifndef _LCD_CHAR2X8_H_
 
 // ############################################################################
 // ############################################################################

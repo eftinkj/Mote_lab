@@ -3,6 +3,27 @@
 
 error_t sys_last_error;
 
+#define SYS_MAX_MODULES	20
+
+#define SYS_MOD_FREE	0
+#define SYS_MOD_BUSY	1
+#define SYS_MOD_POWERED	2
+#define SYS_MOD_INIT	3
+#define SYS_MOD_FAILED	255
+
+typedef CODE void ( * XDATA sys_power_up_func_t)(uint8_t *context);
+typedef CODE void ( * XDATA sys_init_func_t)(uint8_t* context);
+
+typedef struct {
+	uint8_t status;
+	const char *name;
+	sys_power_up_func_t	mod_power_up;
+	sys_init_func_t		mod_init;
+	uint8_t *sys_context;
+} sys_module_t;
+
+sys_module_t sys_modules[SYS_MAX_MODULES]={{SYS_MOD_FREE,},};
+uint8_t sys_module_count_ = 0;
 
 ///////////////////////////////////////////////
 //Decleration of Variables
@@ -50,8 +71,33 @@ void sys_init(void *config)
 	sys_last_error = SYS_ERROR_NONE;
 }
 
+#define SYS_MODULE_SLOT_ERROR	0xFF
+uint8_t sys_get_free_module_slot()
+{
+	assert( SYS_MOD_FREE == sys_modules[sys_module_count_].status);
+	if ( sys_module_count_ < SYS_MAX_MODULES )
+		return sys_module_count_++; // increment after returning
+	else
+		return SYS_MODULE_SLOT_ERROR;
+}
 
 
+int8_t sys_add_module( const char *name 
+	, sys_power_up_func_t	mod_power_up
+	, sys_init_func_t		mod_init
+	, uint8_t *sys_context
+		)
+{
+	uint8_t i = sys_get_free_module_slot();
+	if( SYS_MODULE_SLOT_ERROR == i) return i;
+	
+	sys_modules[i].status = SYS_MOD_BUSY;
+	sys_modules[i].name = name;
+	sys_modules[i].mod_power_up = mod_power_up;
+	sys_modules[i].mod_init = mod_init;
+	sys_modules[i].sys_context = sys_context;
+	return i;
+}
 
 /**
 * sys_reset() - resets the mote

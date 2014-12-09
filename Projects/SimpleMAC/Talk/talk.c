@@ -62,8 +62,10 @@
 #define BUTTON_ACTION_4 3
 #define BUTTON_ACTION_5 4
 
-#define PTP_PAN_ID                   0x1406
-#define PTP_SHORT_ID                 0x1406
+#define PTP_PAN_ID                   0x3332
+//0x1406
+#define PTP_SHORT_ID                 0x0000
+//0x1406
 
 #define INACTIVE_TIMEOUT (10 * 4) // 10 seconds
 /* Private variables ---------------------------------------------------------*/
@@ -198,6 +200,9 @@ void ledAction(uint8_t buttonAction)
   }
 }
 
+
+int mz_t_ = 0;
+
 /**
   * @brief  Processes serial input and button preses
   * @param  None
@@ -249,6 +254,18 @@ void processInput(void)
       if (bufferSize > 0)
       {
         sendData(bufferSize, buffer, TYPE_SERIAL);
+		/*if (0==mz_t_)
+		{
+			mz_t_=1;
+			printf("MZ Start\n");
+			//ST_RadioStartTransmitTone();
+			ST_RadioStartTransmitStream();
+		} else {
+			mz_t_=0;
+			printf("MZ Stop\n");
+			//ST_RadioStopTransmitTone();
+			ST_RadioStopTransmitStream();
+		}*/
         bufferSize = 0;
       }
     }
@@ -534,7 +551,8 @@ int main(void)
   assert(status==ST_SUCCESS); 
 
   /* Set channel */
-  ST_RadioSetChannel(ST_MIN_802_15_4_CHANNEL_NUMBER);
+//  ST_RadioSetChannel(ST_MIN_802_15_4_CHANNEL_NUMBER);
+  ST_RadioSetChannel(0x14);
 
   /* Setup some node and pan ids.  The packet above is also sent to a device
   * with the same node and pan id so that two nodes running this same image
@@ -543,7 +561,10 @@ int main(void)
   ST_RadioSetNodeId(PTP_SHORT_ID);
   ST_RadioSetPanId(PTP_PAN_ID);
 
+  ST_RadioSetPower(16);
+  
   printf("\r\nSimpleMAC (%s) Talk Application\r\n",SIMPLEMAC_VERSION_STRING);
+ST_RadioWake();
 
   while(1)
   {

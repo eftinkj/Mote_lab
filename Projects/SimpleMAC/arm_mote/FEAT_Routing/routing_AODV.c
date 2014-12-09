@@ -33,25 +33,26 @@
 #include "routing.h"
 #include "FEAT_Networking/Phy_layer.h"
 #include "FEAT_Queuing/Queuing.h"
+#include "FEAT_STM32W/STM32W_Radio.h"
 ///////////////////////////////////////////////
 
 //AODV Global Variables
-int16_t xdata num_routes;
-int8_t xdata route_enable[ROUTES_MAX_AODV];
-uint8_t xdata route_table_destination[ROUTES_MAX_AODV];
-uint16_t xdata route_table_direction[ROUTES_MAX_AODV];
-uint8_t xdata route_table_cost[ROUTES_MAX_AODV];
-uint16_t xdata route_table_index[ROUTES_MAX_AODV];
+int16_t XDATA num_routes;
+int8_t XDATA route_enable[ROUTES_MAX_AODV];
+uint8_t XDATA route_table_destination[ROUTES_MAX_AODV];
+uint16_t XDATA route_table_direction[ROUTES_MAX_AODV];
+uint8_t XDATA route_table_cost[ROUTES_MAX_AODV];
+uint16_t XDATA route_table_index[ROUTES_MAX_AODV];
 //uint16_t route_table_source[ROUTES_MAX_AODV] //Adding in Source Memory
 
-uint16_t xdata my_AODV_index = 1;
+uint16_t XDATA my_AODV_index = 1;
 
 
-uint16_t xdata last_RREP_src;
+uint16_t XDATA last_RREP_src;
 
 #ifdef __SDCC__
 //	#define YLED P2_4
-	#define YLED P2_6
+//	#define YLED LED1
 #endif
 
 #ifdef __KEIL__
@@ -60,7 +61,7 @@ uint16_t xdata last_RREP_src;
 
 /// FROM MAIN.C
 
-bit AODV_reply_sent = 0;
+boolean AODV_reply_sent = 0;
 
 
 ///////////////////////////////////////////////
@@ -81,7 +82,9 @@ void send_RREQ ( uint16_t index, uint8_t dest_id, uint8_t src_id )
 	rreq->dst_id = dest_id;
 	rreq->src_id = src_id;
 	rreq->crc = STOP_BYTE;
-	api_send_packet16 ( ( int8_t* ) packet, RREQ_LEN, rreq->mac_dst );
+	//	sendPriorityPacket ( ap->length, (char XDATA*) ap, MAC_BROADCAST );//ap->mac_dst );
+
+	sendPriorityPacket ( RREQ_LEN, ( char* ) packet, rreq->mac_dst );
 	if ( AODVcounter_update )
 	{
 		RREQ_counter++;
@@ -105,7 +108,7 @@ void send_RREP_to_BS ( uint16_t index, uint8_t dest_id, uint8_t src_id )
 	rrep->dst_id = dest_id;
 	rrep->src_id = src_id;
 	rrep->crc = STOP_BYTE;
-	api_send_packet16 ( ( int8_t* ) packet, RREP_LEN, rrep->mac_dst );
+	sendPriorityPacket ( RREP_LEN, ( char* ) packet, rrep->mac_dst );
 }
 ///////////////////////////////////////////////
 ///////////////////////////////////////////////
@@ -128,7 +131,7 @@ void send_RREP ( uint16_t index, uint8_t dest_id, uint8_t src_id )
 	rrep->dst_id = dest_id;
 	rrep->src_id = src_id;
 	rrep->crc = STOP_BYTE;
-	api_send_packet16 ( ( int8_t* ) packet, RREP_LEN, rrep->mac_dst );
+	sendPriorityPacket ( RREP_LEN, ( char* ) packet, rrep->mac_dst );
 	if ( AODVcounter_update )
 	{
 		RREP_counter++;
@@ -141,14 +144,14 @@ void send_RREP ( uint16_t index, uint8_t dest_id, uint8_t src_id )
 
 ///////////////////////////////////////////////
 // Send a RERR in response to being the destination
-void send_RERR ( int8_t *p )
+void send_RERR ( uint16_t hop_id )
 {
-	RERRpkt *pkt = (RERRpkt *)p;
+	//RERRpkt *pkt = (RERRpkt *)p;
 
 	RERRpkt *rerr = (RERRpkt *)packet;
 	//Assemble Routing Type Packet with the RREP Flag
 	int16_t temp_index;
-	temp_index = AODV_find_direction ( pkt->src_id );
+	temp_index = AODV_find_direction ( hop_id );
 	if ( -1 == temp_index )
 	{
 		return;
@@ -158,10 +161,10 @@ void send_RERR ( int8_t *p )
 	rerr->mac_dst = route_table_direction[temp_index];
 	rerr->mac_src = MY_ADDR;
 	//rerr.index=index;
-	rerr->dst_id = pkt->src_id;
+	rerr->dst_id = hop_id;
 	rerr->src_id = MY_ADDR;
 	rerr->crc = STOP_BYTE;
-	api_send_packet16 ( ( int8_t* ) packet, RERR_LEN, rerr->mac_dst );
+	sendPriorityPacket ( RERR_LEN, ( char* ) packet, rerr->mac_dst );
 	if ( AODVcounter_update )
 	{
 		RREP_counter++;
@@ -193,7 +196,7 @@ void send_RERR ( int8_t *p )
 		rerr->dst_id = dest_id;
 		rerr->src_id = MY_ADDR;
 		rerr->crc = STOP_BYTE;
-		api_send_packet16 ( ( int8_t* ) packet, RERR_LEN, rerr->mac_dst );
+		sendPriorityPacket ( RERR_LEN, ( char* ) packet, rerr->mac_dst );
 		if ( AODVcounter_update )
 		{
 			RREP_counter++;
@@ -218,7 +221,7 @@ void ACK_packet ( uint16_t index, uint8_t dest_id, uint8_t src_id, uint16_t dest
 	ack->dst_id = dest_id;
 	ack->src_id = src_id;
 	ack->crc = STOP_BYTE;
-	api_send_packet16 ( ( int8_t* ) packet, ACK_LEN, ack->mac_dst );
+	sendPriorityPacket ( ACK_LEN, ( char* ) packet, ack->mac_dst );
 	if ( AODVcounter_update )
 	{
 		ACK_AODV_counter++;
@@ -246,7 +249,7 @@ void send_aodv_counters()
 	cnt->crc = STOP_BYTE;
 
 	phy_set_power_level ( MAX_POWER_LEVEL );
-	api_send_packet16 ( ( int8_t* ) packet, COUNT_LEN_AODV, BS_ADDR );
+	sendPriorityPacket ( COUNT_LEN_AODV, ( char* ) packet, BS_ADDR );
 	phy_set_power_level ( temp_power );
 }
 ///////////////////////////////////////////////
@@ -301,7 +304,7 @@ void routing_init_AODV()
 }
 ///////////////////////////////////////////////
 
-bit route_table_update_AODV ( uint8_t dest, uint16_t index, uint16_t direction, uint8_t cost )
+boolean route_table_update_AODV ( uint8_t dest, uint16_t index, uint16_t direction, uint8_t cost )
 {
 
 	int16_t index2, index_temp;
@@ -365,7 +368,7 @@ void Routing_AODV ( int8_t *p, uint8_t rssi )
 
 
 	//uint16_t index_temp, dir_index;
-	bit update_bit;
+	boolean update_bit;
 	int8_t tempdst;
 	int16_t tempdest_index;
 
@@ -395,7 +398,7 @@ void Routing_AODV ( int8_t *p, uint8_t rssi )
 			{}
 			else
 			{
-				send_RERR ( p );
+				send_RERR ( tempdst );
 			}
 			break;
 			////////////////////////////////
@@ -506,11 +509,11 @@ void Routing_AODV ( int8_t *p, uint8_t rssi )
   * 1) check if buffer ready then passes packet
   * 2) else temporarly stores
   */
-bit AODV_send_DATA_base ( uint16_t base )
+boolean AODV_send_DATA_base ( uint16_t base )
 {
 	uint16_t mac_d;
 	// SDCC:
-	pkt_t * xdata pkt = ( pkt_t* ) ( &(buffer0[base]) ); //&(QBUFF_ACCESS(base,0));
+	pkt_t * XDATA pkt = ( pkt_t* ) ( &(buffer0[base]) ); //&(QBUFF_ACCESS(base,0));
 
 	uint8_t tempdst = pkt->dst_id;
 	//Check if I am the destination, then if not forward towards the destination node
@@ -522,11 +525,11 @@ bit AODV_send_DATA_base ( uint16_t base )
 	else
 	{
 		//Relay Packet
-		uint8_t *hop_list;
+//		uint8_t *hop_list;
 		int16_t tempdest_index;
 
 
-		YLED = ~YLED;
+		TOGGLE_LED(YLED);// = ~YLED;
 		tempdest_index = AODV_find_direction ( tempdst );
 
 		if ( ( tempdest_index == -1 ) && ( CLUSTERING_I_AM_CH == my_CH_ ) )
@@ -538,13 +541,13 @@ bit AODV_send_DATA_base ( uint16_t base )
 		{
 			pkt->mac_dst = route_table_direction[tempdest_index];
 			pkt->mac_src = MY_ADDR;
-//			api_send_packet16 ( pkt, pkt->length, route_table_direction[tempdest_index] );
+//			sendPriorityPacket ( pkt, pkt->length, route_table_direction[tempdest_index] );
 			if ( AODVcounter_update )
 			{
 				DATA_AODV_counter++;
 			}
 			my_energy_ = my_energy_ - ( pkt->length + 7 );
-			YLED = ~YLED;
+			TOGGLE_LED(YLED);// = ~YLED;
 
 		}
 	}
@@ -557,7 +560,7 @@ bit AODV_send_DATA_base ( uint16_t base )
   * aodv_dropped_link(??) - the link failed (after few retransmissions??) - update routing
   *    and optionally restart route discovery
   */
-void aodv_dropped_link()
+void aodv_dropped_link(uint16_t hop_id)
 {
 	if ( CLUSTERING_I_AM_CH == my_CH_ )
 	{
@@ -565,7 +568,7 @@ void aodv_dropped_link()
 		enableDataTx_ = 0;
 #ifndef CH_START_ROUTE
 		//start_routing_aodv(BS_ADDR);
-		send_RERR ( & ( af_rx16->api_data ) );
+		send_RERR ( hop_id );
 #else
 		// Restart route
 		start_routing_aodv ( BS_ADDR );

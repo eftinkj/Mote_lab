@@ -185,8 +185,8 @@ unsigned long int XDATA my_distance_;
 unsigned char XDATA my_protocol_ = PROTOCOL_ROUTING_OEDSR ;
 unsigned char XDATA my_scheduling_ = PROTOCOL_SCHEDULING_NONE;
 unsigned char XDATA my_backoff_ = PHY_BACKOFF_DISABLE;
-uint16_t XDATA my_weight_ = DEFAULT_NODE_WEIGHT;
-uint16_t XDATA my_source_weight_ = DEFAULT_SOURCE_WEIGHT;
+//uint16_t XDATA my_weight_ = DEFAULT_NODE_WEIGHT;
+//uint16_t XDATA my_source_weight_ = DEFAULT_SOURCE_WEIGHT;
 //unsigned char xdata my_CH_ = CLUSTERING_I_AM_CH;
 uint16_t XDATA my_CH_ = DEFAULT_MY_CH;
 
@@ -243,8 +243,8 @@ void main_power_up()
 	my_protocol_ = PROTOCOL_ROUTING_OEDSR ;
 	my_scheduling_ = PROTOCOL_SCHEDULING_NONE;
 	my_backoff_ = PHY_BACKOFF_DISABLE;
-	my_weight_ = DEFAULT_NODE_WEIGHT;
-	my_source_weight_ = DEFAULT_SOURCE_WEIGHT;
+//	my_weight_ = DEFAULT_NODE_WEIGHT;
+//	my_source_weight_ = DEFAULT_SOURCE_WEIGHT;
 	//unsigned char xdata my_CH_ = CLUSTERING_I_AM_CH;
 	my_CH_ = DEFAULT_MY_CH;
 	my_tx_timeout_ = DEFAULT_TX_TIMEOUT; // Timeout for receiveing confirmation of packet TX (expires if no reponse from Radio)
@@ -384,96 +384,10 @@ void main_power_up()
 #if defined(_ENABLE_APP_TEMP_1WIRE_)
 	app_temp_1wire_init();
 #endif // #if defined (_ENABLE_APP_TEMP_1WIRE_)
-	
-	GPIO_InitTypeDef  GPIO_InitStructure;
-	/* Configure the GPIO_LED pin */
-//	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;
-//	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT_PP;
-//	GPIO_Init(GPIOC, &GPIO_InitStructure);
-//	GPIOC->BSR = GPIO_Pin_2; // Set pin (1)
-//	GPIOC->BRR = GPIO_Pin_2; // Reset pin (0)
-  
-  
-	//GPIO_InitTypeDef  GPIO_InitStructure; 
-	/* sEE_I2C Peripheral Disable */
-	//I2C_Cmd(SC2_I2C, DISABLE);
- 	/* _I2C DeInit */
-	//I2C_DeInit(SC2_I2C);
-	
-	
-	/*!< GPIO configuration */  
- 	/*!< Configure _I2C pins: SCL */
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_OD;
-	GPIO_Init(GPIOA, &GPIO_InitStructure);
-	/* Set pull-up on sEE_I2C SCL pin */
-	GPIO_SetBits(GPIOA, GPIO_Pin_2);
 
-	/*!< Configure _I2C pins: SDA */
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1;
-	GPIO_Init(GPIOA, &GPIO_InitStructure);
-	/* Set pull-up on sEE_I2C SDA pin */
-	GPIO_SetBits(GPIOA, GPIO_Pin_1);
- 
-	TIM2->CCER &= 0xFFFFEEEE; 
-  
-	//SC_I2C_TypeDef* SCx_I2C;
-	I2C_InitTypeDef I2C_InitStruct;	// Create structure for SC2_I2C)
-	//uint8_t Address = LCD_I2C_ADDR;//0x3e; // LCD Address default?? //0x112;
-	//uint8_t Data = 0xAA;
-	uint8_t contrast = 35;
-	
-	I2C_StructInit(&I2C_InitStruct); // Initialize SC2_I2C structure with defaults
-	I2C_InitStruct.I2C_ClockRate = 100000; // 100kHz
-	I2C_Init(SC2_I2C, &I2C_InitStruct); // Initialize SC2 to work as I2C
-	I2C_Cmd(SC2_I2C, ENABLE); // ENABLE or DISABLE SC2_I2C peripheral
-	
-	I2C_AcknowledgeConfig(SC2_I2C, ENABLE); /// Enable ACK mode
-//	I2C_AcknowledgeConfig(SC2_I2C, DISABLE); /// Enable ACK mode
-
-	
-	halCommonDelayMilliseconds(10);
-
-	lcd_cmd ( 0x38 );// 0b0011 1000 ) ; // function set
-	lcd_cmd ( 0x39 );// 0b0011 1001 ) ; // function set
-	lcd_cmd ( 0x04 );// 0b0000 0100 ) ; // EntryModeSet
-	lcd_cmd ( 0x14 );// 0b0001 0100 ) ; // interval osc
-	lcd_cmd ( 0x70 | ( contrast & 0xF ) );// 0b0111 0000 | ( contrast & 0xF ) ) ; // contrast Low
-	lcd_cmd ( 0x5C | ( ( contrast >> 4 ) & 0x3 ) );// 0b0101 1100 | ( ( contrast >> 4 ) & 0x3 ) ) ; // contast High/icon/power
-	lcd_cmd ( 0x6C );// 0b0110 1100 ) ; // follower control
-	//delay ( 200 ) ;
-	halCommonDelayMilliseconds(100);
-	lcd_cmd ( 0x38 );// 0b0011 1000 ) ; // function set
-	lcd_cmd ( 0x0C );// 0b0000 1100 ) ; // Display On
-	lcd_cmd ( 0x01 );// 0b0000 0001 ) ; // Clear Display
-	//delay ( 2 ) ; 
-	halCommonDelayMilliseconds(2);	
-
-	// Tryout displau
-	lcd_setCursor ( 0 , 0 ) ;
-	lcd_printStr ( "SWITCH" ) ; 
-	
-//	I2C_GenerateSTART(SC2_I2C);
-//	I2C_Send7bitAddress(SC2_I2C, Address, I2C_Direction_Transmitter); // I2C_Direction_Transmitter or I2C_Direction_Receiver
-//	I2C_SendData(SC2_I2C, Data);
-//	Data=I2C_ReceiveData(SC2_I2C);
-	
-	
-	
-	/**
-  * @brief  Checks whether the specified I2C flag is set or not.
-  * @param  SCx_I2C: where x can be 1 or 2 to select the Serial controller peripheral.
-  * @param  I2C_FLAG: specifies the SCx_I2C flag to check.
-  *   This parameter can be one of the following values:
-  *     @arg I2C_FLAG_NACK: Not acknowledge flag
-  *     @arg I2C_FLAG_BTF: Byte transfer finished flag
-  *     @arg I2C_FLAG_BRF: Byte receive finished flag
-  *     @arg I2C_FLAG_CMDFIN: Command finished flag
-  * @retval The new state of I2C_FLAG (SET or RESET).
-  */
-//FlagStatus I2C_GetFlagStatus(SC_I2C_TypeDef* SCx_I2C, uint32_t I2C_FLAG);
-
-//	I2C_GenerateSTOP(SC2_I2C);
+#if defined(_ENABLE_LCD_CHAR_2x8_)
+	lcd28_init ( );
+#endif 
 
 }
 

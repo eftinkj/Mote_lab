@@ -83,6 +83,8 @@ char str_LED_BLINK_1[]="LED1";
 char str_LED_BLINK_2[]="LED2";
 char str_RTR_CH_SWITCH[] = "RTR_CH_SWITCH_MMCR";
 
+char str_TEST[] = "TEST 1\n";
+
 void timer_cb_test1(uint8_t *x)
 {
 	SET_LED(YLED);
@@ -92,6 +94,9 @@ void timer_cb_test1(uint8_t *x)
 void timer_cb_test2(uint8_t *x)
 {
 	CLEAR_LED(YLED);
+	//send_PONG(MAC_BROADCAST);
+	//sendSerialData( strlen(str_TEST), str_TEST );
+	sendPacketData( strlen(str_TEST), str_TEST, MAC_BROADCAST );
 	sch_create_timeout(rtc_get_ticks()+1000, timer_cb_test1, 0, str_LED_BLINK_1);
 }
 ///////////////////////////////////////////////

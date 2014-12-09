@@ -11,7 +11,7 @@ ByteLimit=50
 [JLinkDriver]
 CStepIntDis=_ 0
 [stlink]
-stlinkserialNo=EE5626A6
+stlinkserialNo=5C9324E2
 stlinkfoundProbes=
 [Exceptions]
 StopOnUncaught=_ 0
@@ -34,21 +34,13 @@ ITMportsTermIO=0
 ITMportsLogFile=0
 ITMlogFile=$PROJ_DIR$\ITM.log
 [DebugChecksum]
-Checksum=1900558507
+Checksum=532623890
 [CodeCoverage]
 Enabled=_ 0
 [CallStack]
 ShowArgs=0
 [Disassembly]
 MixedMode=1
-[CallStackLog]
-Enabled=0
-[DriverProfiling]
-Enabled=0
-Mode=3
-Graph=0
-Symbiont=0
-Exclusions=
 [SWOTraceWindow]
 PcSampling=0
 InterruptLogs=0
@@ -78,10 +70,20 @@ Category=_ 0
 [TermIOLog]
 LoggingEnabled=_ 0
 LogFile=_ ""
+[CallStackLog]
+Enabled=0
+[DriverProfiling]
+Enabled=0
+Mode=0
+Graph=0
+Symbiont=0
+Exclusions=
 [Disassemble mode]
 mode=0
 [Breakpoints2]
 Count=0
 [Aliases]
-Count=0
+A0=_ "C:\SVN2\STM32W108xx_RF_LibSrc\Libraries\SimpleMAC\superphy-source\stack\phy\em3xx\phy.c" ""
+A1=_ "C:\SVN2\STM32W108xx_RF_LibSrc\Libraries\SimpleMAC\superphy-source\stack\phy\phy-library.c" ""
+Count=2
 SuppressDialog=0

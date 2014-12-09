@@ -226,8 +226,8 @@ void app_sendConfigSensor()
 	pkt->scheduling_protocol = my_scheduling_;
 
 	//Section for Scheduling Settings
-	pkt->src_weight = my_source_weight_;
-	pkt->node_weight = my_weight_;
+	pkt->src_weight = 0;//my_source_weight_;
+	pkt->node_weight = 0;//my_weight_;
 
 	//Clustering Settings
 	pkt->current_CH = my_CH_;
@@ -468,6 +468,7 @@ void app_recvConfigSensor ( pkt_t *p , unsigned char rssi )
 #endif // not _ARM_
 				}
 				break;
+#ifdef ENABLE_ADFS
 			case ISN_APP_CONFIG_FLAG_SCHEDULING:
 				{
 					config_scheduling_t *cp = ( config_scheduling_t * ) ( ( ( char* ) cfg_gen ) + ISN_APP_CONFIG_LEN_OVERHEAD );
@@ -487,6 +488,7 @@ void app_recvConfigSensor ( pkt_t *p , unsigned char rssi )
 						Q_SFQ_set_weights (my_weight_, my_source_weight_);
 #endif // FEAT_ENABLE_SFQ
 				break;
+#endif // ENABLE_ADFS
 			case ISN_APP_CONFIG_FLAG_CLUSTERING:
 				{
 					config_clustering_t *cp = ( config_clustering_t * ) ( ( ( char* ) cfg_gen ) + ISN_APP_CONFIG_LEN_OVERHEAD );

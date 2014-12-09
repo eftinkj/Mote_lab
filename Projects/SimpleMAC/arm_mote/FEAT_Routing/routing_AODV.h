@@ -46,7 +46,7 @@ void routing_init_AODV(void );
 void Routing_AODV ( int8_t *p, uint8_t rssi );
 void send_AODV_counters(void);
 
-void send_RERR ( int8_t *p );
+void send_RERR ( uint16_t hop_id  );
 void send_RERR2 ( uint8_t dest_id );
 
 uint8_t AODV_send_DATA_base ( uint16_t base );
@@ -58,7 +58,7 @@ uint8_t AODV_send_DATA_base ( uint16_t base );
   * aodv_dropped_link(??) - the link failed (after few retransmissions??) - update routing
   *    and optionally restart route discovery
   */
-void aodv_dropped_link(void);
+void aodv_dropped_link(uint16_t hop_id);
 
 
 

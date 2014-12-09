@@ -721,7 +721,7 @@ void rtr_dropped_link(uint16_t hop_id)
 #endif // _ENABLE_OEDSR_
 #ifdef FEAT_ENABLE_AODV
 		case ROUTING_PROTOCOL_AODV:
-			aodv_dropped_link();
+			aodv_dropped_link(hop_id);
 			break;
 #endif
 #ifdef FEAT_ENABLE_MMCR
@@ -756,7 +756,8 @@ void rtr_add_neighbor(uint16_t dst_id, uint16_t next_hop, uint8_t metric)
 #endif // _ENABLE_OEDSR_
 #ifdef FEAT_ENABLE_AODV
 		case ROUTING_PROTOCOL_AODV:
-			aodv_set_route(dst_id, next_hop, metric);
+#warning AODV - Route update has incorrect index (age of the routing info)
+			route_table_update_AODV(dst_id, 0, next_hop, metric);
 			break;
 #endif
 #ifdef FEAT_ENABLE_MMCR

@@ -552,6 +552,12 @@
     </group>
     <group>
       <name>FEAT_LCD</name>
+      <file>
+        <name>$PROJ_DIR$\..\..\arm_mote\FEAT_LCD\lcd_char2x8.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\..\arm_mote\FEAT_LCD\lcd_char2x8.h</name>
+      </file>
     </group>
     <group>
       <name>FEAT_Networking</name>

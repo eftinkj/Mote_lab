@@ -28,9 +28,10 @@
 //MZ 2014/11/07
 ////#define NODE_EUI8_RTLS_BS
 
+// Temp sensor node for HB
+//#define NODE_EUI8_TEMP
 
-
-//#define NODE_EUI8_MMCR_SSN
+#define NODE_EUI8_MMCR_SSN
 //#define NODE_EUI8_MMCR_SHT
 //#define NODE_EUI8_MMCR_RELAY
 
@@ -82,9 +83,10 @@
 //#define NODE_E_MMCR_SHT
 //#define NODE_F_MMCR_SHT
 
-#define RSSI_SNIFFING_BS
+//#define RSSI_SNIFFING_BS
 //#define RSSI_SNIFFER_DOG
 
+//#define ENABLE_ENERGY_SNIFFER
 
 
 //#######################################################################
@@ -172,6 +174,62 @@
      #define DEFAULT_MY_CH CLUSTERING_I_AM_CH
 //   #define DEFAULT_MY_CH CLUSTERING_BS
 #endif
+
+ //////////////////////////////////////////////////////////////////////////////////////////////
+#ifdef NODE_EUI8_RTLS_BECON
+        #define _ENABLE_RTLS_BEACON_
+		#define _ENABLE_MICROSTRAIN_
+        #define SSN_TEST	/* test new source code */
+//	#define _ENABLE_SRC_8BIT_ADC
+	#define MY_ADC_CHANNEL 0
+//	#define MY_ADDR 0x10
+	#define EUI64_TRUNK_ID
+	#define MY_ADDR 0x14 //my_addr8_
+	#define HSET_DST 0xFE
+	#define MY_DEST 0xFE
+
+	#define DEFAULT_NODE_WEIGHT 1000
+	#define DEFAULT_SOURCE_WEIGHT 500
+	#define DEFAULT_DISTANCE 1500
+	//#define DEFAULT_ENERGY 0x000186A0
+	#define DEFAULT_ENERGY ENERGY_DISABLE_VALUE
+	/*! it IS  a niegbor of the BS */
+//	#undef BS_NEIGHBOR
+	#define BS_NEIGHBOR
+
+     #define DEFAULT_MY_CH CLUSTERING_I_AM_CH
+//   #define DEFAULT_MY_CH CLUSTERING_BS
+#endif
+
+
+ //////////////////////////////////////////////////////////////////////////////////////////////
+#ifdef NODE_EUI8_TEMP
+//	#define _ENABLE_RTLS_LSENS_
+	#define SSN_TEST	/* test new source code */
+//	#define _ENABLE_SRC_8BIT_ADC_
+	#define MY_ADC_CHANNEL 0
+//	#define MY_ADDR 0x10
+	#define EUI64_TRUNK_ID
+	#define MY_ADDR my_addr8_
+	#define HSET_DST 0xFE
+	#define MY_DEST 0xFE
+
+//	#define DEFAULT_NODE_WEIGHT 1000
+//	#define DEFAULT_SOURCE_WEIGHT 500
+	#define DEFAULT_DISTANCE 1500
+	//#define DEFAULT_ENERGY 0x000186A0
+	#define DEFAULT_ENERGY ENERGY_DISABLE_VALUE
+	/*! it IS  a niegbor of the BS */
+//	#undef BS_NEIGHBOR
+	#define BS_NEIGHBOR
+
+     #define DEFAULT_MY_CH CLUSTERING_I_AM_CH
+//   #define DEFAULT_MY_CH CLUSTERING_BS
+
+	#define ENABLE_LCD_CHAR2x8
+#endif
+
+
 
  //////////////////////////////////////////////////////////////////////////////////////////////
 #ifdef NODE_EUI8_RTLS_BECON
@@ -489,6 +547,8 @@
 	#define SOURCE
 	#define MY_ADDR 0x08
 	#define HSET_DST 0x09
+
+	#define MY_ADC_CHANNEL 0
 
 	#define DEFAULT_NODE_WEIGHT 1000
 	#define DEFAULT_SOURCE_WEIGHT 500

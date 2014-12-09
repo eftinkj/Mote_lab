@@ -142,12 +142,12 @@ typedef uint8_t RadioPowerMode;
 #define RADIO_TRANSMIT_CONFIG_DEFAULTS                            \
   {                                                               \
     TRUE,  /* waitForAck */                                       \
-    TRUE,  /* checkCca */                                         \
+    FALSE, /*TRUE, */ /* checkCca */                                         \
     RADIO_CCA_ATTEMPT_MAX_DEFAULT,      /* ccaAttemptMax */       \
     RADIO_BACKOFF_EXPONENT_MIN_DEFAULT, /* backoffExponentMin */  \
     RADIO_BACKOFF_EXPONENT_MAX_DEFAULT, /* backoffExponentMax */  \
     RADIO_MINIMUM_BACKOFF_DEFAULT,      /* minimumBackoff */      \
-    TRUE  /* appendCrc */                                         \
+    FALSE /*TRUE, */  /* appendCrc */                                         \
   }
 
 /**

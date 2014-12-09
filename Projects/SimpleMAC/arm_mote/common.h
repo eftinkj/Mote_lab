@@ -81,8 +81,8 @@ extern unsigned char XDATA my_rssi_threshold_;
 extern unsigned char XDATA my_protocol_;
 extern unsigned char XDATA my_scheduling_;
 extern unsigned char XDATA my_backoff_;
-extern uint16_t XDATA my_weight_;
-extern uint16_t XDATA my_source_weight_;
+//extern uint16_t XDATA my_weight_;
+//extern uint16_t XDATA my_source_weight_;
 extern uint16_t XDATA my_CH_;
 extern uint32_t XDATA my_tx_timeout_; // Timeout for receiveing confirmation of packet TX (expires if no reponse from Radio)
 

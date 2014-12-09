@@ -329,10 +329,10 @@ void STM_EVAL_LEDToggle(Led_TypeDef Led);
 void STM_EVAL_PBInit(Button_TypeDef Button, ButtonMode_TypeDef Button_Mode);
 uint32_t STM_EVAL_PBGetState(Button_TypeDef Button);
 void STM_EVAL_COMInit(COM_TypeDef COM, UART_InitTypeDef* UART_InitStruct);
-void LIS302DL_LowLevel_DeInit(void);
-void LIS302DL_LowLevel_Init(void);
-void STLM20_LowLevel_DeInit(void);
-void STLM20_LowLevel_Init(void);
+//void LIS302DL_LowLevel_DeInit(void);
+//void LIS302DL_LowLevel_Init(void);
+//void STLM20_LowLevel_DeInit(void);
+//void STLM20_LowLevel_Init(void);
 
 #if defined (USE_MB851_REVC) || defined (USE_MB851_REVD)
   void sEE_LowLevel_DeInit(void);
