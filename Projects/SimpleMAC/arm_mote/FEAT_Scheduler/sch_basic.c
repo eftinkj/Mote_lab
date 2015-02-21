@@ -15,7 +15,10 @@
 
 //#define _SCH_DEBUG_ENABLE_
 #undef _SCH_DEBUG_ENABLE_
-#define _SCH_DEBUG_LEVEL_	0
+#define _SCH_DEBUG_LEVEL_
+
+#include "stm32w108xx_gpio.h"
+
 
 
 /****************************************************************************
@@ -41,6 +44,9 @@ char *	sch_callback_name[MAX_TIMEOUTS];
 //sch_loop_func_t	xdata	sch_loop_funcs[MAX_LOOPS];
 sch_loop_func_t sch_loop_funcs[MAX_LOOPS];
 uint8_t sch_loop_funcs_on[MAX_LOOPS];
+
+
+
 
 /****************************************************************************
 **	Variables definition (PUBLIC)
@@ -69,6 +75,16 @@ char str_NONE[] = "NONE";
 void sch_power_up ( void )
 {
 	uint8_t i;
+    
+    GPIO_InitTypeDef  GPIO_InitStructure;
+	/* Configure the GPIO_LED pin */
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT_PP;
+	GPIO_Init(GPIOB, &GPIO_InitStructure);
+	GPIOB->BSR = GPIO_Pin_3; // Set pin (1)
+	GPIOB->BRR = GPIO_Pin_3; // Reset pin (0)
+    
+    
 	//sch_timeout_ticks[MAX_TIMEOUTS];
 	for(i=0; i< MAX_TIMEOUTS; i++)
 	{
@@ -91,6 +107,8 @@ void sch_power_up ( void )
 	}
 	sch_timeout_count = 0; // empty
 
+    
+    
 }
 
 /**
@@ -120,13 +138,16 @@ uint8_t timeout_idx;
 void sch_loop( void )
 {
 
-	for(current_loop_idx=0; current_loop_idx< MAX_LOOPS; current_loop_idx++)
+	GPIO_Setbits(GPIOB, GPIO_Pin_3);
+    for(current_loop_idx=0; current_loop_idx< MAX_LOOPS; current_loop_idx++)
 	{
 		if (sch_loop_funcs_on[current_loop_idx] == SCH_FUNC_ON)
 		{
 			(sch_loop_funcs[current_loop_idx])();			
 		}
 	}
+    
+    GPIO_resetBits(GPIOB, GPIO_Pin_3);
 
 	while ( (SCH_NO_TIMEOUT_ID != sch_tout_head )
 		&& (sch_timeout_ticks[sch_tout_head ] < rtc_get_ticks()) )

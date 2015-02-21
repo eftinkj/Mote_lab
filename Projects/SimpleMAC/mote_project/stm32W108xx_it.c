@@ -89,9 +89,11 @@ void MemManage_Handler(void)
   */
 void BusFault_Handler(void)
 {
+  uint8_t byte;
   /* Go to infinite loop when Bus Fault exception occurs */
   while (1)
   {
+    byte = 0;
   }
 }
 

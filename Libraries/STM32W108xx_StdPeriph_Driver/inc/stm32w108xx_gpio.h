@@ -152,7 +152,7 @@ typedef enum
   */
 
 /** @defgroup GPIO_Exported_Functions
-  * @{
+  * @
   */
 /*  Function used to set the GPIO configuration to the default reset state ****/
 void GPIO_DeInit(GPIO_TypeDef* GPIOx);

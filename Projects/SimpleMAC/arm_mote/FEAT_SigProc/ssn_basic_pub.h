@@ -80,7 +80,7 @@ void ssn_loop( void );
 /**
  * ssn_recv_sample(uint8_t context, uint16_t value) - receives a sample
  */
-void ssn_recv_sample(uint8_t, sint16_t);
+void ssn_recv_sample(uint8_t, uint16_t);
 
 /**
   * fla_recv_cmd(module, rssi) - handles a command (packet's module)

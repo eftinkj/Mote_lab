@@ -35,7 +35,7 @@ src_d_mem_t XDATA* src_d_mem_p;
 
 uint8_t	XDATA src_d_mem_raw[SRC_D_MEM_STRUCT_SIZE];
 
-sint16_t adc_value;
+uint16_t adc_value;
 
 #define SRC_8BIT_ADC_DEBUG
 
@@ -59,8 +59,8 @@ void src_8bit_powerup ()
 //	GPIO_PACFGH[3:0] = 0;
 	//ADC5 input PA5 -  PACFGH [7:4]
 //	((gpia_pacfgh_t)GPIO_PACFGH).PA5 = 0;
-	GPIO_PACFGH = GPIO_PACFGH & 0xFFFFFF0F;	// PA5/ADC5
-	GPIO_PACFGH = GPIO_PACFGH & 0xFFFFFFF0; // PA4/ADC4
+	//GPIO_PACFGH = GPIO_PACFGH & 0xFFFFFF0F;	// PA5/ADC5
+	//GPIO_PACFGH = GPIO_PACFGH & 0xFFFFFFF0; // PA4/ADC4
 	
 }
 
