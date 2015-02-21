@@ -45,3 +45,10 @@ Thumbs.db
 *.pbi
 *.cout
 *.browse
+Projects/SimpleMAC/mote_project/EWARM/MB_SnT_X2_Mote/Exe/Project.sim
+Projects/SimpleMAC/mote_project/EWARM/MB_SnT_X2_Mote/List/Project.map
+Projects/SimpleMAC/mote_project/EWARM/MB_SnT_X2_Mote/Obj/Project.pbd.tmp
+Projects/SimpleMAC/mote_project/EWARM/Project.dep
+Projects/SimpleMAC/mote_project/EWARM/Project.stack.log.xml
+Projects/SimpleMAC/mote_project/EWARM/settings/Project.dni
+Projects/SimpleMAC/mote_project/EWARM/settings/Project.wsdt
