@@ -81,9 +81,10 @@ void sch_power_up ( void )
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT_PP;
 	GPIO_Init(GPIOB, &GPIO_InitStructure);
-	GPIOB->BSR = GPIO_Pin_3; // Set pin (1)
-	GPIOB->BRR = GPIO_Pin_3; // Reset pin (0)
-    
+	//GPIOB->BSR = GPIO_Pin_3; // Set pin (1)
+	//GPIOB->BRR = GPIO_Pin_3; // Reset pin (0)
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4;
+    GPIO_Init(GPIOB, &GPIO_InitStructure);
     
 	//sch_timeout_ticks[MAX_TIMEOUTS];
 	for(i=0; i< MAX_TIMEOUTS; i++)
@@ -137,22 +138,26 @@ uint8_t timeout_idx;
   */
 void sch_loop( void )
 {
+    GPIO_SetBits(GPIOB, GPIO_Pin_3);
 
-	GPIO_Setbits(GPIOB, GPIO_Pin_3);
+    
     for(current_loop_idx=0; current_loop_idx< MAX_LOOPS; current_loop_idx++)
 	{
-		if (sch_loop_funcs_on[current_loop_idx] == SCH_FUNC_ON)
+            
+        if (sch_loop_funcs_on[current_loop_idx] == SCH_FUNC_ON)
 		{
 			(sch_loop_funcs[current_loop_idx])();			
-		}
+		}      
+            
 	}
     
-    GPIO_resetBits(GPIOB, GPIO_Pin_3);
+
 
 	while ( (SCH_NO_TIMEOUT_ID != sch_tout_head )
 		&& (sch_timeout_ticks[sch_tout_head ] < rtc_get_ticks()) )
 	{
-		// Remove from head for the purpose of consistency
+
+        // Remove from head for the purpose of consistency
 		ATOMIC(
 			   	timeout_idx = sch_tout_head ;
 				sch_tout_head  = sch_timeout_order[sch_tout_head ];
@@ -163,7 +168,10 @@ void sch_loop( void )
 		(sch_callback_funcs[timeout_idx ])(sch_callback_context[timeout_idx] );
 		// Free the Timer slot for others to use
 		sch_timeout_state[timeout_idx] = SCH_STATE_IDLE;
+      
 	}
+    
+    GPIO_ResetBits(GPIOB, GPIO_Pin_3);
 }
 
 
