@@ -52,3 +52,6 @@ Projects/SimpleMAC/mote_project/EWARM/Project.dep
 Projects/SimpleMAC/mote_project/EWARM/Project.stack.log.xml
 Projects/SimpleMAC/mote_project/EWARM/settings/Project.dni
 Projects/SimpleMAC/mote_project/EWARM/settings/Project.wsdt
+*.wsdt
+*.dni
+*.dbgdt
