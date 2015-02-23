@@ -18,7 +18,7 @@
 #define _SCH_DEBUG_LEVEL_
 
 #include "stm32w108xx_gpio.h"
-#include "..\HW_LIB\RTC.h"
+#include "RTC.h"
 
 
 
@@ -45,9 +45,8 @@ char *	sch_callback_name[MAX_TIMEOUTS];
 //sch_loop_func_t	xdata	sch_loop_funcs[MAX_LOOPS];
 sch_loop_func_t sch_loop_funcs[MAX_LOOPS];
 uint8_t sch_loop_funcs_on[MAX_LOOPS];
-uint32_t start_time_diff[MAX_TIMEOUTS];
-uint32_t end_time_diff[MAX_TIMEOUTS];
-uint32_t dummy = 0;
+uint32_t init_time[MAX_TIMEOUTS];
+uint32_t execution_time[MAX_TIMEOUTS];
 
 
 
@@ -96,8 +95,6 @@ void sch_power_up ( void )
 		sch_timeout_order[i] = (i+1)%MAX_TIMEOUTS;
 		sch_callback_funcs[i] = (sch_cb_func_t)NULL; //sch_default_callback;
 		sch_callback_name[i] = str_NONE;
-                start_time_diff[i] = 0;
-                end_time_diff[i] = 0;
 	}
 	sch_timeout_order[MAX_TIMEOUTS - 1] = SCH_NO_TIMEOUT_ID; // last points to nothing
 	sch_timeout_count = MAX_TIMEOUTS; // initially all empty
@@ -170,18 +167,11 @@ void sch_loop( void )
 				sch_timeout_count--;
 				)
 		// Execute
-                start_time_diff[timeout_idx] = rtc_get_ticks() - sch_timeout_ticks[timeout_idx];
 		(sch_callback_funcs[timeout_idx ])(sch_callback_context[timeout_idx] );
 		// Free the Timer slot for others to use
 		sch_timeout_state[timeout_idx] = SCH_STATE_IDLE;
-                end_time_diff[timeout_idx] = rtc_get_ticks() - sch_timeout_ticks[timeout_idx];
       
 	}
-    
-        if(SCH_NO_TIMEOUT_ID != sch_tout_head)
-        {
-            dummy++;
-        }
     
     GPIO_ResetBits(GPIOB, GPIO_Pin_3);
 }
