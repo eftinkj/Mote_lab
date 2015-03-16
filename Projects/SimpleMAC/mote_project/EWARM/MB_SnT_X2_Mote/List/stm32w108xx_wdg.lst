@@ -1,0 +1,355 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.30.4.8167/W32 for ARM        21/Feb/2015  16:30:35
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_wdg.c
+#    Command line =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_wdg.c
+#        -D USE_STDPERIPH_DRIVER -D USE_MB_SNT_X2 -D STM32W108CB -D
+#        "PLATFORM_HEADER=\"Utilities\STM32W108xx_HAL_Driver/micro/cortexm3/compiler/iar.h\""
+#        -D CORTEXM3 -D CORTEXM3_STM32W108 -D CORTEXM3_STM32W108xB -D
+#        DISABLE_WATCHDOG -D "__SOURCEFILE__=\"stm32w108xx_wdg.c\"" -lC
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\
+#        --diag_suppress Pa050 -o
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Libraries\STM32W108xx_StdPeriph_Driver\src\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\stm32w108\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\generic\compiler\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\bootloader\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\Shared\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Device\ST\STM32W108xx\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\SimpleMAC\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\Common\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\MB851\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\arm_mote\
+#        -Ohz --use_c++_inline
+#    List file    =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\stm32w108xx_wdg.lst
+#    Object file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\stm32w108xx_wdg.o
+#
+###############################################################################
+
+C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_wdg.c
+      1          /**
+      2            ******************************************************************************
+      3            * @file    stm32w108xx_wdg.c
+      4            * @author  MCD Application Team
+      5            * @version V1.0.1
+      6            * @date    30-November-2012
+      7            * @brief   This file provides firmware functions to use the watchdog (WDG) peripheral           
+      8            *
+      9            *  @verbatim  
+     10            *  
+     11          ================================================================================ 
+     12                                    ##### WDG features #####
+     13          ================================================================================              
+     14              [..] The watchdog timer uses the calibrated 1 kHz clock (CLK1K) as its reference
+     15                   and provides a nominal 2.048 s timeout. A low water mark interrupt occurs 
+     16                   at 1.760 s and triggers an NMI to the Cortex-M3 NVIC as an early warning. 
+     17                   When enabled, periodically reset the watchdog timer before it expires.
+     18                                       
+     19              [..] By default, the WDG is disabled at power up of the always-on power domain.
+     20                        
+     21              [..] The watchdog timer can be paused when the debugger halts the core.
+     22                                    
+     23                                    ##### How to use this driver ##### 
+     24          ================================================================================ 
+     25              [..] This driver allows to use WDG peripheral.   
+     26              [..] Start the WDG using WDG_Cmd() function.        
+     27              [..] Restart the WDG timer using WDG_ReloadCounter() function.
+     28              [..] Specifies the staus of WDG timer during debug mode using WDG_DebugConfig() function.
+     29          
+     30                        
+     31              @endverbatim
+     32            *    
+     33            ******************************************************************************
+     34            * @attention
+     35            *
+     36            * <h2><center>&copy; COPYRIGHT 2012 STMicroelectronics</center></h2>
+     37            *
+     38            * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
+     39            * You may not use this file except in compliance with the License.
+     40            * You may obtain a copy of the License at:
+     41            *
+     42            *        http://www.st.com/software_license_agreement_liberty_v2
+     43            *
+     44            * Unless required by applicable law or agreed to in writing, software 
+     45            * distributed under the License is distributed on an "AS IS" BASIS, 
+     46            * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     47            * See the License for the specific language governing permissions and
+     48            * limitations under the License.
+     49            *
+     50            ******************************************************************************
+     51            */
+     52          
+     53          /* Includes ------------------------------------------------------------------*/
+     54          #include "stm32w108xx_wdg.h"
+     55          
+     56          /** @addtogroup STM32W108xx_StdPeriph_Driver
+     57            * @{
+     58            */
+     59          
+     60          /** @defgroup WDG 
+     61            * @brief WDG driver modules
+     62            * @{
+     63            */ 
+     64          
+     65          /* Private typedef -----------------------------------------------------------*/
+     66          /* Private define ------------------------------------------------------------*/
+     67          /* ---------------------- WDG registers bit mask -----------------------------*/
+     68          #define KICKSR_KEY_RELOAD    ((uint32_t)0xAAAAAAAA)
+     69          #define KR_KEY_ENABLE        ((uint32_t)0x0000EABE)
+     70          #define KR_KEY_DISABLE       ((uint32_t)0x0000DEAD)
+     71          /* Private macro -------------------------------------------------------------*/
+     72          /* Private variables ---------------------------------------------------------*/
+     73          /* Private function prototypes -----------------------------------------------*/
+     74          /* Private functions ---------------------------------------------------------*/
+     75          
+     76          /** @defgroup WDG_Private_Functions
+     77            * @{
+     78            */
+     79          
+     80          /** @defgroup WDG_Group1 WDG activation function
+     81           *  @brief   WDG activation function 
+     82           *
+     83          @verbatim   
+     84           ==============================================================================
+     85                                    ##### WDG activation function #####
+     86           ==============================================================================  
+     87          
+     88          @endverbatim
+     89            * @{
+     90            */
+     91          
+     92          /**
+     93            * @brief  Deinitializes the WDG peripheral registers to their default reset values.
+     94            * @param  None
+     95            * @retval None
+     96            */
+
+   \                                 In section .text, align 2, keep-with-next
+     97          void WDG_DeInit(void)
+     98          {
+     99            WDG->CR = 0x00000002;
+   \                     WDG_DeInit: (+1)
+   \   00000000   0x....             LDR.N    R0,??DataTable4  ;; 0x40006000
+   \   00000002   0x2102             MOVS     R1,#+2
+   \   00000004   0x6001             STR      R1,[R0, #+0]
+    100            WDG->KR = 0x00000000;
+   \   00000006   0x2100             MOVS     R1,#+0
+   \   00000008   0x6041             STR      R1,[R0, #+4]
+    101            WDG->KICKSR = 0x00000000;
+   \   0000000A   0x6081             STR      R1,[R0, #+8]
+    102          }
+   \   0000000C   0x4770             BX       LR               ;; return
+    103          
+    104          /**
+    105            * @brief  Reloads WDG counter with value defined in the restart register
+    106            * @param  None
+    107            * @retval None
+    108            */
+
+   \                                 In section .text, align 2, keep-with-next
+    109          void WDG_ReloadCounter(void)
+    110          {
+    111            WDG->KICKSR = KICKSR_KEY_RELOAD;
+   \                     WDG_ReloadCounter: (+1)
+   \   00000000   0x....             LDR.N    R1,??DataTable4_1  ;; 0x40006008
+   \   00000002   0xF04F 0x30AA      MOV      R0,#-1431655766
+   \   00000006   0x6008             STR      R0,[R1, #+0]
+    112          }
+   \   00000008   0x4770             BX       LR               ;; return
+    113          
+    114          /**
+    115            * @brief  Enables/Disables WDG.
+    116            * @param  NewState: new state of the WDG timer.
+    117            *   This parameter can be: ENABLE or DISABLE.
+    118            * @retval None.
+    119            */
+
+   \                                 In section .text, align 2, keep-with-next
+    120          void WDG_Cmd(FunctionalState NewState)
+    121          {
+    122            /* Check the parameters */
+    123            assert_param(IS_FUNCTIONAL_STATE(NewState));
+    124            
+    125            if (NewState != DISABLE)
+   \                     WDG_Cmd: (+1)
+   \   00000000   0x....             LDR.N    R1,??DataTable4  ;; 0x40006000
+   \   00000002   0xB148             CBZ.N    R0,??WDG_Cmd_0
+    126            { 
+    127              WDG->KR = 0x00000000; 
+   \   00000004   0x2000             MOVS     R0,#+0
+   \   00000006   0x6048             STR      R0,[R1, #+4]
+    128              WDG->KR |= KR_KEY_ENABLE;
+   \   00000008   0x6848             LDR      R0,[R1, #+4]
+   \   0000000A   0xF440 0x406A      ORR      R0,R0,#0xEA00
+   \   0000000E   0xF040 0x00BE      ORR      R0,R0,#0xBE
+   \   00000012   0x6048             STR      R0,[R1, #+4]
+    129              WDG->CR = WDG_CR_WDGEN;
+   \   00000014   0x2001             MOVS     R0,#+1
+   \   00000016   0xE007             B.N      ??WDG_Cmd_1
+    130            }
+    131            else
+    132            {
+    133              WDG->KR = 0x00000000; 
+   \                     ??WDG_Cmd_0: (+1)
+   \   00000018   0x6048             STR      R0,[R1, #+4]
+    134              WDG->KR |= KR_KEY_DISABLE;
+   \   0000001A   0x6848             LDR      R0,[R1, #+4]
+   \   0000001C   0xF440 0x405E      ORR      R0,R0,#0xDE00
+   \   00000020   0xF040 0x00AD      ORR      R0,R0,#0xAD
+   \   00000024   0x6048             STR      R0,[R1, #+4]
+    135              WDG->CR = WDG_CR_WDGDIS;
+   \   00000026   0x2002             MOVS     R0,#+2
+   \                     ??WDG_Cmd_1: (+1)
+   \   00000028   0x6008             STR      R0,[R1, #+0]
+    136            }
+    137          }
+   \   0000002A   0x4770             BX       LR               ;; return
+    138          
+    139          /**
+    140            * @brief  Status of WDG timer while in debug mode.
+    141            * @param  DBG_STATUS: specifies the staus of WDG timer during debug mode.
+    142            *   This parameter can be one of the following values:
+    143            *     @arg WDG_DBG_RUN: The timer continues working in Debug mode.
+    144            *     @arg WDG_DBG_PAUSE: The timer is paused in Debug mode when the CPU is halted.
+    145            * @retval None.
+    146            */
+
+   \                                 In section .text, align 2, keep-with-next
+    147          void WDG_DebugConfig(uint32_t DBG_STATUS)
+    148          {
+    149            /* Check the parameters */
+    150            assert_param(IS_WDG_DEBUG_STATUS(DBG_STATUS));
+    151            
+    152            SLPTMR->CR = DBG_STATUS;
+   \                     WDG_DebugConfig: (+1)
+   \   00000000   0x....             LDR.N    R1,??DataTable4_2  ;; 0x4000600c
+   \   00000002   0x6008             STR      R0,[R1, #+0]
+    153          }
+   \   00000004   0x4770             BX       LR               ;; return
+    154          
+    155          /**
+    156            * @brief  Returns the status of WDG timer.
+    157            * @param  None
+    158            * @retval None
+    159            */
+
+   \                                 In section .text, align 2, keep-with-next
+    160          FunctionalState WDG_GetStatus(void) 
+    161          { 
+    162            FunctionalState wdgstatus = DISABLE;
+    163          
+    164            if ((WDG->CR & WDG_CR_WDGEN) == WDG_CR_WDGEN)
+   \                     WDG_GetStatus: (+1)
+   \   00000000   0x....             LDR.N    R0,??DataTable4  ;; 0x40006000
+   \   00000002   0x6800             LDR      R0,[R0, #+0]
+    165            {
+    166              wdgstatus = ENABLE;
+    167            }
+    168            else
+    169            {
+    170              wdgstatus = DISABLE;
+    171            }
+    172            return wdgstatus;
+   \   00000004   0xF000 0x0001      AND      R0,R0,#0x1
+   \   00000008   0x4770             BX       LR               ;; return
+    173          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4:
+   \   00000000   0x40006000         DC32     0x40006000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_1:
+   \   00000000   0x40006008         DC32     0x40006008
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_2:
+   \   00000000   0x4000600C         DC32     0x4000600c
+    174          
+    175          /**
+    176            * @}
+    177            */
+    178          
+    179          /**
+    180            * @}
+    181            */
+    182          
+    183          /**
+    184            * @}
+    185            */
+    186          
+    187          /**
+    188            * @}
+    189            */
+    190          
+    191          /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   WDG_Cmd
+       0   WDG_DeInit
+       0   WDG_DebugConfig
+       0   WDG_GetStatus
+       0   WDG_ReloadCounter
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable4
+       4  ??DataTable4_1
+       4  ??DataTable4_2
+      44  WDG_Cmd
+      14  WDG_DeInit
+       6  WDG_DebugConfig
+      10  WDG_GetStatus
+      10  WDG_ReloadCounter
+
+ 
+ 96 bytes in section .text
+ 
+ 96 bytes of CODE memory
+
+Errors: none
+Warnings: none

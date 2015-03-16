@@ -1,0 +1,143 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.30.4.8167/W32 for ARM        21/Feb/2015  16:26:20
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_BaseStation\bs_base.c
+#    Command line =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_BaseStation\bs_base.c
+#        -D USE_STDPERIPH_DRIVER -D USE_MB_SNT_X2 -D STM32W108CB -D
+#        "PLATFORM_HEADER=\"Utilities\STM32W108xx_HAL_Driver/micro/cortexm3/compiler/iar.h\""
+#        -D CORTEXM3 -D CORTEXM3_STM32W108 -D CORTEXM3_STM32W108xB -D
+#        DISABLE_WATCHDOG -D "__SOURCEFILE__=\"bs_base.c\"" -lC
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\
+#        --diag_suppress Pa050 -o
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_BaseStation\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\stm32w108\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\generic\compiler\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\bootloader\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\Shared\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Device\ST\STM32W108xx\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\SimpleMAC\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\Common\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\MB851\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\arm_mote\
+#        -Ohz --use_c++_inline
+#    List file    =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\bs_base.lst
+#    Object file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\bs_base.o
+#
+###############################################################################
+
+C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_BaseStation\bs_base.c
+      1          
+      2          #include "defs/esnl_pub.h"
+      3          
+      4          #ifdef FEAT_BASE_STATION
+      5          
+      6          #include "bs_base.h"
+      7          
+      8          
+      9          //******************
+     10          // FUNCTION: bs_power_up
+     11          //
+     12          // DESCRIPTION:
+     13          //  Setup local variables for Base Station
+     14          //
+     15          // OUTPUT:
+     16          //  void
+     17          //
+     18          // ARGUMENTS:
+     19          //  void
+     20          //
+     21          // CREATED: 9/4/2011, by mjzx9c
+     22          // FILE: bs_base.c
+     23          //
+     24          //void bs_power_up ( void ); // For Header File!
+     25          void bs_power_up ( void )
+     26          {
+     27          }
+     28          
+     29          ///////////////////////////////////////////////
+     30          /**
+     31          * FUNCTION:	 bs_init
+     32          * DESCRIPTION: Initialize the Base Station code - connect to OS
+     33          * OUTPUT: 	void
+     34          * ARGUMENTS:	void
+     35          * CREATED:	9/6/2011, by mjzx9c
+     36          */
+     37          //void bs_init ( void ); // For Header File!
+     38          void bs_init ( void )
+     39          {
+     40          	
+     41          }
+     42          
+     43          #define TEMP_FORMAT_F	1
+     44          #define TEMP_FORMAT_C	2
+     45          #define TEMP_FORMAT_cF	3
+     46          #define TEMP_FORMAT_cC	4
+     47          
+     48          IAR_PACKED struct temp_mod_contet {
+     49          	uint16_t temp;
+     50          	unit8_t temp_format;
+     51          	uint8_t sensor_id;
+     52          	uint8_t content;
+     53          }  PACKED;
+     54          typedef struct temp_mod_contet temp_mod_content_t;
+     55          
+     56          void bs_temp_callback(uint8_t scr_id, pkt_mod_header_t *module, uint8_t rssi)
+     57          {
+     58          	temp_mod_content_t *m = &(module->module_content);
+     59          //		uint8_t module_type;
+     60          //		uint8_t module_length;
+     61          //		uint8_t content;
+     62          	//temp_convert(m->temp_format, m->temp, TEMP_FORMAT_cF);
+     63          	printf("ID=%d
+     64          	m->temp;
+     65          }
+     66          
+     67          #endif /*FEAT_BASE_STATION */
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

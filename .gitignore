@@ -38,23 +38,4 @@ Thumbs.db
 
 ######################
 *.Identifier
-*.lst
-*.s37
-*.out
-*.pbd
-*.pbi
-*.cout
-*.browse
-**.sim
-**.map
-**.pbd.tmp
-**.dep
-**.stack.log.xml
-**.dni
-**.wsdt
-*.wsdt
-*.dni
-*.dbgdt
-**.wsdt
-**.dbgdt
-**.dep
+

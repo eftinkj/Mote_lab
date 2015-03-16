@@ -1,0 +1,149 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.30.4.8167/W32 for ARM        21/Feb/2015  16:27:56
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\packet.c
+#    Command line =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\packet.c
+#        -D USE_STDPERIPH_DRIVER -D USE_MB_SNT_X2 -D STM32W108CB -D
+#        "PLATFORM_HEADER=\"Utilities\STM32W108xx_HAL_Driver/micro/cortexm3/compiler/iar.h\""
+#        -D CORTEXM3 -D CORTEXM3_STM32W108 -D CORTEXM3_STM32W108xB -D
+#        DISABLE_WATCHDOG -D "__SOURCEFILE__=\"packet.c\"" -lC
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\
+#        --diag_suppress Pa050 -o
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\stm32w108\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\generic\compiler\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\bootloader\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\Shared\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Device\ST\STM32W108xx\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\SimpleMAC\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\Common\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\MB851\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\arm_mote\
+#        -Ohz --use_c++_inline
+#    List file    =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\packet.lst
+#    Object file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\packet.o
+#
+###############################################################################
+
+C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\packet.c
+      1          /****************************************************************************
+      2          **
+      3          ** Copyright (C) 2006-2005 Maciej Zawodniok, James W. Fonda. All rights reserved.
+      4          **
+      5          ** This file is part of the documentation of the UMR Mote Toolkit.
+      6          **
+      7          ** This file may be used under the terms of the GNU General Public
+      8          ** License version 2.0 as published by the Free Software Foundation
+      9          ** and appearing in the file LICENSE.GPL included in the packaging of
+     10          ** this file.
+     11          **
+     12          ** This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
+     13          ** WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+     14          **
+     15          ****************************************************************************/
+     16          #include <stdio.h>
+     17          
+     18          #include "defs/esnl_pub.h"
+     19          
+     20          #include "packet.h"
+     21          
+     22          #include "FEAT_Queuing/Queuing.h"
+     23          
+     24          
+     25          // Sequence number used for data packets (initially for TEST MODE only)
+
+   \                                 In section .bss, align 1
+     26          uint8_t sequence_no_=0;
+   \                     sequence_no_:
+   \   00000000                      DS8 1
+     27          
+     28          /**
+     29            * get_dst_mac_base(base) - returns the MAC address of destination
+     30            * 	for a given packet ('base' offset in the queue buffer)
+     31            * returns the MAC addrss of dest node
+     32            */
+
+   \                                 In section .text, align 4, keep-with-next
+     33          uint16_t get_dst_mac_base ( uint16_t base )
+     34          {
+     35          	// SDCC:
+     36          	pkt_t * XDATA pkt = ( pkt_t* ) ( & ( buffer0[base] ) ); //&(QBUFF_ACCESS(base,0));
+     37          	return ( ENDIAN16(pkt->mac_dst) );
+   \                     get_dst_mac_base: (+1)
+   \   00000000   0x4903             LDR.N    R1,??get_dst_mac_base_0
+   \   00000002   0x1840             ADDS     R0,R0,R1
+   \   00000004   0x8841             LDRH     R1,[R0, #+2]
+   \   00000006   0x0208             LSLS     R0,R1,#+8
+   \   00000008   0xEA40 0x2011      ORR      R0,R0,R1, LSR #+8
+   \   0000000C   0xB280             UXTH     R0,R0
+   \   0000000E   0x4770             BX       LR               ;; return
+   \                     ??get_dst_mac_base_0:
+   \   00000010   0x........         DC32     buffer0
+     38          
+     39          }
+     40          
+     41          
+     42          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   get_dst_mac_base
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      20  get_dst_mac_base
+       1  sequence_no_
+
+ 
+  1 byte  in section .bss
+ 20 bytes in section .text
+ 
+ 20 bytes of CODE memory
+  1 byte  of DATA memory
+
+Errors: none
+Warnings: none

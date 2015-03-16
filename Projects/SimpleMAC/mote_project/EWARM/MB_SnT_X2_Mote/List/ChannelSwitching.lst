@@ -1,0 +1,691 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.30.4.8167/W32 for ARM        21/Feb/2015  16:26:25
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_Networking\ChannelSwitching.c
+#    Command line =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_Networking\ChannelSwitching.c
+#        -D USE_STDPERIPH_DRIVER -D USE_MB_SNT_X2 -D STM32W108CB -D
+#        "PLATFORM_HEADER=\"Utilities\STM32W108xx_HAL_Driver/micro/cortexm3/compiler/iar.h\""
+#        -D CORTEXM3 -D CORTEXM3_STM32W108 -D CORTEXM3_STM32W108xB -D
+#        DISABLE_WATCHDOG -D "__SOURCEFILE__=\"ChannelSwitching.c\"" -lC
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\
+#        --diag_suppress Pa050 -o
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_Networking\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\stm32w108\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\generic\compiler\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\bootloader\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\Shared\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Device\ST\STM32W108xx\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\SimpleMAC\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\Common\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\MB851\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\arm_mote\
+#        -Ohz --use_c++_inline
+#    List file    =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\ChannelSwitching.lst
+#    Object file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\ChannelSwitching.o
+#
+###############################################################################
+
+C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_Networking\ChannelSwitching.c
+      1          /****************************************************************************
+      2          **
+      3          ** Copyright (C) 2006-2005 Maciej Zawodniok, James W. Fonda. All rights reserved.
+      4          **
+      5          ** This file is part of the documentation of the UMR Mote Toolkit.
+      6          **
+      7          ** This file may be used under the terms of the GNU General Public
+      8          ** License version 2.0 as published by the Free Software Foundation
+      9          ** and appearing in the file LICENSE.GPL included in the packaging of
+     10          ** this file.
+     11          **
+     12          ** This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
+     13          ** WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+     14          **
+     15          ****************************************************************************/
+     16          
+     17          //Queuing Code for ADFS
+     18          
+     19          #include "defs/esnl_pub.h"
+     20          
+     21          #ifdef FEAT_ENABLE_CH_SWITCHING
+     22          
+     23          #include "common.h"
+     24          #include "ChannelSwitching.h"
+     25          #include "HW_LIB/RTC.h"
+     26          #include "FEAT_Queuing/Queuing.h"
+     27          //#include "packet.h"
+     28          //#include "API_frames.h"
+     29          #include "Phy_layer.h"
+     30          #include "FEAT_Scheduler/sch_basic_pub.h"
+     31          #include "sys_func.h"
+     32          
+     33          
+     34          
+
+   \                                 In section .bss, align 1
+     35          uint8_t cs_enabled_;//xdata cs_enabled_;
+   \                     cs_enabled_:
+   \   00000000                      DS8 1
+     36          
+     37          uint32_t cs_switching_timeout_;//xdata cs_switching_timeout_;
+
+   \                                 In section .bss, align 2
+     38          uint16_t cs_switching_interval_;//xdata cs_switching_interval_;
+   \                     cs_switching_interval_:
+   \   00000000                      DS8 2
+     39          uint8_t cs_next_channel_;//xdata cs_next_channel_;
+
+   \                                 In section .bss, align 1
+     40          uint8_t cs_alternative_ch_;//xdata cs_alternative_ch_;
+   \                     cs_alternative_ch_:
+   \   00000000                      DS8 1
+
+   \                                 In section .bss, align 1
+     41          uint8_t cs_current_channel_;//xdata cs_current_channel_;
+   \                     cs_current_channel_:
+   \   00000000                      DS8 1
+
+   \                                 In section .data, align 4
+   \                     cs_next_channel_:
+   \   00000000   0x00               DC8 0
+     42          
+     43          
+     44          uint8_t cs_pkt_id;// = NO_PACKET_INDEX;
+   \                     cs_pkt_id:
+   \   00000001   0x00               DC8 0
+     45          uint32_t cs_switch_time_;// = CS_DISABLE_TIMEOUT;
+     46          
+     47          uint8_t	cs_bcast_tidx_;
+   \                     cs_bcast_tidx_:
+   \   00000002   0x00               DC8 0
+     48          uint8_t	cs_end_tidx_;
+   \                     cs_end_tidx_:
+   \   00000003   0x00               DC8 0
+   \                     cs_switching_timeout_:
+   \   00000004   0x00 0x00          DC8 0, 0, 0, 0
+   \              0x00 0x00    
+   \                     cs_switch_time_:
+   \   00000008   0x00 0x00          DC8 0, 0, 0, 0
+   \              0x00 0x00    
+     49          	
+     50          extern char str_CS_SWITCH[] = "SC_SWITCH";
+     51          extern char str_CS_SWITCH_END[] = "CS_SWITCH_END";
+     52          
+     53          pkt_mod_cs_t *mod_cs;
+   \                     mod_cs:
+   \   0000000C   0x00 0x00          DC8 0, 0, 0, 0
+   \              0x00 0x00    
+   \                     str_CS_SWITCH:
+   \   00000010   0x53 0x43          DC8 "SC_SWITCH"
+   \              0x5F 0x53    
+   \              0x57 0x49    
+   \              0x54 0x43    
+   \              0x48 0x00    
+   \   0000001A   0x00 0x00          DC8 0, 0
+   \                     str_CS_SWITCH_END:
+   \   0000001C   0x43 0x53          DC8 "CS_SWITCH_END"
+   \              0x5F 0x53    
+   \              0x57 0x49    
+   \              0x54 0x43    
+   \              0x48 0x5F    
+   \              0x45 0x4E    
+   \              0x44 0x00    
+   \   0000002A   0x00 0x00          DC8 0, 0
+     54          // ##############################################################################
+     55          // ## Misc counters
+     56          // ##############################################################################
+     57          
+     58          // ##############################################################################
+     59          // ## Function Section
+     60          // ##############################################################################
+     61          
+     62          /**
+     63            * TEMPLATE
+     64            */
+     65          
+     66          /**
+     67           * void cs_power_up ( ) - set local variables of the Channel Switching module
+     68           */
+
+   \                                 In section .text, align 2, keep-with-next
+     69          void cs_power_up ( )
+     70          {
+     71          	cs_pkt_id = NO_PACKET_INDEX;
+   \                     cs_power_up: (+1)
+   \   00000000   0x....             LDR.N    R0,??DataTable5
+   \   00000002   0x21FF             MOVS     R1,#+255
+   \   00000004   0x7041             STRB     R1,[R0, #+1]
+     72          	cs_switch_time_ = CS_DISABLE_TIMEOUT;
+     73          	cs_bcast_tidx_ = SCH_NO_TIMEOUT_ID;
+   \   00000006   0x7081             STRB     R1,[R0, #+2]
+     74          	cs_end_tidx_ = SCH_NO_TIMEOUT_ID;
+   \   00000008   0x70C1             STRB     R1,[R0, #+3]
+   \   0000000A   0xF04F 0x32FF      MOV      R2,#-1
+     75          
+     76              cs_next_channel_ = DEFAULT_RF_CHANNEL;
+   \   0000000E   0x2114             MOVS     R1,#+20
+   \   00000010   0x7001             STRB     R1,[R0, #+0]
+   \   00000012   0x6082             STR      R2,[R0, #+8]
+     77              //cs_switch_count_down_ = 0;
+     78              cs_switching_timeout_ = CS_DISABLE_TIMEOUT ; // not important since disabled
+     79          
+     80          //	cs_enabled_ = CS_DISABLED;
+     81          //	cs_switching_interval_ = CS_DEFAULT_SWITCHING_INTERVAL;
+     82          //	cs_next_channel_ = DEFAULT_RF_CHANNEL; /*! Default channel == no switching */
+     83          //	cs_alternative_ch_ = DEFAULT_RF_CHANNEL;
+     84          //	cs_current_channel_ = DEFAULT_RF_CHANNEL;
+     85          	mod_cs = ( pkt_mod_cs_t* )NULL;
+   \   00000014   0x2100             MOVS     R1,#+0
+   \   00000016   0x6042             STR      R2,[R0, #+4]
+   \   00000018   0x60C1             STR      R1,[R0, #+12]
+     86          }
+   \   0000001A   0x4770             BX       LR               ;; return
+     87          
+     88          /**
+     89           * void cs_init ( ) - initialize Channel Switching Module
+     90           */
+
+   \                                 In section .text, align 2, keep-with-next
+     91          void cs_init ( )
+     92          {
+     93              // Nothing to do -> switch request will initiate the process
+     94          }
+   \                     cs_init: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+     95          
+     96          
+     97          /**
+     98           *
+     99           */
+
+   \                                 In section .text, align 2, keep-with-next
+    100          void cs_req_switch ( uint8_t new_ch, uint16_t timeout)
+    101          {
+   \                     cs_req_switch: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+    102          	cs_next_channel_ = new_ch;
+   \   00000002   0x....             LDR.N    R5,??DataTable5
+   \   00000004   0x460C             MOV      R4,R1
+   \   00000006   0x7028             STRB     R0,[R5, #+0]
+    103          	cs_switch_time_ = rtc_get_ticks() + timeout;
+   \   00000008   0x.... 0x....      BL       halCommonGetInt32uMillisecondTick
+   \   0000000C   0x1820             ADDS     R0,R4,R0
+   \   0000000E   0x60A8             STR      R0,[R5, #+8]
+    104          	cs_bcast_tidx_ = sch_create_timeout(rtc_get_ticks()+CS_REQ_REPEAT_TIMEOUT, cs_send_req_Switch, 0, str_CS_SWITCH);
+   \   00000010   0x.... 0x....      BL       halCommonGetInt32uMillisecondTick
+   \   00000014   0xF105 0x0310      ADD      R3,R5,#+16
+   \   00000018   0x.... 0x....      BL       ?Subroutine0
+   \                     ??CrossCallReturnLabel_1: (+1)
+   \   0000001C   0x70A8             STRB     R0,[R5, #+2]
+    105          	cs_end_tidx_ = sch_create_timeout(cs_switch_time_, cs_end_switch, 0, str_CS_SWITCH_END);
+   \   0000001E   0xF105 0x031C      ADD      R3,R5,#+28
+   \   00000022   0x68A8             LDR      R0,[R5, #+8]
+   \   00000024   0x.... 0x....      ADR.W    R1,cs_end_switch
+   \   00000028   0x2200             MOVS     R2,#+0
+   \   0000002A   0x.... 0x....      BL       sch_create_timeout
+   \   0000002E   0x70E8             STRB     R0,[R5, #+3]
+    106          }
+   \   00000030   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine0: (+1)
+   \   00000000   0x2200             MOVS     R2,#+0
+   \   00000002   0x....             LDR.N    R1,??DataTable5_2
+   \   00000004   0x3064             ADDS     R0,R0,#+100
+   \   00000006   0x.... 0x....      B.W      sch_create_timeout
+    107          
+    108          
+    109          /**
+    110           * void cs_end_switch ( uint8_t *context ) - finishes the Channel switching
+    111           *			(execute switch to the target channel)
+    112           */
+
+   \                                 In section .text, align 4, keep-with-next
+    113          void cs_end_switch ( uint8_t *context )
+    114          {
+   \                     cs_end_switch: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    115          	if (SCH_NO_TIMEOUT_ID != cs_bcast_tidx_)
+   \   00000002   0x....             LDR.N    R4,??DataTable5
+   \   00000004   0x78A0             LDRB     R0,[R4, #+2]
+   \   00000006   0x28FF             CMP      R0,#+255
+   \   00000008   0xD005             BEQ.N    ??cs_end_switch_0
+    116          	{
+    117          		sch_remove_timeout(cs_bcast_tidx_, str_CS_SWITCH);
+   \   0000000A   0xF104 0x0110      ADD      R1,R4,#+16
+   \   0000000E   0x.... 0x....      BL       sch_remove_timeout
+    118          		cs_bcast_tidx_ = SCH_NO_TIMEOUT_ID;
+   \   00000012   0x20FF             MOVS     R0,#+255
+   \   00000014   0x70A0             STRB     R0,[R4, #+2]
+    119          	}
+    120          	phy_set_RF_channel(cs_next_channel_);
+   \                     ??cs_end_switch_0: (+1)
+   \   00000016   0x7820             LDRB     R0,[R4, #+0]
+   \   00000018   0x.... 0x....      BL       phy_set_RF_channel
+    121          	routing_init_MMCR(); /// ?? Is it enough
+                 	^
+Warning[Pe223]: function "routing_init_MMCR" declared implicitly
+   \   0000001C   0x.... 0x....      BL       routing_init_MMCR
+    122          	if ( NULL != mod_cs )
+   \   00000020   0x68E0             LDR      R0,[R4, #+12]
+   \   00000022   0xB120             CBZ.N    R0,??cs_end_switch_1
+    123          	{
+    124          		tsp_release_packet(cs_pkt_id);
+                 		^
+Warning[Pe223]: function "tsp_release_packet" declared implicitly
+   \   00000024   0x7860             LDRB     R0,[R4, #+1]
+   \   00000026   0x.... 0x....      BL       tsp_release_packet
+    125          		mod_cs = NULL;
+   \   0000002A   0x2000             MOVS     R0,#+0
+   \   0000002C   0x60E0             STR      R0,[R4, #+12]
+    126          	}
+    127          
+    128          }
+   \                     ??cs_end_switch_1: (+1)
+   \   0000002E   0xBD10             POP      {R4,PC}          ;; return
+    129          
+    130          
+    131          
+    132          /**
+    133           * cs_send_req_Switch ( uint8_t *context ) - sends a channel switch request (BCAST)
+    134           */
+
+   \                                 In section .text, align 2, keep-with-next
+    135          void cs_send_req_Switch ( uint8_t *context )
+    136          {
+   \                     cs_send_req_Switch: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+    137          	uint32_t timeout = 0;
+    138          	uint8_t module_size = PMOD_CS_V1_LENGTH;
+    139          	if ( NULL == mod_cs )
+   \   00000002   0x....             LDR.N    R4,??DataTable5
+   \   00000004   0x68E0             LDR      R0,[R4, #+12]
+   \   00000006   0x2600             MOVS     R6,#+0
+   \   00000008   0xF64F 0x75FF      MOVW     R5,#+65535
+   \   0000000C   0xB930             CBNZ.N   R0,??cs_send_req_Switch_0
+    140          	{
+    141          		mod_cs = ( pkt_mod_cs_t* ) tsp_new_module( PKT_MODULE_TYPE_CS_V1,
+                 		                           ^
+Warning[Pe223]: function "tsp_new_module" declared implicitly
+    142          									module_size, &cs_pkt_id, MAC_BROADCAST);
+   \   0000000E   0x462B             MOV      R3,R5
+   \   00000010   0x1C62             ADDS     R2,R4,#+1
+   \   00000012   0x2108             MOVS     R1,#+8
+   \   00000014   0x2050             MOVS     R0,#+80
+   \   00000016   0x.... 0x....      BL       tsp_new_module
+   \   0000001A   0x60E0             STR      R0,[R4, #+12]
+    143          	}
+    144          	if (NULL == mod_cs)
+   \                     ??cs_send_req_Switch_0: (+1)
+   \   0000001C   0x68E0             LDR      R0,[R4, #+12]
+   \   0000001E   0xB930             CBNZ.N   R0,??cs_send_req_Switch_1
+    145          	{
+    146          		// Error
+    147          		cs_pkt_id = NO_PACKET_INDEX;
+   \   00000020   0x20FF             MOVS     R0,#+255
+   \   00000022   0x7060             STRB     R0,[R4, #+1]
+    148          		sys_error(SYS_ERROR_MEM_FULL);
+   \   00000024   0x2018             MOVS     R0,#+24
+   \   00000026   0xE8BD 0x4070      POP      {R4-R6,LR}
+   \   0000002A   0x.... 0x....      B.W      sys_error
+    149          		return;
+    150          	}
+    151          	mod_cs -> interval = ENDIAN16(0);	// NOT USED FOR NOW
+   \                     ??cs_send_req_Switch_1: (+1)
+   \   0000002E   0x8006             STRH     R6,[R0, #+0]
+    152          	mod_cs -> next_ch = cs_next_channel_;
+   \   00000030   0x7821             LDRB     R1,[R4, #+0]
+   \   00000032   0x7081             STRB     R1,[R0, #+2]
+    153          	mod_cs -> alternative_ch = cs_next_channel_; // NOT USED FOR NOW
+   \   00000034   0x68E1             LDR      R1,[R4, #+12]
+   \   00000036   0x7820             LDRB     R0,[R4, #+0]
+   \   00000038   0x70C8             STRB     R0,[R1, #+3]
+    154          	timeout =  (cs_switch_time_ > rtc_get_ticks()) ? (cs_switch_time_ - rtc_get_ticks()) : 0 ;
+   \   0000003A   0x.... 0x....      BL       halCommonGetInt32uMillisecondTick
+   \   0000003E   0x68A1             LDR      R1,[R4, #+8]
+   \   00000040   0x4288             CMP      R0,R1
+   \   00000042   0xD203             BCS.N    ??cs_send_req_Switch_2
+   \   00000044   0x.... 0x....      BL       halCommonGetInt32uMillisecondTick
+   \   00000048   0x68A1             LDR      R1,[R4, #+8]
+   \   0000004A   0x1A0E             SUBS     R6,R1,R0
+    155          	mod_cs -> first_timeout = ENDIAN32 ( timeout );
+   \                     ??cs_send_req_Switch_2: (+1)
+   \   0000004C   0x0A30             LSRS     R0,R6,#+8
+   \   0000004E   0xF400 0x407F      AND      R0,R0,#0xFF00
+   \   00000052   0x0231             LSLS     R1,R6,#+8
+   \   00000054   0xEA40 0x6016      ORR      R0,R0,R6, LSR #+24
+   \   00000058   0xF401 0x017F      AND      R1,R1,#0xFF0000
+   \   0000005C   0x4308             ORRS     R0,R1,R0
+   \   0000005E   0x68E1             LDR      R1,[R4, #+12]
+   \   00000060   0xEA40 0x6006      ORR      R0,R0,R6, LSL #+24
+   \   00000064   0x6048             STR      R0,[R1, #+4]
+    156          	
+    157          	//tsp_send_from_modules(cs_pkt_id);
+    158          	unsigned int base = QBUFF_BASE ( cs_pkt_id );
+    159          	uint8_t len = PAK_GET_TOTAL_LENGTH ( cs_pkt_id );
+    160          	sendPriorityPacket(len, (sint8_t*)&(QBUFF_ACCESS(base, 0)) , MAC_BROADCAST);
+                 	^
+Warning[Pe223]: function "sendPriorityPacket" declared implicitly
+   \   00000066   0x2264             MOVS     R2,#+100
+   \   00000068   0x7861             LDRB     R1,[R4, #+1]
+   \   0000006A   0x....             LDR.N    R0,??DataTable5_1
+   \   0000006C   0xFB02 0x0101      MLA      R1,R2,R1,R0
+   \   00000070   0x462A             MOV      R2,R5
+   \   00000072   0xF991 0x0006      LDRSB    R0,[R1, #+6]
+   \   00000076   0x1DC0             ADDS     R0,R0,#+7
+   \   00000078   0xB2C0             UXTB     R0,R0
+   \   0000007A   0x.... 0x....      BL       sendPriorityPacket
+    161          
+    162          	cs_bcast_tidx_ = sch_create_timeout(rtc_get_ticks()+CS_REQ_REPEAT_TIMEOUT, cs_send_req_Switch, 0, str_CS_SWITCH);
+   \   0000007E   0x.... 0x....      BL       halCommonGetInt32uMillisecondTick
+   \   00000082   0xF104 0x0310      ADD      R3,R4,#+16
+   \   00000086   0x.... 0x....      BL       ?Subroutine0
+   \                     ??CrossCallReturnLabel_0: (+1)
+   \   0000008A   0x70A0             STRB     R0,[R4, #+2]
+    163          }
+   \   0000008C   0xBD70             POP      {R4-R6,PC}       ;; return
+    164          
+    165          /**
+    166           * cs_recv_switching_request(pkt) - handle channel switching request
+    167           *	
+    168           */
+
+   \                                 In section .text, align 2, keep-with-next
+    169          void cs_recv_switching_request( char *module )
+    170          {
+   \                     cs_recv_switching_request: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+    171          	pkt_mod_cs_t *cs_module = ( pkt_mod_cs_t * ) &(module[2]); // map the content
+   \   00000002   0x1C85             ADDS     R5,R0,#+2
+    172          	cs_next_channel_ = cs_module->next_ch;
+   \   00000004   0x....             LDR.N    R4,??DataTable5
+   \   00000006   0x78A8             LDRB     R0,[R5, #+2]
+   \   00000008   0x7020             STRB     R0,[R4, #+0]
+    173          	if (SCH_NO_TIMEOUT_ID != cs_end_tidx_)
+   \   0000000A   0x78E0             LDRB     R0,[R4, #+3]
+   \   0000000C   0x28FF             CMP      R0,#+255
+   \   0000000E   0xD116             BNE.N    ??cs_recv_switching_request_0
+    174          	{
+    175          		//sch_remove_timeout(cs_end_tidx_);
+    176          		// = SCH_NO_TIMEOUT_ID;
+    177          		return;
+    178          	}
+    179          	cs_switching_timeout_ = rtc_get_ticks() + ENDIAN32(cs_module -> first_timeout);
+   \   00000010   0x.... 0x....      BL       halCommonGetInt32uMillisecondTick
+   \   00000014   0x6869             LDR      R1,[R5, #+4]
+   \   00000016   0x0A0A             LSRS     R2,R1,#+8
+   \   00000018   0xF402 0x427F      AND      R2,R2,#0xFF00
+   \   0000001C   0x020B             LSLS     R3,R1,#+8
+   \   0000001E   0xEA42 0x6211      ORR      R2,R2,R1, LSR #+24
+   \   00000022   0xF403 0x037F      AND      R3,R3,#0xFF0000
+   \   00000026   0x431A             ORRS     R2,R3,R2
+   \   00000028   0xEA42 0x6101      ORR      R1,R2,R1, LSL #+24
+   \   0000002C   0x1808             ADDS     R0,R1,R0
+   \   0000002E   0x6060             STR      R0,[R4, #+4]
+    180          	cs_end_tidx_ = sch_create_timeout( cs_switching_timeout_,
+    181          									  cs_end_switch, 0, str_CS_SWITCH_END);
+   \   00000030   0xF104 0x031C      ADD      R3,R4,#+28
+   \   00000034   0x2200             MOVS     R2,#+0
+   \   00000036   0x....             LDR.N    R1,??DataTable5_3
+   \   00000038   0x.... 0x....      BL       sch_create_timeout
+   \   0000003C   0x70E0             STRB     R0,[R4, #+3]
+    182          //	cs_switching_interval_ = cs_module->interval;	
+    183          //	cs_alternative_ch_ = cs_module->alternative_ch;
+    184          //	cs_switching_timeout_ = cs_module->first_timeout;
+    185          }
+   \                     ??cs_recv_switching_request_0: (+1)
+   \   0000003E   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5:
+   \   00000000   0x........         DC32     cs_next_channel_
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5_1:
+   \   00000000   0x........         DC32     buffer0
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5_2:
+   \   00000000   0x........         DC32     cs_send_req_Switch
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5_3:
+   \   00000000   0x........         DC32     cs_end_switch
+    186          
+    187          #if (0)
+    188          
+    189          #ifdef CS_ENABLE_DATA_ACCESS_FUNCT
+    190          /**
+    191            *
+    192            */
+    193          void cs_activate( bit activate)
+    194          {
+    195          	if (activate)
+    196          	{
+    197          		if ( (CS_DISABLE_TIMEOUT == cs_switching_timeout_ )
+    198          			|| (cs_switching_timeout_ < rtc_get_ticks() ) )
+    199          		{
+    200          			// If not set or STALE then set based on current time
+    201          			cs_switching_timeout_ = rtc_get_ticks() + cs_switching_interval_ ;
+    202          			if (cs_switching_timeout_ > RTC_MAX_TIMER_VALUE)
+    203          			{
+    204          				cs_switching_timeout_ -= RTC_MAX_TIMER_VALUE;
+    205          			}
+    206          		}
+    207          		cs_enabled_= CS_ENABLED;
+    208          	}
+    209          	else
+    210          	{
+    211          		cs_enabled_ = CS_DISABLED;
+    212          	}
+    213          }
+    214          
+    215          /**
+    216            *
+    217            */
+    218          void cs_change_timeout ( uint32_t timeout )
+    219          {
+    220          	cs_switching_timeout_ = timeout;
+    221          }
+    222          
+    223          
+    224          /**
+    225            *
+    226            */
+    227          void cs_change_switching_interval ( uint16_t interval)
+    228          {
+    229          	cs_switching_interval_ = interval;
+    230          	if ( CS_DISABLE_TIMEOUT == cs_switching_timeout_ )
+    231          	{
+    232          		cs_switching_timeout_ = rtc_get_ticks() + cs_switching_interval_; // not important since disabled
+    233          	}
+    234          }
+    235          
+    236          /**
+    237            *
+    238            */
+    239          void cs_set_next_channel ( uint8_t ch )
+    240          {
+    241          	cs_next_channel_ = ch;
+    242          }
+    243          
+    244          
+    245          /**
+    246            *
+    247            */
+    248          void cs_set_alternative_channel ( uint8_t ch )
+    249          {
+    250          	cs_alternative_ch_ = ch;
+    251          }
+    252          
+    253          #endif
+    254          
+    255          /**
+    256            *
+    257            */
+    258          void cs_switching_timeout ()
+    259          {
+    260          	// currently simply switch and schedule next timeout
+    261          	uint8_t temp_ch = cs_current_channel_;
+    262          	phy_set_RF_channel(cs_next_channel_);
+    263          	cs_current_channel_ = cs_next_channel_;
+    264          	cs_next_channel_ = temp_ch;
+    265          
+    266          	if (CS_MIN_CHANNEL_SWITCHING_INTERVAL > cs_switching_interval_ )
+    267          	{
+    268          		cs_enabled_ = CS_DISABLED;
+    269          	}
+    270          	else
+    271          	{
+    272          		cs_switching_timeout_ += cs_switching_interval_;
+    273          		if (cs_switching_timeout_ < rtc_get_ticks())
+    274          		{
+    275          			cs_switching_timeout_ = rtc_get_ticks() + cs_switching_interval_;
+    276          		}
+    277          	}
+    278          }
+    279          
+    280          //**********************
+    281          
+    282          
+    283          
+    284          
+    285          
+    286          /**
+    287            * cs_send_join(dst_id, mode) - sends JOIN packet to agiven node (dst_id)
+    288            *     additionally it stops the channel search and sets the particular channel
+    289            */
+    290          void cs_send_join ( unsigned char dst_id, unsigned char mode )
+    291          {
+    292          	unsigned char temp_power = my_tx_power_;
+    293          	char temp_pkt[JOIN_PKT_SIZE];
+    294          	jpkt_t *pkt = ( jpkt_t* ) temp_pkt;
+    295          	// Turn off the channel search
+    296          	//network_search_mode_ = SEARCH_OFF;
+    297          	// Make the JOIN packet
+    298          	pkt->start = START_BYTE;
+    299          	pkt->flags = FLAG_JOIN;
+    300          	pkt->mac_dst = ( unsigned int ) dst_id;
+    301          	pkt->mac_src = MY_ADDR;
+    302          	pkt->length = JOIN_PKT_LENGTH; // of the packet'd data
+    303          	pkt->dst_id = dst_id; // part of DATA field (dest_id) - actual length depends on "length"
+    304          	pkt->src_id = MY_ADDR; // part of DATA field
+    305          	pkt->channel = cs_current_channel_; //  channel to be used as a starting point
+    306          	pkt->search_mode = mode; // search algorithm
+    307          	pkt->duration = rtc_get_rticks(); // ????  search algorithm
+    308          	pkt->crc = STOP_BYTE;
+    309          
+    310          	// Send the JOIN packet using MAX power
+    311          	phy_set_power_level ( MAX_POWER_LEVEL );
+    312          	api_send_packet16 ( ( char* ) temp_pkt, JOIN_PKT_SIZE, ( unsigned int ) dst_id );
+    313          	phy_set_power_level ( temp_power );
+    314          }
+    315          
+    316          #endif // (0)
+    317          
+    318          
+    319          #endif
+    320          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   cs_end_switch
+         8   -> phy_set_RF_channel
+         8   -> routing_init_MMCR
+         8   -> sch_remove_timeout
+         8   -> tsp_release_packet
+       0   cs_init
+       0   cs_power_up
+      16   cs_recv_switching_request
+        16   -> halCommonGetInt32uMillisecondTick
+        16   -> sch_create_timeout
+      16   cs_req_switch
+        16   -> halCommonGetInt32uMillisecondTick
+        16   -> sch_create_timeout
+      16   cs_send_req_Switch
+        16   -> halCommonGetInt32uMillisecondTick
+        16   -> sch_create_timeout
+        16   -> sendPriorityPacket
+         0   -> sys_error
+        16   -> tsp_new_module
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable5
+       4  ??DataTable5_1
+       4  ??DataTable5_2
+       4  ??DataTable5_3
+      10  ?Subroutine0
+       1  cs_alternative_ch_
+       1  cs_current_channel_
+       1  cs_enabled_
+      48  cs_end_switch
+       2  cs_init
+      44  cs_next_channel_
+          cs_pkt_id
+          cs_bcast_tidx_
+          cs_end_tidx_
+          cs_switching_timeout_
+          cs_switch_time_
+          mod_cs
+          str_CS_SWITCH
+          str_CS_SWITCH_END
+      28  cs_power_up
+      64  cs_recv_switching_request
+      50  cs_req_switch
+     142  cs_send_req_Switch
+       2  cs_switching_interval_
+
+ 
+   5 bytes in section .bss
+  44 bytes in section .data
+ 360 bytes in section .text
+ 
+ 360 bytes of CODE memory
+  49 bytes of DATA memory
+
+Errors: none
+Warnings: 4

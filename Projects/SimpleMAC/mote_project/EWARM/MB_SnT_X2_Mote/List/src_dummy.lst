@@ -1,0 +1,214 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.30.4.8167/W32 for ARM        21/Feb/2015  16:29:23
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_SigProc\src_dummy.c
+#    Command line =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_SigProc\src_dummy.c
+#        -D USE_STDPERIPH_DRIVER -D USE_MB_SNT_X2 -D STM32W108CB -D
+#        "PLATFORM_HEADER=\"Utilities\STM32W108xx_HAL_Driver/micro/cortexm3/compiler/iar.h\""
+#        -D CORTEXM3 -D CORTEXM3_STM32W108 -D CORTEXM3_STM32W108xB -D
+#        DISABLE_WATCHDOG -D "__SOURCEFILE__=\"src_dummy.c\"" -lC
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\
+#        --diag_suppress Pa050 -o
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_SigProc\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\stm32w108\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\generic\compiler\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\bootloader\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\Shared\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Device\ST\STM32W108xx\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\SimpleMAC\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\Common\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\MB851\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\arm_mote\
+#        -Ohz --use_c++_inline
+#    List file    =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\src_dummy.lst
+#    Object file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\src_dummy.o
+#
+###############################################################################
+
+C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_SigProc\src_dummy.c
+      1          #include "defs/esnl_pub.h"
+      2          
+      3          #ifdef _ENABLE_SRC_DUMMY_
+      4          
+      5          #include "src_dummy_prv.h"
+      6          #include "src_dummy_pub.h"
+      7          
+      8          
+      9          #include "FEAT_Scheduler/sch_basic_pub.h"
+     10          #include "sys_func.h"
+     11          //#include "common.h"
+     12          
+     13          
+     14          /****************************************************************************
+     15          **	Constants, definies and typedefs  (PUBLIC)
+     16          ****************************************************************************/
+     17          
+     18          /****************************************************************************
+     19          **	Variables definition (PRIVATE)
+     20          ****************************************************************************/
+     21          
+     22          
+     23          /****************************************************************************
+     24          **	Variables definition (PUBLIC)
+     25          ****************************************************************************/
+     26          
+     27          
+     28          /****************************************************************************
+     29          **	Functions implementation (PUBLIC)
+     30          ****************************************************************************/
+     31          
+     32          
+     33          
+     34          src_d_mem_t XDATA* src_d_mem_p;
+     35          
+     36          uint8_t	XDATA src_d_mem_raw[SRC_D_MEM_STRUCT_SIZE];
+     37          
+     38          #define SRC_DUMMY_DEBUG
+     39          
+     40          /**
+     41           * ssn_init () - sets up Signal Processing Module
+     42           */
+     43          void src_init ( void )
+     44          {
+     45          	src_d_mem_p = (src_d_mem_t XDATA*)src_d_mem_raw;
+     46          	src_d_mem_p -> enabled_ = 0;
+     47          	src_d_mem_p -> timeout_ = 0;
+     48          	src_d_mem_p -> rate_ = 500;
+     49          	src_d_mem_p -> seq_ = 0;
+     50          	src_d_mem_p -> context_ = 0xFF;
+     51          //	src_d_mem_p -> receiver = (recv_func_t *)NULL;
+     52          
+     53          	sch_add_loop( (sch_loop_func_t) src_loop);
+     54          
+     55          #ifdef SRC_DUMMY_DEBUG
+     56          	src_enable();
+     57          #endif // SRC_DUMMY_DEBUG
+     58          }
+     59          
+     60          
+     61          
+     62          
+     63          /**
+     64           * src_enable() - enable the dummy source
+     65           */
+     66          void src_enable()
+     67          {
+     68          	src_d_mem_p -> timeout_ = rtc_get_ticks() + 1000 / src_d_mem_p -> rate_;
+     69          	src_d_mem_p -> enabled_ = SRC_D_ENABLED;
+     70          }
+     71          
+     72          
+     73          
+     74          /**
+     75           * src_disable() - disable the dummy source
+     76           */
+     77          void src_disable()
+     78          {
+     79          //	src_d_mem_p -> timeout_ = rtc_get_ticks() + 1000 / src_d_mem_p -> rate_;
+     80          	src_d_mem_p -> enabled_ = SRC_D_DISABLED;
+     81          }
+     82          
+     83          
+     84          	
+     85          	
+     86          #include "ssn_basic_pub.h"
+     87          	
+     88          /**
+     89           * ssn_loop() - executes main loop block (BUT DOES NOT LOOP ITSELF!!!)
+     90           */
+     91          void src_loop( void )
+     92          {
+     93          	if ( SRC_D_ENABLED == src_d_mem_p -> enabled_)
+     94          	{
+     95          		if (rtc_get_ticks() > src_d_mem_p -> timeout_)
+     96          		{
+     97          			//(src_d_mem_p -> receiver)(src_d_mem_p->context_, src_d_mem_p->seq_++);
+     98          			ssn_recv_sample(src_d_mem_p->context_, src_d_mem_p->seq_++);
+     99          			src_d_mem_p -> timeout_ = rtc_get_ticks() + 1000 / src_d_mem_p -> rate_;
+    100          		}
+    101          	}
+    102          }
+    103          	
+    104          
+    105          /**
+    106           * src_set_rate(uint16_t rate) - set a sample rate in Hz (up to 1kHz)
+    107           */
+    108          void src_set_rate(uint16_t rate)
+    109          {
+    110          	src_d_mem_p->rate_ = rate;
+    111          }
+    112          
+    113          
+    114          /**
+    115           * src_attach ( uint8_t context, void code* receiver) - connects to a receiver module 
+    116           */
+    117          void src_attach ( uint8_t context)// void code* receiver)
+    118          {
+    119          	src_d_mem_p->context_ = context;
+    120          }
+    121          
+    122          
+    123          /****************************************************************************
+    124          **	Functions implementation (PRIVATE)
+    125          ****************************************************************************/
+    126          
+    127          
+    128          
+    129          // ############################################################################
+    130          // ############################################################################
+    131          // Spacers
+    132          // ############################################################################
+    133          // ############################################################################
+    134          
+    135          
+    136          
+    137          #endif // _ENABLE_SIG_BASIC_
+    138          
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

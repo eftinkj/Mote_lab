@@ -1,0 +1,235 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.30.4.8167/W32 for ARM        21/Feb/2015  16:30:16
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_rst.c
+#    Command line =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_rst.c
+#        -D USE_STDPERIPH_DRIVER -D USE_MB_SNT_X2 -D STM32W108CB -D
+#        "PLATFORM_HEADER=\"Utilities\STM32W108xx_HAL_Driver/micro/cortexm3/compiler/iar.h\""
+#        -D CORTEXM3 -D CORTEXM3_STM32W108 -D CORTEXM3_STM32W108xB -D
+#        DISABLE_WATCHDOG -D "__SOURCEFILE__=\"stm32w108xx_rst.c\"" -lC
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\
+#        --diag_suppress Pa050 -o
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Libraries\STM32W108xx_StdPeriph_Driver\src\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\stm32w108\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\generic\compiler\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\bootloader\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\Shared\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Device\ST\STM32W108xx\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\SimpleMAC\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\Common\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\MB851\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\arm_mote\
+#        -Ohz --use_c++_inline
+#    List file    =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\stm32w108xx_rst.lst
+#    Object file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\stm32w108xx_rst.o
+#
+###############################################################################
+
+C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_rst.c
+      1          /**
+      2            ******************************************************************************
+      3            * @file    stm32w108xx_rst.c
+      4            * @author  MCD Application Team
+      5            * @version V1.0.1
+      6            * @date    30-November-2012
+      7            * @brief   This file provides firmware functions to manage the following 
+      8            *          functionalities of the RST peripheral
+      9            *
+     10            *  @verbatim
+     11            *  
+     12           ===============================================================================
+     13                                  ##### RST specific features #####
+     14           ===============================================================================
+     15              [..] This driver provide the information about reset source
+     16                              
+     17              [..] The reset can be due to:
+     18                   (#) Core lockup 
+     19                   (#) Option byte load failure (may be set with other bits  
+     20                   (#) Wake-up from Deep Sleep
+     21                   (#) Software reset
+     22                   (#) Watchdog expiration
+     23                   (#) External reset pin signal
+     24                   (#) The application of a Core power supply (or previously failed)
+     25                   (#) Normal power applied 
+     26          
+     27          
+     28              @endverbatim
+     29            *  
+     30            ******************************************************************************
+     31            * @attention
+     32            *
+     33            * <h2><center>&copy; COPYRIGHT 2012 STMicroelectronics</center></h2>
+     34            *
+     35            * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
+     36            * You may not use this file except in compliance with the License.
+     37            * You may obtain a copy of the License at:
+     38            *
+     39            *        http://www.st.com/software_license_agreement_liberty_v2
+     40            *
+     41            * Unless required by applicable law or agreed to in writing, software 
+     42            * distributed under the License is distributed on an "AS IS" BASIS, 
+     43            * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     44            * See the License for the specific language governing permissions and
+     45            * limitations under the License.
+     46            *
+     47            ******************************************************************************
+     48            */
+     49          
+     50          /* Includes ------------------------------------------------------------------*/
+     51          #include "stm32w108xx_rst.h"
+     52          
+     53          /** @addtogroup STM32W108xx_StdPeriph_Driver
+     54            * @{
+     55            */
+     56          
+     57          /** @defgroup RESET
+     58            * @brief RST driver modules
+     59            * @{
+     60            */
+     61          
+     62          /* Private typedef -----------------------------------------------------------*/
+     63          /* Private defines -----------------------------------------------------------*/
+     64          /* Private macros ------------------------------------------------------------*/
+     65          /* Private variables ---------------------------------------------------------*/
+     66          /* Private function prototypes -----------------------------------------------*/
+     67          /* Private functions ---------------------------------------------------------*/
+     68          
+     69          /** @defgroup RST_Private_Functions 
+     70            * @{
+     71            */
+     72            
+     73          /** @defgroup RST_Group1 
+     74           *  @brief   Reset event sources 
+     75           *
+     76          @verbatim
+     77           ===============================================================================
+     78                                  ##### RST EVENT SOURCES #####
+     79           ===============================================================================
+     80              [..] This section provides function allowing to get reset event source
+     81          
+     82          @endverbatim
+     83            * @{
+     84            */
+     85          
+     86          /**
+     87            * @brief  Checks whether the specified RST flag is set or not.
+     88            * @param  RST_FLAG: specifies the RST_FLAG flag to check.
+     89            *   This parameter can be one of the following values:
+     90            *     @arg RST_FLAG_PWRHV: Normal power applied
+     91            *     @arg RST_FLAG_PWRLV: The application of a Core power supply (or previously failed)
+     92            *     @arg RST_FLAG_PIN: External reset pin signal.    
+     93            *     @arg RST_FLAG_WDG: Watchdog expiration
+     94            *     @arg RST_FLAG_SWRST: Software reset.
+     95            *     @arg RST_FLAG_WKUP: Wake-up from Deep Sleep
+     96            *     @arg RST_FLAG_OBFAIL: Option byte load failure (may be set with other bits)
+     97            *     @arg RST_FLAG_LKUP: Core lockup          
+     98            *   
+     99            * @retval The new state of RST_FLAG (SET or RESET)
+    100            */
+
+   \                                 In section .text, align 4, keep-with-next
+    101          FlagStatus RST_GetFlagStatus(uint32_t RST_FLAG)
+    102          {
+    103            FlagStatus bitstatus = RESET;  
+    104            /* Check the parameters */
+    105            assert_param(IS_RST_FLAG(RST_FLAG));
+    106            
+    107            if ((RST->SR & RST_FLAG) != (uint32_t)RESET)
+   \                     RST_GetFlagStatus: (+1)
+   \   00000000   0x4A03             LDR.N    R2,??RST_GetFlagStatus_0  ;; 0x4000002c
+   \   00000002   0x6812             LDR      R2,[R2, #+0]
+   \   00000004   0x2100             MOVS     R1,#+0
+   \   00000006   0x4202             TST      R2,R0
+   \   00000008   0xBF18             IT       NE 
+   \   0000000A   0x2101             MOVNE    R1,#+1
+    108            {
+    109              bitstatus = SET;
+    110            }
+    111            else
+    112            {
+    113              bitstatus = RESET;
+    114            }
+    115            return bitstatus;
+   \   0000000C   0x4608             MOV      R0,R1
+   \   0000000E   0x4770             BX       LR               ;; return
+   \                     ??RST_GetFlagStatus_0:
+   \   00000010   0x4000002C         DC32     0x4000002c
+    116          }
+    117          
+    118          /**
+    119            * @}
+    120            */
+    121          
+    122          /**
+    123            * @}
+    124            */ 
+    125          
+    126          /**
+    127            * @}
+    128            */
+    129            
+    130          /**
+    131            * @}
+    132            */
+    133            
+    134          /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   RST_GetFlagStatus
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      20  RST_GetFlagStatus
+
+ 
+ 20 bytes in section .text
+ 
+ 20 bytes of CODE memory
+
+Errors: none
+Warnings: none

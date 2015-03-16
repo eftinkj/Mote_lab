@@ -1,0 +1,394 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.30.4.8167/W32 for ARM        21/Feb/2015  16:30:54
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Libraries\CMSIS\Device\ST\STM32W108xx\Source\Templates\system_stm32w108xx.c
+#    Command line =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Libraries\CMSIS\Device\ST\STM32W108xx\Source\Templates\system_stm32w108xx.c
+#        -D USE_STDPERIPH_DRIVER -D USE_MB_SNT_X2 -D STM32W108CB -D
+#        "PLATFORM_HEADER=\"Utilities\STM32W108xx_HAL_Driver/micro/cortexm3/compiler/iar.h\""
+#        -D CORTEXM3 -D CORTEXM3_STM32W108 -D CORTEXM3_STM32W108xB -D
+#        DISABLE_WATCHDOG -D "__SOURCEFILE__=\"system_stm32w108xx.c\"" -lC
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\
+#        --diag_suppress Pa050 -o
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Libraries\CMSIS\Device\ST\STM32W108xx\Source\Templates\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\stm32w108\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\generic\compiler\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\bootloader\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\Shared\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Device\ST\STM32W108xx\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\SimpleMAC\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\Common\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\MB851\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\arm_mote\
+#        -Ohz --use_c++_inline
+#    List file    =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\system_stm32w108xx.lst
+#    Object file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\system_stm32w108xx.o
+#
+###############################################################################
+
+C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Libraries\CMSIS\Device\ST\STM32W108xx\Source\Templates\system_stm32w108xx.c
+      1          /**
+      2            ******************************************************************************
+      3            * @file    system_stm32w108xx.c
+      4            * @author  MCD Application Team
+      5            * @version V1.0.1
+      6            * @date    30-November-2012
+      7            * @brief   CMSIS Cortex-M3 Device Peripheral Access Layer System Source File.
+      8            *             
+      9            * 1.  This file provides two functions and one global variable to be called from 
+     10            *     user application:
+     11            *      - SystemInit(): Setups the system clock (System clock source).
+     12            *                      This function is called at startup just after reset and 
+     13            *                      before branch to main program. This call is made inside
+     14            *                      the "startup_stm32w108xx.s" file.
+     15            *                        
+     16            *      - SystemCoreClock variable: Contains the core clock (HCLK), it can be used
+     17            *                                  by the user application to setup the SysTick 
+     18            *                                  timer or configure other parameters.
+     19            *                                     
+     20            *      - SystemCoreClockUpdate(): Updates the variable SystemCoreClock and must
+     21            *                                 be called whenever the core clock is changed
+     22            *                                 during program execution.   
+     23            *      
+     24            * 2. After each device reset the HSI (12 MHz) is used as system clock source.
+     25            *    Then SystemInit() function is called, in "startup_stm32w108xx.s" file, to
+     26            *    configure the system clock before to branch to main program.    
+     27            *    
+     28            * 3. If the system clock source selected by user fails to startup, the SystemInit()
+     29            *    function will do nothing and HSI still used as system clock source. User can 
+     30            *    add some code to deal with this issue inside the SetSysClock() function.
+     31            * 
+     32            * 4. The default value of HSE crystal is set to 24MHz, refer to "HSE_VALUE" define
+     33            *    in "stm32w108xx.h" file. When HSE is used as system clock source, directly or
+     34            *    through PLL, and you are using different crystal you have to adapt the HSE
+     35            *    value to your own configuration.
+     36            * 
+     37            * 5. This file configures the system clock as follows:  
+     38            *=============================================================================
+     39            *                         System Clock Configuration
+     40            *=============================================================================
+     41            *        System Clock source          | HSE
+     42            *----------------------------------------------------------------------------- 
+     43            *        SYSCLK                       | 24000000 Hz
+     44            *----------------------------------------------------------------------------- 
+     45            *        HCLK                         | 24000000 Hz
+     46            *----------------------------------------------------------------------------- 
+     47            *        FCLK                         | 12000000 Hz
+     48            *----------------------------------------------------------------------------- 
+     49            *        PCLK = SYSCLK/2              | 12000000 Hz
+     50            *----------------------------------------------------------------------------- 
+     51            *        HSE Frequency                | 24000000 Hz
+     52            *----------------------------------------------------------------------------- 
+     53            *        VDD                          | 3.3 V
+     54            *----------------------------------------------------------------------------- 
+     55            *        Flash Latency                | 1 WS
+     56            *----------------------------------------------------------------------------- 
+     57            *=============================================================================
+     58            ******************************************************************************
+     59            * @attention
+     60            *
+     61            * <h2><center>&copy; COPYRIGHT 2012 STMicroelectronics</center></h2>
+     62            *
+     63            * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
+     64            * You may not use this file except in compliance with the License.
+     65            * You may obtain a copy of the License at:
+     66            *
+     67            *        http://www.st.com/software_license_agreement_liberty_v2
+     68            *
+     69            * Unless required by applicable law or agreed to in writing, software 
+     70            * distributed under the License is distributed on an "AS IS" BASIS, 
+     71            * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     72            * See the License for the specific language governing permissions and
+     73            * limitations under the License.
+     74            *
+     75            ******************************************************************************
+     76            */
+     77          
+     78          /** @addtogroup CMSIS
+     79            * @{
+     80            */
+     81          
+     82          /** @addtogroup stm32w108xx_system
+     83            * @{
+     84            */  
+     85            
+     86          /** @addtogroup STM32W108xx_System_Private_Includes
+     87            * @{
+     88            */
+     89          
+     90          #include "stm32w108xx.h"
+     91          
+     92          /**
+     93            * @}
+     94            */
+     95          
+     96          /** @addtogroup STM32W108xx_System_Private_TypesDefinitions
+     97            * @{
+     98            */
+     99          
+    100          /**
+    101            * @}
+    102            */
+    103          
+    104          /** @addtogroup STM32W108xx_System_Private_Defines
+    105            * @{
+    106            */
+    107          /**
+    108            * @}
+    109            */
+    110          
+    111          /** @addtogroup STM32W108xx_System_Private_Macros
+    112            * @{
+    113            */
+    114          
+    115          /**
+    116            * @}
+    117            */
+    118          
+    119          /** @addtogroup STM32W108xx_System_Private_Variables
+    120            * @{
+    121            */
+
+   \                                 In section .data, align 4
+    122          uint32_t SystemCoreClock    = 24000000;
+   \                     SystemCoreClock:
+   \   00000000   0x016E3600         DC32 24000000
+    123          /**
+    124            * @}
+    125            */
+    126          
+    127          /** @addtogroup STM32W108xx_System_Private_FunctionPrototypes
+    128            * @{
+    129            */
+    130          
+    131          static void SetSysClock(void);
+    132          
+    133          /**
+    134            * @}
+    135            */
+    136          
+    137          /** @addtogroup STM32W108xx_System_Private_Functions
+    138            * @{
+    139            */
+    140          
+    141          /**
+    142            * @brief  Setup the microcontroller system.
+    143            *         Initialize the Embedded Flash Interface, the PLL and update the 
+    144            *         SystemCoreClock variable.
+    145            * @param  None
+    146            * @retval None
+    147            */
+
+   \                                 In section .text, align 2, keep-with-next
+    148          void SystemInit (void)
+    149          {
+    150            /* reset the CLK_HSECR2 register */
+    151             CLK->HSECR2 &=  (uint32_t)0x00000000;
+   \                     SystemInit: (+1)
+   \   00000000   0x....             LDR.N    R0,??DataTable1  ;; 0x4000401c
+   \   00000002   0xB081             SUB      SP,SP,#+4
+   \   00000004   0x6801             LDR      R1,[R0, #+0]
+   \   00000006   0x2100             MOVS     R1,#+0
+   \   00000008   0x6001             STR      R1,[R0, #+0]
+    152             
+    153            /* reset the CLK_CPUCR register */
+    154             CLK->CPUCR &=  (uint32_t)0x00000000;
+   \   0000000A   0x6841             LDR      R1,[R0, #+4]
+   \   0000000C   0x2100             MOVS     R1,#+0
+   \   0000000E   0x6041             STR      R1,[R0, #+4]
+    155          
+    156            /* Configure the System clock frequency */
+    157            SetSysClock();
+   \   00000010   0x9100             STR      R1,[SP, #+0]
+   \   00000012   0x6801             LDR      R1,[R0, #+0]
+   \   00000014   0xF041 0x0102      ORR      R1,R1,#0x2
+   \   00000018   0x6001             STR      R1,[R0, #+0]
+   \                     ??SystemInit_0: (+1)
+   \   0000001A   0x9900             LDR      R1,[SP, #+0]
+   \   0000001C   0x1C49             ADDS     R1,R1,#+1
+   \   0000001E   0x9100             STR      R1,[SP, #+0]
+   \   00000020   0x9900             LDR      R1,[SP, #+0]
+   \   00000022   0xF5B1 0x6FA0      CMP      R1,#+1280
+   \   00000026   0xD1F8             BNE.N    ??SystemInit_0
+   \   00000028   0x6801             LDR      R1,[R0, #+0]
+   \   0000002A   0xF041 0x0101      ORR      R1,R1,#0x1
+   \   0000002E   0x6001             STR      R1,[R0, #+0]
+    158          }
+   \   00000030   0xB001             ADD      SP,SP,#+4
+   \   00000032   0x4770             BX       LR               ;; return
+    159          
+    160          /**
+    161            * @brief  Update SystemCoreClock according to Clock Register Values
+    162            * @note   - The system frequency computed by this function is not the real 
+    163            *           frequency in the chip. It is calculated based on the predefined 
+    164            *           constant and the selected clock source:
+    165            *
+    166            *           - If SYSCLK source is HSI, SystemCoreClock will contain the HSI_VALUE(*)
+    167            *
+    168            *           - If SYSCLK source is HSE, SystemCoreClock will contain the HSE_VALUE(**)
+    169            *
+    170            *         (*) HSI_VALUE is a constant defined in stm32w108xx.h file (default value
+    171            *             12 MHz) but the real value may vary depending on the variations
+    172            *             in voltage and temperature.   
+    173            *    
+    174            *         (**) HSE_VALUE is a constant defined in stm32w108xx.h file (default value
+    175            *              24 MHz), user has to ensure that HSE_VALUE is same as the real
+    176            *              frequency of the crystal used. Otherwise, this function may
+    177            *              have wrong result.
+    178            *
+    179            *         - The result of this function could be not correct when using fractional
+    180            *           value for HSE crystal.
+    181            * @param  None
+    182            * @retval None
+    183            */
+
+   \                                 In section .text, align 2, keep-with-next
+    184          void SystemCoreClockUpdate(void)
+    185          {
+    186            uint32_t tmp = 0;
+    187            
+    188            /* Get SYSCLK source -------------------------------------------------------*/   
+    189            tmp = (CLK->HSECR2) & (uint32_t)0x0000003;
+   \                     SystemCoreClockUpdate: (+1)
+   \   00000000   0x....             LDR.N    R0,??DataTable1  ;; 0x4000401c
+    190            
+    191            if (tmp == 0x0000003) /* HSE used as system clock */  
+    192            {
+    193              SystemCoreClock = HSE_VALUE;
+    194            }  
+    195            else  /* HSI used as system clock */
+    196            {
+    197              SystemCoreClock = HSI_VALUE;
+   \   00000002   0x....             LDR.N    R1,??DataTable1_1
+   \   00000004   0x6800             LDR      R0,[R0, #+0]
+   \   00000006   0xF000 0x0003      AND      R0,R0,#0x3
+   \   0000000A   0x2803             CMP      R0,#+3
+   \   0000000C   0xBF0C             ITE      EQ 
+   \   0000000E   0x....             LDREQ.N  R0,??DataTable1_2  ;; 0x16e3600
+   \   00000010   0x....             LDRNE.N  R0,??DataTable1_3  ;; 0xb71b00
+   \   00000012   0x6008             STR      R0,[R1, #+0]
+    198            } 
+    199          }
+   \   00000014   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1:
+   \   00000000   0x4000401C         DC32     0x4000401c
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_1:
+   \   00000000   0x........         DC32     SystemCoreClock
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_2:
+   \   00000000   0x016E3600         DC32     0x16e3600
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_3:
+   \   00000000   0x00B71B00         DC32     0xb71b00
+    200          
+    201          /**
+    202            * @brief  Configures the System clock frequency,
+    203            * @note   This function should be called only once the CLOCK configuration  
+    204            *         is reset to the default reset state (done in SystemInit() function).
+    205            * @param  None
+    206            * @retval None
+    207            */
+    208          static void SetSysClock(void)
+    209          {
+    210            __IO uint32_t StartUpCounter = 0;
+    211              
+    212           /* Enable HSE */
+    213            CLK->HSECR2 |= CLK_HSECR2_EN;
+    214           
+    215            /* Wait till HSE is ready and if Time out is reached exit */
+    216            do
+    217            {
+    218              StartUpCounter++;  
+    219            } while(StartUpCounter != HSE_STARTUP_TIMEOUT);
+    220             
+    221           /* Select HSE system clock */
+    222            CLK->HSECR2 |= CLK_HSECR2_SW1;
+    223          }
+    224          
+    225          /**
+    226            * @}
+    227            */
+    228          
+    229          /**
+    230            * @}
+    231            */
+    232          
+    233          /**
+    234            * @}
+    235            */
+    236          
+    237          /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   SystemCoreClockUpdate
+       4   SystemInit
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+       4  ??DataTable1_1
+       4  ??DataTable1_2
+       4  ??DataTable1_3
+       4  SystemCoreClock
+      22  SystemCoreClockUpdate
+      52  SystemInit
+
+ 
+  4 bytes in section .data
+ 90 bytes in section .text
+ 
+ 90 bytes of CODE memory
+  4 bytes of DATA memory
+
+Errors: none
+Warnings: none

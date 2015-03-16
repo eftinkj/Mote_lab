@@ -1,0 +1,1379 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.30.4.8167/W32 for ARM        21/Feb/2015  16:28:25
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_Routing\routing_AODV.c
+#    Command line =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_Routing\routing_AODV.c
+#        -D USE_STDPERIPH_DRIVER -D USE_MB_SNT_X2 -D STM32W108CB -D
+#        "PLATFORM_HEADER=\"Utilities\STM32W108xx_HAL_Driver/micro/cortexm3/compiler/iar.h\""
+#        -D CORTEXM3 -D CORTEXM3_STM32W108 -D CORTEXM3_STM32W108xB -D
+#        DISABLE_WATCHDOG -D "__SOURCEFILE__=\"routing_AODV.c\"" -lC
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\
+#        --diag_suppress Pa050 -o
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_Routing\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\stm32w108\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\generic\compiler\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\bootloader\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\Shared\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Device\ST\STM32W108xx\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\SimpleMAC\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\Common\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\MB851\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\arm_mote\
+#        -Ohz --use_c++_inline
+#    List file    =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\routing_AODV.lst
+#    Object file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\routing_AODV.o
+#
+###############################################################################
+
+C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_Routing\routing_AODV.c
+      1          /****************************************************************************
+      2          **
+      3          ** Copyright (C) 2006-2005 Maciej Zawodniok, James W. Fonda. All rights reserved.
+      4          **
+      5          ** This file is part of the documentation of the UMR Mote Toolkit.
+      6          **
+      7          ** This file may be used under the terms of the GNU General Public
+      8          ** License version 2.0 as published by the Free Software Foundation
+      9          ** and appearing in the file LICENSE.GPL included in the packaging of
+     10          ** this file.
+     11          **
+     12          ** This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
+     13          ** WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+     14          **
+     15          ****************************************************************************/
+     16          
+     17          //AODV Routing Functions
+     18          
+     19          #include "defs/esnl_pub.h"
+     20          #ifdef FEAT_ENABLE_AODV
+     21          
+     22          
+     23          //Files Included
+     24          ///////////////////////////////////////////////
+     25          #include "packet_AODV.h"
+     26          #include "packet.h"
+     27          #include "Application.h"
+     28          //#include "AT_scripts.h"
+     29          //#include "uart_0.h"
+     30          #include "FEAT_XBee_API/API_frames.h"
+     31          #include "routing_AODV.h"
+     32          #include "common.h"
+     33          #include "routing.h"
+     34          #include "FEAT_Networking/Phy_layer.h"
+     35          #include "FEAT_Queuing/Queuing.h"
+     36          #include "FEAT_STM32W/STM32W_Radio.h"
+     37          ///////////////////////////////////////////////
+     38          
+     39          //AODV Global Variables
+
+   \                                 In section .data, align 4
+     40          int16_t XDATA num_routes;
+     41          int8_t XDATA route_enable[ROUTES_MAX_AODV];
+     42          uint8_t XDATA route_table_destination[ROUTES_MAX_AODV];
+     43          uint16_t XDATA route_table_direction[ROUTES_MAX_AODV];
+     44          uint8_t XDATA route_table_cost[ROUTES_MAX_AODV];
+     45          uint16_t XDATA route_table_index[ROUTES_MAX_AODV];
+     46          //uint16_t route_table_source[ROUTES_MAX_AODV] //Adding in Source Memory
+     47          
+     48          uint16_t XDATA my_AODV_index = 1;
+     49          
+     50          
+     51          uint16_t XDATA last_RREP_src;
+     52          
+     53          #ifdef __SDCC__
+     54          //	#define YLED P2_4
+     55          //	#define YLED LED1
+     56          #endif
+     57          
+     58          #ifdef __KEIL__
+     59          	sbit YLED = P2 ^ 4;
+     60          #endif
+     61          
+     62          /// FROM MAIN.C
+     63          
+     64          boolean AODV_reply_sent = 0;
+   \                     AODV_reply_sent:
+   \   00000000   0x00               DC8 0
+   \   00000001   0x00 0x00          DC8 0, 0, 0
+   \              0x00         
+   \                     route_enable:
+   \   00000004   0x00 0x00          DC8 0, 0, 0, 0, 0, 0, 0, 0
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \                     route_table_destination:
+   \   0000000C   0x00 0x00          DC8 0, 0, 0, 0, 0, 0, 0, 0
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \                     route_table_cost:
+   \   00000014   0x00 0x00          DC8 0, 0, 0, 0, 0, 0, 0, 0
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \                     num_routes:
+   \   0000001C   0x00 0x00          DC8 0, 0
+   \                     my_AODV_index:
+   \   0000001E   0x0001             DC16 1
+   \                     last_RREP_src:
+   \   00000020   0x00 0x00          DC8 0, 0
+   \   00000022   0x00 0x00          DC8 0, 0
+   \                     route_table_direction:
+   \   00000024   0x00 0x00          DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \                     route_table_index:
+   \   00000030   0x00 0x00          DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+     65          
+     66          
+     67          ///////////////////////////////////////////////
+     68          //Routing Functions
+     69          ///////////////////////////////////////////////
+     70          
+     71          ///////////////////////////////////////////////
+     72          // Broadcast Request for Route to neighbors
+
+   \                                 In section .text, align 2, keep-with-next
+     73          void send_RREQ ( uint16_t index, uint8_t dest_id, uint8_t src_id )
+     74          {
+   \                     send_RREQ: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+     75          	RREQpkt *rreq = (RREQpkt *)packet;
+     76          	//Assemble Routing Type Packet with the RREQ Flag
+     77          	rreq->start = START_BYTE;
+   \   00000002   0x.... 0x....      BL       ?Subroutine3
+     78          	rreq->flags = ROUTEFLAG_RREQ;
+     79          	rreq->mac_dst = MAC_BROADCAST;
+     80          	rreq->mac_src = MY_ADDR;
+     81          	rreq->index = index;
+   \                     ??CrossCallReturnLabel_6: (+1)
+   \   00000006   0x24B0             MOVS     R4,#+176
+   \   00000008   0x705C             STRB     R4,[R3, #+1]
+     82          	rreq->dst_id = dest_id;
+     83          	rreq->src_id = src_id;
+   \   0000000A   0x745A             STRB     R2,[R3, #+17]
+   \   0000000C   0xF64F 0x74FF      MOVW     R4,#+65535
+   \   00000010   0x605C             STR      R4,[R3, #+4]
+     84          	rreq->crc = STOP_BYTE;
+   \   00000012   0x2041             MOVS     R0,#+65
+   \   00000014   0x.... 0x....      LDR.W    R4,??DataTable15
+   \   00000018   0x7419             STRB     R1,[R3, #+16]
+   \   0000001A   0x7498             STRB     R0,[R3, #+18]
+     85          	//	sendPriorityPacket ( ap->length, (char XDATA*) ap, MAC_BROADCAST );//ap->mac_dst );
+     86          
+     87          	sendPriorityPacket ( RREQ_LEN, ( char* ) packet, rreq->mac_dst );
+   \   0000001C   0x4619             MOV      R1,R3
+   \   0000001E   0x7824             LDRB     R4,[R4, #+0]
+   \   00000020   0x685A             LDR      R2,[R3, #+4]
+   \   00000022   0x609C             STR      R4,[R3, #+8]
+   \   00000024   0x.... 0x....      BL       ?Subroutine2
+     88          	if ( AODVcounter_update )
+   \                     ??CrossCallReturnLabel_5: (+1)
+   \   00000028   0x.... 0x....      LDR.W    R0,??DataTable15_1
+   \   0000002C   0x7800             LDRB     R0,[R0, #+0]
+   \   0000002E   0xB120             CBZ.N    R0,??send_RREQ_0
+     89          	{
+     90          		RREQ_counter++;
+   \   00000030   0x.... 0x....      LDR.W    R0,??DataTable15_2
+   \   00000034   0x7801             LDRB     R1,[R0, #+0]
+   \   00000036   0x1C49             ADDS     R1,R1,#+1
+   \   00000038   0x7001             STRB     R1,[R0, #+0]
+     91          	}
+     92          	my_energy_ = my_energy_ - RREQ_LEN;
+   \                     ??send_RREQ_0: (+1)
+   \   0000003A   0x.... 0x....      BL       ?Subroutine4
+     93          
+     94          }
+   \                     ??CrossCallReturnLabel_8: (+1)
+   \   0000003E   0xBD10             POP      {R4,PC}          ;; return
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine3: (+1)
+   \   00000000   0x.... 0x....      LDR.W    R3,??DataTable15_3
+   \   00000004   0x2442             MOVS     R4,#+66
+   \   00000006   0x701C             STRB     R4,[R3, #+0]
+   \   00000008   0x60D8             STR      R0,[R3, #+12]
+   \   0000000A   0x4770             BX       LR
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine4: (+1)
+   \   00000000   0x....             LDR.N    R0,??DataTable15_6
+   \   00000002   0x6801             LDR      R1,[R0, #+0]
+   \   00000004   0x390B             SUBS     R1,R1,#+11
+   \   00000006   0x6001             STR      R1,[R0, #+0]
+   \   00000008   0x4770             BX       LR
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine2: (+1)
+   \   00000000   0x200B             MOVS     R0,#+11
+   \   00000002   0x.... 0x....      B.W      sendPriorityPacket
+     95          ///////////////////////////////////////////////
+     96          
+     97          ///////////////////////////////////////////////
+     98          // Send a RREP in response to being the destination
+
+   \                                 In section .text, align 2, keep-with-next
+     99          void send_RREP_to_BS ( uint16_t index, uint8_t dest_id, uint8_t src_id )
+    100          {
+   \                     send_RREP_to_BS: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    101          	RREPpkt *rrep = (RREPpkt *)packet;
+    102          	//Assemble Routing Type Packet with the RREP Flag
+    103          	rrep->start = START_BYTE;
+   \   00000002   0x.... 0x....      BL       ?Subroutine3
+    104          	rrep->flags = ROUTEFLAG_RREP;
+    105          	rrep->mac_dst = dest_id;
+    106          	rrep->mac_src = MY_ADDR;
+    107          	rrep->index = index;
+   \                     ??CrossCallReturnLabel_7: (+1)
+   \   00000006   0x24B1             MOVS     R4,#+177
+   \   00000008   0x705C             STRB     R4,[R3, #+1]
+    108          	rrep->dst_id = dest_id;
+    109          	rrep->src_id = src_id;
+    110          	rrep->crc = STOP_BYTE;
+   \   0000000A   0x2041             MOVS     R0,#+65
+   \   0000000C   0x.... 0x....      LDR.W    R4,??DataTable15
+   \   00000010   0x7824             LDRB     R4,[R4, #+0]
+   \   00000012   0x609C             STR      R4,[R3, #+8]
+   \   00000014   0x6059             STR      R1,[R3, #+4]
+   \   00000016   0x7419             STRB     R1,[R3, #+16]
+   \   00000018   0x745A             STRB     R2,[R3, #+17]
+   \   0000001A   0x7498             STRB     R0,[R3, #+18]
+    111          	sendPriorityPacket ( RREP_LEN, ( char* ) packet, rrep->mac_dst );
+   \   0000001C   0x460A             MOV      R2,R1
+   \   0000001E   0xE8BD 0x4010      POP      {R4,LR}
+   \   00000022   0x4619             MOV      R1,R3
+   \   00000024   0x200B             MOVS     R0,#+11
+   \   00000026   0x.... 0x....      B.W      sendPriorityPacket
+    112          }
+    113          ///////////////////////////////////////////////
+    114          ///////////////////////////////////////////////
+    115          // Send a RREP in response to being the destination
+
+   \                                 In section .text, align 2, keep-with-next
+    116          void send_RREP ( uint16_t index, uint8_t dest_id, uint8_t src_id )
+    117          {
+   \                     send_RREP: (+1)
+   \   00000000   0xE92D 0x41F0      PUSH     {R4-R8,LR}
+   \   00000004   0x4605             MOV      R5,R0
+   \   00000006   0x460E             MOV      R6,R1
+   \   00000008   0x4690             MOV      R8,R2
+    118          	RREPpkt *rrep = (RREPpkt *)packet;
+    119          	//Assemble Routing Type Packet with the RREP Flag
+    120          	int16_t temp_index;
+    121          	temp_index = AODV_find_direction ( dest_id );
+   \   0000000A   0x4630             MOV      R0,R6
+   \   0000000C   0x.... 0x....      BL       AODV_find_direction
+    122          	if ( -1 == temp_index )
+   \   00000010   0xF110 0x0F01      CMN      R0,#+1
+   \   00000014   0xD020             BEQ.N    ??send_RREP_0
+    123          	{
+    124          		return;
+    125          	}
+    126          	rrep->start = START_BYTE;
+   \   00000016   0x.... 0x....      LDR.W    R4,??DataTable15_3
+    127          	rrep->flags = ROUTEFLAG_RREP;
+    128          	rrep->mac_dst = route_table_direction[temp_index];
+   \   0000001A   0x.... 0x....      LDR.W    R7,??DataTable15_4
+   \   0000001E   0x2142             MOVS     R1,#+66
+   \   00000020   0x7021             STRB     R1,[R4, #+0]
+   \   00000022   0xEB07 0x0040      ADD      R0,R7,R0, LSL #+1
+   \   00000026   0x21B1             MOVS     R1,#+177
+   \   00000028   0x7061             STRB     R1,[R4, #+1]
+    129          	rrep->mac_src = MY_ADDR;
+    130          	rrep->index = index;
+    131          	rrep->dst_id = dest_id;
+    132          	rrep->src_id = src_id;
+    133          	rrep->crc = STOP_BYTE;
+    134          	sendPriorityPacket ( RREP_LEN, ( char* ) packet, rrep->mac_dst );
+   \   0000002A   0x4621             MOV      R1,R4
+   \   0000002C   0x8C80             LDRH     R0,[R0, #+36]
+   \   0000002E   0x6060             STR      R0,[R4, #+4]
+   \   00000030   0x60E5             STR      R5,[R4, #+12]
+   \   00000032   0x7426             STRB     R6,[R4, #+16]
+   \   00000034   0xF884 0x8011      STRB     R8,[R4, #+17]
+   \   00000038   0x....             LDR.N    R0,??DataTable15
+   \   0000003A   0x7800             LDRB     R0,[R0, #+0]
+   \   0000003C   0x6862             LDR      R2,[R4, #+4]
+   \   0000003E   0x60A0             STR      R0,[R4, #+8]
+   \   00000040   0x2041             MOVS     R0,#+65
+   \   00000042   0x74A0             STRB     R0,[R4, #+18]
+   \   00000044   0x.... 0x....      BL       ?Subroutine2
+    135          	if ( AODVcounter_update )
+   \                     ??CrossCallReturnLabel_4: (+1)
+   \   00000048   0x.... 0x....      BL       ?Subroutine1
+    136          	{
+    137          		RREP_counter++;
+    138          	}
+    139          	my_energy_ = my_energy_ -RREP_LEN;
+   \                     ??CrossCallReturnLabel_0: (+1)
+   \   0000004C   0x390B             SUBS     R1,R1,#+11
+   \   0000004E   0x6001             STR      R1,[R0, #+0]
+    140          	last_RREP_src = rrep->src_id;
+   \   00000050   0x7C60             LDRB     R0,[R4, #+17]
+   \   00000052   0x8438             STRH     R0,[R7, #+32]
+    141          	AODV_reply_sent = 1;
+   \   00000054   0x2001             MOVS     R0,#+1
+   \   00000056   0x7038             STRB     R0,[R7, #+0]
+    142          }
+   \                     ??send_RREP_0: (+1)
+   \   00000058   0xE8BD 0x81F0      POP      {R4-R8,PC}       ;; return
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine1: (+1)
+   \   00000000   0x....             LDR.N    R0,??DataTable15_1
+   \   00000002   0x7800             LDRB     R0,[R0, #+0]
+   \   00000004   0xB118             CBZ.N    R0,??Subroutine1_0
+   \   00000006   0x....             LDR.N    R0,??DataTable15_5
+   \   00000008   0x7801             LDRB     R1,[R0, #+0]
+   \   0000000A   0x1C49             ADDS     R1,R1,#+1
+   \   0000000C   0x7001             STRB     R1,[R0, #+0]
+   \                     ??Subroutine1_0: (+1)
+   \   0000000E   0x....             LDR.N    R0,??DataTable15_6
+   \   00000010   0x6801             LDR      R1,[R0, #+0]
+   \   00000012   0x4770             BX       LR
+    143          ///////////////////////////////////////////////
+    144          
+    145          ///////////////////////////////////////////////
+    146          // Send a RERR in response to being the destination
+
+   \                                 In section .text, align 2, keep-with-next
+    147          void send_RERR ( uint16_t hop_id )
+    148          {
+   \                     send_RERR: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+   \   00000002   0x4604             MOV      R4,R0
+    149          	//RERRpkt *pkt = (RERRpkt *)p;
+    150          
+    151          	RERRpkt *rerr = (RERRpkt *)packet;
+    152          	//Assemble Routing Type Packet with the RREP Flag
+    153          	int16_t temp_index;
+    154          	temp_index = AODV_find_direction ( hop_id );
+   \   00000004   0xB2C0             UXTB     R0,R0
+   \   00000006   0x....             B.N      ?Subroutine0
+    155          	if ( -1 == temp_index )
+    156          	{
+    157          		return;
+    158          	}
+    159          	rerr->start = START_BYTE;
+    160          	rerr->flags = ROUTEFLAG_RERR;
+    161          	rerr->mac_dst = route_table_direction[temp_index];
+    162          	rerr->mac_src = MY_ADDR;
+    163          	//rerr.index=index;
+    164          	rerr->dst_id = hop_id;
+    165          	rerr->src_id = MY_ADDR;
+    166          	rerr->crc = STOP_BYTE;
+    167          	sendPriorityPacket ( RERR_LEN, ( char* ) packet, rerr->mac_dst );
+    168          	if ( AODVcounter_update )
+    169          	{
+    170          		RREP_counter++;
+    171          	}
+    172          	my_energy_ = my_energy_ - RERR_LEN;
+    173          
+    174          }
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine0: (+1)
+   \   00000000   0x.... 0x....      BL       AODV_find_direction
+   \   00000004   0xF110 0x0F01      CMN      R0,#+1
+   \   00000008   0xD018             BEQ.N    ??Subroutine0_0
+   \   0000000A   0x....             LDR.N    R1,??DataTable15_3
+   \   0000000C   0x2242             MOVS     R2,#+66
+   \   0000000E   0x700A             STRB     R2,[R1, #+0]
+   \   00000010   0x22B3             MOVS     R2,#+179
+   \   00000012   0x704A             STRB     R2,[R1, #+1]
+   \   00000014   0x....             LDR.N    R2,??DataTable15_4
+   \   00000016   0xEB02 0x0040      ADD      R0,R2,R0, LSL #+1
+   \   0000001A   0x8C80             LDRH     R0,[R0, #+36]
+   \   0000001C   0x6048             STR      R0,[R1, #+4]
+   \   0000001E   0x730C             STRB     R4,[R1, #+12]
+   \   00000020   0x....             LDR.N    R0,??DataTable15
+   \   00000022   0x7800             LDRB     R0,[R0, #+0]
+   \   00000024   0x6088             STR      R0,[R1, #+8]
+   \   00000026   0x7348             STRB     R0,[R1, #+13]
+   \   00000028   0x2041             MOVS     R0,#+65
+   \   0000002A   0x7388             STRB     R0,[R1, #+14]
+   \   0000002C   0x2009             MOVS     R0,#+9
+   \   0000002E   0x684A             LDR      R2,[R1, #+4]
+   \   00000030   0x.... 0x....      BL       sendPriorityPacket
+   \   00000034   0x.... 0x....      BL       ?Subroutine1
+   \                     ??CrossCallReturnLabel_1: (+1)
+   \   00000038   0x3909             SUBS     R1,R1,#+9
+   \   0000003A   0x6001             STR      R1,[R0, #+0]
+   \                     ??Subroutine0_0: (+1)
+   \   0000003C   0xBD10             POP      {R4,PC}          ;; return
+    175          ///////////////////////////////////////////////
+    176          
+    177          #ifndef CH_START_ROUTE
+    178          	///////////////////////////////////////////////
+    179          	// Send a RERR in response to being the destination
+
+   \                                 In section .text, align 2, keep-with-next
+    180          	void send_RERR2 ( uint8_t dest_id )
+    181          	{
+   \                     send_RERR2: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+   \   00000002   0x4604             MOV      R4,R0
+    182          
+    183          		RERRpkt *rerr = (RERRpkt *)packet;
+    184          		//Assemble Routing Type Packet with the RREP Flag
+    185          		int16_t temp_index;
+    186          		temp_index = AODV_find_direction ( dest_id );
+   \   00000004                      REQUIRE ?Subroutine0
+   \   00000004                      ;; // Fall through to label ?Subroutine0
+    187          		if ( -1 == temp_index )
+    188          		{
+    189          			return;
+    190          		}
+    191          		rerr->start = START_BYTE;
+    192          		rerr->flags = ROUTEFLAG_RERR;
+    193          		rerr->mac_dst = route_table_direction[temp_index];
+    194          		rerr->mac_src = MY_ADDR;
+    195          		//rerr.index=index;
+    196          		rerr->dst_id = dest_id;
+    197          		rerr->src_id = MY_ADDR;
+    198          		rerr->crc = STOP_BYTE;
+    199          		sendPriorityPacket ( RERR_LEN, ( char* ) packet, rerr->mac_dst );
+    200          		if ( AODVcounter_update )
+    201          		{
+    202          			RREP_counter++;
+    203          		}
+    204          		my_energy_ = my_energy_ - RERR_LEN;
+    205          
+    206          	}
+    207          	///////////////////////////////////////////////
+    208          #endif
+    209          
+    210          ///////////////////////////////////////////////
+    211          // Send ACK Packet
+
+   \                                 In section .text, align 2, keep-with-next
+    212          void ACK_packet ( uint16_t index, uint8_t dest_id, uint8_t src_id, uint16_t dest )
+    213          {
+   \                     ACK_packet: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+    214          	ACKpkt *ack = (ACKpkt *)packet;
+    215          	//Assemble Routing Type Packet with the ACK Flag
+    216          	ack->start = START_BYTE;
+   \   00000002   0x....             LDR.N    R4,??DataTable15_3
+   \   00000004   0x2542             MOVS     R5,#+66
+    217          	ack->flags = ROUTEFLAG_ACK;
+    218          	ack->mac_dst = dest;
+   \   00000006   0x6063             STR      R3,[R4, #+4]
+    219          	ack->mac_src = MY_ADDR;
+    220          	ack->index = index;
+   \   00000008   0x60E0             STR      R0,[R4, #+12]
+   \   0000000A   0x7025             STRB     R5,[R4, #+0]
+   \   0000000C   0x25B2             MOVS     R5,#+178
+   \   0000000E   0x....             LDR.N    R3,??DataTable15
+    221          	ack->dst_id = dest_id;
+    222          	ack->src_id = src_id;
+   \   00000010   0x7462             STRB     R2,[R4, #+17]
+    223          	ack->crc = STOP_BYTE;
+   \   00000012   0x2041             MOVS     R0,#+65
+   \   00000014   0x781B             LDRB     R3,[R3, #+0]
+   \   00000016   0x7421             STRB     R1,[R4, #+16]
+   \   00000018   0x74A0             STRB     R0,[R4, #+18]
+   \   0000001A   0x7065             STRB     R5,[R4, #+1]
+   \   0000001C   0x60A3             STR      R3,[R4, #+8]
+    224          	sendPriorityPacket ( ACK_LEN, ( char* ) packet, ack->mac_dst );
+   \   0000001E   0x4621             MOV      R1,R4
+   \   00000020   0x6862             LDR      R2,[R4, #+4]
+   \   00000022   0x.... 0x....      BL       ?Subroutine2
+    225          	if ( AODVcounter_update )
+   \                     ??CrossCallReturnLabel_3: (+1)
+   \   00000026   0x....             LDR.N    R0,??DataTable15_1
+   \   00000028   0x7800             LDRB     R0,[R0, #+0]
+   \   0000002A   0xB118             CBZ.N    R0,??ACK_packet_0
+    226          	{
+    227          		ACK_AODV_counter++;
+   \   0000002C   0x....             LDR.N    R0,??DataTable15_7
+   \   0000002E   0x7801             LDRB     R1,[R0, #+0]
+   \   00000030   0x1C49             ADDS     R1,R1,#+1
+   \   00000032   0x7001             STRB     R1,[R0, #+0]
+    228          	}
+    229          	my_energy_ = my_energy_ - ACK_LEN;
+   \                     ??ACK_packet_0: (+1)
+   \   00000034   0x.... 0x....      BL       ?Subroutine4
+    230          }
+   \                     ??CrossCallReturnLabel_9: (+1)
+   \   00000038   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+    231          ///////////////////////////////////////////////
+    232          
+    233          ///////////////////////////////////////////////
+    234          
+
+   \                                 In section .text, align 2, keep-with-next
+    235          void send_aodv_counters()
+    236          {
+   \                     send_aodv_counters: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+    237          
+    238          	CNTpkt *cnt = (CNTpkt *) packet;
+    239          	uint8_t temp_power = my_tx_power_;
+   \   00000002   0x....             LDR.N    R0,??DataTable15_8
+    240          
+    241          	cnt->start = START_BYTE;
+   \   00000004   0x....             LDR.N    R5,??DataTable15_3
+   \   00000006   0x7804             LDRB     R4,[R0, #+0]
+   \   00000008   0x2042             MOVS     R0,#+66
+   \   0000000A   0x7028             STRB     R0,[R5, #+0]
+    242          	cnt->flags = FLAG_COUNTERS;
+   \   0000000C   0x2079             MOVS     R0,#+121
+   \   0000000E   0x7068             STRB     R0,[R5, #+1]
+    243          	cnt->mac_dst = BS_ADDR;
+   \   00000010   0x20FE             MOVS     R0,#+254
+   \   00000012   0x6068             STR      R0,[R5, #+4]
+    244          	cnt->mac_src = MY_ADDR;
+   \   00000014   0x....             LDR.N    R0,??DataTable15
+   \   00000016   0x7800             LDRB     R0,[R0, #+0]
+   \   00000018   0x60A8             STR      R0,[R5, #+8]
+    245          	cnt->RREQcnt = RREQ_counter;
+   \   0000001A   0x....             LDR.N    R0,??DataTable15_2
+   \   0000001C   0x7800             LDRB     R0,[R0, #+0]
+   \   0000001E   0x7328             STRB     R0,[R5, #+12]
+    246          	cnt->RREPcnt = RREP_counter;
+   \   00000020   0x....             LDR.N    R0,??DataTable15_5
+   \   00000022   0x7800             LDRB     R0,[R0, #+0]
+   \   00000024   0x7368             STRB     R0,[R5, #+13]
+    247          	cnt->ACKcnt = ACK_AODV_counter;
+   \   00000026   0x....             LDR.N    R0,??DataTable15_7
+   \   00000028   0x7800             LDRB     R0,[R0, #+0]
+   \   0000002A   0x73A8             STRB     R0,[R5, #+14]
+    248          	cnt->DATcnt = DATA_AODV_counter;
+   \   0000002C   0x....             LDR.N    R0,??DataTable15_9
+   \   0000002E   0x7800             LDRB     R0,[R0, #+0]
+   \   00000030   0x73E8             STRB     R0,[R5, #+15]
+    249          	cnt->crc = STOP_BYTE;
+   \   00000032   0x2041             MOVS     R0,#+65
+   \   00000034   0x7428             STRB     R0,[R5, #+16]
+    250          
+    251          	phy_set_power_level ( MAX_POWER_LEVEL );
+   \   00000036   0x2004             MOVS     R0,#+4
+   \   00000038   0x.... 0x....      BL       phy_set_power_level
+    252          	sendPriorityPacket ( COUNT_LEN_AODV, ( char* ) packet, BS_ADDR );
+   \   0000003C   0x22FE             MOVS     R2,#+254
+   \   0000003E   0x4629             MOV      R1,R5
+   \   00000040   0x.... 0x....      BL       ?Subroutine2
+    253          	phy_set_power_level ( temp_power );
+   \                     ??CrossCallReturnLabel_2: (+1)
+   \   00000044   0x4620             MOV      R0,R4
+   \   00000046   0xE8BD 0x4032      POP      {R1,R4,R5,LR}
+   \   0000004A   0x.... 0x....      B.W      phy_set_power_level
+    254          }
+    255          ///////////////////////////////////////////////
+    256          
+    257          
+    258          //Routing Functions
+    259          
+    260          ///////////////////////////////////////////////
+    261          //
+    262          //Function to use the dst_id input to search for a valid direction for a destination
+    263          
+    264          //TODO: Make function return first open routing slot
+
+   \                                 In section .text, align 2, keep-with-next
+    265          int16_t AODV_find_direction ( uint8_t dest )
+    266          {
+    267          	int16_t index;
+    268          	for ( index = 0; index < ROUTES_MAX_AODV; index++ )
+   \                     AODV_find_direction: (+1)
+   \   00000000   0x2100             MOVS     R1,#+0
+    269          	{
+    270          		//Find the Index of the Destination
+    271          		if ( 1 == route_enable[index] )
+   \                     ??AODV_find_direction_0: (+1)
+   \   00000002   0x....             LDR.N    R2,??DataTable15_4
+   \   00000004   0x188B             ADDS     R3,R1,R2
+   \   00000006   0xF993 0x3004      LDRSB    R3,[R3, #+4]
+   \   0000000A   0x2B01             CMP      R3,#+1
+   \   0000000C   0xBF02             ITTT     EQ 
+   \   0000000E   0x188A             ADDEQ    R2,R1,R2
+   \   00000010   0x7B12             LDRBEQ   R2,[R2, #+12]
+   \   00000012   0x4290             CMPEQ    R0,R2
+    272          		{
+    273          			if ( dest == route_table_destination[index] )
+   \   00000014   0xD101             BNE.N    ??AODV_find_direction_1
+    274          			{
+    275          				return index; //Return the known route index
+   \   00000016   0x4608             MOV      R0,R1
+   \   00000018   0x4770             BX       LR
+    276          			}
+    277          		}
+    278          	}
+   \                     ??AODV_find_direction_1: (+1)
+   \   0000001A   0x1C49             ADDS     R1,R1,#+1
+   \   0000001C   0xB209             SXTH     R1,R1
+   \   0000001E   0x2905             CMP      R1,#+5
+   \   00000020   0xDBEF             BLT.N    ??AODV_find_direction_0
+    279          	return ( int16_t ) - 1;
+   \   00000022   0xF04F 0x30FF      MOV      R0,#-1
+   \   00000026   0x4770             BX       LR               ;; return
+    280          }
+    281          ///////////////////////////////////////////////
+
+   \                                 In section .text, align 2, keep-with-next
+    282          void routing_init_AODV()
+    283          {
+   \                     routing_init_AODV: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    284          
+    285          	int16_t index;
+    286          	RREQ_counter = 0;
+   \   00000002   0x....             LDR.N    R1,??DataTable15_2
+   \   00000004   0x2000             MOVS     R0,#+0
+   \   00000006   0x7008             STRB     R0,[R1, #+0]
+    287          	RREP_counter = 0;
+   \   00000008   0x....             LDR.N    R1,??DataTable15_5
+   \   0000000A   0x7008             STRB     R0,[R1, #+0]
+    288          	ACK_AODV_counter = 0;
+   \   0000000C   0x....             LDR.N    R1,??DataTable15_7
+   \   0000000E   0x7008             STRB     R0,[R1, #+0]
+    289          	DATA_AODV_counter = 0;
+   \   00000010   0x....             LDR.N    R1,??DataTable15_9
+   \   00000012   0x7008             STRB     R0,[R1, #+0]
+    290          	AODVcounter_update = 1;
+   \   00000014   0x2001             MOVS     R0,#+1
+   \   00000016   0x....             LDR.N    R1,??DataTable15_1
+   \   00000018   0x7008             STRB     R0,[R1, #+0]
+    291          	for ( index = 0; index < ROUTES_MAX_AODV ; index++ )
+   \   0000001A   0x2000             MOVS     R0,#+0
+   \   0000001C   0x....             LDR.N    R1,??DataTable15_4
+    292          	{
+    293          		route_enable[index] = 0;
+   \                     ??routing_init_AODV_0: (+1)
+   \   0000001E   0x1843             ADDS     R3,R0,R1
+   \   00000020   0x2200             MOVS     R2,#+0
+   \   00000022   0x711A             STRB     R2,[R3, #+4]
+    294          		//route_table_source[index]=0;
+    295          		route_table_destination[index] = 0;
+   \   00000024   0x731A             STRB     R2,[R3, #+12]
+    296          		route_table_direction  [index] = 0;
+   \   00000026   0x2300             MOVS     R3,#+0
+   \   00000028   0xEB01 0x0240      ADD      R2,R1,R0, LSL #+1
+    297          		route_table_cost       [index] = 0;
+   \   0000002C   0x1844             ADDS     R4,R0,R1
+   \   0000002E   0x8493             STRH     R3,[R2, #+36]
+    298          		route_table_index      [index] = 0;
+    299          	}
+   \   00000030   0x1C40             ADDS     R0,R0,#+1
+   \   00000032   0x7523             STRB     R3,[R4, #+20]
+   \   00000034   0x2805             CMP      R0,#+5
+   \   00000036   0x8613             STRH     R3,[R2, #+48]
+   \   00000038   0xDBF1             BLT.N    ??routing_init_AODV_0
+    300          	num_routes = 0;
+   \   0000003A   0x838B             STRH     R3,[R1, #+28]
+    301          	my_AODV_index = 1;
+   \   0000003C   0x2001             MOVS     R0,#+1
+   \   0000003E   0x83C8             STRH     R0,[R1, #+30]
+    302          	AODV_route_control = 1;
+   \   00000040   0x....             LDR.N    R1,??DataTable15_10
+   \   00000042   0x7008             STRB     R0,[R1, #+0]
+    303          
+    304          }
+   \   00000044   0xBD10             POP      {R4,PC}          ;; return
+    305          ///////////////////////////////////////////////
+    306          
+
+   \                                 In section .text, align 2, keep-with-next
+    307          boolean route_table_update_AODV ( uint8_t dest, uint16_t index, uint16_t direction, uint8_t cost )
+    308          {
+   \                     route_table_update_AODV: (+1)
+   \   00000000   0xB5F8             PUSH     {R3-R7,LR}
+   \   00000002   0x4607             MOV      R7,R0
+   \   00000004   0x460C             MOV      R4,R1
+   \   00000006   0x4615             MOV      R5,R2
+   \   00000008   0x461E             MOV      R6,R3
+    309          
+    310          	int16_t index2, index_temp;
+    311          	index_temp = AODV_find_direction ( dest );
+   \   0000000A   0x.... 0x....      BL       AODV_find_direction
+    312          
+    313          	if ( num_routes < ROUTES_MAX_AODV )
+   \   0000000E   0x....             LDR.N    R1,??DataTable15_4
+   \   00000010   0xF9B1 0x201C      LDRSH    R2,[R1, #+28]
+   \   00000014   0x2A05             CMP      R2,#+5
+   \   00000016   0xDA29             BGE.N    ??route_table_update_AODV_0
+    314          	{
+    315          
+    316          		if ( ( int16_t ) - 1 == index_temp )
+   \   00000018   0xF110 0x0F01      CMN      R0,#+1
+   \   0000001C   0xD119             BNE.N    ??route_table_update_AODV_1
+    317          		{
+    318          
+    319          			//Define a new known route
+    320          			for ( index2 = 0; index2 < ROUTES_MAX_AODV; index2++ )
+   \   0000001E   0x2000             MOVS     R0,#+0
+    321          			{
+    322          				if ( route_enable[index2] == 0 )
+   \                     ??route_table_update_AODV_2: (+1)
+   \   00000020   0x1843             ADDS     R3,R0,R1
+   \   00000022   0xF993 0x3004      LDRSB    R3,[R3, #+4]
+   \   00000026   0xB97B             CBNZ.N   R3,??route_table_update_AODV_3
+    323          				{
+    324          					route_enable[index2] = 1;
+   \   00000028   0xEB00 0x0C01      ADD      R12,R0,R1
+   \   0000002C   0x2301             MOVS     R3,#+1
+   \   0000002E   0xF88C 0x3004      STRB     R3,[R12, #+4]
+    325          					route_table_destination[index2] = dest;
+   \   00000032   0x1843             ADDS     R3,R0,R1
+   \   00000034   0x731F             STRB     R7,[R3, #+12]
+    326          					route_table_direction  [index2] = direction;
+   \   00000036   0xEB01 0x0340      ADD      R3,R1,R0, LSL #+1
+    327          					route_table_cost       [index2] = cost;
+   \   0000003A   0x1840             ADDS     R0,R0,R1
+   \   0000003C   0x849D             STRH     R5,[R3, #+36]
+   \   0000003E   0x7506             STRB     R6,[R0, #+20]
+    328          					route_table_index      [index2] = index;
+   \   00000040   0x861C             STRH     R4,[R3, #+48]
+    329          					num_routes++;
+   \   00000042   0x1C50             ADDS     R0,R2,#+1
+   \   00000044   0x8388             STRH     R0,[R1, #+28]
+    330          					return 1;
+   \   00000046   0xE00F             B.N      ??route_table_update_AODV_4
+    331          				}
+    332          			}
+   \                     ??route_table_update_AODV_3: (+1)
+   \   00000048   0x1C40             ADDS     R0,R0,#+1
+   \   0000004A   0xB200             SXTH     R0,R0
+   \   0000004C   0x2805             CMP      R0,#+5
+   \   0000004E   0xDBE7             BLT.N    ??route_table_update_AODV_2
+    333          			return 0;
+   \   00000050   0xE00C             B.N      ??route_table_update_AODV_0
+    334          		}
+    335          		else
+    336          		{
+    337          			if ( index > route_table_index[index_temp] )
+   \                     ??route_table_update_AODV_1: (+1)
+   \   00000052   0xEB01 0x0240      ADD      R2,R1,R0, LSL #+1
+   \   00000056   0x8E13             LDRH     R3,[R2, #+48]
+   \   00000058   0x42A3             CMP      R3,R4
+   \   0000005A   0xD207             BCS.N    ??route_table_update_AODV_0
+    338          			{
+    339          				route_table_destination[index_temp] = dest;
+   \   0000005C   0x1843             ADDS     R3,R0,R1
+    340          				route_table_direction  [index_temp] = direction;
+    341          				route_table_cost       [index_temp] = cost;
+   \   0000005E   0x1840             ADDS     R0,R0,R1
+   \   00000060   0x731F             STRB     R7,[R3, #+12]
+   \   00000062   0x8495             STRH     R5,[R2, #+36]
+   \   00000064   0x7506             STRB     R6,[R0, #+20]
+    342          				route_table_index      [index_temp] = index;
+   \   00000066   0x8614             STRH     R4,[R2, #+48]
+    343          				return 1;
+   \                     ??route_table_update_AODV_4: (+1)
+   \   00000068   0x2001             MOVS     R0,#+1
+   \   0000006A   0xBDF2             POP      {R1,R4-R7,PC}
+    344          			}
+    345          			else
+    346          			{
+    347          				return 0;
+    348          			}
+    349          		}
+    350          
+    351          	}
+    352          	return 0;
+   \                     ??route_table_update_AODV_0: (+1)
+   \   0000006C   0x2000             MOVS     R0,#+0
+   \   0000006E   0xBDF2             POP      {R1,R4-R7,PC}    ;; return
+    353          }
+    354          ///////////////////////////////////////////////
+    355          
+
+   \                                 In section .text, align 2, keep-with-next
+    356          void start_routing_aodv ( uint8_t dest_id )
+    357          {
+    358          	send_RREQ ( my_AODV_index++, dest_id, MY_ADDR );
+   \                     start_routing_aodv: (+1)
+   \   00000000   0x....             LDR.N    R1,??DataTable15_4
+   \   00000002   0x8BCB             LDRH     R3,[R1, #+30]
+   \   00000004   0x1C5A             ADDS     R2,R3,#+1
+   \   00000006   0x83CA             STRH     R2,[R1, #+30]
+   \   00000008   0x....             LDR.N    R1,??DataTable15
+   \   0000000A   0x780A             LDRB     R2,[R1, #+0]
+   \   0000000C   0x4601             MOV      R1,R0
+   \   0000000E   0x4618             MOV      R0,R3
+   \   00000010   0x....             B.N      send_RREQ
+    359          //	route_search_on_=1;
+    360          }
+    361          ///////////////////////////////////////////////
+    362          
+    363          
+    364          
+    365          
+
+   \                                 In section .text, align 2, keep-with-next
+    366          void Routing_AODV ( int8_t *p, uint8_t rssi )
+    367          {
+   \                     Routing_AODV: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+   \   00000002   0x4604             MOV      R4,R0
+    368          
+    369          
+    370          	//uint16_t index_temp, dir_index;
+    371          	boolean update_bit;
+    372          	int8_t tempdst;
+    373          	int16_t tempdest_index;
+    374          
+    375          
+    376          
+    377          	RREQpkt *pkt = (RREQpkt *)p; // NOTE: this is OK since all routing packets have the same format!!!
+    378          
+    379          
+    380          
+    381          	switch ( pkt->flags )
+   \   00000004   0x....             LDR.N    R5,??DataTable15
+   \   00000006   0x7860             LDRB     R0,[R4, #+1]
+   \   00000008   0x28B0             CMP      R0,#+176
+   \   0000000A   0xD01F             BEQ.N    ??Routing_AODV_0
+   \   0000000C   0x28B1             CMP      R0,#+177
+   \   0000000E   0xD010             BEQ.N    ??Routing_AODV_1
+   \   00000010   0x28B3             CMP      R0,#+179
+   \   00000012   0xD136             BNE.N    ??Routing_AODV_2
+    382          	{
+    383          			///////////////////////////////////////////////
+    384          		case ROUTEFLAG_RERR:
+    385          			tempdst = ( ( pkt_t* ) p )->dst_id;
+   \   00000014   0xF994 0x4007      LDRSB    R4,[R4, #+7]
+    386          			if ( tempdst == MY_ADDR )
+   \   00000018   0x7828             LDRB     R0,[R5, #+0]
+   \   0000001A   0x4284             CMP      R4,R0
+   \   0000001C   0xD031             BEQ.N    ??Routing_AODV_2
+    387          			{
+    388          #ifdef CH_START_ROUTE
+    389          				start_routing_aodv ( BS_ADDR );
+    390          #endif
+    391          				break;
+    392          				//recieve_pkt(); //Need to make this function
+    393          			}
+    394          
+    395          			tempdest_index = AODV_find_direction ( tempdst );
+    396          
+    397          			if ( tempdest_index == -1 )
+   \   0000001E   0xB2E0             UXTB     R0,R4
+   \   00000020   0x.... 0x....      BL       AODV_find_direction
+   \   00000024   0xF110 0x0F01      CMN      R0,#+1
+   \   00000028   0xD02B             BEQ.N    ??Routing_AODV_2
+    398          			{}
+    399          			else
+    400          			{
+    401          				send_RERR ( tempdst );
+   \   0000002A   0xB2A0             UXTH     R0,R4
+   \   0000002C   0xE8BD 0x4032      POP      {R1,R4,R5,LR}
+   \   00000030   0x....             B.N      send_RERR
+    402          			}
+    403          			break;
+    404          			////////////////////////////////
+    405          
+    406          
+    407          
+    408          		case ROUTEFLAG_RREP:
+    409          
+    410          
+    411          			////////////////////////////////
+    412          			//if(MY_ADDR < pkt->mac_src){ //Provide Backward Propogation to the RREPs
+    413          
+    414          			ACK_packet ( pkt->index, pkt->dst_id, pkt->src_id, pkt->mac_src ); //ACK the recipt of this packet
+   \                     ??Routing_AODV_1: (+1)
+   \   00000032   0x.... 0x....      BL       ?Subroutine6
+    415          
+    416          			update_bit = route_table_update_AODV ( pkt->src_id, pkt->index, pkt->mac_src, 1 );
+    417          
+    418          			if ( 0 == update_bit )
+   \                     ??CrossCallReturnLabel_13: (+1)
+   \   00000036   0x.... 0x....      BL       ?Subroutine5
+   \                     ??CrossCallReturnLabel_11: (+1)
+   \   0000003A   0x2800             CMP      R0,#+0
+   \   0000003C   0xBF1E             ITTT     NE 
+   \   0000003E   0x7C21             LDRBNE   R1,[R4, #+16]
+   \   00000040   0x7828             LDRBNE   R0,[R5, #+0]
+   \   00000042   0x4288             CMPNE    R0,R1
+    419          			{
+    420          				break;
+    421          			}
+    422          			if ( MY_ADDR == pkt->dst_id )
+   \   00000044   0xD01D             BEQ.N    ??Routing_AODV_2
+    423          			{
+    424          				//Route is enabled in update above, wait for command to Tx ;
+    425          #ifdef CH_START_ROUTE
+    426          				send_RREP_to_BS(pkt->index,BS_ADDR,pkt->src_id);
+    427          #endif
+    428          				break;
+    429          			}
+    430          			else
+    431          			{
+    432          				//if(MY_ADDR < pkt->mac_src){
+    433          				send_RREP ( pkt->index, pkt->dst_id, pkt->src_id );
+   \   00000046   0x7C62             LDRB     R2,[R4, #+17]
+   \   00000048   0x68E0             LDR      R0,[R4, #+12]
+   \   0000004A   0xE00E             B.N      ??Routing_AODV_3
+    434          				//}
+    435          
+    436          
+    437          			}
+    438          			//}
+    439          
+    440          			break;
+    441          
+    442          			///////////////////////////////////////////////
+    443          
+    444          
+    445          
+    446          		case ROUTEFLAG_RREQ:
+    447          			ACK_packet ( pkt->index, pkt->dst_id, pkt->src_id, pkt->mac_src );
+   \                     ??Routing_AODV_0: (+1)
+   \   0000004C   0x.... 0x....      BL       ?Subroutine6
+    448          
+    449          			//if(MY_ADDR > pkt->mac_src){ //Provide Forward propogation to the RREQs
+    450          
+    451          			update_bit = route_table_update_AODV ( pkt->src_id, pkt->index, pkt->mac_src, 1 );
+    452          			//}
+    453          
+    454          			if ( 0 == update_bit )
+   \                     ??CrossCallReturnLabel_12: (+1)
+   \   00000050   0x.... 0x....      BL       ?Subroutine5
+   \                     ??CrossCallReturnLabel_10: (+1)
+   \   00000054   0xB1A8             CBZ.N    R0,??Routing_AODV_2
+    455          			{
+    456          				break;
+    457          			}
+    458          			if ( MY_ADDR == pkt->dst_id )
+   \   00000056   0x7C21             LDRB     R1,[R4, #+16]
+   \   00000058   0x7828             LDRB     R0,[R5, #+0]
+   \   0000005A   0x4288             CMP      R0,R1
+   \   0000005C   0xD109             BNE.N    ??Routing_AODV_4
+    459          			{
+    460          				my_AODV_index = my_AODV_index + 1;
+   \   0000005E   0x....             LDR.N    R1,??DataTable15_4
+   \   00000060   0x8BC8             LDRH     R0,[R1, #+30]
+   \   00000062   0x1C40             ADDS     R0,R0,#+1
+   \   00000064   0x83C8             STRH     R0,[R1, #+30]
+    461          				send_RREP ( my_AODV_index, pkt->src_id, pkt->dst_id );
+   \   00000066   0x7C22             LDRB     R2,[R4, #+16]
+   \   00000068   0x7C61             LDRB     R1,[R4, #+17]
+   \                     ??Routing_AODV_3: (+1)
+   \   0000006A   0xE8BD 0x4038      POP      {R3-R5,LR}
+   \   0000006E   0xB280             UXTH     R0,R0
+   \   00000070   0x....             B.N      send_RREP
+    462          			}
+    463          			else
+    464          			{
+    465          				if(MY_ADDR != pkt->src_id){
+   \                     ??Routing_AODV_4: (+1)
+   \   00000072   0x7C62             LDRB     R2,[R4, #+17]
+   \   00000074   0x4290             CMP      R0,R2
+   \   00000076   0xD004             BEQ.N    ??Routing_AODV_2
+    466          					send_RREQ ( pkt->index, pkt->dst_id, pkt->src_id );
+   \   00000078   0x68E0             LDR      R0,[R4, #+12]
+   \   0000007A   0xE8BD 0x4038      POP      {R3-R5,LR}
+   \   0000007E   0xB280             UXTH     R0,R0
+   \   00000080   0x....             B.N      send_RREQ
+    467          				}
+    468          			}
+    469          
+    470          
+    471          			break;
+    472          
+    473          			///////////////////////////////////////////////
+    474          
+    475          
+    476          
+    477          
+    478          			///////////////////////////////////////////////
+    479          			/*
+    480          				case ROUTEFLAG_ACK:
+    481          					//Used to check for my local neighbors that I can reach
+    482          					//Use RSSI value for determining the network neighbors
+    483          					//Update the routing table
+    484          
+    485          					if(pkt->mac_src == last_RREP_dest){
+    486          						AODV_reply_sent=0;
+    487          					}
+    488          
+    489          					break;
+    490          			*/
+    491          			///////////////////////////////////////////////
+    492          
+    493          
+    494          			///////////////////////////////////////////////
+    495          		case FLAG_DATA:
+    496          		case FLAG_DATA_TEST:
+    497          			// THERE SHOULD BE NO DATA PACKETS HERE -> handled earlier
+    498          
+    499          			break;
+    500          	}
+    501          }
+   \                     ??Routing_AODV_2: (+1)
+   \   00000082   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine6: (+1)
+   \   00000000   0x68A3             LDR      R3,[R4, #+8]
+   \   00000002   0x68E0             LDR      R0,[R4, #+12]
+   \   00000004   0x7C62             LDRB     R2,[R4, #+17]
+   \   00000006   0x7C21             LDRB     R1,[R4, #+16]
+   \   00000008   0xB29B             UXTH     R3,R3
+   \   0000000A   0xB280             UXTH     R0,R0
+   \   0000000C   0x....             B.N      ACK_packet
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine5: (+1)
+   \   00000000   0x68A2             LDR      R2,[R4, #+8]
+   \   00000002   0x68E1             LDR      R1,[R4, #+12]
+   \   00000004   0x7C60             LDRB     R0,[R4, #+17]
+   \   00000006   0x2301             MOVS     R3,#+1
+   \   00000008   0xB292             UXTH     R2,R2
+   \   0000000A   0xB289             UXTH     R1,R1
+   \   0000000C   0x....             B.N      route_table_update_AODV
+    502          ///////////////////////////////////////////////
+    503          //////////////////////////////////////////////////////////////////////////////////////////////
+    504          
+    505          ///////////////////////////////////////////////
+    506          ///////////////////////////////////////////////
+    507          /**
+    508            * sendDATA - handles a sending of DATA packet
+    509            * 1) check if buffer ready then passes packet
+    510            * 2) else temporarly stores
+    511            */
+
+   \                                 In section .text, align 2, keep-with-next
+    512          boolean AODV_send_DATA_base ( uint16_t base )
+    513          {
+   \                     AODV_send_DATA_base: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+    514          	uint16_t mac_d;
+                 	         ^
+Warning[Pe177]: variable "mac_d" was declared but never referenced
+    515          	// SDCC:
+    516          	pkt_t * XDATA pkt = ( pkt_t* ) ( &(buffer0[base]) ); //&(QBUFF_ACCESS(base,0));
+    517          
+    518          	uint8_t tempdst = pkt->dst_id;
+   \   00000002   0x....             LDR.N    R1,??DataTable15_11
+    519          	//Check if I am the destination, then if not forward towards the destination node
+    520          	if ( tempdst == MY_ADDR )
+   \   00000004   0x....             LDR.N    R5,??DataTable15
+   \   00000006   0x1844             ADDS     R4,R0,R1
+   \   00000008   0x7828             LDRB     R0,[R5, #+0]
+   \   0000000A   0x79E6             LDRB     R6,[R4, #+7]
+   \   0000000C   0x4286             CMP      R6,R0
+   \   0000000E   0xD00F             BEQ.N    ??AODV_send_DATA_base_0
+    521          	{
+    522          		//recieve_pkt(); //Need to make this function
+    523          		return 0;
+    524          	}
+    525          	else
+    526          	{
+    527          		//Relay Packet
+    528          //		uint8_t *hop_list;
+    529          		int16_t tempdest_index;
+    530          
+    531          
+    532          		TOGGLE_LED(YLED);// = ~YLED;
+   \   00000010   0x2001             MOVS     R0,#+1
+   \   00000012   0x.... 0x....      BL       STM_EVAL_LEDToggle
+    533          		tempdest_index = AODV_find_direction ( tempdst );
+   \   00000016   0x4630             MOV      R0,R6
+   \   00000018   0x.... 0x....      BL       AODV_find_direction
+    534          
+    535          		if ( ( tempdest_index == -1 ) && ( CLUSTERING_I_AM_CH == my_CH_ ) )
+   \   0000001C   0xF110 0x0F01      CMN      R0,#+1
+   \   00000020   0xBF02             ITTT     EQ 
+   \   00000022   0x....             LDREQ.N  R1,??DataTable15_12
+   \   00000024   0x8809             LDRHEQ   R1,[R1, #+0]
+   \   00000026   0x29FD             CMPEQ    R1,#+253
+   \   00000028   0xD104             BNE.N    ??AODV_send_DATA_base_1
+    536          		{
+    537          			start_routing_aodv ( BS_ADDR );
+   \   0000002A   0x20FE             MOVS     R0,#+254
+   \   0000002C   0x.... 0x....      BL       start_routing_aodv
+    538          			return 0; // unsuccesful
+   \                     ??AODV_send_DATA_base_0: (+1)
+   \   00000030   0x2000             MOVS     R0,#+0
+   \   00000032   0xBD70             POP      {R4-R6,PC}
+    539          		}
+    540          		else
+    541          		{
+    542          			pkt->mac_dst = route_table_direction[tempdest_index];
+   \                     ??AODV_send_DATA_base_1: (+1)
+   \   00000034   0x....             LDR.N    R1,??DataTable15_4
+   \   00000036   0xEB01 0x0040      ADD      R0,R1,R0, LSL #+1
+   \   0000003A   0x8C80             LDRH     R0,[R0, #+36]
+   \   0000003C   0x8060             STRH     R0,[R4, #+2]
+    543          			pkt->mac_src = MY_ADDR;
+   \   0000003E   0x7828             LDRB     R0,[R5, #+0]
+   \   00000040   0x80A0             STRH     R0,[R4, #+4]
+    544          //			sendPriorityPacket ( pkt, pkt->length, route_table_direction[tempdest_index] );
+    545          			if ( AODVcounter_update )
+   \   00000042   0x....             LDR.N    R0,??DataTable15_1
+   \   00000044   0x7800             LDRB     R0,[R0, #+0]
+   \   00000046   0xB118             CBZ.N    R0,??AODV_send_DATA_base_2
+    546          			{
+    547          				DATA_AODV_counter++;
+   \   00000048   0x....             LDR.N    R0,??DataTable15_9
+   \   0000004A   0x7801             LDRB     R1,[R0, #+0]
+   \   0000004C   0x1C49             ADDS     R1,R1,#+1
+   \   0000004E   0x7001             STRB     R1,[R0, #+0]
+    548          			}
+    549          			my_energy_ = my_energy_ - ( pkt->length + 7 );
+   \                     ??AODV_send_DATA_base_2: (+1)
+   \   00000050   0x....             LDR.N    R0,??DataTable15_6
+   \   00000052   0x79A2             LDRB     R2,[R4, #+6]
+   \   00000054   0x6801             LDR      R1,[R0, #+0]
+   \   00000056   0x1DD2             ADDS     R2,R2,#+7
+   \   00000058   0x1A89             SUBS     R1,R1,R2
+   \   0000005A   0x6001             STR      R1,[R0, #+0]
+    550          			TOGGLE_LED(YLED);// = ~YLED;
+   \   0000005C   0x2001             MOVS     R0,#+1
+   \   0000005E   0x.... 0x....      BL       STM_EVAL_LEDToggle
+    551          
+    552          		}
+    553          	}
+    554          	return 1;
+   \   00000062   0x2001             MOVS     R0,#+1
+   \   00000064   0xBD70             POP      {R4-R6,PC}       ;; return
+    555          }
+    556          
+    557          ///////////////////////////////////////////////
+    558          ///////////////////////////////////////////////
+    559          /**
+    560            * aodv_dropped_link(??) - the link failed (after few retransmissions??) - update routing
+    561            *    and optionally restart route discovery
+    562            */
+
+   \                                 In section .text, align 2, keep-with-next
+    563          void aodv_dropped_link(uint16_t hop_id)
+    564          {
+    565          	if ( CLUSTERING_I_AM_CH == my_CH_ )
+   \                     aodv_dropped_link: (+1)
+   \   00000000   0x....             LDR.N    R1,??DataTable15_12
+   \   00000002   0x8809             LDRH     R1,[R1, #+0]
+   \   00000004   0x29FD             CMP      R1,#+253
+   \   00000006   0xD103             BNE.N    ??aodv_dropped_link_0
+    566          	{
+    567          		// stop data forwarding
+    568          		enableDataTx_ = 0;
+   \   00000008   0x....             LDR.N    R2,??DataTable15_13
+   \   0000000A   0x2100             MOVS     R1,#+0
+   \   0000000C   0x7011             STRB     R1,[R2, #+0]
+    569          #ifndef CH_START_ROUTE
+    570          		//start_routing_aodv(BS_ADDR);
+    571          		send_RERR ( hop_id );
+   \   0000000E   0x....             B.N      send_RERR
+    572          #else
+    573          		// Restart route
+    574          		start_routing_aodv ( BS_ADDR );
+    575          #endif
+    576          	}
+    577          }
+   \                     ??aodv_dropped_link_0: (+1)
+   \   00000010   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15:
+   \   00000000   0x........         DC32     my_addr8_
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15_1:
+   \   00000000   0x........         DC32     AODVcounter_update
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15_2:
+   \   00000000   0x........         DC32     RREQ_counter
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15_3:
+   \   00000000   0x........         DC32     packet
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15_4:
+   \   00000000   0x........         DC32     AODV_reply_sent
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15_5:
+   \   00000000   0x........         DC32     RREP_counter
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15_6:
+   \   00000000   0x........         DC32     my_energy_
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15_7:
+   \   00000000   0x........         DC32     ACK_AODV_counter
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15_8:
+   \   00000000   0x........         DC32     my_tx_power_
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15_9:
+   \   00000000   0x........         DC32     DATA_AODV_counter
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15_10:
+   \   00000000   0x........         DC32     AODV_route_control
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15_11:
+   \   00000000   0x........         DC32     buffer0
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15_12:
+   \   00000000   0x........         DC32     my_CH_
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15_13:
+   \   00000000   0x........         DC32     enableDataTx_
+    578          ///////////////////////////////////////////////
+    579          ///////////////////////////////////////////////
+    580          #endif
+    581          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      16   ACK_packet
+        16   -> sendPriorityPacket
+       0   AODV_find_direction
+      16   AODV_send_DATA_base
+        16   -> AODV_find_direction
+        16   -> STM_EVAL_LEDToggle
+        16   -> start_routing_aodv
+      16   Routing_AODV
+        16   -> ACK_packet
+        16   -> AODV_find_direction
+        16   -> route_table_update_AODV
+         0   -> send_RERR
+         0   -> send_RREP
+         0   -> send_RREQ
+       0   aodv_dropped_link
+         0   -> send_RERR
+      24   route_table_update_AODV
+        24   -> AODV_find_direction
+       8   routing_init_AODV
+       8   send_RERR
+         8   -> AODV_find_direction
+         8   -> sendPriorityPacket
+       8   send_RERR2
+         8   -> AODV_find_direction
+         8   -> sendPriorityPacket
+      24   send_RREP
+        24   -> AODV_find_direction
+        24   -> sendPriorityPacket
+       8   send_RREP_to_BS
+         0   -> sendPriorityPacket
+       8   send_RREQ
+         8   -> sendPriorityPacket
+      16   send_aodv_counters
+         0   -> phy_set_power_level
+        16   -> phy_set_power_level
+        16   -> sendPriorityPacket
+       0   start_routing_aodv
+         0   -> send_RREQ
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable15
+       4  ??DataTable15_1
+       4  ??DataTable15_10
+       4  ??DataTable15_11
+       4  ??DataTable15_12
+       4  ??DataTable15_13
+       4  ??DataTable15_2
+       4  ??DataTable15_3
+       4  ??DataTable15_4
+       4  ??DataTable15_5
+       4  ??DataTable15_6
+       4  ??DataTable15_7
+       4  ??DataTable15_8
+       4  ??DataTable15_9
+      62  ?Subroutine0
+      20  ?Subroutine1
+       6  ?Subroutine2
+      12  ?Subroutine3
+      10  ?Subroutine4
+      14  ?Subroutine5
+      14  ?Subroutine6
+      58  ACK_packet
+      40  AODV_find_direction
+      60  AODV_reply_sent
+          route_enable
+          route_table_destination
+          route_table_cost
+          num_routes
+          my_AODV_index
+          last_RREP_src
+          route_table_direction
+          route_table_index
+     102  AODV_send_DATA_base
+     132  Routing_AODV
+      18  aodv_dropped_link
+     112  route_table_update_AODV
+      70  routing_init_AODV
+       8  send_RERR
+       4  send_RERR2
+      92  send_RREP
+      42  send_RREP_to_BS
+      64  send_RREQ
+      78  send_aodv_counters
+      18  start_routing_aodv
+
+ 
+    60 bytes in section .data
+ 1 032 bytes in section .text
+ 
+ 1 032 bytes of CODE memory
+    60 bytes of DATA memory
+
+Errors: none
+Warnings: 1

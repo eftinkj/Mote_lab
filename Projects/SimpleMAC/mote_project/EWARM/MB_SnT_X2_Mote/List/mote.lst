@@ -1,0 +1,1279 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.30.4.8167/W32 for ARM        21/Feb/2015  16:27:41
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\mote.c
+#    Command line =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\mote.c
+#        -D USE_STDPERIPH_DRIVER -D USE_MB_SNT_X2 -D STM32W108CB -D
+#        "PLATFORM_HEADER=\"Utilities\STM32W108xx_HAL_Driver/micro/cortexm3/compiler/iar.h\""
+#        -D CORTEXM3 -D CORTEXM3_STM32W108 -D CORTEXM3_STM32W108xB -D
+#        DISABLE_WATCHDOG -D "__SOURCEFILE__=\"mote.c\"" -lC
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\
+#        --diag_suppress Pa050 -o
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\stm32w108\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\generic\compiler\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\bootloader\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\Shared\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Device\ST\STM32W108xx\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\SimpleMAC\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\Common\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\MB851\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\arm_mote\
+#        -Ohz --use_c++_inline
+#    List file    =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\mote.lst
+#    Object file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\mote.o
+#
+###############################################################################
+
+C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\mote.c
+      1          /******************** (C) COPYRIGHT 2010 STMicroelectronics ********************
+      2          * File Name          : talk.c
+      3          * Author             : MCD Application Team
+      4          * Version            : V1.0.1
+      5          * Date               : April 2010
+      6          * Description        : SimpleMac demo application.
+      7          *                      Download the same application image on two STM32W108 MB851
+      8          *                      platforms.
+      9          *                      Open 2 hyper terminals on the related USB Virtual COMs.
+     10          *                      What you you write on an hyperterminal is displayed on
+     11          *                      the other and viceversa.
+     12          ********************************************************************************
+     13          * THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
+     14          * WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE TIME.
+     15          * AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY DIRECT,
+     16          * INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING FROM THE
+     17          * CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE CODING
+     18          * INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
+     19          *******************************************************************************/
+     20          
+     21          /* Includes ------------------------------------------------------------------*/
+     22          #include PLATFORM_HEADER
+     23          #include "board.h"
+     24          #include <stdio.h>
+     25          #include <stdlib.h>
+     26          #include <string.h>
+     27          #include "error.h"
+     28          #include "hal.h"
+     29          #include "phy-library.h"
+     30          #include "iap_bootloader.h"
+     31          #include <stdint.h>
+     32          #include "transmit.h"
+     33          
+     34          //#include PLATFORM_HEADER
+     35          //#include BOARD_HEADER
+     36          //#include "hal/hal.h"
+     37          //#include "hal/micro/cortexm3/uart.h"
+     38          //#include "include/phy-library.h"
+     39          //#include "hal/error.h"
+     40          //#include "stdio.h"
+     41          //#include "stdlib.h"
+     42          
+     43          #include "arm_mote/common.h"
+     44          
+     45          #include "FEAT_STM32W/STM32W_Radio.h"
+     46          
+     47          /* Private define ------------------------------------------------------------*/
+     48          #define TIMEOUT_VALUE 100
+     49          #define BUFFER_SIZE 64
+     50          
+     51          // #define serialReadByte __io_getcharNonBlocking
+     52          #include "arm_mote/HW_LIB/RTC.h"
+     53          
+     54          
+     55          //#define _RSSI_SNIFFER_
+     56          //#undef _RSSI_SNIFFER_
+     57          
+     58          //#define _HEX_SNIFFER_
+     59          //#define XBEE_COMPAT
+     60          
+     61          
+     62          // # ifdef _RSSI_SNIFFER_
+     63          #ifdef _ASCI_SNIFFER_
+     64          
+     65          	uint8_t	enable_pkt_trace = 1;
+     66          	uint32_t pkt_trace_len = 14;
+     67          #endif // _RSSI_SNIFFER_
+     68          	
+     69          #ifdef XBEE_COMPAT
+     70          	IAR_PACKED struct api_frame_rx16
+     71          	{
+     72          		uint8_t api_start;
+     73          		uint16_t api_length;
+     74          		uint8_t api_id;
+     75          		uint16_t api_source;
+     76          		uint8_t api_rssi;
+     77          		uint8_t api_options;
+     78          		uint8_t api_data; // with crc at the end
+     79          	};
+     80          	typedef struct api_frame_rx16 api_frame_rx16_t;
+     81          	#define API_RX16_MIN_LENGTH 5
+     82          	#define API_RX16_HEAD_LENGTH 0x05
+     83          #endif // XBEE_COMPAT
+     84          	
+     85          /* Private variables ---------------------------------------------------------*/
+     86          
+     87          /* radioTransmitConfig variables required from the SimpleMac library for packet
+     88             transmission */
+
+   \                                 In section .data, align 4
+     89          RadioTransmitConfig radioTransmitConfig =
+   \                     radioTransmitConfig:
+   \   00000000   0x01 0x01          DC8 1, 1, 4, 3, 5, 0, 0, 0
+   \              0x04 0x03    
+   \              0x05 0x00    
+   \              0x00 0x00    
+     90          {
+     91          	TRUE,  // waitForAck;
+     92          	TRUE, // checkCca;
+     93          	4,     // ccaAttemptMax;
+     94          	3,     // backoffExponentMin;
+     95          	5,     // backoffExponentMax;
+     96          	FALSE //TRUE   // appendCrc;
+     97          };
+     98          
+     99          /* generic data packet */
+    100          #pragma align txPacket
+    101          uint8_t txPacket[128] =
+    102          {
+    103          	0x0a, // length
+    104          	0x61, //0x61, // fcf - intra pan, ack request, data
+    105          	0x88, //0x08 // fcf - src, dst mode
+    106          	0x00, // seq
+    107          //	0x04, // dst pan l
+    108          //	0x16, // dst pan h
+    109          	0x32, // dst pan l
+    110          	0x33, // dst pan h
+    111          	0xFF, 0xFF,
+    112          	0x32, // src pan l
+    113          	0x33, // scr pan h
+    114          	0x0A, 0x00,
+    115          /*	0x05, // dst addr l
+    116          	0x16, // dst addr h
+    117          */	0x00  // data
+    118          };
+    119          
+    120          /* buffer for received packet */
+
+   \                                 In section .bss, align 4
+    121          uint8_t rxPacket[128];
+    122          /* received packet flag */
+    123          boolean packetReceived = FALSE;
+   \                     packetReceived:
+   \   00000000                      DS8 1
+    124          /* received packet's RSSI */
+    125          uint8_t rxPacketRSSI;
+   \                     rxPacketRSSI:
+   \   00000001                      DS8 1
+    126          
+    127          /* packet transmission complete flag */
+    128          boolean txComplete = TRUE;
+    129          
+    130          
+    131          uint32_t rxpkt_oveflow_count_ = 0;
+    132          uint32_t rxpkt_wrong_count_ = 0;
+    133          uint8_t beforelast_id = 0;
+   \                     beforelast_id:
+   \   00000002                      DS8 1
+    134          uint8_t last_id = 0;
+   \                     last_id:
+   \   00000003                      DS8 1
+   \                     rxPacket:
+   \   00000004                      DS8 128
+   \                     rxpkt_oveflow_count_:
+   \   00000084                      DS8 4
+   \                     rxpkt_wrong_count_:
+   \   00000088                      DS8 4
+
+   \                                 In section .data, align 4
+   \                     txPacket:
+   \   00000000   0x0A 0x61          DC8 10, 97, 136, 0, 50, 51, 255, 255, 50, 51, 10, 0, 0, 0, 0, 0, 0, 0
+   \              0x88 0x00    
+   \              0x32 0x33    
+   \              0xFF 0xFF    
+   \              0x32 0x33    
+   \              0x0A 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \   00000012   0x00 0x00          DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00         
+   \   00000029   0x00 0x00          DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00         
+   \   00000040   0x00 0x00          DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00         
+   \   00000057   0x00 0x00          DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00         
+   \   0000006E   0x00 0x00          DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \                     txComplete:
+   \   00000080   0x01               DC8 1
+    135          
+    136          
+    137          /* Private Functions ---------------------------------------------------------*/
+    138          StStatus radio_call_status = 0;
+   \                     radio_call_status:
+   \   00000081   0x00               DC8 0
+    139          /*******************************************************************************
+    140          * Function Name  : sendSerialData
+    141          * @brief It allows to transmit the data
+    142          * @param - lenght of the data
+    143          *                  - data to be transmitted
+    144          * @retval None
+    145          *******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    146          boolean sendSerialData( uint8_t length, uint8_t *data )
+    147          {
+   \                     sendSerialData: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+    148          	//ATOMIC(
+    149          		if ( txComplete != FALSE )
+   \   00000002   0x....             LDR.N    R5,??DataTable10
+   \   00000004   0x4604             MOV      R4,R0
+   \   00000006   0xF895 0x0080      LDRB     R0,[R5, #+128]
+   \   0000000A   0xB190             CBZ.N    R0,??sendSerialData_0
+    150          		{//8
+    151          			halCommonMemCopy( txPacket + 12, data, length );
+   \   0000000C   0x4622             MOV      R2,R4
+   \   0000000E   0xF105 0x000C      ADD      R0,R5,#+12
+   \   00000012   0x.... 0x....      BL       halCommonMemCopy
+    152          			//
+    153          			txPacket[0] = length + 13;//12;//2 + 7;
+   \   00000016   0xF104 0x000D      ADD      R0,R4,#+13
+   \   0000001A   0x7028             STRB     R0,[R5, #+0]
+    154          			txPacket[3]++; /* increment sequence number */
+   \   0000001C   0x78E8             LDRB     R0,[R5, #+3]
+   \   0000001E   0x1C40             ADDS     R0,R0,#+1
+   \   00000020   0x70E8             STRB     R0,[R5, #+3]
+    155          			//txPacket[10]++; /* increment sequence number */
+    156          
+    157          			txComplete = FALSE;
+   \   00000022   0x2000             MOVS     R0,#+0
+   \   00000024   0xF885 0x0080      STRB     R0,[R5, #+128]
+    158          			radio_call_status = ST_RadioTransmit( txPacket );
+   \   00000028   0x4628             MOV      R0,R5
+   \   0000002A   0x.... 0x....      BL       ST_RadioTransmit
+   \   0000002E   0xF885 0x0081      STRB     R0,[R5, #+129]
+    159          		}
+    160          	//)
+    161          	return ~txComplete; //TRUE;
+   \                     ??sendSerialData_0: (+1)
+   \   00000032   0xF895 0x0080      LDRB     R0,[R5, #+128]
+   \   00000036   0x43C0             MVNS     R0,R0
+   \   00000038   0xB2C0             UXTB     R0,R0
+   \   0000003A   0xBD32             POP      {R1,R4,R5,PC}    ;; return
+    162          }/* end sendSerialData() */
+    163          
+    164          /*******************************************************************************
+    165          * Function Name  : sendSerialData
+    166          * @brief It processes serial commands
+    167          * @param None
+    168          * @retval None
+    169          *******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    170          void processSerialInput( void )
+    171          {
+   \                     processSerialInput: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    172          	static uint8_t buffer[BUFFER_SIZE];
+    173          	static uint8_t bufferSize = 0;
+    174          	static uint32_t bufferTimeout = TIMEOUT_VALUE;
+    175          	
+    176          	if ( bufferSize == 0 )
+   \   00000002   0x....             LDR.N    R4,??DataTable10_1
+   \   00000004   0x7820             LDRB     R0,[R4, #+0]
+   \   00000006   0xB908             CBNZ.N   R0,??processSerialInput_0
+    177          		bufferTimeout = TIMEOUT_VALUE;
+   \   00000008   0x2164             MOVS     R1,#+100
+   \   0000000A   0x6461             STR      R1,[R4, #+68]
+    178          
+    179          	if ( serialReadByte( buffer + bufferSize ) )
+   \                     ??processSerialInput_0: (+1)
+   \   0000000C   0x1900             ADDS     R0,R0,R4
+   \   0000000E   0x1D00             ADDS     R0,R0,#+4
+   \   00000010   0x.... 0x....      BL       __io_getcharNonBlocking
+   \   00000014   0xB148             CBZ.N    R0,??processSerialInput_1
+    180          	{
+    181          #if (1)
+    182          		if ('?'==buffer[bufferSize])
+   \   00000016   0x7820             LDRB     R0,[R4, #+0]
+   \   00000018   0x1900             ADDS     R0,R0,R4
+   \   0000001A   0x7900             LDRB     R0,[R0, #+4]
+   \   0000001C   0x283F             CMP      R0,#+63
+   \   0000001E   0xBF08             IT       EQ 
+   \   00000020   0x.... 0x....      BLEQ     print_timeouts
+    183          		{
+    184          			//printf("Timers: temp=%d, lcd=%d\n", temp_sensor_timeout, lcd_timeout);
+    185          			print_timeouts();
+                 			^
+Warning[Pe223]: function "print_timeouts" declared implicitly
+    186          		}
+    187          #endif
+    188          
+    189          		bufferSize += 1;
+   \   00000024   0x7820             LDRB     R0,[R4, #+0]
+   \   00000026   0x1C40             ADDS     R0,R0,#+1
+   \   00000028   0x7020             STRB     R0,[R4, #+0]
+    190          	}
+    191          
+    192          	bufferTimeout--;
+   \                     ??processSerialInput_1: (+1)
+   \   0000002A   0x6C60             LDR      R0,[R4, #+68]
+   \   0000002C   0x1E41             SUBS     R1,R0,#+1
+    193          
+    194          	if ( ( bufferTimeout == 0 ) || ( bufferSize == BUFFER_SIZE ) )
+   \   0000002E   0x7820             LDRB     R0,[R4, #+0]
+   \   00000030   0x6461             STR      R1,[R4, #+68]
+   \   00000032   0xBF18             IT       NE 
+   \   00000034   0x2840             CMPNE    R0,#+64
+   \   00000036   0xD105             BNE.N    ??processSerialInput_2
+    195          	{
+    196          		if ( bufferSize > 0 )
+   \   00000038   0xB120             CBZ.N    R0,??processSerialInput_2
+    197          		{
+    198          			sendSerialData( bufferSize, buffer ); // Send via Radio
+   \   0000003A   0x1D21             ADDS     R1,R4,#+4
+   \   0000003C   0x.... 0x....      BL       sendSerialData
+    199          			bufferSize = 0;
+   \   00000040   0x2000             MOVS     R0,#+0
+   \   00000042   0x7020             STRB     R0,[R4, #+0]
+    200          		}
+    201          	}
+    202          }/* end processSerialInput() */
+   \                     ??processSerialInput_2: (+1)
+   \   00000044   0xBD10             POP      {R4,PC}          ;; return
+
+   \                                 In section .data, align 4
+   \                     ??bufferSize:
+   \   00000000   0x00               DC8 0
+   \   00000001   0x00 0x00          DC8 0, 0, 0
+   \              0x00         
+   \   00000004   0x00 0x00          DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \   00000014   0x00 0x00          DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \   00000024   0x00 0x00          DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \   00000034   0x00 0x00          DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \   00000044   0x00000064         DC32 100
+    203          
+    204          /* ********************* SimpleMac callbacks functions ************************/
+    205          
+    206          // Calculate chaceksum over 8-bit (unsigned) data blocks
+
+   \                                 In section .text, align 2, keep-with-next
+    207          uint8_t add8( uint8_t*data, uint8_t len)
+    208          {
+   \                     add8: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    209          	uint8_t i, temp = 0;
+   \   00000002   0x2200             MOVS     R2,#+0
+    210          	for(i=0; i<len; i++)
+   \   00000004   0x2300             MOVS     R3,#+0
+   \   00000006   0xE003             B.N      ??add8_0
+    211          	{
+    212          		temp += data[i];
+   \                     ??add8_1: (+1)
+   \   00000008   0x5C1C             LDRB     R4,[R3, R0]
+   \   0000000A   0x18A2             ADDS     R2,R4,R2
+   \   0000000C   0xB2D2             UXTB     R2,R2
+    213          	}
+   \   0000000E   0x1C5B             ADDS     R3,R3,#+1
+   \                     ??add8_0: (+1)
+   \   00000010   0xB2DB             UXTB     R3,R3
+   \   00000012   0x428B             CMP      R3,R1
+   \   00000014   0xD3F8             BCC.N    ??add8_1
+    214          	return temp;
+   \   00000016   0x4610             MOV      R0,R2
+   \   00000018   0xBD10             POP      {R4,PC}          ;; return
+    215          }
+    216          
+    217          /*******************************************************************************
+    218          * Function Name  : ST_RadioReceiveIsrCallback
+    219          * @brief Radio Receiver callback function
+    220          * @param - packet: received packet
+    221          *                  - ackFramePendingSet: frame pending bit in the received packet
+    222          *                  - time: MAC timer when the SFD was received
+    223          *                  - errors: numbers of correlator erros in the packet
+    224          *                  - rssi: energy detected in the packet
+    225          * @retval None
+    226          *******************************************************************************/
+
+   \                                 In section .bss, align 2
+    227          uint16_t src;
+   \                     src:
+   \   00000000                      DS8 2
+
+   \                                 In section .text, align 2, keep-with-next
+    228          void ST_RadioReceiveIsrCallback( uint8_t *packet,
+    229          								 boolean ackFramePendingSet,
+    230          								 uint32_t time,
+    231          								 uint16_t errors,
+    232          								 int8_t rssi )
+    233          {
+   \                     ST_RadioReceiveIsrCallback: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    234          	/* note this is executed from interupt context */
+    235          	uint8_t i;
+    236          
+    237          	/* Copy the packet to a buffer that can be accessed from the main loop;
+    238          	   don't do the copy if there is already a packet there being processed */
+    239          #ifdef _RSSI_SNIFFER_
+    240          	if (0x88 == packet[2])
+    241          	{
+    242          		src = packet[9];
+    243          		src = src << 8;
+    244          		src += packet[8];
+    245          		printf("%d %d\r", src, rssi);
+    246          	}
+    247          #endif // _RSSI_SNIFFER_
+    248          #ifdef	_ASCI_SNIFFER_
+    249          	if (1 == enable_pkt_trace)
+    250          	{
+    251          		printf("P");
+    252          		for(int i = 0; i< (packet[0]>pkt_trace_len?pkt_trace_len:packet[0]); i++)
+    253          			printf(" %2x", packet[i]);
+    254          		printf("\r");
+    255          	}
+    256          #endif // _ASCI_SNIFFER_
+    257          #ifdef	_HEX_SNIFFER_
+    258          	#ifndef XBEE_COMPAT
+    259          	//	if (1 == enable_pkt_trace)
+    260          	if (0x88 == packet[2])
+    261          	{
+    262          		__write(_LLIO_STDOUT, (unsigned char *)packet, packet[0]);
+    263          	}
+    264          	#else
+    265          	if (0x88 == packet[2])
+    266          	{	
+    267          		api_frame_rx16_t temp;
+    268          		uint8_t sum = 0;
+    269          		src = packet[9];
+    270          		src = src << 8;
+    271          		src += packet[8];
+    272          		temp.api_start = 0x7e;
+    273          		temp.api_length = ENDIAN16((uint16_t)packet[0]-6);//+API_RX16_HEAD_LENGTH);
+    274          		temp.api_id = 0x81;
+    275          		temp.api_source = ENDIAN16(src);
+    276          		temp.api_rssi = 255-rssi;
+    277          		temp.api_options = packet[3]; // WILL USE FOR seq id
+    278          		//
+    279          		sum += add8((unsigned char *)&temp.api_id, 5);
+    280          		sum += add8( (unsigned char *)&(packet[12]), packet[0]-11 );
+    281          		sum = 0xFF - sum;
+    282          		__write(_LLIO_STDOUT, (unsigned char *)&temp, 8);
+    283          		__write(_LLIO_STDOUT, (unsigned char *)&(packet[12]), packet[0]-11);
+    284          		__write(_LLIO_STDOUT, (unsigned char *)&sum, 1);
+    285          	} else {
+    286          		__write(_LLIO_STDOUT, (unsigned char *)packet, packet[0]);
+    287          	}
+    288          	#endif // ELSE not defined XBEE_COMPAT
+    289          #endif // _HEX_SNIFFER_
+    290          
+    291          #if !defined(_HEX_SNIFFER_) && !defined(_RSSI_SNIFFER_) && !defined(_ASCI_SNIFFER_)
+    292          	if ( packetReceived == FALSE )
+   \   00000002   0x....             LDR.N    R1,??DataTable10_2
+   \   00000004   0x780A             LDRB     R2,[R1, #+0]
+   \   00000006   0xB9F2             CBNZ.N   R2,??ST_RadioReceiveIsrCallback_0
+    293          	{
+    294          		if ( 0x88 == packet[2] )
+   \   00000008   0x7882             LDRB     R2,[R0, #+2]
+   \   0000000A   0x2A88             CMP      R2,#+136
+   \   0000000C   0xD115             BNE.N    ??ST_RadioReceiveIsrCallback_1
+    295          		{
+    296          			for ( i = 0; i <= packet[0]; i++ )
+   \   0000000E   0x2200             MOVS     R2,#+0
+   \   00000010   0xE004             B.N      ??ST_RadioReceiveIsrCallback_2
+    297          			{
+    298          				rxPacket[i] = packet[i];
+   \                     ??ST_RadioReceiveIsrCallback_3: (+1)
+   \   00000012   0x5C13             LDRB     R3,[R2, R0]
+   \   00000014   0x1854             ADDS     R4,R2,R1
+    299          			}
+   \   00000016   0x1C52             ADDS     R2,R2,#+1
+   \   00000018   0x7123             STRB     R3,[R4, #+4]
+   \   0000001A   0xB2D2             UXTB     R2,R2
+   \                     ??ST_RadioReceiveIsrCallback_2: (+1)
+   \   0000001C   0x7803             LDRB     R3,[R0, #+0]
+   \   0000001E   0x4293             CMP      R3,R2
+   \   00000020   0xDAF7             BGE.N    ??ST_RadioReceiveIsrCallback_3
+    300          			beforelast_id = last_id;
+   \   00000022   0x78CA             LDRB     R2,[R1, #+3]
+   \   00000024   0x708A             STRB     R2,[R1, #+2]
+    301          			last_id = packet[1];
+   \   00000026   0x7840             LDRB     R0,[R0, #+1]
+   \   00000028   0x70C8             STRB     R0,[R1, #+3]
+    302          			rxPacketRSSI = 255 - rssi;
+   \   0000002A   0xF99D 0x0008      LDRSB    R0,[SP, #+8]
+   \   0000002E   0xF1C0 0x00FF      RSB      R0,R0,#+255
+   \   00000032   0x7048             STRB     R0,[R1, #+1]
+    303          			
+    304          			//rs_rx_rssi(STRADIO_GET_SRC_ADDR(packet), rssi); // add the rssi info to sensor - make id dynamic
+    305          			
+    306          			packetReceived = TRUE;
+   \   00000034   0x2001             MOVS     R0,#+1
+   \   00000036   0x7008             STRB     R0,[R1, #+0]
+   \   00000038   0xBD10             POP      {R4,PC}
+    307          		}
+    308          		else
+    309          		{
+    310          			rxpkt_wrong_count_ ++;
+   \                     ??ST_RadioReceiveIsrCallback_1: (+1)
+   \   0000003A   0xF8D1 0x0088      LDR      R0,[R1, #+136]
+   \   0000003E   0x1C40             ADDS     R0,R0,#+1
+   \   00000040   0xF8C1 0x0088      STR      R0,[R1, #+136]
+   \   00000044   0xBD10             POP      {R4,PC}
+    311          		}
+    312          	}
+    313          	else
+    314          	{
+    315          		rxpkt_oveflow_count_ ++;
+   \                     ??ST_RadioReceiveIsrCallback_0: (+1)
+   \   00000046   0xF8D1 0x0084      LDR      R0,[R1, #+132]
+   \   0000004A   0x1C40             ADDS     R0,R0,#+1
+   \   0000004C   0xF8C1 0x0084      STR      R0,[R1, #+132]
+    316          	}
+    317          #endif // if neither _RSSI_SNIFFER_ nor _HEX_SNIFFER_ nor _ASCI_SNIFFER_
+    318          
+    319          }/* end ST_RadioReceiveIsrCallback() */
+   \   00000050   0xBD10             POP      {R4,PC}          ;; return
+    320          
+    321          
+    322          /*******************************************************************************
+    323          * Function Name  : ST_RadioDataPendingShortIdIsrCallback
+    324          * @brief Callback for Radio Short Id data pending
+    325          * @param shortId address         : 
+    326          * @retval TRUE/FALSE
+    327          *******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    328          boolean ST_RadioDataPendingShortIdIsrCallback( uint16_t shortId )
+    329          {
+    330          	return FALSE;
+   \                     ST_RadioDataPendingShortIdIsrCallback: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x4770             BX       LR               ;; return
+    331          }/* end ST_RadioDataPendingShortIdIsrCallback() */
+    332          
+    333          
+    334          /*******************************************************************************
+    335          * Function Name  : ST_RadioDataPendingLongIdIsrCallback
+    336          * @brief Callback for Radio Long  Id data pending
+    337          * @param long id address
+    338          * @retval TRUE/FALSE 
+    339          *******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    340          boolean ST_RadioDataPendingLongIdIsrCallback( uint8_t* longId )
+    341          {
+    342          	return FALSE;
+   \                     ST_RadioDataPendingLongIdIsrCallback: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x4770             BX       LR               ;; return
+    343          }/* ST_RadioDataPendingShortIdIsrCallback() */
+    344          
+    345          
+    346          
+    347          /*******************************************************************************
+    348           **
+    349            * @brief  This callback must be defined.  This callback is enabled 
+    350            *         using the function ST_RadioEnableOverflowNotification but should
+    351            *         never be called by the phy library.
+    352            * @param  None 
+    353            * @retval None
+    354            * @note   If the function is called, something went wrong with receive.  
+    355            *         Probably long latency.
+    356            */
+
+   \                                 In section .text, align 2, keep-with-next
+    357          void ST_RadioOverflowIsrCallback(void)
+    358          {
+   \                     ST_RadioOverflowIsrCallback: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    359            assert(FALSE);
+   \   00000002   0xF240 0x1267      MOVW     R2,#+359
+   \   00000006   0x.... 0x....      ADR.W    R1,?_1
+   \   0000000A   0x.... 0x....      ADR.W    R0,?_0
+   \   0000000E   0x.... 0x....      BL       __aeabi_assert
+   \   00000012   0x.... 0x....      BL       __iar_EmptyStepPoint
+    360          }/* end ST_RadioOverflowIsrCallback() */
+   \   00000016   0xBD01             POP      {R0,PC}          ;; return
+    361          
+    362          
+    363          
+    364          /*******************************************************************************
+    365          * Function Name  : ST_RadioSfdSentIsrCallback
+    366          * @brief Radio SFD sent event callback
+    367          * @param sfdSentTime:MAC timer when the SFD was sent
+    368          * @retval None
+    369          *******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    370          void ST_RadioSfdSentIsrCallback( uint32_t sfdSentTime )
+    371          {
+    372          }/* end ST_RadioSfdSentIsrCallback() */
+   \                     ST_RadioSfdSentIsrCallback: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    373          
+    374          
+    375          /*******************************************************************************
+    376          * Function Name  : ST_RadioMacTimerCompareIsrCallback
+    377          * @brief Radio MAC timer comapre Event callback
+    378          * @param None
+    379          * @retval None
+    380          *******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    381          void ST_RadioMacTimerCompareIsrCallback( void )
+    382          {
+    383          }/* end ST_RadioMacTimerCompareIsrCallback() */
+   \                     ST_RadioMacTimerCompareIsrCallback: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    384          
+    385          
+    386          #define PERIODIC_MAINTENANCE_EVENTS_RATE	1000
+    387          /**
+    388            * @brief  Perform periodic maintenance tasks required by STM32W108 
+    389            * @param  None
+    390            * @retval None
+    391            */
+
+   \                                 In section .text, align 2, keep-with-next
+    392          void periodicMaintenanceEvents(void)
+    393          {
+   \                     periodicMaintenanceEvents: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    394            static uint16_t lastPeriodicEventsQsTick = 0;
+    395          
+    396            if (lastPeriodicEventsQsTick == 0)
+   \   00000002   0x....             LDR.N    R4,??DataTable10_3
+   \   00000004   0x8820             LDRH     R0,[R4, #+0]
+   \   00000006   0xB910             CBNZ.N   R0,??periodicMaintenanceEvents_0
+    397            {
+    398              lastPeriodicEventsQsTick = halCommonGetInt16uQuarterSecondTick();
+   \   00000008   0x.... 0x....      BL       halCommonGetInt16uQuarterSecondTick
+   \   0000000C   0x8020             STRH     R0,[R4, #+0]
+    399            }
+    400          
+    401            /* Run periodic maintenance events */
+    402            if(elapsedTimeInt16u(lastPeriodicEventsQsTick, halCommonGetInt16uQuarterSecondTick()) > PERIODIC_MAINTENANCE_EVENTS_RATE)
+   \                     ??periodicMaintenanceEvents_0: (+1)
+   \   0000000E   0x.... 0x....      BL       halCommonGetInt16uQuarterSecondTick
+   \   00000012   0x8821             LDRH     R1,[R4, #+0]
+   \   00000014   0x1A40             SUBS     R0,R0,R1
+   \   00000016   0xB280             UXTH     R0,R0
+   \   00000018   0xF5B0 0x7F7A      CMP      R0,#+1000
+   \   0000001C   0xDD0B             BLE.N    ??periodicMaintenanceEvents_1
+    403            {
+    404              if(ST_RadioCheckRadio()) 
+   \   0000001E   0x.... 0x....      BL       ST_RadioCheckRadio
+   \   00000022   0xB108             CBZ.N    R0,??periodicMaintenanceEvents_2
+    405              {
+    406                ST_RadioCalibrateCurrentChannel();
+   \   00000024   0x.... 0x....      BL       ST_RadioCalibrateCurrentChannel
+    407              }
+    408              halCommonCheckXtalBiasTrim();
+   \                     ??periodicMaintenanceEvents_2: (+1)
+   \   00000028   0x.... 0x....      BL       halCommonTryToSwitchToXtal
+    409              halCommonCalibratePads();
+   \   0000002C   0x.... 0x....      BL       halCommonCalibratePads
+    410              lastPeriodicEventsQsTick = halCommonGetInt16uQuarterSecondTick();
+   \   00000030   0x.... 0x....      BL       halCommonGetInt16uQuarterSecondTick
+   \   00000034   0x8020             STRH     R0,[R4, #+0]
+    411            }
+    412          }
+   \                     ??periodicMaintenanceEvents_1: (+1)
+   \   00000036   0xBD10             POP      {R4,PC}          ;; return
+
+   \                                 In section .bss, align 2
+   \                     ??lastPeriodicEventsQsTick:
+   \   00000000                      DS8 2
+    413          
+    414          #define BUTTON_CLICKED 1
+    415          #define BUTTON_IDLE    0
+    416          /**
+    417            * @brief  This function return whether a button has been pressed and released
+    418            * @param  button
+    419            * @retval BUTTON_clicked or BUTTON_IDLE
+    420            */
+
+   \                                 In section .text, align 2, keep-with-next
+    421          uint8_t getButtonStatus(Button_TypeDef button)
+    422          {
+   \                     getButtonStatus: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+   \   00000002   0x4604             MOV      R4,R0
+    423            if (STM_EVAL_PBGetState(button) == 0x00)
+   \   00000004   0x.... 0x....      BL       STM_EVAL_PBGetState
+   \   00000008   0xB980             CBNZ.N   R0,??getButtonStatus_0
+    424            {
+    425              /*  Indicate button pression detected */
+    426              STM_EVAL_LEDOn(LED1);
+   \   0000000A   0x.... 0x....      BL       STM_EVAL_LEDOn
+    427              /* Wait for release */
+    428              while (STM_EVAL_PBGetState(button) == 0x00);
+   \                     ??getButtonStatus_1: (+1)
+   \   0000000E   0x4620             MOV      R0,R4
+   \   00000010   0x.... 0x....      BL       STM_EVAL_PBGetState
+   \   00000014   0x2800             CMP      R0,#+0
+   \   00000016   0xD0FA             BEQ.N    ??getButtonStatus_1
+    429              halCommonDelayMilliseconds(50);
+   \   00000018   0x2032             MOVS     R0,#+50
+   \   0000001A   0x.... 0x....      BL       halCommonDelayMilliseconds
+    430              while (STM_EVAL_PBGetState(button) == 0x00);
+   \                     ??getButtonStatus_2: (+1)
+   \   0000001E   0x4620             MOV      R0,R4
+   \   00000020   0x.... 0x....      BL       STM_EVAL_PBGetState
+   \   00000024   0x2800             CMP      R0,#+0
+   \   00000026   0xD0FA             BEQ.N    ??getButtonStatus_2
+    431              return BUTTON_CLICKED;
+   \   00000028   0x2001             MOVS     R0,#+1
+   \   0000002A   0xBD10             POP      {R4,PC}
+    432            }
+    433            else
+    434            {
+    435              return BUTTON_IDLE;
+   \                     ??getButtonStatus_0: (+1)
+   \   0000002C   0x2000             MOVS     R0,#+0
+   \   0000002E   0xBD10             POP      {R4,PC}          ;; return
+    436            }
+    437          }
+    438          
+    439          
+    440          
+    441          extern int main_arm( void ); // declaration of main function with scheduler loop
+    442          
+    443          /*******************************************************************************
+    444          * Function Name  : main.
+    445          * @brief talk main routine.
+    446          * @param None
+    447          * @retval None
+    448          *******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    449          void main( void )
+    450          {
+   \                     main: (+1)
+   \   00000000   0xB500             PUSH     {LR}
+   \   00000002   0xB085             SUB      SP,SP,#+20
+    451          	uint32_t seed;
+    452          	
+    453          	/* Initialization */
+    454          	halInit();
+   \   00000004   0x.... 0x....      BL       halInit
+    455          	ST_RadioGetRandomNumbers((uint16_t *)&seed, 2);
+   \   00000008   0x2102             MOVS     R1,#+2
+   \   0000000A   0xA800             ADD      R0,SP,#+0
+   \   0000000C   0x.... 0x....      BL       ST_RadioGetRandomNumbers
+    456          	halCommonSeedRandom(seed);
+   \   00000010   0x9800             LDR      R0,[SP, #+0]
+   \   00000012   0x.... 0x....      BL       halCommonSeedRandom
+    457          	//ST_RadioGetRandomNumbers( ( uint16_t * )&seed, 2 );
+    458          	//srand( seed );
+    459          
+    460          #ifdef ENABLE_UART
+    461          //	uartInit( UART_BAUDRATE, 8, PARITY_NONE, 1 );
+    462          	uartInit( ); // New version with default config (115200 bps, 8bit, 1stop, no parity)
+   \   00000016   0x.... 0x....      BL       uartInit
+    463          #endif // ENABLE_UART
+    464          
+    465          	INTERRUPTS_ON();
+   \   0000001A   0x2000             MOVS     R0,#+0
+   \   0000001C   0xF380 0x8811      MSR      BASEPRI,R0
+    466          
+    467          	/* init leds */
+    468          	//halInitLed();
+    469          	STM_EVAL_LEDInit(RLED);
+   \   00000020   0x.... 0x....      BL       STM_EVAL_LEDInit
+    470          	STM_EVAL_LEDInit(YLED);
+   \   00000024   0x2001             MOVS     R0,#+1
+   \   00000026   0x.... 0x....      BL       STM_EVAL_LEDInit
+    471          	
+    472          
+    473          	/* Initialize radio (analog section, digital baseband and MAC).
+    474          	Leave radio powered up in non-promiscuous rx mode */
+    475          	  ST_RadioEnableOverflowNotification(TRUE);
+   \   0000002A   0x2001             MOVS     R0,#+1
+   \   0000002C   0x.... 0x....      BL       ST_RadioEnableOverflowNotification
+    476          	assert( ST_RadioInit( ST_RADIO_POWER_MODE_RX_ON ) == ST_SUCCESS );
+   \   00000030   0x2000             MOVS     R0,#+0
+   \   00000032   0x.... 0x....      BL       ST_RadioInit
+   \   00000036   0xB148             CBZ.N    R0,??main_0
+   \   00000038   0xF44F 0x72EE      MOV      R2,#+476
+   \   0000003C   0x.... 0x....      ADR.W    R1,?_1
+   \   00000040   0x.... 0x....      ADR.W    R0,?_2
+   \   00000044   0x.... 0x....      BL       __aeabi_assert
+   \   00000048   0x.... 0x....      BL       __iar_EmptyStepPoint
+    477          
+    478          	/* Setup some node and pan ids.  The packet above is also sent to a device
+    479          	   with the same node and pan id so that two nodes running this same image
+    480          	   will talk to each other, even though its not right to have two nodes
+    481          	   with the same node id */
+    482              //  ST_RadioSetNodeId(0x0030);
+    483              //  ST_RadioSetPanId(0x1604);
+    484          	ST_RadioSetChannel( 0x14 );
+   \                     ??main_0: (+1)
+   \   0000004C   0x2014             MOVS     R0,#+20
+   \   0000004E   0x.... 0x....      BL       ST_RadioSetChannel
+    485          
+    486          	main_power_up();
+   \   00000052   0x.... 0x....      BL       main_power_up
+    487          
+    488          	radio_init();
+   \   00000056   0x.... 0x....      BL       radio_init
+    489          
+    490          // Debugging type printout -> to check is anything works
+    491          #ifndef NO_UART_OUT
+    492          	uint8_t len = 10;
+    493          	uint8_t data[] = "TR.TEST_1\r";
+   \   0000005A   0x.... 0x....      ADR.W    R1,?_3
+   \   0000005E   0xA801             ADD      R0,SP,#+4
+   \   00000060   0x220B             MOVS     R2,#+11
+   \   00000062   0x.... 0x....      BL       __aeabi_memcpy
+    494          	sendSerialData( len, data ); // Send via Radio
+   \   00000066   0xA901             ADD      R1,SP,#+4
+   \   00000068   0x200A             MOVS     R0,#+10
+   \   0000006A   0x.... 0x....      BL       sendSerialData
+    495              // Print via UART (USB-to-serial):
+    496          	printf( "\r\nSimpleMAC (%s) Talk Application (EUI=%x)\r\n", SIMPLEMAC_VERSION_STRING, ST_RadioGetEui64() );
+   \   0000006E   0x.... 0x....      BL       ST_RadioGetEui64
+   \   00000072   0x4602             MOV      R2,R0
+   \   00000074   0x.... 0x....      ADR.W    R1,?_5
+   \   00000078   0x.... 0x....      ADR.W    R0,?_4
+   \   0000007C   0x.... 0x....      BL       printf
+    497          #endif
+    498          
+    499             sch_add_loop(processSerialInput);     
+                    ^
+Warning[Pe223]: function "sch_add_loop" declared implicitly
+   \   00000080   0x....             LDR.N    R0,??DataTable10_4
+   \   00000082   0x.... 0x....      BL       sch_add_loop
+    500          // *********************************** Main loop *****************************
+    501          	// This should be end of the road (inside is an infinite loop)
+    502          	
+    503          // Special application -> only reads Radio input and prints to UART - no scheduling
+    504          #if defined(_RSSI_SNIFFER_) || defined(_HEX_SNIFFER_) || defined(_ASCI_SNIFFER_)
+    505          	// Enable promiscous mode:
+    506          	/* Set promiscuous mode: receive any packet on the selected radio
+    507          	channel */
+    508          	/* Disable address filtering*/
+    509          	ST_RadioEnableAddressFiltering(FALSE);
+    510          	/* Turn off automatic acknowledgment */
+    511          	ST_RadioEnableAutoAck(FALSE);
+    512          	ST_RadioSetCoordinator(TRUE);
+    513          	ST_RadioEnableReceiveCrc(FALSE);
+    514          	// forwarding the RSSI info is done inside the ISR
+    515          	int8_t rf_en_ = 0;
+    516          	uint8_t chan = ST_RadioGetChannel();
+    517          	while (1)
+    518          	{
+    519          #ifdef ENABLE_ENERGY_SNIFFER
+    520          		rf_en_ = ST_RadioEnergyDetection();
+    521          		if (-50 < rf_en_)
+    522          		printf("Energy = %d\n",  rf_en_);
+    523          		periodicMaintenanceEvents();
+    524          		if(BUTTON_CLICKED == getButtonStatus(BUTTON_S1))
+    525          		{
+    526          			if (ST_MAX_802_15_4_CHANNEL_NUMBER < ++chan) chan = ST_MIN_802_15_4_CHANNEL_NUMBER;
+    527          			ST_RadioSetChannel(chan);
+    528          			printf("Channel=%d (%x)\n", chan, chan);
+    529          		}
+    530          #endif // #ifdef ENABLE_ENERGY_SNIFFER
+    531          	}
+    532                  
+    533          #else //_RSSI_SNIFFER_
+    534          	
+    535          	main_arm(); // The main code with Scheduler
+   \   00000086   0x.... 0x....      BL       main_arm
+    536          
+    537          #endif // else _RSSI_SNIFFER_
+    538          
+    539          
+    540          }/* end main ()*/
+   \   0000008A   0xB005             ADD      SP,SP,#+20
+   \   0000008C   0xBD00             POP      {PC}             ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10:
+   \   00000000   0x........         DC32     txPacket
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_1:
+   \   00000000   0x........         DC32     ??bufferSize
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_2:
+   \   00000000   0x........         DC32     packetReceived
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_3:
+   \   00000000   0x........         DC32     ??lastPeriodicEventsQsTick
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_4:
+   \   00000000   0x........         DC32     processSerialInput
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ?_0:
+   \   00000000   0x46 0x41          DC8 "FALSE"
+   \              0x4C 0x53    
+   \              0x45 0x00    
+   \   00000006   0x00 0x00          DC8 0, 0
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ?_1:
+   \   00000000   0x43 0x3A          DC8 43H, 3AH, 5CH, 55H, 73H, 65H, 72H, 73H
+   \              0x5C 0x55    
+   \              0x73 0x65    
+   \              0x72 0x73    
+   \   00000008   0x5C 0x4A          DC8 5CH, 4AH, 6FH, 6EH, 5CH, 44H, 6FH, 63H
+   \              0x6F 0x6E    
+   \              0x5C 0x44    
+   \              0x6F 0x63    
+   \   00000010   0x75 0x6D          DC8 75H, 6DH, 65H, 6EH, 74H, 73H, 5CH, 4DH
+   \              0x65 0x6E    
+   \              0x74 0x73    
+   \              0x5C 0x4D    
+   \   00000018   0x4F 0x5F          DC8 4FH, 5FH, 53H, 5FH, 61H, 6EH, 64H, 5FH
+   \              0x53 0x5F    
+   \              0x61 0x6E    
+   \              0x64 0x5F    
+   \   00000020   0x54 0x5C          DC8 54H, 5CH, 43H, 70H, 45H, 35H, 31H, 37H
+   \              0x43 0x70    
+   \              0x45 0x35    
+   \              0x31 0x37    
+   \   00000028   0x30 0x5F          DC8 30H, 5FH, 52H, 54H, 5FH, 53H, 79H, 73H
+   \              0x52 0x54    
+   \              0x5F 0x53    
+   \              0x79 0x73    
+   \   00000030   0x74 0x65          DC8 74H, 65H, 6DH, 73H, 5CH, 4CH, 61H, 62H
+   \              0x6D 0x73    
+   \              0x5C 0x4C    
+   \              0x61 0x62    
+   \   00000038   0x73 0x5C          DC8 73H, 5CH, 63H, 70H, 65H, 2DH, 35H, 31H
+   \              0x63 0x70    
+   \              0x65 0x2D    
+   \              0x35 0x31    
+   \   00000040   0x37 0x30          DC8 37H, 30H, 2DH, 6DH, 6FH, 74H, 65H, 2DH
+   \              0x2D 0x6D    
+   \              0x6F 0x74    
+   \              0x65 0x2D    
+   \   00000048   0x63 0x6F          DC8 63H, 6FH, 64H, 65H, 5CH, 50H, 72H, 6FH
+   \              0x64 0x65    
+   \              0x5C 0x50    
+   \              0x72 0x6F    
+   \   00000050   0x6A 0x65          DC8 6AH, 65H, 63H, 74H, 73H, 5CH, 53H, 69H
+   \              0x63 0x74    
+   \              0x73 0x5C    
+   \              0x53 0x69    
+   \   00000058   0x6D 0x70          DC8 6DH, 70H, 6CH, 65H, 4DH, 41H, 43H, 5CH
+   \              0x6C 0x65    
+   \              0x4D 0x41    
+   \              0x43 0x5C    
+   \   00000060   0x6D 0x6F          DC8 6DH, 6FH, 74H, 65H, 5FH, 70H, 72H, 6FH
+   \              0x74 0x65    
+   \              0x5F 0x70    
+   \              0x72 0x6F    
+   \   00000068   0x6A 0x65          DC8 6AH, 65H, 63H, 74H, 5CH, 6DH, 6FH, 74H
+   \              0x63 0x74    
+   \              0x5C 0x6D    
+   \              0x6F 0x74    
+   \   00000070   0x65 0x2E          DC8 65H, 2EH, 63H, 0
+   \              0x63 0x00    
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ?_2:
+   \   00000000   0x53 0x54          DC8 53H, 54H, 5FH, 52H, 61H, 64H, 69H, 6FH
+   \              0x5F 0x52    
+   \              0x61 0x64    
+   \              0x69 0x6F    
+   \   00000008   0x49 0x6E          DC8 49H, 6EH, 69H, 74H, 28H, 20H, 53H, 54H
+   \              0x69 0x74    
+   \              0x28 0x20    
+   \              0x53 0x54    
+   \   00000010   0x5F 0x52          DC8 5FH, 52H, 41H, 44H, 49H, 4FH, 5FH, 50H
+   \              0x41 0x44    
+   \              0x49 0x4F    
+   \              0x5F 0x50    
+   \   00000018   0x4F 0x57          DC8 4FH, 57H, 45H, 52H, 5FH, 4DH, 4FH, 44H
+   \              0x45 0x52    
+   \              0x5F 0x4D    
+   \              0x4F 0x44    
+   \   00000020   0x45 0x5F          DC8 45H, 5FH, 52H, 58H, 5FH, 4FH, 4EH, 20H
+   \              0x52 0x58    
+   \              0x5F 0x4F    
+   \              0x4E 0x20    
+   \   00000028   0x29 0x20          DC8 29H, 20H, 3DH, 3DH, 20H, 53H, 54H, 5FH
+   \              0x3D 0x3D    
+   \              0x20 0x53    
+   \              0x54 0x5F    
+   \   00000030   0x53 0x55          DC8 53H, 55H, 43H, 43H, 45H, 53H, 53H, 0
+   \              0x43 0x43    
+   \              0x45 0x53    
+   \              0x53 0x00    
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ?_3:
+   \   00000000   0x54 0x52          DC8 "TR.TEST_1\015"
+   \              0x2E 0x54    
+   \              0x45 0x53    
+   \              0x54 0x5F    
+   \              0x31 0x0D    
+   \              0x00         
+   \   0000000B   0x00               DC8 0
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ?_4:
+   \   00000000   0x0D 0x0A          DC8 "\015\012SimpleMAC (%s) Talk Application (EUI=%x)\015\012"
+   \              0x53 0x69    
+   \              0x6D 0x70    
+   \              0x6C 0x65    
+   \              0x4D 0x41    
+   \              0x43 0x20    
+   \              0x28 0x25    
+   \              0x73 0x29    
+   \              0x20 0x54    
+   \              0x61 0x6C    
+   \              0x6B 0x20    
+   \              0x41 0x70    
+   \              0x70 0x6C    
+   \              0x69 0x63    
+   \              0x61 0x74    
+   \              0x69 0x6F    
+   \              0x6E 0x20    
+   \              0x28 0x45    
+   \              0x55 0x49    
+   \              0x3D 0x25    
+   \              0x78 0x29    
+   \              0x0D 0x0A    
+   \              0x00         
+   \   0000002D   0x00 0x00          DC8 0, 0, 0
+   \              0x00         
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ?_5:
+   \   00000000   0x32 0x2E          DC8 "2.0.0RC1"
+   \              0x30 0x2E    
+   \              0x30 0x52    
+   \              0x43 0x31    
+   \              0x00         
+   \   00000009   0x00 0x00          DC8 0, 0, 0
+   \              0x00         
+    541          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   ST_RadioDataPendingLongIdIsrCallback
+       0   ST_RadioDataPendingShortIdIsrCallback
+       0   ST_RadioMacTimerCompareIsrCallback
+       8   ST_RadioOverflowIsrCallback
+         8   -> __aeabi_assert
+         8   -> __iar_EmptyStepPoint
+       8   ST_RadioReceiveIsrCallback
+       0   ST_RadioSfdSentIsrCallback
+       8   add8
+       8   getButtonStatus
+         8   -> STM_EVAL_LEDOn
+         8   -> STM_EVAL_PBGetState
+         8   -> halCommonDelayMilliseconds
+      24   main
+        24   -> STM_EVAL_LEDInit
+        24   -> ST_RadioEnableOverflowNotification
+        24   -> ST_RadioGetEui64
+        24   -> ST_RadioGetRandomNumbers
+        24   -> ST_RadioInit
+        24   -> ST_RadioSetChannel
+        24   -> __aeabi_assert
+        24   -> __aeabi_memcpy
+        24   -> __iar_EmptyStepPoint
+        24   -> halCommonSeedRandom
+        24   -> halInit
+        24   -> main_arm
+        24   -> main_power_up
+        24   -> printf
+        24   -> radio_init
+        24   -> sch_add_loop
+        24   -> sendSerialData
+        24   -> uartInit
+       8   periodicMaintenanceEvents
+         8   -> ST_RadioCalibrateCurrentChannel
+         8   -> ST_RadioCheckRadio
+         8   -> halCommonCalibratePads
+         8   -> halCommonGetInt16uQuarterSecondTick
+         8   -> halCommonTryToSwitchToXtal
+       8   processSerialInput
+         8   -> __io_getcharNonBlocking
+         8   -> sendSerialData
+      16   sendSerialData
+        16   -> ST_RadioTransmit
+        16   -> halCommonMemCopy
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable10
+       4  ??DataTable10_1
+       4  ??DataTable10_2
+       4  ??DataTable10_3
+       4  ??DataTable10_4
+       8  ?_0
+     116  ?_1
+      56  ?_2
+      12  ?_3
+      48  ?_4
+      12  ?_5
+       4  ST_RadioDataPendingLongIdIsrCallback
+       4  ST_RadioDataPendingShortIdIsrCallback
+       2  ST_RadioMacTimerCompareIsrCallback
+      24  ST_RadioOverflowIsrCallback
+      82  ST_RadioReceiveIsrCallback
+       2  ST_RadioSfdSentIsrCallback
+      26  add8
+      72  bufferSize
+          buffer
+          bufferTimeout
+      48  getButtonStatus
+       2  lastPeriodicEventsQsTick
+     142  main
+     140  packetReceived
+          rxPacketRSSI
+          beforelast_id
+          last_id
+          rxPacket
+          rxpkt_oveflow_count_
+          rxpkt_wrong_count_
+      56  periodicMaintenanceEvents
+      70  processSerialInput
+       8  radioTransmitConfig
+      60  sendSerialData
+       2  src
+     130  txPacket
+          txComplete
+          radio_call_status
+
+ 
+ 144 bytes in section .bss
+ 210 bytes in section .data
+ 792 bytes in section .text
+ 
+ 792 bytes of CODE memory
+ 354 bytes of DATA memory
+
+Errors: none
+Warnings: 2

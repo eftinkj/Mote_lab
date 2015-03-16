@@ -1,0 +1,570 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.30.4.8167/W32 for ARM        21/Feb/2015  16:28:54
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_CogNet\rtls_beacon.c
+#    Command line =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_CogNet\rtls_beacon.c
+#        -D USE_STDPERIPH_DRIVER -D USE_MB_SNT_X2 -D STM32W108CB -D
+#        "PLATFORM_HEADER=\"Utilities\STM32W108xx_HAL_Driver/micro/cortexm3/compiler/iar.h\""
+#        -D CORTEXM3 -D CORTEXM3_STM32W108 -D CORTEXM3_STM32W108xB -D
+#        DISABLE_WATCHDOG -D "__SOURCEFILE__=\"rtls_beacon.c\"" -lC
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\
+#        --diag_suppress Pa050 -o
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_CogNet\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\stm32w108\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\generic\compiler\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\bootloader\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\Shared\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Device\ST\STM32W108xx\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\SimpleMAC\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\Common\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\MB851\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\arm_mote\
+#        -Ohz --use_c++_inline
+#    List file    =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\rtls_beacon.lst
+#    Object file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\rtls_beacon.o
+#
+###############################################################################
+
+C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_CogNet\rtls_beacon.c
+      1          /****************************************************************************
+      2          **
+      3          ** 
+      4          ** 
+      5          ** Author:  Rana Basheer
+      6          ** eMail:   mrbxcf@mst.edu
+      7          ** Version: 1.0
+      8          **
+      9          ****************************************************************************/
+     10          
+     11          #include "defs/esnl_pub.h"
+     12          
+     13          #if defined(_ENABLE_RTLS_BEACON_)
+     14          
+     15          #include "common_constants.h"
+     16          #include "common.h"
+     17          #include "sys_func.h"
+     18          #include "FEAT_Networking/tsp_common_pub.h"
+     19          
+     20          #include "hal/micro/cortexm3/uart.h"
+     21          #include "rtls_beacon.h"
+     22          #include "microstrain.h"
+     23          #include "FEAT_Scheduler/sch_basic_pub.h"
+     24          #include "FEAT_STM32W/STM32W_Radio.h"
+     25          
+     26          #include <string.h>
+     27          
+     28          //constants
+     29          #define MAX_RSSI_INFO_SZ 100
+     30          #define PYTHON_START_PKT 	0xBE
+     31          #define PYTHON_END_PKT		0xEF
+     32          #define PYTHON_ESC_PKT		0xAB
+     33          
+     34          //typedefs
+     35          typedef struct
+     36          {
+     37            uint8_t uid;
+     38            uint8_t rssi;
+     39          } rssi_data_t;
+     40          
+     41          typedef enum
+     42          {
+     43          PYTHON_START_PKT_MODE = 0
+     44          ,PYTHON_CMD_MODE
+     45          ,PYTHON_TX_BCAST_ID_MODE
+     46          ,PYTHON_TX_BCAST_UID_MODE
+     47          ,PYTHON_TX_BCAST_CNT_MODE
+     48          ,PYTHON_TX_BCAST_DELAY_MODE
+     49          ,PYTHON_RX_BCAST_ID_MODE
+     50          ,PYTHON_RX_BCAST_UID_MODE
+     51          ,PYTHON_END_PKT_MODE
+     52          } python_mode_t;
+     53          
+     54          typedef enum
+     55          {
+     56          PYTHON_ACK_CMD_PKT = 0
+     57          ,PYTHON_CMD_RQST_TX_BCAST
+     58          ,PYTHON_CMD_RESP_TX_BCAST
+     59          ,PYTHON_CMD_RQST_TX_RSSI
+     60          ,PYTHON_CMD_RESP_TX_RSSI
+     61          } python_cmd_t;   
+     62          
+     63          //Function declarations
+     64          static void trigger_bcast();
+     65          static void send_bcast_now(uint8_t XDATA *context);
+     66          static uint8_t send_rssi(uint8_t base_station_id, uint8_t uid);
+     67          static void send_python_rssi_info(uint8_t receiver_id, uint8_t *rssi_data, uint8_t rssi_count);
+     68          static void send_python_bcast_info(uint8_t bcast_id, uint8_t bcast_indx, uint8_t bcast_uid, float tx_heading);
+     69          static void rtls_receive_beacon(uint8_t src_id, pkt_mod_header_t *mod, uint8_t rssi);
+     70          static void python_fsm(uint8_t ser_data);
+     71          static void rtls_loop(void);
+     72          static void handle_python_cmd(void);
+     73          static void send_bcast_rqst();
+     74          static void send_rssi_rqst();
+     75          static void putescchar(uint8_t chr);
+     76          static void putackchar(void);
+     77          
+     78          //Global variables
+     79          //static uint8_t report_event_tid;/// Stores ID of the timeout for beacon
+     80          static uint8_t 			rtls_pkt_id;
+     81          static rssi_data_t 		rssi_info[MAX_RSSI_INFO_SZ];
+     82          static uint8_t 			bcast_uid;
+     83          static uint8_t 			bcast_current_count;
+     84          static uint8_t 			bcast_total_count;
+     85          static uint8_t 			bcast_ms_delay;
+     86          static python_mode_t	python_mode;
+     87          static python_cmd_t 	python_cmd;
+     88          static uint8_t			python_bcast_rqst_id;
+     89          static uint8_t			python_rssi_rqst_id;
+     90          static uint8_t			python_esc_mode;
+     91          //static uint32_t			next_bcast_time;
+     92          
+     93          void rtls_beacon_power_up()
+     94          {
+     95          	//report_event_tid = SCH_NO_TIMEOUT_ID;
+     96          	bcast_total_count = 0;
+     97          	bcast_current_count = 0xFF;
+     98          	bcast_uid = 0;
+     99          	bcast_ms_delay = 0;
+    100          	rtls_pkt_id = 0xFF;
+    101          	python_esc_mode = 1;
+    102          	python_mode = PYTHON_START_PKT_MODE;
+    103          }
+    104          
+    105          void rtls_beacon_init()
+    106          {
+    107          	tsp_register_port( PKT_MODULE_TYPE_RTLS_BEACON, rtls_receive_beacon);
+    108          	sch_add_loop((sch_loop_func_t)rtls_loop);
+    109          	//next_bcast_time = (uint32_t)-1;
+    110          }
+    111          
+    112          static void rtls_receive_beacon(uint8_t src_id, pkt_mod_header_t *mod, uint8_t rssi)
+    113          {
+    114              //mod->moule_type ==;
+    115              //mod->module_length;
+    116              //mod->content // is the first byte;
+    117          	uint8_t *content = &(mod->content);
+    118          	uint8_t rtls_cmd = *content; content++;
+    119          	// printf (
+    120          	switch(rtls_cmd)
+    121          	{
+    122          	case RTLS_BCAST_RQST:
+    123          	  {
+    124          	  //This message is only received by a mote acting as the transmitter
+    125          	  //A request came from the base station asking to send certain number of broadcast messages
+    126          	  bcast_uid = *content; content++;
+    127          	  bcast_total_count = *content; content++;
+    128          	  bcast_ms_delay = *content; content++;
+    129          	  bcast_current_count = 0;
+    130          	  trigger_bcast();	  
+    131          	  }  
+    132          	break;
+    133          	
+    134          	case RTLS_BCAST:
+    135          	  {
+    136          	  //This is a message that either a receiver or a base station will receive
+    137          	  uint8_t bcast_indx = *content-1; content++; 
+    138          	  uint8_t bcast_uid  = *content; content++;
+    139          	  float tx_heading = *((float *)content);
+    140          	  if(bcast_indx < MAX_RSSI_INFO_SZ)
+    141          	  	{
+    142          		rssi_info[bcast_indx].uid = bcast_uid;
+    143          		rssi_info[bcast_indx].rssi = rssi;
+    144          	  	send_python_bcast_info(src_id, bcast_indx, bcast_uid, tx_heading);
+    145          		}
+    146          	  }
+    147          	  break;
+    148          	  
+    149          	case RTLS_RSSI_RQST:
+    150          	  {
+    151          	  //this message is only received  by a mote acting as the receiver
+    152          	  //we are sending the RSSI information collected from the transmitter broadcast to the base station
+    153          	  uint8_t bcast_uid = *content;
+    154          	  send_rssi(src_id, bcast_uid);
+    155          	  }
+    156          	  break;
+    157          	
+    158          	case RTLS_RSSI_RESP:
+    159          	  {
+    160          	  //This message is only send from the receiver to the base station
+    161          	  //we have to send to the python the current heading that is obtained from the broadcast
+    162                //message and also the rssi info obtained from the receiver
+    163          	  uint8_t rssi_count = mod->module_length-1;
+    164          	  uint8_t *rssi_data = content;
+    165          	  send_python_rssi_info(src_id, rssi_data, rssi_count);
+    166          	  }
+    167          	  break;
+    168          	}
+    169          }
+    170          
+    171          /*
+    172          This function is executed by the transmitter on the request of the base station
+    173          we have to keep on sending multiple messages out
+    174          */
+    175          static void trigger_bcast()
+    176          {
+    177          //we create a timer and when the timer expires a broadcast message will be sent out
+    178          sch_create_timeout( rtc_get_ticks()+bcast_ms_delay, send_bcast_now, NULL);
+    179          }
+    180          
+    181          static void send_bcast_now(uint8_t XDATA *context)
+    182          {
+    183            // 1) Reserve a packet in a queue buffer (NOT QUEUED YET) and check if successful
+    184          	// 2) Get a pointer to the reserved MODULE inside the packet (set as DUMMY)
+    185          	uint8_t module_size = sizeof(float)+3*sizeof(uint8_t); // nothing to transmit ???
+    186          	uint8_t *content = NULL;
+    187          //	sprintf(buff, "\\%s", "");  
+    188          	content = tsp_new_module( PKT_MODULE_TYPE_RTLS_BEACON, 
+    189                                    module_size, 
+    190                                    &rtls_pkt_id, 
+    191                                    MAC_BROADCAST);
+    192          
+    193          	if (0 == content)
+    194          	{
+    195          		// Error
+    196          		rtls_pkt_id = 0xFF;
+    197          		sys_error(SYS_ERROR_MEM_FULL);
+    198          	}
+    199          	else
+    200          	{
+    201          	    (*content) = RTLS_BCAST; content++;
+    202          	  	(*content) = bcast_current_count; content++; 
+    203          	  	(*content) = bcast_uid; content++; 
+    204          		*((float *)content) = microstrain_get_yaw();
+    205          		bcast_current_count++;
+    206          		tsp_send_from_modules(rtls_pkt_id);
+    207          	}
+    208          	if(bcast_current_count <= bcast_total_count)
+    209          		{
+    210          		trigger_bcast(); //retrigger the broadcast	
+    211          		}
+    212          }
+    213          /*
+    214          This is a command that is executed at the receiver. This will send the rssi information 
+    215          collected by this receiver to the base station
+    216          */
+    217          static uint8_t send_rssi(uint8_t base_station_id, uint8_t uid)
+    218          {
+    219          	// 1) Reserve a packet in a queue buffer (NOT QUEUED YET) and check if successful
+    220          	// 2) Get a pointer to the reserved MODULE inside the packet (set as DUMMY)
+    221          	uint8_t *content = NULL;
+    222          	uint8_t i;
+    223          	uint8_t rssi_info_count = 1; //we start from 1 for the command
+    224          	//Find out how many rssi packets are there in our array that corresponds
+    225          	//to the UID requested by the base station
+    226          	for(i = 0; i < MAX_RSSI_INFO_SZ; ++i)
+    227          		{
+    228          		if(rssi_info[i].uid == uid)
+    229          		  rssi_info_count++;
+    230          		}
+    231          	if(rssi_info_count == 0)
+    232          	  return 1;
+    233          	
+    234          	//We reserve a buffer space to send that rssi information
+    235          	content = tsp_new_module( PKT_MODULE_TYPE_RTLS_BEACON, 
+    236                                    rssi_info_count, 
+    237                                    &rtls_pkt_id, 
+    238                                    base_station_id);
+    239          
+    240          	if (0 == content)
+    241          	{
+    242          		// Error
+    243          		rtls_pkt_id = 0xFF;
+    244          		sys_error(SYS_ERROR_MEM_FULL);
+    245          		return 0;
+    246          	}
+    247          	else
+    248          	{	
+    249          	  	*content = RTLS_RSSI_RESP; ++content;
+    250          	  	//copy the RSSI information to the buffer space that we reserved previously
+    251          		for(i = 0; i < MAX_RSSI_INFO_SZ; ++i)
+    252          			{
+    253          			if(rssi_info[i].uid == uid)
+    254          			  *content = rssi_info[i].rssi; ++content;
+    255          			}
+    256          		//off we go
+    257          		tsp_send_from_modules(rtls_pkt_id);
+    258          	}
+    259          	return 1;
+    260          }
+    261          
+    262          /*
+    263          This is needed to escape control characters in the data
+    264          */
+    265          static void putescchar(uint8_t chr)
+    266          {
+    267          if(chr == PYTHON_START_PKT || chr == PYTHON_END_PKT || chr == PYTHON_ESC_PKT)
+    268          	putchar(PYTHON_ESC_PKT);
+    269          putchar(chr);
+    270          }
+    271          /*
+    272          */
+    273          static void send_python_bcast_info(uint8_t bcast_id, uint8_t bcast_indx, uint8_t bcast_uid, float tx_heading)
+    274          {
+    275          uint8_t *hdg_ptr = (uint8_t *)&tx_heading;
+    276          putchar(PYTHON_START_PKT);
+    277          putescchar(PYTHON_CMD_RESP_TX_BCAST);
+    278          putescchar(bcast_id);
+    279          putescchar(bcast_indx);
+    280          putescchar(bcast_uid);
+    281          putescchar(hdg_ptr[3]);
+    282          putescchar(hdg_ptr[2]);
+    283          putescchar(hdg_ptr[1]);
+    284          putescchar(hdg_ptr[0]);
+    285          putchar(PYTHON_END_PKT);
+    286          }
+    287          
+    288          static void putackchar()
+    289          {
+    290          putchar(PYTHON_START_PKT);
+    291          putchar(PYTHON_ACK_CMD_PKT);
+    292          putchar(PYTHON_END_PKT);
+    293          }
+    294          
+    295          /*
+    296          This function sends the heading, rssi information that the receiver collected to the 
+    297          python
+    298          */
+    299          static void send_python_rssi_info(uint8_t receiver_id, uint8_t *rssi_data, uint8_t rssi_count)
+    300          {
+    301          uint8_t i=0;
+    302          putchar(PYTHON_START_PKT);
+    303          putescchar(PYTHON_CMD_RESP_TX_RSSI);
+    304          putescchar(receiver_id);
+    305          //putescchar(rssi_count);
+    306          for(i = 0; i < rssi_count; ++i)
+    307          	{
+    308          	putescchar(rssi_data[i]);	
+    309          	}
+    310          putchar(PYTHON_END_PKT);
+    311          }
+    312          
+    313          /*
+    314          This function reads the serial port if it is not being used by the microstrain
+    315          */
+    316          static void rtls_loop(void)
+    317          {
+    318          if(!is_microstrain_active())
+    319          	{
+    320            	uint8_t ser_data;
+    321          	if ( serialReadByte( &ser_data ) )
+    322          		{
+    323          		python_fsm(ser_data);
+    324          		}
+    325          	}
+    326          }
+    327          
+    328          /*
+    329          This is used to handle the control characters appearing in the data stream
+    330          */
+    331          #define ESC_PYTHON_MODE()						\
+    332          	  	if(python_esc_mode)						\
+    333          			{									\
+    334          			if(ser_data == PYTHON_ESC_PKT)		\
+    335          				{								\
+    336          				python_esc_mode = 0;			\
+    337          				break;							\
+    338          				}								\
+    339          			}									\
+    340          		else									\
+    341          			{									\
+    342          			python_esc_mode = 1;				\
+    343          			}									\
+    344          
+    345          /*
+    346          This function talks to the uart port to see if there is any command from the python host
+    347          */
+    348          static void python_fsm(uint8_t ser_data)
+    349          {
+    350          switch(python_mode)
+    351          	{
+    352          	default:
+    353          	  python_mode = PYTHON_START_PKT_MODE;
+    354          	  break;
+    355          	  
+    356          	case PYTHON_START_PKT_MODE:
+    357          	  	python_mode = (ser_data == PYTHON_START_PKT)?PYTHON_CMD_MODE:PYTHON_START_PKT_MODE;
+    358          		python_esc_mode = 1;
+    359          		break;
+    360          				
+    361          	case PYTHON_CMD_MODE:
+    362          		ESC_PYTHON_MODE();
+    363          	  	python_cmd = (python_cmd_t)ser_data;
+    364          		switch(python_cmd)
+    365          			{
+    366          			case PYTHON_CMD_RQST_TX_BCAST:
+    367          			  python_mode = PYTHON_TX_BCAST_ID_MODE;
+    368          			  break;
+    369          			case PYTHON_CMD_RQST_TX_RSSI:
+    370          			  python_mode = PYTHON_RX_BCAST_ID_MODE;
+    371          			  break;
+    372          			default:
+    373          			  python_mode = PYTHON_START_PKT_MODE;
+    374          			  break;
+    375          			}
+    376          	  	break;
+    377          		
+    378          	case PYTHON_TX_BCAST_ID_MODE:
+    379          	  	ESC_PYTHON_MODE();
+    380          	  	python_bcast_rqst_id = ser_data;
+    381          		python_mode = PYTHON_TX_BCAST_UID_MODE;
+    382          	  	break;
+    383          	
+    384          	case PYTHON_TX_BCAST_UID_MODE:
+    385          	  	ESC_PYTHON_MODE();
+    386          	  	bcast_uid = ser_data;
+    387          		python_mode = PYTHON_TX_BCAST_CNT_MODE;	  	
+    388          	  	break;
+    389          	  
+    390          	case PYTHON_TX_BCAST_CNT_MODE:
+    391          	  	ESC_PYTHON_MODE();
+    392          		bcast_total_count = ser_data;
+    393          		python_mode = PYTHON_TX_BCAST_DELAY_MODE;
+    394          		break;
+    395          	
+    396          	case PYTHON_TX_BCAST_DELAY_MODE:
+    397          	  	ESC_PYTHON_MODE();
+    398          	  	bcast_ms_delay = ser_data;
+    399          		python_mode = PYTHON_END_PKT_MODE;
+    400          		break;
+    401          	
+    402          	case PYTHON_RX_BCAST_ID_MODE:
+    403          	  	ESC_PYTHON_MODE();
+    404          	  	python_rssi_rqst_id = ser_data;
+    405          		python_mode = PYTHON_RX_BCAST_UID_MODE;
+    406          		break;
+    407          
+    408          	case PYTHON_RX_BCAST_UID_MODE:
+    409          	  	ESC_PYTHON_MODE();
+    410          	  	bcast_uid = ser_data;
+    411          		python_mode = PYTHON_END_PKT_MODE;	  	
+    412          	  	break;
+    413          		
+    414          	case PYTHON_END_PKT_MODE:	  	
+    415          	  	if(ser_data == PYTHON_END_PKT)
+    416          	    	handle_python_cmd();
+    417          		python_mode = PYTHON_START_PKT_MODE;
+    418          	  	break;
+    419          	}
+    420          }	  
+    421          
+    422          static void handle_python_cmd(void)
+    423          {
+    424          switch(python_cmd)
+    425          	{
+    426          	case PYTHON_CMD_RQST_TX_BCAST:
+    427          	  send_bcast_rqst();
+    428          	  break;
+    429          	case PYTHON_CMD_RQST_TX_RSSI:
+    430          	  send_rssi_rqst();
+    431          	  break;
+    432          	default:
+    433          	  break;	 
+    434          	}
+    435          }
+    436          
+    437          static void send_bcast_rqst()
+    438          {
+    439            // 1) Reserve a packet in a queue buffer (NOT QUEUED YET) and check if successful
+    440          	// 2) Get a pointer to the reserved MODULE inside the packet (set as DUMMY)
+    441          	uint8_t module_size = 4*sizeof(uint8_t); // nothing to transmit ???
+    442          	uint8_t *content = NULL;
+    443          //	sprintf(buff, "\\%s", "");  
+    444          	content = tsp_new_module( PKT_MODULE_TYPE_RTLS_BEACON, 
+    445                                    module_size, 
+    446                                    &rtls_pkt_id, 
+    447                                    python_bcast_rqst_id);
+    448          
+    449          	if (0 == content)
+    450          	{
+    451          		// Error
+    452          		rtls_pkt_id = 0xFF;
+    453          		sys_error(SYS_ERROR_MEM_FULL);
+    454          	}
+    455          	else
+    456          	{
+    457          	  	(*content) = RTLS_BCAST_RQST; content++;
+    458          	  	(*content) = bcast_uid; content++; 
+    459          	  	(*content) = bcast_total_count; content++; 
+    460          	  	(*content) = bcast_ms_delay; content++; 
+    461          		tsp_send_from_modules(rtls_pkt_id);
+    462          		putackchar();
+    463          	}
+    464          }
+    465          
+    466          static void send_rssi_rqst()
+    467          {
+    468            // 1) Reserve a packet in a queue buffer (NOT QUEUED YET) and check if successful
+    469          	// 2) Get a pointer to the reserved MODULE inside the packet (set as DUMMY)
+    470          	uint8_t module_size = 2*sizeof(uint8_t); // nothing to transmit ???
+    471          	uint8_t *content = NULL;
+    472          //	sprintf(buff, "\\%s", "");  
+    473          	content = tsp_new_module( PKT_MODULE_TYPE_RTLS_BEACON, 
+    474                                    module_size, 
+    475                                    &rtls_pkt_id, 
+    476                                    python_rssi_rqst_id);
+    477          
+    478          	if (0 == content)
+    479          	{
+    480          		// Error
+    481          		rtls_pkt_id = 0xFF;
+    482          		sys_error(SYS_ERROR_MEM_FULL);
+    483          	}
+    484          	else
+    485          	{
+    486          	  	(*content) = RTLS_RSSI_RQST; content++;
+    487          	  	(*content) = bcast_uid; content++; 
+    488          		tsp_send_from_modules(rtls_pkt_id);
+    489          		putackchar();
+    490          	}
+    491          }
+    492          
+    493          
+    494          #endif // defined(_ENABLE_RTLS_BEACON_)
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

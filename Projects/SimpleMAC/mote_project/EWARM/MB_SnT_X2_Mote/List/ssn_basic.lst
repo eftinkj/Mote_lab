@@ -1,0 +1,399 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.30.4.8167/W32 for ARM        21/Feb/2015  16:29:33
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_SigProc\ssn_basic.c
+#    Command line =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_SigProc\ssn_basic.c
+#        -D USE_STDPERIPH_DRIVER -D USE_MB_SNT_X2 -D STM32W108CB -D
+#        "PLATFORM_HEADER=\"Utilities\STM32W108xx_HAL_Driver/micro/cortexm3/compiler/iar.h\""
+#        -D CORTEXM3 -D CORTEXM3_STM32W108 -D CORTEXM3_STM32W108xB -D
+#        DISABLE_WATCHDOG -D "__SOURCEFILE__=\"ssn_basic.c\"" -lC
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\
+#        --diag_suppress Pa050 -o
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_SigProc\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\stm32w108\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\generic\compiler\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\bootloader\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\Shared\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Device\ST\STM32W108xx\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\SimpleMAC\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\Common\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\MB851\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\arm_mote\
+#        -Ohz --use_c++_inline
+#    List file    =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\ssn_basic.lst
+#    Object file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\ssn_basic.o
+#
+###############################################################################
+
+C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_SigProc\ssn_basic.c
+      1          #include "defs/esnl_pub.h"
+      2          
+      3          #ifdef _ENABLE_SSN_BASIC_
+      4          
+      5          #include "ssn_basic_prv.h"
+      6          #include "ssn_basic_pub.h"
+      7          
+      8          
+      9          //#include "sys_func.h"
+     10          
+     11          //#include "packet.h"
+     12          //#include "common.h"
+     13          
+     14          
+     15          #include "FEAT_Networking/tsp_common_pub.h"
+     16          #include "FEAT_Scheduler/sch_basic_pub.h"
+     17          #include "HW_LIB/new_adc_0_pub.h"
+     18          
+     19          #include "sys_func.h"
+     20          #include "common.h"
+     21          
+     22          #ifdef _ENABLE_SRC_DUMMY_
+     23          	#define _BRIDGE_EXP_
+     24          #endif // _ENABLE_SRC_DUMMY_
+     25          
+     26          // generate 255 packets in a row
+     27          //#define SSN_TEST
+     28          //#undef SSN_TEST
+     29          
+     30          /****************************************************************************
+     31          **	Constants, definies and typedefs  (PUBLIC)
+     32          ****************************************************************************/
+     33          
+     34          /****************************************************************************
+     35          **	Variables definition (PRIVATE)
+     36          ****************************************************************************/
+     37          
+     38          
+     39          /****************************************************************************
+     40          **	Variables definition (PUBLIC)
+     41          ****************************************************************************/
+     42          
+     43          
+     44          /****************************************************************************
+     45          **	Functions implementation (PUBLIC)
+     46          ****************************************************************************/
+     47          
+     48          
+     49          
+     50          ssn_mem_t XDATA* ssn_mem_p;
+     51          
+     52          uint8_t	XDATA ssn_mem_raw[SSN_MEM_STRUCT_SIZE];
+     53          SSN_BUFF_ITEM_T	XDATA ssn_buffer_raw[SSN_BUFF_SIZE];
+     54          
+     55          
+     56          /**
+     57           * ssn_init () - sets up Signal Processing Module
+     58           */
+     59          void ssn_init ( void )
+     60          {
+     61          //	float XDATA * temp_coeff;
+     62          	int i;
+     63          	for( i=0; i < SSN_BUFF_SIZE; i++) { ssn_buffer_raw[i]=i; }
+     64          
+     65          	ssn_mem_p = (ssn_mem_t XDATA* )ssn_mem_raw;
+     66          
+     67          	ssn_mem_p-> head_ = 0;
+     68          	ssn_mem_p-> tail_ = 0;
+     69          	ssn_mem_p-> buff = ssn_buffer_raw;
+     70          	ssn_mem_p-> rate_ = 400; // rate in Hz
+     71          	// TODO: setup NEW ADC to use this rate
+     72          
+     73          	ssn_mem_p->next_pkt_ = SSN_SPP;
+     74          	ssn_mem_p-> start_time_ = 0; // start index for the Packet
+     75          	ssn_mem_p-> start_index_ = 0; // start index for the Packet
+     76          	ssn_mem_p-> burst_enabled_ = 0; // send a burst of a given size
+     77          
+     78          	ssn_mem_p-> pause_ = 0; // send a burst of a given size
+     79          	ssn_mem_p-> pause_timeout_ = 0; // send a burst of a given size
+     80          	
+     81          	ssn_mem_p->burst_timeout_ = 0;
+     82          
+     83          	#ifdef SSN_TEST
+     84          		ssn_mem_p-> burst_enabled_ = 10000;//255; // send a burst of a given size	
+     85          	#endif // SSN_TEST
+     86          	sch_add_loop( (sch_loop_func_t) ssn_loop);
+     87          
+     88          #ifdef _BRIDGE_EXP_
+     89          	// (adc_channel, context, receiver)
+     90          	//adc0_attach(0, 0x22, NULL);
+     91          	//adc_resumeADC();
+     92          #endif // _BRIDGE_EXP_
+     93          }
+     94          
+     95          
+     96          /**
+     97           * uint16_t ssn_start_burst(uint16_t len) - starts the burst transmission of LEN packets (e.g.)
+     98           * RETURNS the number of scheduled packets or 0 is failed/already transmitting
+     99           */
+    100          uint16_t ssn_start_burst(uint16_t len)
+    101          {
+    102          	if (0 == ssn_mem_p -> burst_enabled_)
+    103          	{	// Reset buffer (if this is what we want????)
+    104          		ssn_mem_p-> head_ = 0;
+    105          		ssn_mem_p-> tail_ = 0;
+    106          		ssn_mem_p->next_pkt_ =  ssn_mem_p->head_ + SSN_SPP;
+    107          		return ssn_mem_p-> burst_enabled_ = len; // send a burst of a given size	
+    108          	}
+    109          	else
+    110          	{
+    111          		return 0;
+    112          	}
+    113          }	
+    114          	
+    115          	
+    116          	/**
+    117          	 * ssn_test() - tests Signal Processing operation (e.g.)
+    118          	 */
+    119          	uint8_t ssn_test();
+    120          	
+    121          	
+    122          /**
+    123           * ssn_loop() - executes main loop block (BUT DOES NOT LOOP ITSELF!!!)
+    124           */
+    125          void ssn_loop( void )
+    126          {
+    127          	//	ssn_mem_p->sample_interval_ = (ssn_mem_p->last_tick_ - ssn_mem_p->tail_tick_);
+    128          	if ( 1 == ssn_mem_p->pause_)
+    129          	{
+    130          		if ( ssn_mem_p->pause_timeout_ < rtc_get_ticks())
+    131          		{
+    132          			ssn_mem_p->pause_ = 0;
+    133          		}
+    134          	}
+    135          	else if ( 0 < ssn_mem_p->burst_enabled_)
+    136          	{
+    137          		if ( ( 0 < (ssn_mem_p->head_ - ssn_mem_p->next_pkt_) )
+    138          			&& ( 0xFF00 > (ssn_mem_p->head_ - ssn_mem_p->next_pkt_) ) )
+    139          		{
+    140          			if (0 == ssn_mem_p->start_time_)
+    141          			{
+    142          				ssn_mem_p->start_time_ = rtc_get_ticks();
+    143          			}
+    144          			if (0 == ssn_send_pkt(SSN_SPP))
+    145          			{
+    146          				ssn_mem_p->pause_ = 1;
+    147          				ssn_mem_p->pause_timeout_ = rtc_get_ticks() + SSN_PAUSE_DELAY;
+    148          			}
+    149          			else
+    150          			{
+    151          				ssn_mem_p->burst_enabled_--;
+    152          				ssn_mem_p->next_pkt_ += SSN_SPP;
+    153          				ssn_mem_p->start_index_ = ssn_mem_p->next_pkt_ - SSN_SPP ;
+    154          				//ssn_mem_p->start_time_ = rtc_get_ticks() - (SSN_SPP*1000/ssn_mem_p->rate_);
+    155          				ssn_mem_p->start_time_ = ssn_mem_p->start_time_ + (1000UL*SSN_SPP/(uint32_t)ssn_mem_p->rate_);
+    156          			}
+    157          		}
+    158          	}
+    159          	else
+    160          	{
+    161          		if ( ssn_mem_p->burst_timeout_ > rtc_get_ticks())
+    162          		{
+    163          			ssn_mem_p->burst_enabled_ = 10;
+    164          		}
+    165          //		adc_suspendADC();
+    166          	}
+    167          	// If packet is filled then sent out
+    168          }
+    169          	
+    170          	
+    171          	/**
+    172          	 * ssn_recv_sample(uint8_t context, uint16_t value) - receives a sample
+    173          	 */
+    174          void ssn_recv_sample(uint8_t context, sint16_t value)
+    175          {
+    176          	(ssn_mem_p->buff)[ssn_mem_p->head_ & SSN_BUFF_MASK] = value;
+    177          	ssn_mem_p->head_++;
+    178          	if (0 == ((ssn_mem_p->head_ - ssn_mem_p->tail_) & SSN_BUFF_MASK))
+    179          	{
+    180          		// eat your own tail
+    181          		ssn_mem_p->tail_++;
+    182          	}
+    183          }
+    184          
+    185          
+    186          /**
+    187           * ssn_execute_command(packet) - executes a command received in "packet"
+    188           */
+    189          void ssn_execute_command ( uint8_t *packet)
+    190          {	
+    191          	ssn_command_mod_v1_t *cmd = (ssn_command_mod_v1_t*)packet;
+    192          	switch (cmd->command)
+    193          	{
+    194          		case SSN_CMD_SET:
+    195          			// set interval and other params
+    196          			return;
+    197          			//break;
+    198          		case SSN_CMD_REQ:
+    199          //			ssn_mem_p->start_time_ = cmd->ticks;
+    200          //			ssn_mem_p->start_index_ = ssn_mem_p->head_ - ssn_time_offset(cmd->ticks);
+    201          			//adc_set_rate_divider((uint8_t)((uint16_t)20000 / cmd->rate));
+    202          			ssn_mem_p->rate_ = cmd->rate;
+    203          			ssn_mem_p->start_time_ = rtc_get_ticks();
+    204          			ssn_mem_p->start_index_ = ssn_mem_p->head_;
+    205          			ssn_mem_p->burst_timeout_ = rtc_get_ticks() + 1000UL * cmd->mod_data;
+    206          			ssn_mem_p->next_pkt_ =  ssn_mem_p->start_index_ + SSN_SPP;
+    207          //			ssn_send_pkt(cmd->mod_data); // sample count to send
+    208          			break;
+    209          	}
+    210          }
+    211          
+    212          
+    213          /****************************************************************************
+    214          **	Functions implementation (PRIVATE)
+    215          ****************************************************************************/
+    216          
+    217          
+    218          /**
+    219           * ssn_time_offset(start_ticks) -
+    220           *	
+    221           */
+    222          uint16_t ssn_time_offset(uint32_t start_ticks)
+    223          {
+    224          	uint16_t off;
+    225          	uint32_t d = rtc_get_ticks() - start_ticks;
+    226          	d = d * ssn_mem_p->rate_ / 1000;
+    227          	off = (uint16_t)d;
+    228          	return off;
+    229          }
+    230          
+    231          /**
+    232           * ssn_send_pkt(sample_count)
+    233           *	
+    234           */
+    235          uint8_t ssn_send_pkt(uint8_t sample_count)
+    236          {
+    237          //	return;
+    238          	//TODO: allow for multiple packets
+    239          	// 1) Reserve a packet in a queue buffer (NOT QUEUED YET) and check if successful
+    240          	uint8_t pkt_id = 0xFF;
+    241          	uint8_t mod_len = SSN_SENSOR_DATA_V1_SIZE + sample_count * 2;//sizeof(SSN_BUFF_ITEM_T);
+    242          	if (0 == tsp_reserve_packet( mod_len, &pkt_id, BS_ADDR))
+    243          	{
+    244          		// Error
+    245          		sys_error(SYS_ERROR_MEM_FULL);
+    246          		return 0;
+    247          	}
+    248          	{
+    249          		IAR_PACKED uint16_t XDATA*pkt_samples = NULL;
+    250          		uint16_t i, temp;
+    251          		// 2) Get a pointer to the reserved MODULE inside the packet (set as DUMMY)
+    252          		uint8_t XDATA*mod = (uint8_t XDATA*)tsp_get_dummy(pkt_id);
+    253          		// 3) Fill the headers of the APP-specific module and the END module (REQUIRED!!)
+    254          		//    .... (Possibly defered, but not for too long)
+    255          		ssn_command_mod_v1_t XDATA*ph = ( ssn_command_mod_v1_t XDATA* )mod ;
+    256          //		int16_t adc_len = 0;
+    257          		//original_size = ph->module_length;
+    258          		ph->module_type = PKT_MODULE_TYPE_SSN_V1;
+    259          		ph->module_length = mod_len;
+    260          		ph->command = SSN_DATA_V1;
+    261          
+    262          		// 4) Fill the content of the APP-specific module
+    263          		//    .... (Possibly defered, but not for too long)
+    264          		ph-> ticks = ENDIAN32(ssn_mem_p->start_time_);
+    265          		ph-> rate = ENDIAN16(ssn_mem_p->rate_);
+    266          		ph-> channel = MY_ADC_CHANNEL;
+    267          		pkt_samples = (uint16_t XDATA*)(&(ph->mod_data));
+    268          		for( i = 0; i < sample_count; i++)
+    269          		{
+    270          			temp = (ssn_mem_p->buff)[(i+ssn_mem_p->start_index_)&SSN_BUFF_MASK];
+    271          // ERROR
+    272          			pkt_samples[i] = ENDIAN16(temp); //(ssn_mem_p->buff)[(i+ssn_mem_p->start_index_)&SSN_BUFF_MASK];
+    273          //			pkt_samples[i] = (ssn_mem_p->buff)[(i+ssn_mem_p->start_index_)&SSN_BUFF_MASK];
+    274          		}
+    275          		// TODO: This should be breaked into two separate functions
+    276          		//			-> above part should be used only when no packet has been received
+    277          		//			-> below part should be used whenever the packet has been filled with the voice data
+    278          		
+    279          	}
+    280          	// 5) Send the Packet out via TRANSPORT layer (by default put into the queue)
+    281          	return tsp_send_from_modules(pkt_id);
+    282          }
+    283          
+    284          /**
+    285          * sig_filter_new_data(input) -
+    286          *	
+    287          */
+    288          //void sig_filter_reset(sig_filter_mem_t XDATA *filter);
+    289          
+    290          /**
+    291          * sig_filter_new_config(module) -
+    292          *	
+    293          */
+    294          //void sig_filter_new_config(sig_filter_mem_t XDATA *filter, uint8_t * module)
+    295          
+    296          
+    297          /**
+    298          * sig_filter_new_data(input) -
+    299          *	
+    300          */
+    301          /*
+    302          float sig_filter_new_data( sig_filter_mem_t XDATA *filter, float input )
+    303          {
+    304          	float new_y = B[1] * input;
+    305          	X[idx%] = input;
+    306              for(i=2; i<3; i++)
+    307          	{
+    308          		new_y = new_y + X(idx-i+1)* B(i) - Y(idx-i+1)*A(i);
+    309          	}
+    310          	Y[idx] = new_y;
+    311          }
+    312          */
+    313          
+    314          // ############################################################################
+    315          // ############################################################################
+    316          // Spacers
+    317          // ############################################################################
+    318          // ############################################################################
+    319          
+    320          
+    321          
+    322          #endif // _ENABLE_SSN_BASIC_
+    323          
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

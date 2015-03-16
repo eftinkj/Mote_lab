@@ -1,0 +1,917 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.30.4.8167/W32 for ARM        21/Feb/2015  16:30:11
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_pwr.c
+#    Command line =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_pwr.c
+#        -D USE_STDPERIPH_DRIVER -D USE_MB_SNT_X2 -D STM32W108CB -D
+#        "PLATFORM_HEADER=\"Utilities\STM32W108xx_HAL_Driver/micro/cortexm3/compiler/iar.h\""
+#        -D CORTEXM3 -D CORTEXM3_STM32W108 -D CORTEXM3_STM32W108xB -D
+#        DISABLE_WATCHDOG -D "__SOURCEFILE__=\"stm32w108xx_pwr.c\"" -lC
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\
+#        --diag_suppress Pa050 -o
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Libraries\STM32W108xx_StdPeriph_Driver\src\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\stm32w108\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\generic\compiler\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\bootloader\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\Shared\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Device\ST\STM32W108xx\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\SimpleMAC\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\Common\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\MB851\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\arm_mote\
+#        -Ohz --use_c++_inline
+#    List file    =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\stm32w108xx_pwr.lst
+#    Object file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\stm32w108xx_pwr.o
+#
+###############################################################################
+
+C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Libraries\STM32W108xx_StdPeriph_Driver\src\stm32w108xx_pwr.c
+      1          /**
+      2            ******************************************************************************
+      3            * @file    stm32w108xx_pwr.c
+      4            * @author  MCD Application Team
+      5            * @version V1.0.1
+      6            * @date    30-November-2012
+      7            * @brief   This file provides firmware functions to manage the following 
+      8            *          functionalities of the power management (PWR):
+      9            *           + Voltage Regulator control
+     10            *           + WakeUp Pin/Source Configuration
+     11            *           + DeepSleep mode
+     12            *           + WakeUp status
+     13            *
+     14            *  @verbatim
+     15            ===============================================================================
+     16                                 ##### How to use this driver #####
+     17            ===============================================================================
+     18            [..] This driver provides the Low level functions to manage the low level power
+     19                 registers. These functions are split in 4 groups
+     20          
+     21                 (#) Voltage Regulator control functions: this group includes the 
+     22                     management of following features using PWR_VREGInit() function:
+     23                     (++) Configure the regulator Trim values
+     24                     (++) Enable/Disable VREF, V1.8 and V1.2 voltage regulators 
+     25          
+     26                 (#) WakeUp Pin/Source Configuration functions: this group includes all 
+     27                     needed to configure an interrupt as WakeUp source:
+     28                     (++) To control the GPIO pin to WakeUp the system from low power mode use the 
+     29                          PWR_GPIOWakeUpPinCmd() function.
+     30                     (++) To configure the WakeUp method to wake the system from low power mode use 
+     31                          the PWR_WakeUpSourceConfig() function.
+     32                     (++) To command the WakeUp source filter use PWR_WakeUpFilterConfig() function.
+     33          
+     34                 (#) DeepSleep mode functions: this group includes the deep sleep feature 
+     35                     configuration:
+     36                     (++) To freeze the GPIO state before entering in low power mode use
+     37                          the PWR_FreezestateLVoutput() function.
+     38                     (++) To control the deep sleep mode 0 when debugger is attached use
+     39                          the PWR_DeepSleepMode0Cmd() function.
+     40                     (++) To Wake the core from deep sleep 0  the WakeUp source filter use
+     41                           PWR_CoreWake() function.
+     42                     (++) To Disable the system access to the ACK bit in the CSYSPWRUPACKSR use
+     43                           PWR_InhibitCSYSPWRUPACK() function.
+     44          
+     45                 (#) WakeUp Status functions: this group includes the required functions to 
+     46                     manage the WakeUp interrupt status:
+     47                     (++) When the system wake up from low power mode use PWR_GetFlagStatus()
+     48                          to check witch interrupt is the source for WakeUp.
+     49                     (++) After check the user should clear the WakeUp source in the low power
+     50                          status register using PWR_ClearFlag() function.
+     51          
+     52            @endverbatim
+     53            *
+     54            ******************************************************************************
+     55            * @attention
+     56            *
+     57            * <h2><center>&copy; COPYRIGHT 2012 STMicroelectronics</center></h2>
+     58            *
+     59            * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
+     60            * You may not use this file except in compliance with the License.
+     61            * You may obtain a copy of the License at:
+     62            *
+     63            *        http://www.st.com/software_license_agreement_liberty_v2
+     64            *
+     65            * Unless required by applicable law or agreed to in writing, software 
+     66            * distributed under the License is distributed on an "AS IS" BASIS, 
+     67            * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     68            * See the License for the specific language governing permissions and
+     69            * limitations under the License.
+     70            *
+     71            ******************************************************************************
+     72            */
+     73          
+     74          
+     75          /* Includes ------------------------------------------------------------------*/
+     76          #include "stm32w108xx_pwr.h"
+     77          
+     78          /** @addtogroup STM32W108xx_StdPeriph_Driver
+     79            * @{
+     80            */
+     81          
+     82          /** @defgroup POWER_MANAGEMENT
+     83            * @brief PWR driver modules
+     84            * @{
+     85            */
+     86          
+     87          /* Private typedef -----------------------------------------------------------*/
+     88          /* Private define ------------------------------------------------------------*/
+     89          /* Private macro -------------------------------------------------------------*/
+     90          /* Private variables ---------------------------------------------------------*/
+     91          /* Private function prototypes -----------------------------------------------*/
+     92          /* Private functions ---------------------------------------------------------*/
+     93          
+     94          /** @defgroup PWR_Private_Functions
+     95            * @{
+     96            */
+     97          
+     98          /** @defgroup PWR_Group1 Voltage Regulator control
+     99           *  @brief  Voltage regulator VREF, V1.8 and V1.2 control 
+    100           *
+    101          @verbatim   
+    102           ===============================================================================
+    103                           #####  Voltage Regulator control function #####
+    104           ===============================================================================  
+    105          
+    106          @endverbatim
+    107            * @{
+    108            */
+    109          
+    110          /**
+    111            * @brief  Deinitializes the PWR peripheral registers to their default reset values.
+    112            * @param  None
+    113            * @retval None
+    114            */
+
+   \                                 In section .text, align 2, keep-with-next
+    115          void PWR_DeInit(void)
+    116          {
+    117            PWR->DSLEEPCR1 = 0x00000000;
+   \                     PWR_DeInit: (+1)
+   \   00000000   0x....             LDR.N    R0,??DataTable10  ;; 0x40000004
+   \   00000002   0x2100             MOVS     R1,#+0
+   \   00000004   0x6001             STR      R1,[R0, #+0]
+    118            PWR->DSLEEPCR2 = 0x00000001;
+   \   00000006   0x2101             MOVS     R1,#+1
+   \   00000008   0x6101             STR      R1,[R0, #+16]
+    119            PWR->VREGCR = 0x00000207;
+   \   0000000A   0xF240 0x2107      MOVW     R1,#+519
+   \   0000000E   0x6141             STR      R1,[R0, #+20]
+    120            PWR->WAKECR1 = 0x00000200;
+   \   00000010   0xF44F 0x7100      MOV      R1,#+512
+   \   00000014   0x61C1             STR      R1,[R0, #+28]
+    121            PWR->WAKECR2 = 0x00000000;
+   \   00000016   0x2100             MOVS     R1,#+0
+   \   00000018   0x6201             STR      R1,[R0, #+32]
+    122            PWR->WAKESR = 0x000003FF;
+   \   0000001A   0xF240 0x31FF      MOVW     R1,#+1023
+   \   0000001E   0x6241             STR      R1,[R0, #+36]
+    123            PWR->CSYSPWRUPACKCR = 0x00000000;
+   \   00000020   0x2100             MOVS     R1,#+0
+   \   00000022   0x63C1             STR      R1,[R0, #+60]
+    124            PWR->WAKEPAR = 0x00000000;
+   \   00000024   0x....             LDR.N    R0,??DataTable10_1  ;; 0x4000bc08
+   \   00000026   0x6001             STR      R1,[R0, #+0]
+    125            PWR->WAKEPBR = 0x00000000;
+   \   00000028   0x6041             STR      R1,[R0, #+4]
+    126            PWR->WAKEPCR = 0x00000000;
+   \   0000002A   0x6081             STR      R1,[R0, #+8]
+    127            PWR->WAKEFILTR = 0x00000000;
+   \   0000002C   0x6141             STR      R1,[R0, #+20]
+    128          }
+   \   0000002E   0x4770             BX       LR               ;; return
+    129          
+    130          /**
+    131            * @brief  Fills each VREG_InitStruct member with its default value.
+    132            * @param  VREG_InitStruct: pointer to a PWR_VREG_InitTypeDef structure
+    133            *   which will be initialized.
+    134            * @retval None
+    135            */
+
+   \                                 In section .text, align 2, keep-with-next
+    136          void PWR_VREGStructInit(PWR_VREG_InitTypeDef* VREG_InitStruct)
+    137          {
+    138            /* VREG_InitStruct members default value */
+    139            VREG_InitStruct->PWR_VREFCmd = POWER_ENABLE; /* by default enable */
+   \                     PWR_VREGStructInit: (+1)
+   \   00000000   0x2100             MOVS     R1,#+0
+   \   00000002   0x6001             STR      R1,[R0, #+0]
+    140            VREG_InitStruct->PWR_1V8Cmd = POWER_ENABLE;  /* by default enable */
+   \   00000004   0x6041             STR      R1,[R0, #+4]
+    141            VREG_InitStruct->PWR_1V8TRIM = 4;
+   \   00000006   0x2104             MOVS     R1,#+4
+   \   00000008   0x6081             STR      R1,[R0, #+8]
+    142            VREG_InitStruct->PWR_1V2Cmd = POWER_ENABLE;  /* by default enable */
+   \   0000000A   0x2100             MOVS     R1,#+0
+   \   0000000C   0x60C1             STR      R1,[R0, #+12]
+    143            VREG_InitStruct->PWR_1V2TRIM = 7;  
+   \   0000000E   0x2107             MOVS     R1,#+7
+   \   00000010   0x6101             STR      R1,[R0, #+16]
+    144          }
+   \   00000012   0x4770             BX       LR               ;; return
+    145          
+    146          /**
+    147            * @brief Initializes the VREG peripheral according to the specified
+    148            *   parameters in the VREG_InitStruct.
+    149            * @param  VREG_InitStruct: pointer to a PWR_VREG_InitTypeDef structure
+    150            *   that contains the configuration information for the specified VREG.
+    151            * @retval None
+    152            */
+
+   \                                 In section .text, align 2, keep-with-next
+    153          void PWR_VREGInit(PWR_VREG_InitTypeDef* VREG_InitStruct)
+    154          {
+    155            uint32_t temp = 0;
+    156          
+    157            /* Check the parameters */
+    158            assert_param(IS_POWER_FUNCTIONAL_STATE(VREG_InitStruct->PWR_VREFCmd));
+    159            assert_param(IS_POWER_FUNCTIONAL_STATE(VREG_InitStruct->PWR_1V8Cmd));
+    160            assert_param(IS_TRIM_VALUE(VREG_InitStruct->PWR_1V8TRIM));
+    161            assert_param(IS_POWER_FUNCTIONAL_STATE(VREG_InitStruct->PWR_1V2Cmd));
+    162            assert_param(IS_TRIM_VALUE(VREG_InitStruct->PWR_1V2TRIM));
+    163          
+    164            temp = (uint32_t)(((VREG_InitStruct->PWR_1V8TRIM) << 7) | (VREG_InitStruct->PWR_1V2TRIM));
+   \                     PWR_VREGInit: (+1)
+   \   00000000   0x6881             LDR      R1,[R0, #+8]
+   \   00000002   0x6902             LDR      R2,[R0, #+16]
+   \   00000004   0xEA42 0x11C1      ORR      R1,R2,R1, LSL #+7
+    165          
+    166            /* Check the new VREF status */
+    167            if (VREG_InitStruct->PWR_VREFCmd == POWER_DISABLE)
+   \   00000008   0x6802             LDR      R2,[R0, #+0]
+   \   0000000A   0x2A01             CMP      R2,#+1
+    168            {
+    169              /* Disable VREF */
+    170              temp |= PWR_VREGCR_VREFEN;
+    171            }
+    172          
+    173            /* Check the new 1V8 status */
+    174            if (VREG_InitStruct->PWR_1V8Cmd == POWER_DISABLE)
+   \   0000000C   0x6842             LDR      R2,[R0, #+4]
+    175            {
+    176              /* Disable 1V8 */
+    177              temp |= PWR_VREGCR_1V8EN;
+    178            }
+    179            
+    180            /* Check the new 1V2 status */
+    181            if (VREG_InitStruct->PWR_1V2Cmd == POWER_DISABLE)
+   \   0000000E   0x68C0             LDR      R0,[R0, #+12]
+   \   00000010   0xBF08             IT       EQ 
+   \   00000012   0xF441 0x4100      ORREQ    R1,R1,#0x8000
+   \   00000016   0x2A01             CMP      R2,#+1
+   \   00000018   0xBF08             IT       EQ 
+   \   0000001A   0xF441 0x6100      ORREQ    R1,R1,#0x800
+   \   0000001E   0x2801             CMP      R0,#+1
+    182            {
+    183              /* Disable 1V2 */
+    184              temp |= PWR_VREGCR_1V2EN;
+    185            }
+    186          
+    187            /* Set the new VREG configuration */
+    188            PWR->VREGCR = temp;
+   \   00000020   0x....             LDR.N    R0,??DataTable10_2  ;; 0x40000018
+   \   00000022   0xBF08             IT       EQ 
+   \   00000024   0xF041 0x0110      ORREQ    R1,R1,#0x10
+   \   00000028   0x6001             STR      R1,[R0, #+0]
+    189          }
+   \   0000002A   0x4770             BX       LR               ;; return
+    190          
+    191          /**
+    192            * @}
+    193            */
+    194          
+    195          /** @defgroup PWR_Group2 WakeUp Pin/Source Configuration
+    196           *  @brief  Low Power mode source WakeUp and method configuration
+    197           *
+    198          @verbatim   
+    199           ===============================================================================
+    200                           ##### WakeUp Pin-Source Configuration function #####
+    201           ===============================================================================  
+    202          
+    203          @endverbatim
+    204            * @{
+    205            */
+    206          
+    207          /**
+    208            * @brief  Enables or disables the GPIO WakeUp pin.
+    209            * @param  GPIOx: where x can be (A, B or C) to select the GPIO peripheral.
+    210            * @param  GPIO_Pin: specifies the port bit to be written.
+    211            *   This parameter can be one of GPIO_Pin_x where x can be (0..7).
+    212            * @param  NewState: new state of the GPIO WakeUp pin source.
+    213            *         This parameter can be: ENABLE or DISABLE.
+    214            * @note The GPIO WakeUp monitoring should be enabled before enabling the GPIO WakeUp pin.
+    215            *       To enable the GPIO WakeUp monitoring use PWR_WakeUpSourceConfig() function.
+    216            * @retval None
+    217            */
+
+   \                                 In section .text, align 2, keep-with-next
+    218          void PWR_GPIOWakeUpPinCmd(GPIO_TypeDef* GPIOx, uint32_t GPIO_Pin, FunctionalState NewState)
+    219          {
+   \                     PWR_GPIOWakeUpPinCmd: (+1)
+   \   00000000   0xB530             PUSH     {R4,R5,LR}
+    220            /* Check the parameters */
+    221            assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+    222            assert_param(IS_GET_GPIO_PIN(GPIO_Pin));
+    223            assert_param(IS_FUNCTIONAL_STATE(NewState));
+    224          
+    225            if (GPIOx == GPIOA)
+   \   00000002   0x43CC             MVNS     R4,R1
+   \   00000004   0x....             LDR.N    R5,??DataTable10_3  ;; 0x4000b000
+   \   00000006   0x....             LDR.N    R3,??DataTable10_1  ;; 0x4000bc08
+   \   00000008   0x42A8             CMP      R0,R5
+   \   0000000A   0xD106             BNE.N    ??PWR_GPIOWakeUpPinCmd_0
+    226            {
+    227              if (NewState != DISABLE)
+   \   0000000C   0x6818             LDR      R0,[R3, #+0]
+   \   0000000E   0x2A00             CMP      R2,#+0
+   \   00000010   0xBF14             ITE      NE 
+   \   00000012   0x4308             ORRNE    R0,R1,R0
+   \   00000014   0x4020             ANDEQ    R0,R4,R0
+    228              {
+    229                PWR->WAKEPAR |= (uint32_t)GPIO_Pin;
+    230              }
+    231              else
+    232              {
+    233                PWR->WAKEPAR &= (uint32_t)~GPIO_Pin;
+   \   00000016   0x6018             STR      R0,[R3, #+0]
+   \   00000018   0xBD30             POP      {R4,R5,PC}
+    234              }
+    235            }
+    236            else if (GPIOx == GPIOB)
+   \                     ??PWR_GPIOWakeUpPinCmd_0: (+1)
+   \   0000001A   0x....             LDR.N    R5,??DataTable10_4  ;; 0x4000b400
+   \   0000001C   0x42A8             CMP      R0,R5
+   \   0000001E   0xD106             BNE.N    ??PWR_GPIOWakeUpPinCmd_1
+    237            {
+    238              if (NewState != DISABLE)
+   \   00000020   0x6858             LDR      R0,[R3, #+4]
+   \   00000022   0x2A00             CMP      R2,#+0
+   \   00000024   0xBF14             ITE      NE 
+   \   00000026   0x4308             ORRNE    R0,R1,R0
+   \   00000028   0x4020             ANDEQ    R0,R4,R0
+    239              {
+    240                PWR->WAKEPBR |= (uint32_t)GPIO_Pin;
+    241              }
+    242              else
+    243              {
+    244                PWR->WAKEPBR &= (uint32_t)~GPIO_Pin;
+   \   0000002A   0x6058             STR      R0,[R3, #+4]
+   \   0000002C   0xBD30             POP      {R4,R5,PC}
+    245              }
+    246            }
+    247            else
+    248            {
+    249              if (GPIOx == GPIOC)
+   \                     ??PWR_GPIOWakeUpPinCmd_1: (+1)
+   \   0000002E   0x....             LDR.N    R5,??DataTable10_5  ;; 0x4000b800
+   \   00000030   0x42A8             CMP      R0,R5
+   \   00000032   0xD105             BNE.N    ??PWR_GPIOWakeUpPinCmd_2
+    250              {
+    251                if (NewState != DISABLE)
+   \   00000034   0x6898             LDR      R0,[R3, #+8]
+   \   00000036   0x2A00             CMP      R2,#+0
+   \   00000038   0xBF14             ITE      NE 
+   \   0000003A   0x4308             ORRNE    R0,R1,R0
+   \   0000003C   0x4020             ANDEQ    R0,R4,R0
+    252                {
+    253                  PWR->WAKEPCR |= (uint32_t)GPIO_Pin;
+    254                }
+    255                else
+    256                {
+    257                  PWR->WAKEPCR &= (uint32_t)~GPIO_Pin;
+   \   0000003E   0x6098             STR      R0,[R3, #+8]
+    258                }
+    259              }
+    260            }
+    261          }
+   \                     ??PWR_GPIOWakeUpPinCmd_2: (+1)
+   \   00000040   0xBD30             POP      {R4,R5,PC}       ;; return
+    262          
+    263          /**
+    264            * @brief  Enables or disables the WakeUp source filter.
+    265            * @param  PWR_WakeUpSource: specifies the selected PWR WakeUp source.
+    266            *          This parameter can be one of the following values:
+    267            *            @arg PWR_WAKEFILTER_GPIO: filter active on GPIO monitoring.
+    268            *            @arg PWR_WAKEFILTER_SC1: filter active on SC1.
+    269            *            @arg PWR_WAKEFILTER_SC2: filter active on SC2.
+    270            *            @arg PWR_WAKEFILTER_IRQD: filter active on IRQD.
+    271            * @param  NewState: new state of the WakeUp source.
+    272            *         This parameter can be: ENABLE or DISABLE.
+    273            * @retval None
+    274            */
+
+   \                                 In section .text, align 2, keep-with-next
+    275          void PWR_WakeUpFilterConfig(uint32_t PWR_WakeUpSource, FunctionalState NewState)
+    276          {
+    277            /* Check the parameters */
+    278            assert_param(IS_PWR_WAKEUPFILTERSOURCE(PWR_WakeUpSource));
+    279            assert_param(IS_FUNCTIONAL_STATE(NewState));
+    280          
+    281            if (NewState != DISABLE)
+   \                     PWR_WakeUpFilterConfig: (+1)
+   \   00000000   0x....             LDR.N    R2,??DataTable10_6  ;; 0x4000bc1c
+   \   00000002   0x2900             CMP      R1,#+0
+   \   00000004   0x6811             LDR      R1,[R2, #+0]
+   \   00000006   0xBF14             ITE      NE 
+   \   00000008   0x4308             ORRNE    R0,R0,R1
+   \   0000000A   0xEA21 0x0000      BICEQ    R0,R1,R0
+    282            {
+    283              /* Enable the dedicated WakeUp filter by setting the dedicated bit in the 
+    284                 WAKEFILTR register */
+    285              PWR->WAKEFILTR |= PWR_WakeUpSource;
+    286            }
+    287            else
+    288            {
+    289              /* Disable the dedicated WakeUp filter by clearing the dedicated bit in the WAKEFILTR register */
+    290              PWR->WAKEFILTR &= (uint32_t)~((uint32_t)PWR_WakeUpSource);
+   \   0000000E   0x6010             STR      R0,[R2, #+0]
+    291            }
+    292          }
+   \   00000010   0x4770             BX       LR               ;; return
+    293          
+    294          /**
+    295            * @brief  Enables or disables the WakeUp method form low power mode.
+    296            * @param  PWR_WakeUpSource: specifies the selected PWR wakeup method.
+    297            *          This parameter can be one of the following values:
+    298            *            @arg PWR_WAKEUP_CSYSPWRRUPREQ: Wake up active on CSYSPWRUPREQ event.
+    299            *            @arg PWR_WAKEUP_CPWRRUPREQ: Wake up active on CPWRRUPREQ event.
+    300            *            @arg PWR_WAKEUP_CORE: Wake up active on COREWAKE event.
+    301            *            @arg PWR_WAKEUP_WRAP: Wake up active on sleep timer compare wrap/overflow event.
+    302            *            @arg PWR_WAKEUP_COMPB: Wake up active on sleep timer compare B event.
+    303            *            @arg PWR_WAKEUP_COMPA: Wake up active on sleep timer compare A event.
+    304            *            @arg PWR_WAKEUP_IRQD: Wake up active on falling/rising edge of pin PC0.
+    305            *            @arg PWR_WAKEUP_SC2: Wake up active on falling/rising edge of pin PA2 for SC2.
+    306            *            @arg PWR_WAKEUP_SC1: Wake up active on falling/rising edge of pin PB2 for SC12.
+    307            *            @arg PWR_WAKEUP_MON: Wake up active on GPIO monitoring.
+    308            * @param  NewState: new state of the WakeUp source.
+    309            *         This parameter can be: ENABLE or DISABLE.
+    310            * @retval None
+    311            */
+
+   \                                 In section .text, align 2, keep-with-next
+    312          void PWR_WakeUpSourceConfig(uint32_t PWR_WakeUpSource, FunctionalState NewState)
+    313          {
+    314            /* Check the parameters */
+    315            assert_param(IS_PWR_WAKEUPSOURCE(PWR_WakeUpSource));
+    316            assert_param(IS_FUNCTIONAL_STATE(NewState));
+    317          
+    318            if (NewState != DISABLE)
+   \                     PWR_WakeUpSourceConfig: (+1)
+   \   00000000   0x....             LDR.N    R2,??DataTable10_7  ;; 0x40000020
+   \   00000002   0x2900             CMP      R1,#+0
+   \   00000004   0x6811             LDR      R1,[R2, #+0]
+   \   00000006   0xBF14             ITE      NE 
+   \   00000008   0x4308             ORRNE    R0,R0,R1
+   \   0000000A   0xEA21 0x0000      BICEQ    R0,R1,R0
+    319            {
+    320              /* Enable the WakeUp from low power method by setting the dedicated bit in the WAKECR1 register */
+    321              PWR->WAKECR1 |= PWR_WakeUpSource;
+    322            }
+    323            else
+    324            {
+    325              /* Disable the WakeUp from low power method by clearing the dedicated bit in the WAKECR1 register */
+    326              PWR->WAKECR1 &= (uint32_t)~((uint32_t)PWR_WakeUpSource);
+   \   0000000E   0x6010             STR      R0,[R2, #+0]
+    327            }
+    328          }
+   \   00000010   0x4770             BX       LR               ;; return
+    329          
+    330          /**
+    331            * @}
+    332            */
+    333          
+    334          /** @defgroup PWR_Group3 DeepSleep mode
+    335           *  @brief control the DeepSleep mode features
+    336           *
+    337          @verbatim   
+    338           ===============================================================================
+    339                                   #####  DeepSleep mode function #####
+    340           ===============================================================================  
+    341          
+    342          @endverbatim
+    343            * @{
+    344            */
+    345          
+    346          /**
+    347            * @brief  Enables or disables the freeze GPIO state LV output.
+    348            * @param  NewState: new freeze state of the GPIO state LV output.
+    349            *         This parameter can be: ENABLE or DISABLE.
+    350            * @retval None
+    351            */
+
+   \                                 In section .text, align 2, keep-with-next
+    352          void PWR_FreezestateLVoutput(FunctionalState NewState)
+    353          {
+    354            /* Check the parameters */
+    355            assert_param(IS_FUNCTIONAL_STATE(NewState));
+    356            
+    357            if (NewState != DISABLE)
+   \                     PWR_FreezestateLVoutput: (+1)
+   \   00000000   0x....             LDR.N    R1,??DataTable10  ;; 0x40000004
+   \   00000002   0x2800             CMP      R0,#+0
+   \   00000004   0x6808             LDR      R0,[R1, #+0]
+   \   00000006   0xBF14             ITE      NE 
+   \   00000008   0xF040 0x0002      ORRNE    R0,R0,#0x2
+   \   0000000C   0xF020 0x0002      BICEQ    R0,R0,#0x2
+    358            {
+    359              /* Enable freeze GPIO state LV output by setting the LVFREEZE bit in the DSLEEPCR1 register */
+    360              PWR->DSLEEPCR1 |= PWR_DSLEEPCR1_LVFREEZE;
+    361            }
+    362            else
+    363            {
+    364              /* Disable freeze GPIO state LV output from low power method by clearing the LVFREEZE bit in the DSLEEPCR1 register */
+    365              PWR->DSLEEPCR1 &= (uint32_t)~((uint32_t)PWR_DSLEEPCR1_LVFREEZE);
+   \   00000010   0x6008             STR      R0,[R1, #+0]
+    366            }
+    367          }
+   \   00000012   0x4770             BX       LR               ;; return
+    368          
+    369          /**
+    370            * @brief  Enables or disables the deep sleep mode 0 when debugger is attached.
+    371            * @param  NewState: new freeze state of the GPIO state LV output.
+    372            *         This parameter can be: ENABLE or DISABLE.
+    373            * @retval None
+    374            */
+
+   \                                 In section .text, align 2, keep-with-next
+    375          void PWR_DeepSleepMode0Cmd(FunctionalState NewState)
+    376          {
+    377            /* Check the parameters */
+    378            assert_param(IS_FUNCTIONAL_STATE(NewState));
+    379            
+    380            if (NewState != DISABLE)
+   \                     PWR_DeepSleepMode0Cmd: (+1)
+   \   00000000   0x....             LDR.N    R1,??DataTable10_8  ;; 0x40000014
+   \   00000002   0x2800             CMP      R0,#+0
+   \   00000004   0x6808             LDR      R0,[R1, #+0]
+   \   00000006   0xBF12             ITEE     NE 
+   \   00000008   0xF040 0x0001      ORRNE    R0,R0,#0x1
+   \   0000000C   0x0840             LSREQ    R0,R0,#+1
+   \   0000000E   0x0040             LSLEQ    R0,R0,#+1
+    381            {
+    382              /* Enable deep sleep mode 0 if debugger attached by setting the MODE bit in the DSLEEPCR2 register */
+    383              PWR->DSLEEPCR2 |= PWR_DSLEEPCR2_MODE;
+    384            }
+    385            else
+    386            {
+    387              /* Disable deep sleep mode 0 if debugger by clearing the MODE bit in the DSLEEPCR2 register */
+    388              PWR->DSLEEPCR2 &= (uint32_t)~((uint32_t)PWR_DSLEEPCR2_MODE);
+   \   00000010   0x6008             STR      R0,[R1, #+0]
+    389            }
+    390          }
+   \   00000012   0x4770             BX       LR               ;; return
+    391          
+    392          /**
+    393            * @brief  Wake core form a deep sleep 0.
+    394            * @param  None
+    395            * @retval None
+    396            */
+
+   \                                 In section .text, align 2, keep-with-next
+    397          void PWR_CoreWake(void)
+    398          {
+    399            /* Wake core from deep sleep 0 by setting the COREWAKE bit in the WAKECR2 register */
+    400            PWR->WAKECR2 |= PWR_WAKECR2_COREWAKE;
+   \                     PWR_CoreWake: (+1)
+   \   00000000   0x....             LDR.N    R0,??DataTable10_9  ;; 0x40000024
+   \   00000002   0x6801             LDR      R1,[R0, #+0]
+   \   00000004   0xF041 0x0120      ORR      R1,R1,#0x20
+   \   00000008   0x6001             STR      R1,[R0, #+0]
+    401          }
+   \   0000000A   0x4770             BX       LR               ;; return
+    402          
+    403          /**
+    404            * @brief  Disables the cortex-M3 system access to the ACK bit in the CSYSPWRUPACKSR register.
+    405            * @param  None
+    406            * @retval None
+    407            */
+
+   \                                 In section .text, align 2, keep-with-next
+    408          void PWR_InhibitCSYSPWRUPACK(void)
+    409          {
+    410            /* Disable the system access to the ACK bit in the CSYSPWRUPACKSR by setting 
+    411            the INHIBIT bit in the CSYSPWRUPACKCR register */
+    412            PWR->CSYSPWRUPACKCR |= PWR_CSYSPWRUPACKCR_INHIBIT;
+   \                     PWR_InhibitCSYSPWRUPACK: (+1)
+   \   00000000   0x....             LDR.N    R0,??DataTable10_10  ;; 0x40000040
+   \   00000002   0x6801             LDR      R1,[R0, #+0]
+   \   00000004   0xF041 0x0101      ORR      R1,R1,#0x1
+   \   00000008   0x6001             STR      R1,[R0, #+0]
+    413          }
+   \   0000000A   0x4770             BX       LR               ;; return
+    414          
+    415          /**
+    416            * @}
+    417            */
+    418          
+    419          /** @defgroup PWR_Group4 WakeUp status
+    420           *  @brief  Control the low power WakeUp source status 
+    421           *
+    422          @verbatim   
+    423           ===============================================================================
+    424                                    #####  WakeUp status function #####
+    425           ===============================================================================  
+    426          
+    427          @endverbatim
+    428            * @{
+    429            */
+    430          
+    431          /**
+    432            * @brief  Checks whether the specified PWR flag is set or not.
+    433            * @param  PWR_FLAG: specifies the low power wake up flag to check.
+    434            *   This parameter can be one of the following values:
+    435            *     @arg PWR_FLAG_CSYSPWRRUPREQ: Wake up done using the DAP access to SYS registers flag
+    436            *     @arg PWR_FLAG_CPWRRUPREQ: Wake up done using the DAP access to DBG registers flag
+    437            *     @arg PWR_FLAG_CORE: Wake up done using debug port activity flag
+    438            *     @arg PWR_FLAG_WRAP: Wake up done using sleep timer wrap flag
+    439            *     @arg PWR_FLAG_COMPB: Wake up done using sleep timer compare B flag
+    440            *     @arg PWR_FLAG_COMPA: Wake up done using sleep timer compare A flag
+    441            *     @arg PWR_FLAG_IRQD: Wake up done using external interrupt IRQD flag
+    442            *     @arg PWR_FLAG_SC2: Wake up done using serial controller 2 (PA2) flag
+    443            *     @arg PWR_FLAG_SC1: Wake up done using serial controller 1 (PB2) flag
+    444            *     @arg PWR_FLAG_MON: Wake up done using GPIO monitoring flag
+    445            *     @arg PWR_FLAG_CPWRUPREQ: REQ flag in the CPWRUPREQSR register
+    446            *     @arg PWR_FLAG_CSYSPWRUPREQ: REQ flag in the CSYSPWRUPREQSR register
+    447            *     @arg PWR_FLAG_CSYSPWRUPREQ: ACK flag in the CSYSPWRUPREQSR register
+    448            * @retval The new state of PWR_FLAG (SET or RESET).
+    449            */
+
+   \                                 In section .text, align 2, keep-with-next
+    450          FlagStatus PWR_GetFlagStatus(uint32_t PWR_FLAG)
+    451          {
+    452            FlagStatus bitstatus = RESET;
+   \                     PWR_GetFlagStatus: (+1)
+   \   00000000   0x2100             MOVS     R1,#+0
+    453          
+    454            /* Check the parameters */
+    455            assert_param(IS_PWR_GET_FLAG(PWR_FLAG));
+    456          
+    457            /* Check the REQ flag in the CPWRUPREQSR register */
+    458            if (PWR_FLAG == PWR_FLAG_CPWRUPREQ)
+   \   00000002   0x....             LDR.N    R3,??DataTable10_11  ;; 0x10000001
+   \   00000004   0x....             LDR.N    R2,??DataTable10_12  ;; 0x40000028
+   \   00000006   0x4298             CMP      R0,R3
+   \   00000008   0xBF08             IT       EQ 
+   \   0000000A   0x68D0             LDREQ    R0,[R2, #+12]
+    459            {
+    460              if ((PWR->CPWRUPREQSR & 0x00000001) != (uint32_t)RESET)
+    461              {
+    462                bitstatus = SET;
+    463              }
+    464              else
+    465              {
+    466                bitstatus = RESET;
+   \   0000000C   0xD003             BEQ.N    ??PWR_GetFlagStatus_0
+    467              }
+    468            }
+    469            /* Check the REQ flag in the CSYSPWRUPREQSR register */
+    470            else if (PWR_FLAG == PWR_FLAG_CSYSPWRUPREQ)
+   \   0000000E   0x....             LDR.N    R3,??DataTable10_13  ;; 0x20000001
+   \   00000010   0x4298             CMP      R0,R3
+   \   00000012   0xD103             BNE.N    ??PWR_GetFlagStatus_1
+    471            {
+    472              if ((PWR->CSYSPWRUPREQSR & 0x00000001) != (uint32_t)RESET)
+   \   00000014   0x6910             LDR      R0,[R2, #+16]
+    473              {
+    474                bitstatus = SET;
+    475              }
+    476              else
+    477              {
+    478                bitstatus = RESET;
+   \                     ??PWR_GetFlagStatus_0: (+1)
+   \   00000016   0xF000 0x0101      AND      R1,R0,#0x1
+   \   0000001A   0xE003             B.N      ??PWR_GetFlagStatus_2
+    479              }
+    480            }
+    481            /* Check the ACK flag in the CSYSPWRUPACKSR register */
+    482            else if (PWR_FLAG == PWR_FLAG_CSYSPWRUPREQ)
+    483            {
+    484              if ((PWR->CSYSPWRUPACKSR & 0x00000001) != (uint32_t)RESET)
+    485              {
+    486                bitstatus = SET;
+    487              }
+    488              else
+    489              {
+    490                bitstatus = RESET;
+    491              }
+    492            }
+    493            /* Check the Wake up flag in the WAKESR register */
+    494            else
+    495            {
+    496              if ((PWR->WAKESR & PWR_FLAG) != (uint32_t)RESET)
+   \                     ??PWR_GetFlagStatus_1: (+1)
+   \   0000001C   0x6812             LDR      R2,[R2, #+0]
+   \   0000001E   0x4202             TST      R2,R0
+   \   00000020   0xBF18             IT       NE 
+   \   00000022   0x2101             MOVNE    R1,#+1
+    497              {
+    498                bitstatus = SET;
+    499              }
+    500              else
+    501              {
+    502                bitstatus = RESET;
+    503              }
+    504            }
+    505            return bitstatus;
+   \                     ??PWR_GetFlagStatus_2: (+1)
+   \   00000024   0x4608             MOV      R0,R1
+   \   00000026   0x4770             BX       LR               ;; return
+    506          }
+    507          
+    508          /**
+    509            * @brief  Clears the PWR pending flags.
+    510            * @param  PWR_FLAG: specifies the low power wake up flag to clear.
+    511            *   This parameter can be one of the following values:
+    512            *     @arg PWR_FLAG_CSYSPWRRUPREQ: Wake up done using the DAP access to SYS registers flag
+    513            *     @arg PWR_FLAG_CPWRRUPREQ: Wake up done using the DAP access to DBG registers flag
+    514            *     @arg PWR_FLAG_CORE: Wake up done using debug port activity flag
+    515            *     @arg PWR_FLAG_WRAP: Wake up done using sleep timer wrap flag
+    516            *     @arg PWR_FLAG_COMPB: Wake up done using sleep timer compare B flag
+    517            *     @arg PWR_FLAG_COMPA: Wake up done using sleep timer compare A flag
+    518            *     @arg PWR_FLAG_IRQD: Wake up done using external interrupt IRQD flag
+    519            *     @arg PWR_FLAG_SC2: Wake up done using serial controller 2 (PA2) flag
+    520            *     @arg PWR_FLAG_SC1: Wake up done using serial controller 1 (PB2) flag
+    521            *     @arg PWR_FLAG_MON: Wake up done using GPIO monitoring flag
+    522            * @retval The new state of PWR_FLAG (SET or RESET).
+    523            */
+
+   \                                 In section .text, align 2, keep-with-next
+    524          void PWR_ClearFlag(uint32_t PWR_FLAG)
+    525          {
+    526            /* Check the parameters */
+    527            assert_param(IS_PWR_CLEAR_FLAG(PWR_FLAG));
+    528          
+    529            PWR->WAKESR = PWR_FLAG;
+   \                     PWR_ClearFlag: (+1)
+   \   00000000   0x....             LDR.N    R1,??DataTable10_12  ;; 0x40000028
+   \   00000002   0x6008             STR      R0,[R1, #+0]
+    530          }
+   \   00000004   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10:
+   \   00000000   0x40000004         DC32     0x40000004
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_1:
+   \   00000000   0x4000BC08         DC32     0x4000bc08
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_2:
+   \   00000000   0x40000018         DC32     0x40000018
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_3:
+   \   00000000   0x4000B000         DC32     0x4000b000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_4:
+   \   00000000   0x4000B400         DC32     0x4000b400
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_5:
+   \   00000000   0x4000B800         DC32     0x4000b800
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_6:
+   \   00000000   0x4000BC1C         DC32     0x4000bc1c
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_7:
+   \   00000000   0x40000020         DC32     0x40000020
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_8:
+   \   00000000   0x40000014         DC32     0x40000014
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_9:
+   \   00000000   0x40000024         DC32     0x40000024
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_10:
+   \   00000000   0x40000040         DC32     0x40000040
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_11:
+   \   00000000   0x10000001         DC32     0x10000001
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_12:
+   \   00000000   0x40000028         DC32     0x40000028
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10_13:
+   \   00000000   0x20000001         DC32     0x20000001
+    531          
+    532          /**
+    533            * @}
+    534            */
+    535          
+    536          /**
+    537            * @}
+    538            */ 
+    539          
+    540          /**
+    541            * @}
+    542            */
+    543          
+    544          /**
+    545            * @}
+    546            */
+    547          
+    548          /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   PWR_ClearFlag
+       0   PWR_CoreWake
+       0   PWR_DeInit
+       0   PWR_DeepSleepMode0Cmd
+       0   PWR_FreezestateLVoutput
+      12   PWR_GPIOWakeUpPinCmd
+       0   PWR_GetFlagStatus
+       0   PWR_InhibitCSYSPWRUPACK
+       0   PWR_VREGInit
+       0   PWR_VREGStructInit
+       0   PWR_WakeUpFilterConfig
+       0   PWR_WakeUpSourceConfig
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable10
+       4  ??DataTable10_1
+       4  ??DataTable10_10
+       4  ??DataTable10_11
+       4  ??DataTable10_12
+       4  ??DataTable10_13
+       4  ??DataTable10_2
+       4  ??DataTable10_3
+       4  ??DataTable10_4
+       4  ??DataTable10_5
+       4  ??DataTable10_6
+       4  ??DataTable10_7
+       4  ??DataTable10_8
+       4  ??DataTable10_9
+       6  PWR_ClearFlag
+      12  PWR_CoreWake
+      48  PWR_DeInit
+      20  PWR_DeepSleepMode0Cmd
+      20  PWR_FreezestateLVoutput
+      66  PWR_GPIOWakeUpPinCmd
+      40  PWR_GetFlagStatus
+      12  PWR_InhibitCSYSPWRUPACK
+      44  PWR_VREGInit
+      20  PWR_VREGStructInit
+      18  PWR_WakeUpFilterConfig
+      18  PWR_WakeUpSourceConfig
+
+ 
+ 380 bytes in section .text
+ 
+ 380 bytes of CODE memory
+
+Errors: none
+Warnings: none

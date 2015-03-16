@@ -1,0 +1,183 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.30.4.8167/W32 for ARM        21/Feb/2015  16:26:10
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\HW_LIB\arm_adc.c
+#    Command line =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\HW_LIB\arm_adc.c
+#        -D USE_STDPERIPH_DRIVER -D USE_MB_SNT_X2 -D STM32W108CB -D
+#        "PLATFORM_HEADER=\"Utilities\STM32W108xx_HAL_Driver/micro/cortexm3/compiler/iar.h\""
+#        -D CORTEXM3 -D CORTEXM3_STM32W108 -D CORTEXM3_STM32W108xB -D
+#        DISABLE_WATCHDOG -D "__SOURCEFILE__=\"arm_adc.c\"" -lC
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\
+#        --diag_suppress Pa050 -o
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\HW_LIB\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\stm32w108\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\generic\compiler\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\bootloader\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\Shared\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Device\ST\STM32W108xx\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\SimpleMAC\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\Common\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\MB851\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\arm_mote\
+#        -Ohz --use_c++_inline
+#    List file    =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\arm_adc.lst
+#    Object file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\arm_adc.o
+#
+###############################################################################
+
+C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\HW_LIB\arm_adc.c
+      1          
+      2          #include "defs/esnl_pub.h"
+      3          
+      4          #include "arm_adc.h"
+      5          
+      6          #ifdef _ENABLE_ARM_ADC_
+      7          
+      8          IAR_PACKED uint16_t *dma_buff_ PACKED;	// pointer to the ADC DMA destination buffer
+      9          uint32_t dma_size16_; // Size of DMA buffer (count of ADC conversions)
+     10          sch_cb_func_t *dma_callback_; // function to be called when conversion ended
+     11          bool aadc_busy_;	// indicates is ADC/DMA are busy
+     12          uint32_t aadc_cfg;	// current ADC configuration
+     13          
+     14          #define BUF_SIZE	35
+     15          IAR_PACKED uint16_t tbuff[BUF_SIZE] PACKED;
+     16          
+     17          void aadc_powerup ()
+     18          {
+     19          	int i;
+     20          	//init variables
+     21          	// init hardware config (e.g. GPIOs? ADCs?)
+     22          	//ADC0 input PB5
+     23          //	GPIO_PBCFGH[7:4] = 0;
+     24          //	GPIO_PBCFGH = GPIO_PBCFGH & 0x11111101;
+     25          	//ADC1 input PB6
+     26          //	GPIO_PBCFGH[11:8] = 0;
+     27          	//ADC2 input PB7
+     28          //	GPIO_PBCFGH[15:12] = 0;
+     29          //	GPIO_PBCFGH = GPIO_PBCFGH & 0xFFFF0FFF;
+     30          	//ADC3 input PC1
+     31          //	GPIO_PCCFGH[7:4] = 0;
+     32          	//ADC4 input PA4
+     33          //	GPIO_PACFGH[3:0] = 0;
+     34          	//ADC5 input PA5 -  PACFGH [7:4]
+     35          //	((gpia_pacfgh_t)GPIO_PACFGH).PA5 = 0;
+     36          	GPIO_PACFGH = GPIO_PACFGH & 0xFFFFFF0F;
+     37          	
+     38          	dma_buff_ = NULL;
+     39          	dma_size16_ = 0; //
+     40          	dma_callback_ = NULL;
+     41          	aadc_busy_ = FALSE;
+     42          	(*(uint32_t*)&aadc_cfg) = 0;
+     43          	
+     44          	for(i=0; i< BUF_SIZE; i++)
+     45          	{
+     46          		tbuff[i] = 0x11;
+     47          	}
+     48          }
+     49          
+     50          void aadc_init ()
+     51          {
+     52          	// init and configure interfaces with system and other blocks
+     53          	// LOOP, timers, related components
+     54          	sch_add_loop(aadc_loop);
+     55          	aadc_request_datablock(BUF_SIZE, (uint16_t *)tbuff, NULL);
+     56          }
+     57          
+     58          void aadc_request_datablock(uint32_t size, uint16_t *buff, void *callback)
+     59          {
+     60          	arm_adc_cfg_t *tcfg = (arm_adc_cfg_t *)&aadc_cfg;
+     61          	dma_buff_ = buff;
+     62          	dma_size16_ = size; //
+     63          	dma_callback_ = callback;
+     64          	aadc_busy_ = TRUE;
+     65          	tcfg->adc_period = ADC_CONVERSION_TIME_US_4096;
+     66          	tcfg->adc_hvselp = 1;
+     67          	tcfg->adc_hvseln = 1;
+     68          	tcfg->adc_muxp = ADC_MUX_ADC5;
+     69          	tcfg->adc_muxn = ADC_MUX_VREF2;
+     70          	tcfg->adc_1mhzclk = 1;
+     71          	tcfg->adc_enable = 1;
+     72          	
+     73          	
+     74          	ADC_DMABEG = (uint32_t)dma_buff_;
+     75          	ADC_DMASIZE = dma_size16_;
+     76          	
+     77          	uint32_t t1 = 0;
+     78          	amd_adc_dmacfg_t *temp_dmacfg = (amd_adc_dmacfg_t *)&t1;
+     79          	temp_dmacfg->adc_dmarst = 1; // reset DMA
+     80          	temp_dmacfg->adc_dmaautowrap = 1; // setup auto wrap of buffer
+     81          	temp_dmacfg->adc_dmaload = 1; // start DMA
+     82          	ADC_DMACFG = t1;
+     83          	
+     84          	ADC_CFG = aadc_cfg;
+     85          	INT_ADCFLAG = 0xFFFF;
+     86          	INT_CFGSET = INT_ADC;
+     87          }
+     88          
+     89          void aadc_loop()
+     90          {
+     91          	int i;
+     92          	if (1 == (INT_ADCFLAG & INT_ADCULDFULL))
+     93          	{
+     94          		// read ADC data
+     95          		for (i=0; i < dma_size16_; i++)
+     96          		{
+     97          			ssn_recv_sample(0, dma_buff_[i]);
+     98          		}
+     99          		aadc_request_datablock(BUF_SIZE, (uint16_t *)tbuff, NULL);
+    100          	}
+    101          }
+    102          
+    103          void aadc_ISR()
+    104          {
+    105          }
+    106          
+    107          #endif // _ENABLE_ARM_ADC_
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

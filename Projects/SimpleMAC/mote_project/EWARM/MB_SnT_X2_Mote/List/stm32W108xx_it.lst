@@ -1,0 +1,433 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.30.4.8167/W32 for ARM        21/Feb/2015  16:30:02
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\stm32W108xx_it.c
+#    Command line =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\stm32W108xx_it.c
+#        -D USE_STDPERIPH_DRIVER -D USE_MB_SNT_X2 -D STM32W108CB -D
+#        "PLATFORM_HEADER=\"Utilities\STM32W108xx_HAL_Driver/micro/cortexm3/compiler/iar.h\""
+#        -D CORTEXM3 -D CORTEXM3_STM32W108 -D CORTEXM3_STM32W108xB -D
+#        DISABLE_WATCHDOG -D "__SOURCEFILE__=\"stm32W108xx_it.c\"" -lC
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\
+#        --diag_suppress Pa050 -o
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\stm32w108\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\generic\compiler\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\bootloader\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\Shared\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Device\ST\STM32W108xx\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\SimpleMAC\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\Common\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\MB851\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\arm_mote\
+#        -Ohz --use_c++_inline
+#    List file    =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\stm32W108xx_it.lst
+#    Object file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\stm32W108xx_it.o
+#
+###############################################################################
+
+C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\stm32W108xx_it.c
+      1          /**
+      2            ******************************************************************************
+      3            * @file    Project/sample/stm32w108xx_it.c 
+      4            * @author  MCD Application Team
+      5            * @version V2.0.1
+      6            * @date    30-November-2012 
+      7            * @brief   Main Interrupt Service Routines.
+      8            *          This file provides template for all exceptions handler and 
+      9            *          peripherals interrupt service routine.
+     10            ******************************************************************************
+     11            * @attention
+     12            *
+     13            * <h2><center>&copy; COPYRIGHT 2012 STMicroelectronics</center></h2>
+     14            *
+     15            * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
+     16            * You may not use this file except in compliance with the License.
+     17            * You may obtain a copy of the License at:
+     18            *
+     19            *        http://www.st.com/software_license_agreement_liberty_v2
+     20            *
+     21            * Unless required by applicable law or agreed to in writing, software 
+     22            * distributed under the License is distributed on an "AS IS" BASIS, 
+     23            * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     24            * See the License for the specific language governing permissions and
+     25            * limitations under the License.
+     26            *
+     27            ******************************************************************************
+     28            */
+     29          
+     30          
+     31          /* Includes ------------------------------------------------------------------*/
+     32          #include "stm32w108xx_it.h"
+     33          #include PLATFORM_HEADER
+     34          
+     35          /** @addtogroup Sample
+     36            * @{
+     37            */
+     38          
+     39          /* Private typedef -----------------------------------------------------------*/
+     40          /* Private define ------------------------------------------------------------*/
+     41          /* Private macro -------------------------------------------------------------*/
+     42          /* Private variables ---------------------------------------------------------*/
+     43          /* Private function prototypes -----------------------------------------------*/
+     44          /* Private functions ---------------------------------------------------------*/
+     45          
+     46          /******************************************************************************/
+     47          /*            Cortex-M3 Processor Exceptions Handlers                         */
+     48          /******************************************************************************/
+     49          
+     50          /**
+     51            * @brief  This function handles NMI exception.
+     52            * @param  None
+     53            * @retval None
+     54            */
+
+   \                                 In section .text, align 2, keep-with-next
+     55          void NMI_Handler(void)
+     56          {
+     57          }
+   \                     NMI_Handler: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+     58          
+     59          /**
+     60            * @brief  This function handles Hard Fault exception.
+     61            * @param  None
+     62            * @retval None
+     63            */
+
+   \                                 In section .text, align 2, keep-with-next
+     64          void HardFault_Handler(void)
+     65          {
+     66            /* Go to infinite loop when Hard Fault exception occurs */
+     67            while (1)
+   \                     HardFault_Handler: (+1)
+   \                     ??HardFault_Handler_0: (+1)
+   \   00000000   0xE7FE             B.N      ??HardFault_Handler_0
+     68            {
+     69            }
+     70          }
+     71          
+     72          /**
+     73            * @brief  This function handles Memory Manage exception.
+     74            * @param  None
+     75            * @retval None
+     76            */
+
+   \                                 In section .text, align 2, keep-with-next
+     77          void MemManage_Handler(void)
+     78          {
+     79            /* Go to infinite loop when Memory Manage exception occurs */
+     80            while (1)
+   \                     MemManage_Handler: (+1)
+   \                     ??MemManage_Handler_0: (+1)
+   \   00000000   0xE7FE             B.N      ??MemManage_Handler_0
+     81            {
+     82            }
+     83          }
+     84          
+     85          /**
+     86            * @brief  This function handles Bus Fault exception.
+     87            * @param  None
+     88            * @retval None
+     89            */
+
+   \                                 In section .text, align 2, keep-with-next
+     90          void BusFault_Handler(void)
+     91          {
+     92            uint8_t byte;
+                           ^
+Warning[Pe550]: variable "byte" was set but never used
+     93            /* Go to infinite loop when Bus Fault exception occurs */
+     94            while (1)
+     95            {
+     96              byte = 0;
+   \                     BusFault_Handler: (+1)
+   \                     ??BusFault_Handler_0: (+1)
+   \   00000000   0xE7FE             B.N      ??BusFault_Handler_0
+     97            }
+     98          }
+     99          
+    100          /**
+    101            * @brief  This function handles Usage Fault exception.
+    102            * @param  None
+    103            * @retval None
+    104            */
+
+   \                                 In section .text, align 2, keep-with-next
+    105          void UsageFault_Handler(void)
+    106          {
+    107            /* Go to infinite loop when Usage Fault exception occurs */
+    108            while (1)
+   \                     UsageFault_Handler: (+1)
+   \                     ??UsageFault_Handler_0: (+1)
+   \   00000000   0xE7FE             B.N      ??UsageFault_Handler_0
+    109            {
+    110            }
+    111          }
+    112          
+    113          /**
+    114            * @brief  This function handles SVCall exception.
+    115            * @param  None
+    116            * @retval None
+    117            */
+
+   \                                 In section .text, align 2, keep-with-next
+    118          void SVC_Handler(void)
+    119          {
+    120          }
+   \                     SVC_Handler: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    121          
+    122          /**
+    123            * @brief  This function handles Debug Monitor exception.
+    124            * @param  None
+    125            * @retval None
+    126            */
+
+   \                                 In section .text, align 2, keep-with-next
+    127          void DebugMon_Handler(void)
+    128          {
+    129          }
+   \                     DebugMon_Handler: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    130          
+    131          /**
+    132            * @brief  This function handles PendSVC exception.
+    133            * @param  None
+    134            * @retval None
+    135            */
+
+   \                                 In section .text, align 2, keep-with-next
+    136          void PendSV_Handler(void)
+    137          {
+    138            halPendSvIsr();
+   \                     PendSV_Handler: (+1)
+   \   00000000   0x.... 0x....      B.W      halPendSvIsr
+    139          }
+    140          
+    141          /**
+    142            * @brief  This function handles SysTick Handler.
+    143            * @param  None
+    144            * @retval None
+    145            */
+
+   \                                 In section .text, align 2, keep-with-next
+    146          void SysTick_Handler(void)
+    147          {
+    148           halSysTickIsr(); 
+   \                     SysTick_Handler: (+1)
+   \   00000000   0x.... 0x....      B.W      halSysTickIsr
+    149          }
+    150          
+    151          /******************************************************************************/
+    152          /*                 stm32w108xx Peripherals Interrupt Handlers                   */
+    153          /*  Add here the Interrupt Handler for the used peripheral(s) (PPP), for the  */
+    154          /*  available peripheral interrupt handler's name please refer to the startup */
+    155          /*  file (startup_stm32w108xx.s).                                            */
+    156          /******************************************************************************/
+    157          
+    158          /**
+    159            * @brief  This function handles MGMT interrupt request.
+    160            * @param  None
+    161            * @retval None
+    162            */
+
+   \                                 In section .text, align 2, keep-with-next
+    163          void MNG_IRQHandler(void)
+    164          {
+    165            halManagementIsr(); 
+   \                     MNG_IRQHandler: (+1)
+   \   00000000   0x.... 0x....      B.W      halManagementIsr
+    166          }
+    167          
+    168          /**
+    169            * @brief  This function handles SLPTMR interrupt request.
+    170            * @param  None
+    171            * @retval None
+    172            */
+
+   \                                 In section .text, align 2, keep-with-next
+    173          void SLPTIM_IRQHandler(void)
+    174          {
+    175            halSleepTimerIsr(); 
+   \                     SLPTIM_IRQHandler: (+1)
+   \   00000000   0x.... 0x....      B.W      halSleepTimerIsr
+    176          }
+    177          
+    178          /**
+    179            * @brief  This function handles SC1 interrupt request.
+    180            * @param  None
+    181            * @retval None
+    182            */
+
+   \                                 In section .text, align 2, keep-with-next
+    183          void SC1_IRQHandler(void)
+    184          {
+    185            halSc1Isr(); 
+   \                     SC1_IRQHandler: (+1)
+   \   00000000   0x.... 0x....      B.W      halSc1Isr
+    186          }
+    187          
+    188          /**
+    189            * @brief  This function handles MAC_TMR interrupt request.
+    190            * @param  None
+    191            * @retval None
+    192            */
+
+   \                                 In section .text, align 2, keep-with-next
+    193          void MAC_TIM_IRQHandler(void)
+    194          {
+    195            halStackMacTimerIsr(); 
+   \                     MAC_TIM_IRQHandler: (+1)
+   \   00000000   0x.... 0x....      B.W      halStackMacTimerIsr
+    196          }
+    197          
+    198          /**
+    199            * @brief  This function handles MAC_TR interrupt request.
+    200            * @param  None
+    201            * @retval None
+    202            */
+
+   \                                 In section .text, align 2, keep-with-next
+    203          void MAC_TR_IRQHandler(void)
+    204          {
+    205            stmRadioTransmitIsr(); 
+   \                     MAC_TR_IRQHandler: (+1)
+   \   00000000   0x.... 0x....      B.W      stmRadioTransmitIsr
+    206          }
+    207          
+    208          /**
+    209            * @brief  This function handles MAC_RE interrupt request.
+    210            * @param  None
+    211            * @retval None
+    212            */
+
+   \                                 In section .text, align 2, keep-with-next
+    213          void MAC_RE_IRQHandler(void)
+    214          {
+    215            stmRadioReceiveIsr(); 
+   \                     MAC_RE_IRQHandler: (+1)
+   \   00000000   0x.... 0x....      B.W      stmRadioReceiveIsr
+    216          }
+    217          
+    218          /**
+    219            * @brief  This function handles ADC interrupt request.
+    220            * @param  None
+    221            * @retval None
+    222            */
+
+   \                                 In section .text, align 2, keep-with-next
+    223          void ADC_IRQHandler(void)
+    224          {
+    225            halAdcIsr(); 
+   \                     ADC_IRQHandler: (+1)
+   \   00000000   0x.... 0x....      B.W      halAdcIsr
+    226          }
+    227          
+    228          /**
+    229            * @}
+    230            */ 
+    231          
+    232          /**
+    233            * @}
+    234            */ 
+    235          
+    236          /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   ADC_IRQHandler
+         0   -> halAdcIsr
+       0   BusFault_Handler
+       0   DebugMon_Handler
+       0   HardFault_Handler
+       0   MAC_RE_IRQHandler
+         0   -> stmRadioReceiveIsr
+       0   MAC_TIM_IRQHandler
+         0   -> halStackMacTimerIsr
+       0   MAC_TR_IRQHandler
+         0   -> stmRadioTransmitIsr
+       0   MNG_IRQHandler
+         0   -> halManagementIsr
+       0   MemManage_Handler
+       0   NMI_Handler
+       0   PendSV_Handler
+         0   -> halPendSvIsr
+       0   SC1_IRQHandler
+         0   -> halSc1Isr
+       0   SLPTIM_IRQHandler
+         0   -> halSleepTimerIsr
+       0   SVC_Handler
+       0   SysTick_Handler
+         0   -> halSysTickIsr
+       0   UsageFault_Handler
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ADC_IRQHandler
+       2  BusFault_Handler
+       2  DebugMon_Handler
+       2  HardFault_Handler
+       4  MAC_RE_IRQHandler
+       4  MAC_TIM_IRQHandler
+       4  MAC_TR_IRQHandler
+       4  MNG_IRQHandler
+       2  MemManage_Handler
+       2  NMI_Handler
+       4  PendSV_Handler
+       4  SC1_IRQHandler
+       4  SLPTIM_IRQHandler
+       2  SVC_Handler
+       4  SysTick_Handler
+       2  UsageFault_Handler
+
+ 
+ 50 bytes in section .text
+ 
+ 50 bytes of CODE memory
+
+Errors: none
+Warnings: 1

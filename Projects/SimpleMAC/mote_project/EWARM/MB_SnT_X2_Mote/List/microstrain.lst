@@ -1,0 +1,575 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.30.4.8167/W32 for ARM        21/Feb/2015  16:27:37
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_CogNet\microstrain.c
+#    Command line =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_CogNet\microstrain.c
+#        -D USE_STDPERIPH_DRIVER -D USE_MB_SNT_X2 -D STM32W108CB -D
+#        "PLATFORM_HEADER=\"Utilities\STM32W108xx_HAL_Driver/micro/cortexm3/compiler/iar.h\""
+#        -D CORTEXM3 -D CORTEXM3_STM32W108 -D CORTEXM3_STM32W108xB -D
+#        DISABLE_WATCHDOG -D "__SOURCEFILE__=\"microstrain.c\"" -lC
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\
+#        --diag_suppress Pa050 -o
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_CogNet\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\stm32w108\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\generic\compiler\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\bootloader\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\Shared\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Device\ST\STM32W108xx\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\SimpleMAC\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\Common\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\MB851\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\arm_mote\
+#        -Ohz --use_c++_inline
+#    List file    =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\microstrain.lst
+#    Object file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\microstrain.o
+#
+###############################################################################
+
+C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_CogNet\microstrain.c
+      1          /****************************************************************************
+      2          **
+      3          ** 
+      4          ** 
+      5          ** Author:  Rana Basheer
+      6          ** eMail:   mrbxcf@mst.edu
+      7          ** Version: 1.0
+      8          **
+      9          ****************************************************************************/
+     10          #include "defs/esnl_pub.h"
+     11          
+     12          #if defined(_ENABLE_MICROSTRAIN_)
+     13          
+     14          #include "common_constants.h"
+     15          #include "common.h"
+     16          #include "sys_func.h"
+     17          #include "FEAT_Networking/tsp_common_pub.h"
+     18          
+     19          #include "hal/micro/cortexm3/uart.h"
+     20          #include "microstrain.h"
+     21          #include "FEAT_Scheduler/sch_basic_pub.h"
+     22          #include "FEAT_STM32W/STM32W_Radio.h"
+     23          
+     24          #include <string.h>
+     25          
+     26          /****************************************************************************
+     27          **	Constants, definies and typedefs  (PRIVATE)
+     28          ****************************************************************************/
+     29          #define ORIENTMATRIXLEN 3
+     30          #define ORIENTMATRIXWID 3
+     31          //size of the orientation matrix
+     32          
+     33          #define INVALID_YAW     900
+     34          
+     35          typedef enum  {/* RAWACCELANGR = 0xC1,  ACCELANGR = 0xC2, */ 
+     36                        DELANGDELVEL = 0xC3, SETCONTMODE = 0xC4, /*ORIENTMATRIX = 0xC5,*/
+     37                        /*ATTUPDMATRIX = 0xC6, MAGVECTOR = 0xC7, ACCELANGRORINET = 0xC8,
+     38          			  WRACCELBIASCOR = 0xC9, WRGYROBIASCOR = 0xCA,
+     39          			  ACCELANGRMAGNET = 0xCB, ACCELANGRMAGORIENT = 0xCC, 
+     40          			  CAPGYROBIAS = 0xCD, */ EULERANG = 0xCE, EULERANGANGR = 0xCF,
+     41          			  /*TRNASQUNAN = 0xD0, TEMP = 0xD1, GYROSTABACCELANGRMAG = 0xD2,
+     42          			  DELANGDELVELMAG = 0xD3, WRWORD = 0xE4, REWORD = 0xE5, */
+     43          			  STOPCONTMODE = 0xFA, CONFBYTEONE = 0xC1,
+     44          			  CONFBYTETWO = 0x29} MicCommand;
+     45          
+     46          /* Command   Definition
+     47             0x02      Wireless Ping (wireless units only)
+     48             0xC1      Raw Accelerometer and Angular Rate Sensor Outputs
+     49             0xC2      Acceleration & Angular Rate
+     50             0xC3      DeltaAngle & DeltaVelocity
+     51             0xC4      Set Continuous Mode
+     52             0xC5      Orientation Matrix
+     53             0xC6      Attitude Update Matrix
+     54             0xC7      Magnetometer Vector
+     55             0xC8      Acceleration, Angular Rate & Orientation Matrix
+     56             0xC9      Write Accelerometer Bias Correction
+     57             0xCA      Write Gyro Bias Correction
+     58             0xCB      Acceleration, Angular Rate & Magnetometer Vector
+     59             0xCC      Accel, Ang Rate & Mag Vectors & Orientation Matrix
+     60             0xCD      Capture Gyro Bias
+     61             0xCE      Euler Angles
+     62             0xCF      Euler Angles and Angular Rates
+     63             0xD0      Transfer Quantity to Non-Volatile Memory
+     64             0xD1      Temperatures
+     65             0xD2      Gyro Stabilized Acceleration, Angular Rate &
+     66                       Magnetometer Vector
+     67             0xD3      DeltaAngle & DeltaVelocity & Magnetometer Vectors
+     68             0xE4      Write Word to EEPROM
+     69             0xE5      Read Word from EEPROM
+     70             0xFA      Stop Continuous Mode (no reply) */
+     71          #define EULERANGDATALEN     19
+     72          // Length of Microstrain response to an EulerAngle command
+     73          #define DELANGDELVELDATALEN 31
+     74          // Length of Microstrain response to a delta angle delta velocity command
+     75          #define ORIENTMATRIXDATALEN 43
+     76          // Length of Microstrain response to a orientation matrix command
+     77          #define EULERANGANGRDATALEN 31
+     78          // Length of Microstrain response to a Euler Angle/Angular Rate command
+     79          #define ACCELANGRDATALEN 31
+     80          // Length of Microstrain response to a Acceleration/Angular Rate command
+     81          
+     82          #define MAXPACKETSIZE 90
+     83          //Maximum packet size that can be received
+     84          #define MAXBYTES 30
+     85          #define TWO_PI 6.2831853071
+     86          #define MICROPRECISION 100.0
+     87          #define MICRO_TIMER_ID      1
+     88          #define ANG_VEL_UPD_PERIOD  100
+     89          #define MICROSTRAIN_CHECK_PERIOD 100
+     90          #define MICROSTRAIN_WAIT_TIMEOUT 20
+     91          #define NUM_HEADINGS 2
+     92          #define GYRO_HEADING	0xA
+     93          
+     94          //Typedefs
+     95          typedef struct
+     96          {
+     97             float roll;
+     98             float pitch;
+     99             float yaw; 
+    100             float DelAngx;
+    101             float DelAngy;
+    102             float DelAngz;
+    103             float DelVelx; 
+    104             float DelVely;
+    105             float DelVelz;
+    106             float angRatex;
+    107             float angRatey;
+    108             float angRatez;
+    109             float AngV; 
+    110             float lastYaw[NUM_HEADINGS];
+    111             uint32_t time;
+    112             uint8_t initialized;
+    113             uint8_t newYaw;
+    114          
+    115          } micro_data_t; 
+    116          
+    117          //Structure for holding the microstrain data
+    118          
+    119          
+    120          static uint8_t recPacket[MAXPACKETSIZE]; //Buffer for receiving packet
+    121          static uint8_t bytesRec;                 //Number of bytes currently received
+    122          static uint8_t packetSize;               //Expected packet size
+    123          static uint8_t microstrain_available;
+    124          static uint32_t next_update_time;
+    125          /*****************/
+    126          
+    127          static micro_data_t gaugeData;           //Stores the received data 
+    128          
+    129          static void microstrain_request_all_data
+    130          	(
+    131          	void
+    132          	);
+    133          
+    134          static void microstrain_loop
+    135          	(
+    136          	 void
+    137          	);
+    138          
+    139          static void microstrain_fsm
+    140          	(
+    141          	uint8_t ser_data
+    142          	);
+    143          
+    144          static void microstrain_update_angular_velocity
+    145          	(
+    146          	void
+    147          	);
+    148          
+    149          static void micro_send_request
+    150          	(
+    151          	uint8_t command
+    152          	);
+    153          
+    154          static float microstrain_round_off
+    155          	(
+    156          	float number, 
+    157          	const int precision
+    158          	);
+    159          
+    160          static void update_microstrain
+    161          	(
+    162          	uint8_t XDATA *context
+    163          	);
+    164          
+    165          static void check_microstrain
+    166          	(
+    167          	uint8_t XDATA *context
+    168          	);
+    169          
+    170          static void check_microstrain
+    171          	(
+    172          	uint8_t XDATA *context
+    173          	)
+    174          {
+    175          if(!microstrain_available)
+    176          	{
+    177          	printf("\r\nMicrostrain not connected\r\n");
+    178          	return;
+    179          	}
+    180          microstrain_request_all_data();
+    181          microstrain_update_angular_velocity();
+    182          microstrain_available-=1;
+    183          if(!gaugeData.initialized)
+    184          	{
+    185          	if(gaugeData.lastYaw[0] != INVALID_YAW)
+    186          		{
+    187          		gaugeData.initialized = 1;
+    188          		//sch_create_timeout( rtc_get_ticks()+ANG_VEL_UPD_PERIOD, update_microstrain, NULL); 
+    189          		next_update_time = rtc_get_ticks()+ANG_VEL_UPD_PERIOD;
+    190          		}
+    191          	else
+    192          		{
+    193          		sch_create_timeout( rtc_get_ticks()+MICROSTRAIN_CHECK_PERIOD, check_microstrain, NULL);   
+    194          		}
+    195          	}
+    196          }
+    197          
+    198          static void microstrain_request_all_data
+    199          	(
+    200          	void
+    201          	)
+    202          {
+    203          micro_send_request(EULERANG);
+    204          micro_send_request(DELANGDELVEL);
+    205          }
+    206          
+    207          static void micro_send_request
+    208          	(
+    209          	uint8_t command
+    210          	)
+    211          {
+    212             //uint8_t sendbyte = command;
+    213          
+    214             //IOP_comm_writeasdas(comm_hndl, &sendbyte, 1);
+    215             //IOP_comm_flush(comm_hndl);
+    216             //return;
+    217            putchar(command);
+    218          }
+    219          
+    220          static void microstrain_loop
+    221          	(
+    222          	 void
+    223          	)
+    224          {
+    225          if(is_microstrain_active())
+    226          	{
+    227          	uint8_t ser_data;
+    228          	if ( serialReadByte( &ser_data ) )
+    229          		{
+    230          		microstrain_fsm(ser_data);
+    231          		}
+    232          	if(gaugeData.initialized)
+    233          		{
+    234          		if(next_update_time < rtc_get_ticks())
+    235          			{
+    236          			next_update_time = rtc_get_ticks()+ANG_VEL_UPD_PERIOD;
+    237          			update_microstrain(NULL);
+    238          			}
+    239          		}
+    240          	}
+    241          }	  
+    242          
+    243          static void microstrain_fsm
+    244          	(
+    245          	uint8_t ser_data
+    246          	)
+    247          {	
+    248          uint8_t i;
+    249          float *num;
+    250          uint16_t actChecksum;      //Transmitted checksum
+    251          uint16_t checksum;         //Calculated checksum
+    252          
+    253          recPacket[bytesRec++] = ser_data;
+    254          
+    255          if(0 == packetSize)
+    256          	{
+    257            	uint8_t currentByte = 0;
+    258            	while(0 == packetSize && bytesRec > currentByte)
+    259            	//Is there a valid command byte in the buffer?
+    260            		{
+    261               	switch(recPacket[currentByte])
+    262               		{
+    263          	        case EULERANG:
+    264          	           packetSize = EULERANGDATALEN;
+    265          	           break;
+    266          	        case DELANGDELVEL:
+    267          	           packetSize = DELANGDELVELDATALEN;
+    268          	           break;
+    269          	        case EULERANGANGR:
+    270          	           packetSize = EULERANGANGRDATALEN;
+    271          	           break;
+    272          	/*	        case ORIENTMATRIX:
+    273          	           packetSize = ORIENTMATRIXDATALEN;
+    274          	           break;
+    275          			case ACCELANGR:
+    276          			   packetSize = ACCELANGRDATALEN;
+    277          			   break; */   
+    278          	        default:
+    279          			   currentByte++;
+    280          	           break;
+    281          	     	}
+    282            		} //end of while
+    283          	
+    284          	if(0 == packetSize) //valid command byte not found, reset entire buffer
+    285            		{
+    286          		bytesRec = 0;
+    287            		}
+    288          	else if(currentByte > 0) //shift command byte into index 0
+    289            		{
+    290          		for(i = currentByte; i < bytesRec; i++)
+    291          	 		{
+    292          	    	recPacket[i - currentByte] = recPacket[i];
+    293          	 		}
+    294          	 	bytesRec -= currentByte;
+    295            		}
+    296          	} //if(0 == packetSize)
+    297          else if(bytesRec >= packetSize) //We potentially have a full packet
+    298          	{
+    299          	//Check checksum
+    300          	actChecksum = ((uint16_t)recPacket[packetSize - 2])<<8;
+    301          	actChecksum |= (uint16_t)(recPacket[packetSize - 1]);
+    302          	checksum = ((uint16_t)recPacket[0]);
+    303          	for(i = 1; i < packetSize - 2; i++)
+    304          		{
+    305          		checksum += ((uint16_t)recPacket[i]);	  
+    306          		}
+    307          	if(checksum == actChecksum)
+    308          		{
+    309               //Load data
+    310          //#define swap_val(mem,pos1,pos2) {(mem)[pos1]^=(mem)[pos2]; mem[pos2]^=(mem)[pos1]; (mem)[pos1]^=(mem)[pos2];}
+    311          #define swap_val(mem,pos1,pos2) {*((mem)+pos1)^=*((mem)+pos2); *((mem)+pos2)^=*((mem)+pos1); *((mem)+pos1)^=*((mem)+pos2);}
+    312          #define set_float(num,mem)  {swap_val(mem,0,3); swap_val(mem,1,2);(num)=(float *)(mem);}	  
+    313          	switch(recPacket[0])
+    314          	 	{
+    315                  case EULERANGANGR:
+    316          //		   num = (float*)&recPacket[13];
+    317          		   set_float(num,recPacket+13);
+    318          		   gaugeData.DelAngx = *num;
+    319          		   //num = (float*)&recPacket[17];
+    320          		   set_float(num,recPacket+17);
+    321          		   gaugeData.DelAngy = *num;
+    322          		   //num = (float*)&recPacket[21];
+    323          		   set_float(num,recPacket+21);
+    324          		   gaugeData.DelAngz = *num;
+    325          		   //Lack of break intentional
+    326          		case EULERANG:
+    327                     //num = (float*)&recPacket[1]; 
+    328          		   set_float(num,recPacket+1);
+    329                     gaugeData.roll = *num;
+    330          		   //num = (float*)&recPacket[5];
+    331          		   set_float(num,recPacket+5);
+    332          		   gaugeData.pitch = *num;
+    333          		   //num = (float*)&recPacket[9];
+    334          		   set_float(num,recPacket+9);
+    335          		   gaugeData.yaw = *num;
+    336          		   gaugeData.yaw = -gaugeData.yaw;
+    337          		   gaugeData.newYaw = 1;
+    338          		   break;
+    339                  case DELANGDELVEL:
+    340          		   //num = (float*)&recPacket[1];
+    341          		   set_float(num,recPacket+1);
+    342          		   gaugeData.DelAngx = *num;
+    343          		   //num = (float*)&recPacket[5];
+    344          		   set_float(num,recPacket+5);
+    345          		   gaugeData.DelAngy = *num;
+    346          		   //num = (float*)&recPacket[9];
+    347          		   set_float(num,recPacket+9);
+    348          		   gaugeData.DelAngz = *num;
+    349          		   //num = (float*)&recPacket[13];
+    350          		   set_float(num,recPacket+13);
+    351          		   gaugeData.DelVelx = *num;
+    352          		   //num = (float*)&recPacket[17];
+    353          		   set_float(num,recPacket+17);
+    354          		   gaugeData.DelVely = *num;
+    355          		   //num = (float*)&recPacket[21];
+    356          		   set_float(num,recPacket+21);
+    357          		   gaugeData.DelVelz = *num;
+    358          		   break;
+    359          /*            case ORIENTMATRIX:
+    360          		   num = (float*)&recPacket[1];
+    361          		   for(i = 0; i < ORIENTMATRIXLEN*ORIENTMATRIXWID; i++)
+    362          		   {
+    363          		      gaugeData.Orient[i] = *num;
+    364          		      num++;
+    365          		   } 
+    366          		   break;
+    367                  case ACCELANGR:
+    368          		   //num = (float*)&recPacket[1];
+    369                     	set_float(num,recPacket+1);
+    370          			gaugeData.accelx = *num;
+    371          		   //num = (float*)&recPacket[5];
+    372          		   set_float(num,recPacket+5);
+    373          		   gaugeData.accely = *num;
+    374          		   //num = (float*)&recPacket[9];
+    375          		   set_float(num,recPacket+9);
+    376          		   gaugeData.accelz = *num;
+    377          		   //num = (float*)&recPacket[13];
+    378          		   set_float(num,recPacket+13);
+    379          		   gaugeData.angRatex = *num;
+    380          		   //num = (float*)&recPacket[17];
+    381          		   set_float(num,recPacket+17);
+    382          		   gaugeData.angRatey = *num;
+    383          		   //num = (float*)&recPacket[21];
+    384          		   set_float(num,recPacket+21);
+    385          		   gaugeData.angRatez = *num;
+    386          		   break;*/
+    387                  default:
+    388          		   //bad command byte, should not trigger
+    389          		   break;
+    390          	 	} //switch(recPacket[0])
+    391          	 
+    392          	 //purge the packet
+    393              for(i = packetSize; i < bytesRec; i++)
+    394               	{
+    395                  recPacket[i - packetSize] = recPacket[i];
+    396               	}
+    397              bytesRec -=packetSize;
+    398          	} //if(checksum == actChecksum)
+    399          else
+    400          	{
+    401          	recPacket[0] = 0; //set invalid command byte
+    402          	}
+    403          packetSize  = 0;
+    404          }
+    405          
+    406          return;
+    407          }
+    408          
+    409          static void update_microstrain
+    410          	(
+    411          	uint8_t XDATA *context
+    412          	)
+    413          {
+    414          microstrain_request_all_data();
+    415          microstrain_update_angular_velocity();
+    416          //sch_create_timeout( rtc_get_ticks()+ANG_VEL_UPD_PERIOD, update_microstrain, NULL); 
+    417          }
+    418          static void microstrain_update_angular_velocity
+    419          	(
+    420          	void
+    421          	)
+    422          {
+    423             float sampT;
+    424          
+    425             if(gaugeData.newYaw)
+    426             {
+    427               sampT = rtc_get_ticks() - gaugeData.time;
+    428               gaugeData.time = rtc_get_ticks();
+    429               sampT /= 1000;
+    430               gaugeData.lastYaw[0] = gaugeData.lastYaw[1];
+    431               gaugeData.lastYaw[1] = gaugeData.yaw;
+    432          
+    433                if( (gaugeData.lastYaw[0] > TWO_PI/4.0) && (gaugeData.lastYaw[1] < -TWO_PI/4.0)) gaugeData.lastYaw[0] -= TWO_PI;
+    434                else if( (gaugeData.lastYaw[0] < -TWO_PI/4.0) && (gaugeData.lastYaw[1] > TWO_PI/4.0)) gaugeData.lastYaw[0] += TWO_PI;
+    435          
+    436                gaugeData.AngV = (gaugeData.lastYaw[1] - gaugeData.lastYaw[0])/sampT;
+    437                gaugeData.newYaw = 0;
+    438             }
+    439             return;
+    440          }
+    441          
+    442          static float microstrain_round_off(float number, const int precision)
+    443          {
+    444             uint8_t flip = 0;
+    445             float retValue;
+    446             if(number < 0)
+    447             {
+    448                number = -number;
+    449          	  flip = 1;
+    450             }
+    451             retValue = (number * precision + .5)/precision;
+    452             if(flip) retValue = -retValue;
+    453             return retValue;
+    454          } 
+    455          
+    456          float microstrain_get_yaw()
+    457          {
+    458             return microstrain_round_off(gaugeData.yaw, MICROPRECISION);
+    459          }
+    460          
+    461          float microstrain_get_angular_velocity()
+    462          {
+    463             return gaugeData.AngV;
+    464          }
+    465          
+    466          void microstrain_power_up(void)
+    467          {
+    468          uint8_t i;
+    469          microstrain_available = MICROSTRAIN_WAIT_TIMEOUT;
+    470          bytesRec = 0;   
+    471          packetSize = 0;
+    472          gaugeData.yaw = INVALID_YAW;
+    473          for(i = 0; i < NUM_HEADINGS; i++)
+    474          	{	
+    475            	gaugeData.lastYaw[i] = INVALID_YAW;
+    476          	}
+    477          gaugeData.AngV = INVALID_YAW;
+    478          gaugeData.initialized = 0;
+    479          gaugeData.newYaw = 0;
+    480          }
+    481          
+    482          
+    483          void microstrain_init
+    484          	(
+    485          	void
+    486          	)
+    487          {
+    488          sch_add_loop((sch_loop_func_t)microstrain_loop);
+    489          sch_create_timeout( rtc_get_ticks()+1, check_microstrain, NULL);
+    490          }
+    491          
+    492          /*
+    493          This function returns 1 if the microstrain driver is using the uart port
+    494          */
+    495          uint8_t is_microstrain_active()
+    496          {
+    497            return 	microstrain_available?1:0;
+    498          }
+    499          #endif //_ENABLE_MICROSTRAIN_
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

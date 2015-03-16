@@ -1,0 +1,408 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.30.4.8167/W32 for ARM        21/Feb/2015  16:28:15
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_Queuing\Queuing.c
+#    Command line =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_Queuing\Queuing.c
+#        -D USE_STDPERIPH_DRIVER -D USE_MB_SNT_X2 -D STM32W108CB -D
+#        "PLATFORM_HEADER=\"Utilities\STM32W108xx_HAL_Driver/micro/cortexm3/compiler/iar.h\""
+#        -D CORTEXM3 -D CORTEXM3_STM32W108 -D CORTEXM3_STM32W108xB -D
+#        DISABLE_WATCHDOG -D "__SOURCEFILE__=\"Queuing.c\"" -lC
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\
+#        --diag_suppress Pa050 -o
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_Queuing\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\stm32w108\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\generic\compiler\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\bootloader\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\Shared\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Device\ST\STM32W108xx\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\SimpleMAC\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\Common\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\MB851\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\arm_mote\
+#        -Ohz --use_c++_inline
+#    List file    =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\Queuing.lst
+#    Object file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\Queuing.o
+#
+###############################################################################
+
+C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\FEAT_Queuing\Queuing.c
+      1          /****************************************************************************
+      2          **
+      3          ** Copyright (C) 2006-2005 Maciej Zawodniok, James W. Fonda. All rights reserved.
+      4          **
+      5          ** This file is part of the documentation of the UMR Mote Toolkit.
+      6          **
+      7          ** This file may be used under the terms of the GNU General Public
+      8          ** License version 2.0 as published by the Free Software Foundation
+      9          ** and appearing in the file LICENSE.GPL included in the packaging of
+     10          ** this file.
+     11          **
+     12          ** This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
+     13          ** WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+     14          **
+     15          ****************************************************************************/
+     16          
+     17          //Queuing Code for ADFS
+     18          
+     19          //Constants File for Queuing
+     20          #include "defs/esnl_pub.h"
+     21          
+     22          #include "Queuing.h"
+     23          
+     24          //#include "common.h"
+     25          #include "HW_LIB/RTC.h"
+     26          
+     27          #ifdef _ENABLE_QUEUING_
+     28          //**********************
+     29          //Define Variables
+     30          
+     31          uint8_t que_buffer_empty_slots_end_;
+     32          uint8_t XDATA buffer_empty_slots[NUMQBUFFS];
+     33          int8_t XDATA buffer_wp_table[NUMQBUFFS];
+     34          uint32_t XDATA buffer_age_table[NUMQBUFFS];
+     35          
+     36          
+     37          //Define Q-Buffers
+     38          #ifdef __KEIL__
+     39          //char xdata buffer0[SIZE_Q_BUFF * NUMQBUFFS] _at_ DATA_BEGIN;
+     40          int8_t XDATA buffer0[SIZE_Q_BUFF * NUMQBUFFS];
+     41          #endif
+     42          
+     43          #ifdef __SDCC__
+     44          int8_t XDATA buffer0[SIZE_Q_BUFF * NUMQBUFFS];
+     45          #endif
+     46          
+     47          //char buffer0[SIZE_Q_BUFF * NUMQBUFFS];
+     48          
+     49          
+     50          //**********************
+     51          
+     52          //**********************
+     53          
+     54          // ##############################################################################
+     55          // ##
+     56          // ##############################################################################
+     57          
+     58          uint8_t my_queue_ = QUEUE_DROPTAIL; // Type of queuing scheme
+     59          
+     60          
+     61          
+     62          // ##############################################################################
+     63          // ## Function Section
+     64          // ##############################################################################
+     65          
+     66          //Function to Init the Buffer Pointer Table
+
+   \                                 In section .text, align 2, keep-with-next
+     67          void que_init()
+     68          {
+     69          	uint8_t k1;
+     70          	for ( k1 = 0; k1 < NUMQBUFFS; k1++ )
+   \                     que_init: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x....             LDR.N    R1,??DataTable5
+     71          	{
+     72          		buffer_empty_slots[k1] = k1;
+   \                     ??que_init_0: (+1)
+   \   00000004   0x1842             ADDS     R2,R0,R1
+     73          		buffer_wp_table[k1] = 0;
+   \   00000006   0x2300             MOVS     R3,#+0
+   \   00000008   0x7110             STRB     R0,[R2, #+4]
+   \   0000000A   0x7313             STRB     R3,[R2, #+12]
+     74          		buffer_age_table[k1] = 0;
+   \   0000000C   0x2200             MOVS     R2,#+0
+   \   0000000E   0xEB01 0x0380      ADD      R3,R1,R0, LSL #+2
+     75          	}
+   \   00000012   0x1C40             ADDS     R0,R0,#+1
+   \   00000014   0x2808             CMP      R0,#+8
+   \   00000016   0x619A             STR      R2,[R3, #+24]
+   \   00000018   0xDBF4             BLT.N    ??que_init_0
+     76          	que_buffer_empty_slots_end_ = NUMQBUFFS;
+   \   0000001A   0x2008             MOVS     R0,#+8
+   \   0000001C   0x7008             STRB     R0,[R1, #+0]
+     77          
+     78          	switch ( my_queue_ )
+   \   0000001E   0x7848             LDRB     R0,[R1, #+1]
+   \   00000020   0xB100             CBZ.N    R0,??que_init_1
+     79          	{
+     80          		case QUEUE_DROPTAIL:
+     81          			que_Droptail_init();
+     82          			break;
+     83          #ifdef FEAT_ENABLE_SFQ
+     84          		case QUEUE_SFQ:
+     85          			Q_SFQ_init();
+     86          			break;
+     87          #endif // FEAT_ENABLE_SFQ
+     88          		default:
+     89          			// ERROR
+     90          			my_queue_ = QUEUE_DROPTAIL;
+   \   00000022   0x704A             STRB     R2,[R1, #+1]
+     91          			que_Droptail_init();
+   \                     ??que_init_1: (+1)
+   \   00000024   0x.... 0x....      B.W      que_Droptail_init
+     92          			break;
+     93          	}
+     94          }
+     95          //**********************
+     96          
+     97          //Function to give the next empty buffer slot
+
+   \                                 In section .text, align 2, keep-with-next
+     98          uint8_t que_get_empty_buffer_location()
+     99          {
+   \                     que_get_empty_buffer_location: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+    100          	uint8_t ret;
+    101          	if ( que_buffer_empty_slots_end_ == 0 )
+   \   00000002   0x....             LDR.N    R4,??DataTable5
+   \   00000004   0x7820             LDRB     R0,[R4, #+0]
+   \   00000006   0xB908             CBNZ.N   R0,??que_get_empty_buffer_location_0
+    102          	{
+    103          		return 0xFF;
+   \   00000008   0x20FF             MOVS     R0,#+255
+   \   0000000A   0xBD32             POP      {R1,R4,R5,PC}
+    104          	}
+    105          	que_buffer_empty_slots_end_--;
+   \                     ??que_get_empty_buffer_location_0: (+1)
+   \   0000000C   0x1E40             SUBS     R0,R0,#+1
+   \   0000000E   0x7020             STRB     R0,[R4, #+0]
+    106          	ret = buffer_empty_slots[que_buffer_empty_slots_end_];
+   \   00000010   0xB2C0             UXTB     R0,R0
+   \   00000012   0x1900             ADDS     R0,R0,R4
+   \   00000014   0x7905             LDRB     R5,[R0, #+4]
+    107          	buffer_wp_table[ret] = 1;
+   \   00000016   0x1929             ADDS     R1,R5,R4
+   \   00000018   0x2001             MOVS     R0,#+1
+   \   0000001A   0x7308             STRB     R0,[R1, #+12]
+    108          	buffer_age_table[ret] = rtc_get_ticks();
+   \   0000001C   0x.... 0x....      BL       halCommonGetInt32uMillisecondTick
+   \   00000020   0xEB04 0x0185      ADD      R1,R4,R5, LSL #+2
+   \   00000024   0x6188             STR      R0,[R1, #+24]
+    109          	return ret;
+   \   00000026   0x4628             MOV      R0,R5
+   \   00000028   0xBD32             POP      {R1,R4,R5,PC}    ;; return
+    110          }
+
+   \                                 In section .bss, align 4
+   \                     que_buffer_empty_slots_end_:
+   \   00000000                      DS8 1
+   \                     my_queue_:
+   \   00000001                      DS8 1
+   \   00000002                      DS8 2
+   \                     buffer_empty_slots:
+   \   00000004                      DS8 8
+   \                     buffer_wp_table:
+   \   0000000C                      DS8 8
+    111          //**********************
+    112          
+    113          uint16_t wrong_make_empty = 0;
+   \                     wrong_make_empty:
+   \   00000014                      DS8 2
+   \   00000016                      DS8 2
+   \                     buffer_age_table:
+   \   00000018                      DS8 32
+
+   \                                 In section .bss, align 4
+   \                     buffer0:
+   \   00000000                      DS8 800
+    114          //Function to Mark Space as empty buffer
+
+   \                                 In section .text, align 2, keep-with-next
+    115          void que_make_empty_buffer ( uint8_t index )
+    116          {
+    117          	if ( index >= NUMQBUFFS )
+   \                     que_make_empty_buffer: (+1)
+   \   00000000   0x2808             CMP      R0,#+8
+   \   00000002   0x....             LDR.N    R1,??DataTable5
+   \   00000004   0xDB03             BLT.N    ??que_make_empty_buffer_0
+    118          	{
+    119          		wrong_make_empty++;
+   \   00000006   0x8A88             LDRH     R0,[R1, #+20]
+   \   00000008   0x1C40             ADDS     R0,R0,#+1
+   \   0000000A   0x8288             STRH     R0,[R1, #+20]
+   \   0000000C   0x4770             BX       LR
+    120          	}
+    121          	else
+    122          	{
+    123          		buffer_empty_slots[que_buffer_empty_slots_end_] = index;
+   \                     ??que_make_empty_buffer_0: (+1)
+   \   0000000E   0x780A             LDRB     R2,[R1, #+0]
+   \   00000010   0x1853             ADDS     R3,R2,R1
+   \   00000012   0x7118             STRB     R0,[R3, #+4]
+    124          		que_buffer_empty_slots_end_++;
+   \   00000014   0x1C50             ADDS     R0,R2,#+1
+   \   00000016   0x7008             STRB     R0,[R1, #+0]
+    125          	}
+    126          }
+   \   00000018   0x4770             BX       LR               ;; return
+    127          //**********************
+    128          
+    129          
+    130          // ##############################################################################
+    131          // ##
+    132          // ##############################################################################
+    133          
+
+   \                                 In section .text, align 2, keep-with-next
+    134          void que_switch_protocol ( uint8_t new_protocol )
+    135          {
+    136          	my_queue_ = new_protocol;
+   \                     que_switch_protocol: (+1)
+   \   00000000   0x....             LDR.N    R1,??DataTable5
+   \   00000002   0x7048             STRB     R0,[R1, #+1]
+    137          	que_init();
+   \   00000004   0x....             B.N      que_init
+    138          }
+    139          
+    140          
+
+   \                                 In section .text, align 2, keep-with-next
+    141          uint8_t que_enQpacket ( uint8_t index )
+    142          {
+    143          	switch ( my_queue_ )
+   \                     que_enQpacket: (+1)
+   \   00000000   0x....             LDR.N    R1,??DataTable5
+   \   00000002   0x7849             LDRB     R1,[R1, #+1]
+   \   00000004   0x2900             CMP      R1,#+0
+   \   00000006   0xBF08             IT       EQ 
+    144          	{
+    145          		case QUEUE_DROPTAIL:
+    146          			return que_Droptail_enqueue ( index );
+   \   00000008   0x.... 0x....      BEQ.W    que_Droptail_enqueue
+    147          			break;
+    148          #ifdef FEAT_ENABLE_SFQ
+    149          		case QUEUE_SFQ:
+    150          			return Q_SFQ_enqueue ( index );
+    151          			break;
+    152          #endif // FEAT_ENABLE_SFQ
+    153          		default:
+    154          			// ERROR
+    155          			break;
+    156          	}
+    157          	return 0; // FAILED!!
+   \   0000000C   0x2000             MOVS     R0,#+0
+   \   0000000E   0x4770             BX       LR               ;; return
+    158          }
+    159          
+    160          
+
+   \                                 In section .text, align 2, keep-with-next
+    161          uint8_t que_deQpackets()
+    162          {
+    163          	switch ( my_queue_ )
+   \                     que_deQpackets: (+1)
+   \   00000000   0x....             LDR.N    R0,??DataTable5
+   \   00000002   0x7840             LDRB     R0,[R0, #+1]
+   \   00000004   0x2800             CMP      R0,#+0
+   \   00000006   0xBF08             IT       EQ 
+    164          	{
+    165          		case QUEUE_DROPTAIL:
+    166          			return que_Droptail_dequeue();
+   \   00000008   0x.... 0x....      BEQ.W    que_Droptail_dequeue
+    167          			break;
+    168          #ifdef FEAT_ENABLE_SFQ
+    169          		case QUEUE_SFQ:
+    170          			return Q_SFQ_dequeue();
+    171          			break;
+    172          #endif // FEAT_ENABLE_SFQ
+    173          		default:
+    174          			// ERROR
+    175          			break;
+    176          	}
+    177          	return NO_PACKET_INDEX;
+   \   0000000C   0x20FF             MOVS     R0,#+255
+   \   0000000E   0x4770             BX       LR               ;; return
+    178          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5:
+   \   00000000   0x........         DC32     que_buffer_empty_slots_end_
+    179          
+    180          
+    181          
+    182          #endif // _ENABLE_QUEUING_
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   que_deQpackets
+         0   -> que_Droptail_dequeue
+       0   que_enQpacket
+         0   -> que_Droptail_enqueue
+      16   que_get_empty_buffer_location
+        16   -> halCommonGetInt32uMillisecondTick
+       0   que_init
+         0   -> que_Droptail_init
+       0   que_make_empty_buffer
+       0   que_switch_protocol
+         0   -> que_init
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable5
+     800  buffer0
+      56  que_buffer_empty_slots_end_
+          my_queue_
+          buffer_empty_slots
+          buffer_wp_table
+          wrong_make_empty
+          buffer_age_table
+      16  que_deQpackets
+      16  que_enQpacket
+      42  que_get_empty_buffer_location
+      40  que_init
+      26  que_make_empty_buffer
+       6  que_switch_protocol
+
+ 
+ 856 bytes in section .bss
+ 150 bytes in section .text
+ 
+ 150 bytes of CODE memory
+ 856 bytes of DATA memory
+
+Errors: none
+Warnings: none

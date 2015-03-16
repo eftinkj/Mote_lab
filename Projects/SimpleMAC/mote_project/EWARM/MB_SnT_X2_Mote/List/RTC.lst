@@ -1,0 +1,340 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.30.4.8167/W32 for ARM        21/Feb/2015  16:28:50
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\HW_LIB\RTC.c
+#    Command line =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\HW_LIB\RTC.c
+#        -D USE_STDPERIPH_DRIVER -D USE_MB_SNT_X2 -D STM32W108CB -D
+#        "PLATFORM_HEADER=\"Utilities\STM32W108xx_HAL_Driver/micro/cortexm3/compiler/iar.h\""
+#        -D CORTEXM3 -D CORTEXM3_STM32W108 -D CORTEXM3_STM32W108xB -D
+#        DISABLE_WATCHDOG -D "__SOURCEFILE__=\"RTC.c\"" -lC
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\
+#        --diag_suppress Pa050 -o
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\HW_LIB\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\stm32w108\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\generic\compiler\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\bootloader\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\Shared\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Device\ST\STM32W108xx\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\SimpleMAC\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\Common\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\MB851\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\arm_mote\
+#        -Ohz --use_c++_inline
+#    List file    =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\RTC.lst
+#    Object file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\RTC.o
+#
+###############################################################################
+
+C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\HW_LIB\RTC.c
+      1          /****************************************************************************
+      2          **
+      3          ** Copyright (C) 2006-2005 Maciej Zawodniok, James W. Fonda. All rights reserved.
+      4          **
+      5          ** This file is part of the documentation of the UMR Mote Toolkit.
+      6          **
+      7          ** This file may be used under the terms of the GNU General Public
+      8          ** License version 2.0 as published by the Free Software Foundation
+      9          ** and appearing in the file LICENSE.GPL included in the packaging of
+     10          ** this file.
+     11          **
+     12          ** This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
+     13          ** WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+     14          **
+     15          ****************************************************************************/
+     16          //Interupt for RTC
+     17          #include <RTC.h>
+     18          //#include "uart_0.h"
+     19          
+     20          #ifndef _ARM_
+     21          	#ifdef __KEIL__
+     22          	//	sbit P2_4 = P2 ^ 4;
+     23          		sbit P2_2 = P2 ^ 2;
+     24          	#endif
+     25          #endif // not _ARM_
+     26          
+     27          //unsigned int rtc_secs;
+     28          
+     29          
+
+   \                                 In section .bss, align 1
+     30          unsigned char XDATA rtc_hours = 0;
+   \                     rtc_hours:
+   \   00000000                      DS8 1
+
+   \                                 In section .bss, align 1
+     31          unsigned char XDATA rtc_minutes = 0;
+   \                     rtc_minutes:
+   \   00000000                      DS8 1
+
+   \                                 In section .bss, align 1
+     32          unsigned char XDATA rtc_seconds = 0;
+   \                     rtc_seconds:
+   \   00000000                      DS8 1
+
+   \                                 In section .bss, align 1
+     33          unsigned char XDATA rtc_tsec = 0;
+   \                     rtc_tsec:
+   \   00000000                      DS8 1
+     34          
+     35          
+
+   \                                 In section .bss, align 4
+     36          rtc_tick_t XDATA rtc_ticker = 0;
+     37          
+     38          //char rtc_disp = 0;
+     39          
+     40          
+     41          uint8_t XDATA rtc_adjust = RTC_ADJUST_RELOAD; // used to adjust time drift due to inacurate timer 4 overflow
+   \                     rtc_adjust:
+   \   00000000                      DS8 1
+     42          uint8_t XDATA rtc_adjust_long = 0; // used to adjust time drift due to inacurate timer 4 overflow
+   \                     rtc_adjust_long:
+   \   00000001                      DS8 1
+     43          uint8_t XDATA rtc_skip_tick = 0;
+   \                     rtc_skip_tick:
+   \   00000002                      DS8 1
+     44          uint8_t XDATA rtc_zero_tickers_ = 0;
+   \                     rtc_zero_tickers_:
+   \   00000003                      DS8 1
+   \                     rtc_ticker:
+   \   00000004                      DS8 4
+     45          
+     46          
+
+   \                                 In section .text, align 2, keep-with-next
+     47          void rtc_init()
+     48          {
+     49          	rtc_ticker = 0;
+   \                     rtc_init: (+1)
+   \   00000000   0x....             LDR.N    R0,??DataTable1
+   \   00000002   0x2100             MOVS     R1,#+0
+   \   00000004   0x6041             STR      R1,[R0, #+4]
+     50          	rtc_adjust = RTC_ADJUST_RELOAD; // used to adjust time drift due to inacurate timer 4 overflow
+   \   00000006   0x7001             STRB     R1,[R0, #+0]
+     51          	rtc_adjust_long = 0; // used to adjust time drift due to inacurate timer 4 overflow
+   \   00000008   0x7041             STRB     R1,[R0, #+1]
+     52          	rtc_skip_tick = 0;
+   \   0000000A   0x7081             STRB     R1,[R0, #+2]
+     53          	rtc_zero_tickers_ = 0;
+   \   0000000C   0x70C1             STRB     R1,[R0, #+3]
+     54          }
+   \   0000000E   0x4770             BX       LR               ;; return
+     55          
+     56          
+     57          #ifndef _ARM_
+     58          
+     59          //**********************
+     60          #ifdef FEAT_REPLICATOR
+     61          	// Case of custom interrupt handler
+     62          	void TIMER4_ISR() TASK_FUNC
+     63          #else
+     64          	// Case of the static interrupt on F120
+     65          	#ifdef _F340_
+     66          		void RTC_ISR()  interrupt HWM_INT_TIMER3 using HWM_INT_RTC_BANK
+     67          	#else
+     68          		void RTC_ISR() interrupt HWM_INT_TIMER4 using HWM_INT_RTC_BANK
+     69          	#endif // not F340
+     70          #endif
+     71          {
+     72          	// static int counter;
+     73          	//clear interrupt flag
+     74          #ifdef _SFRPAGE_EXIST_
+     75          	SFRPAGE = 2;
+     76          #endif // _SFRPAGE_EXIST_
+     77          #ifdef _F340_
+     78          	TMR3CN &= (0xFF-F340_TF3H);
+     79          #else // _F340_
+     80          	TF4 = 0;
+     81          #endif // else _F340
+     82          	//ADC0BUSY = 1;
+     83          #ifdef _SFRPAGE_EXIST_
+     84          	SFRPAGE = 0;
+     85          #endif // _SFRPAGE_EXIST_
+     86          
+     87          	//RTC Update Section
+     88          //	rtc_ticker = rtc_ticker + 1;
+     89          /*	if (1 == rtc_zero_tickers_)
+     90          	{
+     91          		rtc_ticker = 0;
+     92          		rtc_zero_tickers_ = 0;
+     93          	}
+     94          */	if (!rtc_skip_tick)
+     95          	{
+     96          		rtc_ticker++;
+     97          	}
+     98          	else
+     99          	{
+    100          		rtc_skip_tick = 0;
+    101          	}
+    102          	rtc_adjust++;
+    103          
+    104          //	P2_2 = 1;
+    105          
+    106          	if (0 == (rtc_ticker%1000) )
+    107          	{
+    108          		P2_2 = FLIP_BIT(P2_2);
+    109          		//	P2_2 = 0;
+    110          	}
+    111          //	else if (1000 == rtc_ticker)
+    112          //	{
+    113          //		P2_2 = 1-P2_2;
+    114          //	}
+    115          } //End T4 ISR
+    116          
+    117          #endif // #ifndef _ARM_
+    118          
+    119          //**********************
+    120          
+    121          //Functiont to Set the System Clock
+
+   \                                 In section .text, align 2, keep-with-next
+    122          void rtc_time_set ( uint8_t rtc_hours_s, uint8_t rtc_minutes_s, uint8_t rtc_seconds_s, uint16_t rtc_mseconds_s )
+    123          {
+   \                     rtc_time_set: (+1)
+   \   00000000   0xB5F8             PUSH     {R3-R7,LR}
+   \   00000002   0x4606             MOV      R6,R0
+   \   00000004   0x460F             MOV      R7,R1
+   \   00000006   0x4615             MOV      R5,R2
+   \   00000008   0x461C             MOV      R4,R3
+    124          	uint32_t temp_t = (( uint32_t ) ( TICKERS_PER_SECOND )) * 60 * 60 * rtc_hours_s 
+    125          	+ ( uint32_t ) TICKERS_PER_SECOND * 60 * rtc_minutes_s 
+    126          	+ ( uint32_t ) TICKERS_PER_SECOND * rtc_seconds_s 
+    127          	+ ( uint32_t )rtc_mseconds_s;
+    128          #ifdef _ARM_
+    129          	uint32_t sys_ticks = halCommonGetInt32uMillisecondTick();
+    130          	rtc_ticker = sys_ticks - temp_t;
+   \   0000000A   0x.... 0x....      BL       halCommonGetInt32uMillisecondTick
+   \   0000000E   0x....             LDR.N    R1,??DataTable1_1  ;; 0x36ee80
+   \   00000010   0xFB01 0x0016      MLS      R0,R1,R6,R0
+   \   00000014   0xF64E 0x2160      MOVW     R1,#+60000
+   \   00000018   0xFB01 0x0017      MLS      R0,R1,R7,R0
+   \   0000001C   0xF44F 0x717A      MOV      R1,#+1000
+   \   00000020   0xFB01 0x0015      MLS      R0,R1,R5,R0
+   \   00000024   0x....             LDR.N    R1,??DataTable1
+   \   00000026   0x1B00             SUBS     R0,R0,R4
+   \   00000028   0x6048             STR      R0,[R1, #+4]
+    131          #else // _ARM_
+    132          	EA=0;
+    133          	EA=0;
+    134          	rtc_ticker = temp_t;
+    135          	EA=1;
+    136          #endif // else _ARM_
+    137          //	rtc_hours = rtc_hours_s;
+    138          //	rtc_minutes = rtc_minutes_s;
+    139          //	rtc_seconds = rtc_seconds_s;
+    140          
+    141          }
+   \   0000002A   0xBDF1             POP      {R0,R4-R7,PC}    ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1:
+   \   00000000   0x........         DC32     rtc_adjust
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_1:
+   \   00000000   0x0036EE80         DC32     0x36ee80
+    142          
+    143          //**********************
+    144          
+    145          /*
+    146          //Function to Read the Current Temporal Coordinate
+    147          uint32_t rtc_time_read()
+    148          {
+    149          	unsigned long int xdata temp_lint = 0;
+    150          	char *time_vector = &temp_lint;
+    151          	time_vector[0] = rtc_hours;
+    152          	time_vector[1] = rtc_minutes;
+    153          	time_vector[2] = rtc_seconds;
+    154          	time_vector[3] = rtc_tsec;
+    155          	return temp_lint;
+    156          
+    157          }
+    158          */
+    159          //**********************
+    160          
+    161          //Function to Read the Current Temporal Norm
+    162          //unsigned long int rtc_get_ticks()
+    163          //{
+    164          //	return rtc_ticker;
+    165          //}
+    166          
+    167          //**********************
+    168          
+    169          //Function ?????
+    170          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   rtc_init
+      24   rtc_time_set
+        24   -> halCommonGetInt32uMillisecondTick
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+       4  ??DataTable1_1
+       8  rtc_adjust
+          rtc_adjust_long
+          rtc_skip_tick
+          rtc_zero_tickers_
+          rtc_ticker
+       1  rtc_hours
+      16  rtc_init
+       1  rtc_minutes
+       1  rtc_seconds
+      44  rtc_time_set
+       1  rtc_tsec
+
+ 
+ 12 bytes in section .bss
+ 68 bytes in section .text
+ 
+ 68 bytes of CODE memory
+ 12 bytes of DATA memory
+
+Errors: none
+Warnings: none

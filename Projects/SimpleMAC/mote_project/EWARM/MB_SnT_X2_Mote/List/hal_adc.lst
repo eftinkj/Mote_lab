@@ -1,0 +1,1212 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.30.4.8167/W32 for ARM        21/Feb/2015  16:26:34
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\hal_adc.c
+#    Command line =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\hal_adc.c
+#        -D USE_STDPERIPH_DRIVER -D USE_MB_SNT_X2 -D STM32W108CB -D
+#        "PLATFORM_HEADER=\"Utilities\STM32W108xx_HAL_Driver/micro/cortexm3/compiler/iar.h\""
+#        -D CORTEXM3 -D CORTEXM3_STM32W108 -D CORTEXM3_STM32W108xB -D
+#        DISABLE_WATCHDOG -D "__SOURCEFILE__=\"hal_adc.c\"" -lC
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\
+#        --diag_suppress Pa050 -o
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\stm32w108\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\generic\compiler\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\bootloader\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\Shared\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Device\ST\STM32W108xx\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\SimpleMAC\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\Common\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\MB851\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\arm_mote\
+#        -Ohz --use_c++_inline
+#    List file    =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\hal_adc.lst
+#    Object file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\hal_adc.o
+#
+###############################################################################
+
+C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\hal_adc.c
+      1          /**
+      2            ******************************************************************************
+      3            * @file    hal_adc.c
+      4            * @author  MCD Application Team
+      5            * @version V2.0.1
+      6            * @date    30-November-2012
+      7            * @brief   ADC HAL functions
+      8            ******************************************************************************
+      9            * @attention
+     10            *
+     11            * <h2><center>&copy; COPYRIGHT 2012 STMicroelectronics</center></h2>
+     12            *
+     13            * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
+     14            * You may not use this file except in compliance with the License.
+     15            * You may obtain a copy of the License at:
+     16            *
+     17            *        http://www.st.com/software_license_agreement_liberty_v2
+     18            *
+     19            * Unless required by applicable law or agreed to in writing, software 
+     20            * distributed under the License is distributed on an "AS IS" BASIS, 
+     21            * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     22            * See the License for the specific language governing permissions and
+     23            * limitations under the License.
+     24            *
+     25            ******************************************************************************
+     26            */
+     27            
+     28          /* Includes ------------------------------------------------------------------*/
+     29          #include PLATFORM_HEADER
+     30          #include "error.h"
+     31          #include "hal.h"
+     32          #include "hal_adc.h"
+     33          #include "stm32w108xx_adc.h"
+     34          
+     35          /** @addtogroup HAL
+     36            * @{
+     37            */
+     38          
+     39          /** @defgroup adc
+     40            * @{
+     41            */
+     42          
+     43          #if (NUM_ADC_USERS > 8)
+     44            #error NUM_ADC_USERS must not be greater than 8, or uint8_t variables in adc.c must be changed
+     45          #endif
+     46          
+     47          /* Private typedef -----------------------------------------------------------*/
+     48          /* Private defines -----------------------------------------------------------*/
+     49          /* Define a channel field that combines ADC_CR_CHSELP and ADC_CR_CHSELN */
+     50          #define ADC_CHAN        (ADC_CR_CHSELP | ADC_CR_CHSELN)
+     51          #define ADC_CHAN_BIT     3
+     52          
+     53          /* Private macros ------------------------------------------------------------*/
+     54          /* External variables --------------------------------------------------------*/
+     55          
+
+   \                                 In section .bss, align 4
+     56          static uint16_t adcData;             /* conversion result written by DMA */
+     57          static uint8_t adcPendingRequests;   /* bitmap of pending requests */
+   \                     adcPendingRequests:
+   \   00000000                      DS8 1
+   \   00000001                      DS8 1
+   \   00000002                      DS8 1
+   \   00000003                      DS8 1
+   \   00000004                      DS8 2
+   \   00000006                      DS8 2
+   \   00000008                      DS8 2
+   \   0000000A                      DS8 2
+   \   0000000C                      DS8 8
+   \   00000014                      DS8 8
+   \   0000001C                      DS8 2
+     58          __IO static uint8_t adcPendingConversion; /* id of pending conversion */
+     59          static uint8_t adcReadingValid;      /* bitmap of valid adcReadings */
+     60          static uint16_t adcReadings[NUM_ADC_USERS];
+     61          static uint16_t adcConfig[NUM_ADC_USERS];
+     62          static boolean adcCalibrated;
+     63          static int16_t Nvss;
+     64          static int16_t Nvdd;
+     65          /* Modified the original ADC driver for enabling the ADC extended range mode required for 
+     66             supporting the STLM20 temperature sensor.
+     67             NOTE: 
+     68             The ADC extended range is inaccurate due to the high voltage mode bug of the general purpose ADC 
+     69             (see STM32W108 errata). As consequence, it is not reccomended to use this ADC driver for getting
+     70             the temperature values 
+     71           */
+     72          #ifdef ENABLE_ADC_EXTENDED_RANGE_BROKEN
+     73          static int16_t Nvref;
+     74          static int16_t Nvref2;
+     75          #endif /* ENABLE_ADC_EXTENDED_RANGE_BROKEN */
+     76          static uint16_t adcStaticConfig;
+     77          
+     78          /* Private function prototypes -----------------------------------------------*/
+     79          #ifdef __CC_ARM
+     80          __asm void DMB()
+     81          {
+     82          	DMB
+     83          }
+     84          #endif
+     85          
+     86          /* Private functions ---------------------------------------------------------*/
+     87          
+     88          /** @defgroup  adc_Private_Functions
+     89            * @{
+     90            */
+     91          
+     92          /**
+     93            * @brief  Set ADC clock
+     94            * @param  slow: boolean value
+     95            * @retval None
+     96            */
+
+   \                                 In section .text, align 2, keep-with-next
+     97          void halAdcSetClock(boolean slow)
+     98          {
+     99            if (slow) {
+   \                     halAdcSetClock: (+1)
+   \   00000000   0x....             LDR.N    R1,??DataTable12
+   \   00000002   0x890A             LDRH     R2,[R1, #+8]
+   \   00000004   0x2800             CMP      R0,#+0
+   \   00000006   0xBF12             ITEE     NE 
+   \   00000008   0xF042 0x0004      ORRNE    R0,R2,#0x4
+   \   0000000C   0xF64F 0x70FB      MOVWEQ   R0,#+65531
+   \   00000010   0x4010             ANDEQ    R0,R0,R2
+    100              adcStaticConfig |= ADC_CR_CLK;
+    101            } else {
+    102              adcStaticConfig &= ~ADC_CR_CLK;
+   \   00000012   0x8108             STRH     R0,[R1, #+8]
+    103            }
+    104          }
+   \   00000014   0x4770             BX       LR               ;; return
+    105          
+    106          /**
+    107            * @brief  Set ADC range
+    108            * @param  high: boolean value
+    109            * @retval None
+    110            */
+
+   \                                 In section .text, align 2, keep-with-next
+    111          void halAdcSetRange(boolean high)
+    112          {
+    113            if (high) {
+   \                     halAdcSetRange: (+1)
+   \   00000000   0x....             LDR.N    R1,??DataTable12
+   \   00000002   0x890A             LDRH     R2,[R1, #+8]
+   \   00000004   0x2800             CMP      R0,#+0
+   \   00000006   0xBF12             ITEE     NE 
+   \   00000008   0xF442 0x50C0      ORRNE    R0,R2,#0x1800
+   \   0000000C   0xF24E 0x70FF      MOVWEQ   R0,#+59391
+   \   00000010   0x4010             ANDEQ    R0,R0,R2
+    114              adcStaticConfig |= (ADC_CR_HVSELN | ADC_CR_HVSELP);
+    115            } else {
+    116              adcStaticConfig &= ~(ADC_CR_HVSELN | ADC_CR_HVSELP);
+   \   00000012   0x8108             STRH     R0,[R1, #+8]
+    117            }
+    118          }
+   \   00000014   0x4770             BX       LR               ;; return
+    119          
+    120          /**
+    121            * @brief  Get ADC clock
+    122            * @param  None
+    123            * @retval boolean value
+    124            */
+
+   \                                 In section .text, align 2, keep-with-next
+    125          boolean halAdcGetClock(void)
+    126          {
+    127            /* Fix original function code */
+    128            return (adcStaticConfig & ADC_CR_CLK) ? TRUE : FALSE;
+   \                     halAdcGetClock: (+1)
+   \   00000000   0x....             LDR.N    R0,??DataTable12
+   \   00000002   0x8900             LDRH     R0,[R0, #+8]
+   \   00000004   0x0600             LSLS     R0,R0,#+24
+   \   00000006   0x0E80             LSRS     R0,R0,#+26
+   \   00000008   0xF000 0x0001      AND      R0,R0,#0x1
+   \   0000000C   0x4770             BX       LR               ;; return
+    129          }
+    130          
+    131          /**
+    132            * @brief  Get ADC range
+    133            * @param  None
+    134            * @retval boolean value
+    135            */
+
+   \                                 In section .text, align 2, keep-with-next
+    136          boolean halAdcGetRange(void)
+    137          {
+    138            /* Fix original function code */
+    139            return (adcStaticConfig & ((ADC_CR_HVSELN | ADC_CR_HVSELP))) ? TRUE : FALSE;
+   \                     halAdcGetRange: (+1)
+   \   00000000   0x....             LDR.N    R0,??DataTable12
+   \   00000002   0x8900             LDRH     R0,[R0, #+8]
+   \   00000004   0xF410 0x50C0      ANDS     R0,R0,#0x1800
+   \   00000008   0xBF18             IT       NE 
+   \   0000000A   0x2001             MOVNE    R0,#+1
+   \   0000000C   0xB2C0             UXTB     R0,R0
+   \   0000000E   0x4770             BX       LR               ;; return
+    140          }
+    141          
+    142          /**
+    143            * @brief  hal ADC Isr
+    144            * @param  None
+    145            * @retval None
+    146            */
+
+   \                                 In section .text, align 4, keep-with-next
+    147          void halAdcIsr(void)
+    148          {
+   \                     halAdcIsr: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+    149            uint8_t i;
+    150            uint8_t conversion = adcPendingConversion; /* fix '__IO' warning; costs no flash */
+   \   00000002   0x....             LDR.N    R0,??DataTable12
+    151          
+    152            /* make sure data is ready and the desired conversion is valid */
+    153            if ( (ADC->ISR & ADC_IER_DMABFIE)
+    154                  && (conversion < NUM_ADC_USERS) ) {
+   \   00000004   0x....             LDR.N    R1,??DataTable12_1  ;; 0x4000a810
+   \   00000006   0x7842             LDRB     R2,[R0, #+1]
+   \   00000008   0x680B             LDR      R3,[R1, #+0]
+   \   0000000A   0x075B             LSLS     R3,R3,#+29
+   \   0000000C   0xD525             BPL.N    ??halAdcIsr_0
+   \   0000000E   0x2A03             CMP      R2,#+3
+   \   00000010   0xDA23             BGE.N    ??halAdcIsr_0
+    155              adcReadings[conversion] = adcData;
+   \   00000012   0x8883             LDRH     R3,[R0, #+4]
+   \   00000014   0xEB00 0x0442      ADD      R4,R0,R2, LSL #+1
+   \   00000018   0x81A3             STRH     R3,[R4, #+12]
+    156              adcReadingValid |= BIT(conversion); /* mark the reading as valid */
+   \   0000001A   0x2301             MOVS     R3,#+1
+   \   0000001C   0x7884             LDRB     R4,[R0, #+2]
+   \   0000001E   0xFA03 0xF202      LSL      R2,R3,R2
+   \   00000022   0x4322             ORRS     R2,R2,R4
+   \   00000024   0x7082             STRB     R2,[R0, #+2]
+    157              /* setup the next conversion if any */
+    158              if (adcPendingRequests) {
+   \   00000026   0x....             LDR.N    R4,??DataTable12_2  ;; 0x4000d004
+   \   00000028   0x7802             LDRB     R2,[R0, #+0]
+   \   0000002A   0x2A00             CMP      R2,#+0
+   \   0000002C   0xD012             BEQ.N    ??halAdcIsr_1
+    159                for (i = 0; i < NUM_ADC_USERS; i++) {
+   \   0000002E   0x2500             MOVS     R5,#+0
+    160                  if (BIT(i) & adcPendingRequests) {
+   \                     ??halAdcIsr_2: (+1)
+   \   00000030   0xFA22 0xF605      LSR      R6,R2,R5
+   \   00000034   0x07F6             LSLS     R6,R6,#+31
+   \   00000036   0xD508             BPL.N    ??halAdcIsr_3
+   \   00000038   0x40AB             LSLS     R3,R3,R5
+    161                    adcPendingConversion = i;     /* set pending conversion */
+   \   0000003A   0x7045             STRB     R5,[R0, #+1]
+    162                    adcPendingRequests ^= BIT(i); /* clear request: conversion is starting */
+   \   0000003C   0x405A             EORS     R2,R3,R2
+   \   0000003E   0x7002             STRB     R2,[R0, #+0]
+    163                    ADC->CR = adcConfig[i]; 
+   \   00000040   0xEB10 0x0045      ADDS     R0,R0,R5, LSL #+1
+   \   00000044   0x8A80             LDRH     R0,[R0, #+20]
+   \   00000046   0x6020             STR      R0,[R4, #+0]
+    164                    break; /* conversion started, so we're done here (only one at a time) */
+   \   00000048   0xE007             B.N      ??halAdcIsr_0
+    165                  }
+    166                }
+   \                     ??halAdcIsr_3: (+1)
+   \   0000004A   0x1C6D             ADDS     R5,R5,#+1
+   \   0000004C   0xB2ED             UXTB     R5,R5
+   \   0000004E   0x2D03             CMP      R5,#+3
+   \   00000050   0xDBEE             BLT.N    ??halAdcIsr_2
+   \   00000052   0xE002             B.N      ??halAdcIsr_0
+    167              } else {                                /* no conversion to do */
+    168                ADC->CR = 0;                          /* disable adc */
+   \                     ??halAdcIsr_1: (+1)
+   \   00000054   0x6022             STR      R2,[R4, #+0]
+    169                adcPendingConversion = NUM_ADC_USERS; /* nothing pending, so go "idle" */
+   \   00000056   0x2203             MOVS     R2,#+3
+   \   00000058   0x7042             STRB     R2,[R0, #+1]
+    170              }
+    171            }
+    172            ADC->ISR = 0xFFFF;
+   \                     ??halAdcIsr_0: (+1)
+   \   0000005A   0xF64F 0x70FF      MOVW     R0,#+65535
+   \   0000005E   0x6008             STR      R0,[R1, #+0]
+    173            
+    174           /* asm("DMB"); */
+    175            
+    176          #if (defined (__ICCARM__) || defined (__GNUC__))
+    177            asm("DMB");
+   \   00000060   0xF3BF 0x8F5F      DMB
+    178          #elif defined __CC_ARM
+    179          	DMB();
+    180          #else 
+    181            #error "Inline assembler syntax expected"  
+    182          #endif
+    183          
+    184          }
+   \   00000064   0xBD70             POP      {R4-R6,PC}       ;; return
+    185          
+    186          /**
+    187            * @brief  start next conversion
+    188            * @param  None
+    189            * @retval ADC user
+    190            */
+    191          /* An internal support routine called from functions below.
+    192             Returns the user number of the started conversion, or NUM_ADC_USERS
+    193             otherwise. */
+
+   \                                 In section .text, align 2, keep-with-next
+    194          ADCUser startNextConversion(void)
+    195          {
+   \                     startNextConversion: (+1)
+   \   00000000   0xB530             PUSH     {R4,R5,LR}
+    196            uint8_t i;
+    197            
+    198            ATOMIC (
+    199              /* start the next requested conversion if any */
+    200              if (adcPendingRequests && !(ADC->CR & ADC_CR_ADON)) {
+    201                for (i = 0; i < NUM_ADC_USERS; i++) {
+    202                  if ( BIT(i) & adcPendingRequests) {
+    203                    adcPendingConversion = i;     /* set pending conversion */
+    204                    adcPendingRequests ^= BIT(i); /* clear request */
+    205                    ADC->CR = adcConfig[i];       /* set the configuration to desired */
+    206                    ADC->ISR = 0xFFFF;
+    207                    NVIC->ISER[0] = NVIC_IxxR_ADC;
+    208          	  break;                       /* see DDTS MBTst38936 */
+    209                  }
+    210                }
+    211              } else {
+    212                i = NUM_ADC_USERS;
+    213              }
+    214            )
+   \   00000002   0xF3EF 0x8111      MRS      R1,BASEPRI
+   \   00000006   0x2060             MOVS     R0,#+96
+   \   00000008   0xF380 0x8811      MSR      BASEPRI,R0
+   \   0000000C   0x....             LDR.N    R2,??DataTable12
+   \   0000000E   0x7813             LDRB     R3,[R2, #+0]
+   \   00000010   0xB1FB             CBZ.N    R3,??startNextConversion_0
+   \   00000012   0x....             LDR.N    R4,??DataTable12_2  ;; 0x4000d004
+   \   00000014   0x6820             LDR      R0,[R4, #+0]
+   \   00000016   0x07C0             LSLS     R0,R0,#+31
+   \   00000018   0xD41B             BMI.N    ??startNextConversion_0
+   \   0000001A   0x2000             MOVS     R0,#+0
+   \                     ??startNextConversion_1: (+1)
+   \   0000001C   0xFA23 0xF500      LSR      R5,R3,R0
+   \   00000020   0x07ED             LSLS     R5,R5,#+31
+   \   00000022   0xD511             BPL.N    ??startNextConversion_2
+   \   00000024   0x2501             MOVS     R5,#+1
+   \   00000026   0x4085             LSLS     R5,R5,R0
+   \   00000028   0x7050             STRB     R0,[R2, #+1]
+   \   0000002A   0x406B             EORS     R3,R5,R3
+   \   0000002C   0x7013             STRB     R3,[R2, #+0]
+   \   0000002E   0xEB02 0x0240      ADD      R2,R2,R0, LSL #+1
+   \   00000032   0x....             LDR.N    R3,??DataTable12_1  ;; 0x4000a810
+   \   00000034   0x8A92             LDRH     R2,[R2, #+20]
+   \   00000036   0x6022             STR      R2,[R4, #+0]
+   \   00000038   0xF64F 0x72FF      MOVW     R2,#+65535
+   \   0000003C   0x601A             STR      R2,[R3, #+0]
+   \   0000003E   0xF44F 0x6200      MOV      R2,#+2048
+   \   00000042   0x....             LDR.N    R3,??DataTable12_3  ;; 0xe000e100
+   \   00000044   0x601A             STR      R2,[R3, #+0]
+   \   00000046   0xE005             B.N      ??startNextConversion_3
+   \                     ??startNextConversion_2: (+1)
+   \   00000048   0x1C40             ADDS     R0,R0,#+1
+   \   0000004A   0xB2C0             UXTB     R0,R0
+   \   0000004C   0x2803             CMP      R0,#+3
+   \   0000004E   0xDBE5             BLT.N    ??startNextConversion_1
+   \   00000050   0xE000             B.N      ??startNextConversion_3
+   \                     ??startNextConversion_0: (+1)
+   \   00000052   0x2003             MOVS     R0,#+3
+   \                     ??startNextConversion_3: (+1)
+   \   00000054   0xB2C9             UXTB     R1,R1
+   \   00000056   0xF381 0x8811      MSR      BASEPRI,R1
+    215            return i;
+   \   0000005A   0xBD30             POP      {R4,R5,PC}       ;; return
+    216          }
+    217          
+    218          /**
+    219            * @brief  Initialize internal ADC 
+    220            * @param  None
+    221            * @retval None
+    222            */
+
+   \                                 In section .text, align 2, keep-with-next
+    223          void halInternalInitAdc(void)
+    224          {
+   \                     halInternalInitAdc: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    225            ADC_InitTypeDef ADC_InitStruct;
+    226            
+    227            /* reset the state variables */
+    228            adcPendingRequests = 0;
+   \   00000002   0x....             LDR.N    R4,??DataTable12
+   \   00000004   0x2000             MOVS     R0,#+0
+   \   00000006   0x7020             STRB     R0,[R4, #+0]
+   \   00000008   0xB088             SUB      SP,SP,#+32
+    229            adcPendingConversion = NUM_ADC_USERS;
+   \   0000000A   0x2003             MOVS     R0,#+3
+   \   0000000C   0x7060             STRB     R0,[R4, #+1]
+    230            adcCalibrated = FALSE;
+   \   0000000E   0x2000             MOVS     R0,#+0
+   \   00000010   0x70E0             STRB     R0,[R4, #+3]
+    231            adcStaticConfig = ADC_CR_CLK | ADC_CR_ADON; /* init config: 1MHz, low voltage */
+   \   00000012   0x2005             MOVS     R0,#+5
+   \   00000014   0x8120             STRH     R0,[R4, #+8]
+    232          
+    233            /* set all adcReadings as invalid */
+    234            adcReadingValid = 0;
+   \   00000016   0x2000             MOVS     R0,#+0
+   \   00000018   0x70A0             STRB     R0,[R4, #+2]
+    235          
+    236            /* disable ADC, turn off HV buffers */
+    237            ADC_DMA_ChannelReset();
+   \   0000001A   0x.... 0x....      BL       ADC_DMA_ChannelReset
+    238            ADC_DMA_Config((uint32_t)&adcData, 1);
+   \   0000001E   0x2101             MOVS     R1,#+1
+   \   00000020   0x1D20             ADDS     R0,R4,#+4
+   \   00000022   0x.... 0x....      BL       ADC_DMA_Config
+    239            ADC_InitStruct.ADC_Offset = 0;
+   \   00000026   0x2000             MOVS     R0,#+0
+   \   00000028   0x9006             STR      R0,[SP, #+24]
+    240            ADC_InitStruct.ADC_Gain = 0x00008000;
+   \   0000002A   0xF44F 0x4000      MOV      R0,#+32768
+   \   0000002E   0x9007             STR      R0,[SP, #+28]
+    241            ADC_InitStruct.ADC_Resolution = ADC_Resolution_12b;
+   \   00000030   0xF44F 0x4060      MOV      R0,#+57344
+   \   00000034   0x9000             STR      R0,[SP, #+0]
+    242            ADC_InitStruct.ADC_VoltageP = ADC_VoltageP_Low;
+   \   00000036   0x2000             MOVS     R0,#+0
+   \   00000038   0x9001             STR      R0,[SP, #+4]
+    243            ADC_InitStruct.ADC_VoltageN = ADC_VoltageN_Low;
+   \   0000003A   0x9002             STR      R0,[SP, #+8]
+    244            ADC_InitStruct.ADC_Input = ADC_SOURCE_VREF;
+   \   0000003C   0x20A8             MOVS     R0,#+168
+   \   0000003E   0x9003             STR      R0,[SP, #+12]
+    245            ADC_InitStruct.ADC_DMAMode = ADC_DMAMode_AutoWrap;
+   \   00000040   0x2002             MOVS     R0,#+2
+   \   00000042   0x9005             STR      R0,[SP, #+20]
+    246            ADC_InitStruct.ADC_Clock = ADC_Clock_6MHz;
+   \   00000044   0x2000             MOVS     R0,#+0
+   \   00000046   0x9004             STR      R0,[SP, #+16]
+    247            ADC_Init(&ADC_InitStruct);
+   \   00000048   0xA800             ADD      R0,SP,#+0
+   \   0000004A   0x.... 0x....      BL       ADC_Init
+    248            
+    249            ADC_DMA_ChannelLoadEnable();
+   \   0000004E   0x.... 0x....      BL       ADC_DMA_ChannelLoadEnable
+    250            
+    251            /* Clear the ADC interrupts and enable */
+    252            ADC->IER = ADC_IER_DMABFIE;
+   \   00000052   0x....             LDR.N    R0,??DataTable12_1  ;; 0x4000a810
+   \   00000054   0x2104             MOVS     R1,#+4
+   \   00000056   0x6401             STR      R1,[R0, #+64]
+    253            
+    254            ADC->ISR = 0xFFFF;
+   \   00000058   0xF64F 0x71FF      MOVW     R1,#+65535
+   \   0000005C   0x6001             STR      R1,[R0, #+0]
+    255            NVIC->ISER[0] = NVIC_IxxR_ADC;
+   \   0000005E   0xF44F 0x6000      MOV      R0,#+2048
+   \   00000062   0x....             LDR.N    R1,??DataTable12_3  ;; 0xe000e100
+   \   00000064   0x6008             STR      R0,[R1, #+0]
+    256          
+    257            stCalibrateVref();
+   \   00000066   0x.... 0x....      BL       stCalibrateVref
+    258          }
+   \   0000006A   0xB008             ADD      SP,SP,#+32
+   \   0000006C   0xBD10             POP      {R4,PC}          ;; return
+    259          
+    260          /**
+    261            * @brief  Return the address of the token in NVM
+    262            * @param  ADC user identifier
+    263            * @param  ADC reference
+    264            * @param  ADC channel
+    265            * @param  ADC rate    
+    266            * @retval St status
+    267            */
+
+   \                                 In section .text, align 2, keep-with-next
+    268          StStatus halStartAdcConversion(ADCUser id, ADCReferenceType reference, ADCChannelType channel, ADCRateType rate)
+    269          {
+   \                     halStartAdcConversion: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    270             if(reference != ADC_REF_INT)
+   \   00000002   0x292A             CMP      R1,#+42
+   \   00000004   0x4604             MOV      R4,R0
+   \   00000006   0xD001             BEQ.N    ??halStartAdcConversion_0
+    271              return ST_ERR_FATAL;
+   \   00000008   0x2001             MOVS     R0,#+1
+   \   0000000A   0xBD10             POP      {R4,PC}
+    272          
+    273            /* save the chosen configuration for this user */
+    274            adcConfig[id] = ( ((rate << 13) & ADC_CR_SMP)
+    275                            | ((channel << ADC_CHAN_BIT) & ADC_CHAN)
+    276                            | adcStaticConfig);
+   \                     ??halStartAdcConversion_0: (+1)
+   \   0000000C   0x....             LDR.N    R0,??DataTable12
+   \   0000000E   0x00D1             LSLS     R1,R2,#+3
+   \   00000010   0x8902             LDRH     R2,[R0, #+8]
+   \   00000012   0xEA41 0x3143      ORR      R1,R1,R3, LSL #+13
+   \   00000016   0x4311             ORRS     R1,R2,R1
+   \   00000018   0xEB00 0x0244      ADD      R2,R0,R4, LSL #+1
+   \   0000001C   0x8291             STRH     R1,[R2, #+20]
+   \   0000001E   0x2101             MOVS     R1,#+1
+   \   00000020   0x7802             LDRB     R2,[R0, #+0]
+   \   00000022   0x40A1             LSLS     R1,R1,R4
+   \   00000024   0x420A             TST      R2,R1
+   \   00000026   0xD114             BNE.N    ??halStartAdcConversion_1
+    277          
+    278            /* if the user already has a pending request, overwrite params */
+    279            if (adcPendingRequests & BIT(id)) {
+    280              return ST_ADC_CONVERSION_DEFERRED;
+    281            }
+    282          
+    283            ATOMIC (
+    284              /* otherwise, queue the transaction */
+    285              adcPendingRequests |= BIT(id);
+    286              /* try and start the conversion if there is not one happening */
+    287              adcReadingValid &= ~BIT(id);
+    288            )
+   \   00000028   0xF3EF 0x8211      MRS      R2,BASEPRI
+   \   0000002C   0x2360             MOVS     R3,#+96
+   \   0000002E   0xF383 0x8811      MSR      BASEPRI,R3
+   \   00000032   0x7803             LDRB     R3,[R0, #+0]
+   \   00000034   0x430B             ORRS     R3,R1,R3
+   \   00000036   0x7003             STRB     R3,[R0, #+0]
+   \   00000038   0xB2D2             UXTB     R2,R2
+   \   0000003A   0x7883             LDRB     R3,[R0, #+2]
+   \   0000003C   0xEA23 0x0101      BIC      R1,R3,R1
+   \   00000040   0x7081             STRB     R1,[R0, #+2]
+   \   00000042   0xF382 0x8811      MSR      BASEPRI,R2
+    289            if (startNextConversion() == id)
+   \   00000046   0x.... 0x....      BL       startNextConversion
+   \   0000004A   0x42A0             CMP      R0,R4
+   \   0000004C   0xD101             BNE.N    ??halStartAdcConversion_1
+    290              return ST_ADC_CONVERSION_BUSY;
+   \   0000004E   0x2081             MOVS     R0,#+129
+   \   00000050   0xBD10             POP      {R4,PC}
+    291            else
+    292              return ST_ADC_CONVERSION_DEFERRED;
+   \                     ??halStartAdcConversion_1: (+1)
+   \   00000052   0x2082             MOVS     R0,#+130
+   \   00000054   0xBD10             POP      {R4,PC}          ;; return
+    293          }
+    294          
+    295          /**
+    296            * @brief  request ADC data
+    297            * @param  ADC user identifier
+    298            * @param  value  
+    299            * @retval St status
+    300            */
+
+   \                                 In section .text, align 2, keep-with-next
+    301          StStatus halRequestAdcData(ADCUser id, uint16_t *value)
+    302          {
+   \                     halRequestAdcData: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+    303            /* Both the ADC interrupt and the global interrupt need to be enabled,
+    304               otherwise the ADC ISR cannot be serviced. */
+    305            boolean intsAreOff = ( INTERRUPTS_ARE_OFF()
+    306                                  || !(NVIC->ISER[0] & NVIC_IxxR_ADC) 
+    307                                  || !(ADC->IER & ADC_IER_DMABFIE) );
+   \   00000002   0xF3EF 0x8211      MRS      R2,BASEPRI
+   \   00000006   0x4604             MOV      R4,R0
+   \   00000008   0x460D             MOV      R5,R1
+   \   0000000A   0x2A60             CMP      R2,#+96
+   \   0000000C   0x....             LDR.N    R0,??DataTable12_4  ;; 0x4000a850
+   \   0000000E   0x....             LDR.N    R1,??DataTable12_3  ;; 0xe000e100
+   \   00000010   0xD209             BCS.N    ??halRequestAdcData_0
+   \   00000012   0x680A             LDR      R2,[R1, #+0]
+   \   00000014   0x0512             LSLS     R2,R2,#+20
+   \   00000016   0xD506             BPL.N    ??halRequestAdcData_0
+   \   00000018   0x6802             LDR      R2,[R0, #+0]
+   \   0000001A   0x0892             LSRS     R2,R2,#+2
+   \   0000001C   0xF002 0x0201      AND      R2,R2,#0x1
+   \   00000020   0xF082 0x0201      EOR      R2,R2,#0x1
+   \   00000024   0xE000             B.N      ??halRequestAdcData_1
+   \                     ??halRequestAdcData_0: (+1)
+   \   00000026   0x2201             MOVS     R2,#+1
+    308            StStatus stat;
+    309          
+    310            ATOMIC (
+    311              /* If interupts are disabled but the flag is set,
+    312                 manually run the isr...
+    313                 FIXME -= is this valid??? */
+    314              if( intsAreOff 
+    315                && ( (NVIC->ISER[0] & NVIC_IxxR_ADC) && (ADC->IER & ADC_IER_DMABFIE) )) {
+    316                halAdcIsr();
+    317              }
+    318           
+    319              /* check if we are done */
+    320              if (BIT(id) & adcReadingValid) {
+    321                *value = adcReadings[id];
+    322                adcReadingValid ^= BIT(id);
+    323                stat = ST_ADC_CONVERSION_DONE;
+    324              } else if (adcPendingRequests & BIT(id)) {
+    325                stat = ST_ADC_CONVERSION_DEFERRED;
+    326              } else if (adcPendingConversion == id) {
+    327                stat = ST_ADC_CONVERSION_BUSY;
+    328              } else {
+    329                stat = ST_ADC_NO_CONVERSION_PENDING;
+    330              }
+    331            )
+   \                     ??halRequestAdcData_1: (+1)
+   \   00000028   0xF3EF 0x8611      MRS      R6,BASEPRI
+   \   0000002C   0x2360             MOVS     R3,#+96
+   \   0000002E   0xF383 0x8811      MSR      BASEPRI,R3
+   \   00000032   0xB13A             CBZ.N    R2,??halRequestAdcData_2
+   \   00000034   0x6809             LDR      R1,[R1, #+0]
+   \   00000036   0x0509             LSLS     R1,R1,#+20
+   \   00000038   0xD504             BPL.N    ??halRequestAdcData_2
+   \   0000003A   0x6800             LDR      R0,[R0, #+0]
+   \   0000003C   0x0740             LSLS     R0,R0,#+29
+   \   0000003E   0xBF48             IT       MI 
+   \   00000040   0x.... 0x....      BLMI     halAdcIsr
+   \                     ??halRequestAdcData_2: (+1)
+   \   00000044   0x....             LDR.N    R1,??DataTable12
+   \   00000046   0x788A             LDRB     R2,[R1, #+2]
+   \   00000048   0x2001             MOVS     R0,#+1
+   \   0000004A   0x40A0             LSLS     R0,R0,R4
+   \   0000004C   0xFA22 0xF304      LSR      R3,R2,R4
+   \   00000050   0x07DB             LSLS     R3,R3,#+31
+   \   00000052   0xD507             BPL.N    ??halRequestAdcData_3
+   \   00000054   0xEB01 0x0344      ADD      R3,R1,R4, LSL #+1
+   \   00000058   0x4050             EORS     R0,R0,R2
+   \   0000005A   0x899B             LDRH     R3,[R3, #+12]
+   \   0000005C   0x802B             STRH     R3,[R5, #+0]
+   \   0000005E   0x7088             STRB     R0,[R1, #+2]
+   \   00000060   0x2080             MOVS     R0,#+128
+   \   00000062   0xE009             B.N      ??halRequestAdcData_4
+   \                     ??halRequestAdcData_3: (+1)
+   \   00000064   0x780A             LDRB     R2,[R1, #+0]
+   \   00000066   0x4202             TST      R2,R0
+   \   00000068   0xBF18             IT       NE 
+   \   0000006A   0x2082             MOVNE    R0,#+130
+   \   0000006C   0xD104             BNE.N    ??halRequestAdcData_4
+   \   0000006E   0x7848             LDRB     R0,[R1, #+1]
+   \   00000070   0x42A0             CMP      R0,R4
+   \   00000072   0xBF0C             ITE      EQ 
+   \   00000074   0x2081             MOVEQ    R0,#+129
+   \   00000076   0x2084             MOVNE    R0,#+132
+   \                     ??halRequestAdcData_4: (+1)
+   \   00000078   0xB2F6             UXTB     R6,R6
+   \   0000007A   0xF386 0x8811      MSR      BASEPRI,R6
+    332            return stat;
+   \   0000007E   0xBD70             POP      {R4-R6,PC}       ;; return
+    333          }
+    334          
+    335          /**
+    336            * @brief  Read ADC blocking
+    337            * @param  ADC user identifier
+    338            * @param  value 
+    339            * @retval St status
+    340            */
+
+   \                                 In section .text, align 2, keep-with-next
+    341          StStatus halReadAdcBlocking(ADCUser id, uint16_t *value)
+    342          {
+   \                     halReadAdcBlocking: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+   \   00000002   0x4604             MOV      R4,R0
+   \   00000004   0x460D             MOV      R5,R1
+    343            StStatus stat;
+    344          
+    345            do {
+    346              stat = halRequestAdcData(id, value);
+   \                     ??halReadAdcBlocking_0: (+1)
+   \   00000006   0x4629             MOV      R1,R5
+   \   00000008   0x4620             MOV      R0,R4
+   \   0000000A   0x.... 0x....      BL       halRequestAdcData
+    347              if (stat == ST_ADC_NO_CONVERSION_PENDING)
+   \   0000000E   0x2884             CMP      R0,#+132
+   \   00000010   0xBF18             IT       NE 
+   \   00000012   0x2880             CMPNE    R0,#+128
+    348                break;
+    349            } while(stat != ST_ADC_CONVERSION_DONE);
+   \   00000014   0xD1F7             BNE.N    ??halReadAdcBlocking_0
+    350            return stat;
+   \   00000016   0xBD32             POP      {R1,R4,R5,PC}    ;; return
+    351          }
+    352          
+    353          /**
+    354            * @brief  Calibrate the ADC
+    355            * @param  ADC user identifier
+    356            * @retval St status
+    357            */
+
+   \                                 In section .text, align 2, keep-with-next
+    358          StStatus halAdcCalibrate(ADCUser id)
+    359          {
+   \                     halAdcCalibrate: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+   \   00000002   0x4604             MOV      R4,R0
+    360            StStatus stat;
+    361          /* Modified the original ADC driver for enabling the ADC extended range mode required for 
+    362               supporting the STLM20 temperature sensor.
+    363               NOTE: 
+    364               The ADC extended range is inaccurate due to the high voltage mode bug of the general purpose ADC 
+    365               (see STM32W108 errata). As consequence, it is not reccomended to use this ADC driver for getting
+    366               the temperature values 
+    367             */
+    368          #ifdef ENABLE_ADC_EXTENDED_RANGE_BROKEN
+    369            if(halAdcGetRange()){
+    370              
+    371              halStartAdcConversion(id,
+    372                                    ADC_REF_INT,
+    373                                    ADC_SOURCE_VREF_VREF2,
+    374                                    ADC_CONVERSION_TIME_US_4096);
+    375              
+    376              stat = halReadAdcBlocking(id, (uint16_t *)(&Nvref));
+    377              if (stat == ST_ADC_CONVERSION_DONE) {
+    378                halStartAdcConversion(id,
+    379                                      ADC_REF_INT,
+    380                                      ADC_SOURCE_VREF2_VREF2,
+    381                                      ADC_CONVERSION_TIME_US_4096);
+    382                stat = halReadAdcBlocking(id, (uint16_t *)(&Nvref2));
+    383              }
+    384              if (stat == ST_ADC_CONVERSION_DONE) {
+    385                adcCalibrated = TRUE;
+    386              } else {
+    387                adcCalibrated = FALSE;
+    388                stat = ST_ERR_FATAL;
+    389              }
+    390              return stat;    
+    391              
+    392            }  
+    393          #endif /* ENABLE_ADC_EXTENDED_RANGE_BROKEN */
+    394            halStartAdcConversion(id,
+    395                                  ADC_REF_INT,
+    396                                  ADC_SOURCE_GND_VREF2,
+    397                                  ADC_CONVERSION_TIME_US_4096);
+   \   00000004   0x2307             MOVS     R3,#+7
+   \   00000006   0x2289             MOVS     R2,#+137
+   \   00000008   0x212A             MOVS     R1,#+42
+   \   0000000A   0x.... 0x....      BL       halStartAdcConversion
+    398            stat = halReadAdcBlocking(id, (uint16_t *)(&Nvss));
+   \   0000000E   0x....             LDR.N    R5,??DataTable12
+   \   00000010   0xF105 0x011C      ADD      R1,R5,#+28
+   \   00000014   0x4620             MOV      R0,R4
+   \   00000016   0x.... 0x....      BL       halReadAdcBlocking
+    399            if (stat == ST_ADC_CONVERSION_DONE) {
+   \   0000001A   0x2880             CMP      R0,#+128
+   \   0000001C   0xD109             BNE.N    ??halAdcCalibrate_0
+    400              halStartAdcConversion(id,
+    401                                    ADC_REF_INT,
+    402                                    ADC_SOURCE_VREG2_VREF2,
+    403                                    ADC_CONVERSION_TIME_US_4096);
+   \   0000001E   0x2307             MOVS     R3,#+7
+   \   00000020   0x22B9             MOVS     R2,#+185
+   \   00000022   0x212A             MOVS     R1,#+42
+   \   00000024   0x4620             MOV      R0,R4
+   \   00000026   0x.... 0x....      BL       halStartAdcConversion
+    404              stat = halReadAdcBlocking(id, (uint16_t *)(&Nvdd));
+   \   0000002A   0x1DA9             ADDS     R1,R5,#+6
+   \   0000002C   0x4620             MOV      R0,R4
+   \   0000002E   0x.... 0x....      BL       halReadAdcBlocking
+    405            }
+    406            if (stat == ST_ADC_CONVERSION_DONE) {
+   \                     ??halAdcCalibrate_0: (+1)
+   \   00000032   0x2880             CMP      R0,#+128
+   \   00000034   0xD105             BNE.N    ??halAdcCalibrate_1
+    407              Nvdd -= Nvss;
+   \   00000036   0x88E9             LDRH     R1,[R5, #+6]
+   \   00000038   0x8BAA             LDRH     R2,[R5, #+28]
+   \   0000003A   0x1A89             SUBS     R1,R1,R2
+   \   0000003C   0x80E9             STRH     R1,[R5, #+6]
+    408              adcCalibrated = TRUE;
+   \   0000003E   0x2101             MOVS     R1,#+1
+   \   00000040   0xE001             B.N      ??halAdcCalibrate_2
+    409            } else {
+    410              adcCalibrated = FALSE;
+   \                     ??halAdcCalibrate_1: (+1)
+   \   00000042   0x2100             MOVS     R1,#+0
+    411              stat = ST_ERR_FATAL;
+   \   00000044   0x2001             MOVS     R0,#+1
+   \                     ??halAdcCalibrate_2: (+1)
+   \   00000046   0x70E9             STRB     R1,[R5, #+3]
+    412            }
+    413            return stat;
+   \   00000048   0xBD32             POP      {R1,R4,R5,PC}    ;; return
+    414          }
+    415          
+    416          /**
+    417            * @brief  Convert value to voltage
+    418            * Use the ratio of the sample reading to the of VDD_PADSA/2, a 'known'
+    419            * value (nominally 900mV in normal mode, but slightly higher in boost mode)
+    420            * to convert to 100uV units. 
+    421            * FIXME: support external Vref use #define of Vref, ignore VDD_PADSA 
+    422            * @param  value
+    423            * @retval voltage
+    424            */
+
+   \                                 In section .text, align 2, keep-with-next
+    425          int16_t halConvertValueToVolts(uint16_t value)
+    426          {
+   \                     halConvertValueToVolts: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+    427            int32_t N;
+    428            int16_t V;
+    429            int32_t nvalue;
+    430            
+    431            if (!adcCalibrated) {
+   \   00000002   0x....             LDR.N    R5,??DataTable12
+   \   00000004   0x4604             MOV      R4,R0
+   \   00000006   0x78E8             LDRB     R0,[R5, #+3]
+   \   00000008   0xB908             CBNZ.N   R0,??halConvertValueToVolts_0
+    432              halAdcCalibrate(ADC_USER_LQI);
+   \   0000000A   0x.... 0x....      BL       halAdcCalibrate
+    433            }
+    434            if (adcCalibrated) {
+   \                     ??halConvertValueToVolts_0: (+1)
+   \   0000000E   0x78E8             LDRB     R0,[R5, #+3]
+   \   00000010   0xB328             CBZ.N    R0,??halConvertValueToVolts_1
+    435           /* Modified the original ADC driver for enabling the ADC extended range mode required for 
+    436               supporting the STLM20 temperature sensor.
+    437               NOTE: 
+    438               The ADC extended range is inaccurate due to the high voltage mode bug of the general purpose ADC 
+    439               (see STM32W108 errata). As consequence, it is not reccomended to use this ADC driver for getting
+    440               the temperature values 
+    441             */
+    442          #ifdef ENABLE_ADC_EXTENDED_RANGE_BROKEN
+    443              if(halAdcGetRange()){  /* High range. */
+    444                
+    445                N = (((int32_t)value + Nvref - 2*Nvref2) << 16)/(2*(Nvref-Nvref2));
+    446                /* Calculate voltage with: V = (N * VREF) / (2^16) where VDD = 1.2 volts */
+    447                /* Mutiplying by 1.2*10000 makes the result of this equation 100 uVolts */
+    448                V = (int16_t)((N*12000L) >> 16);
+    449                if (V > 21000) {  /* VDD_PADS ? */
+    450                  V = 21000;
+    451                }      
+    452                
+    453              }
+    454              else {
+    455           #endif /* ENABLE_ADC_EXTENDED_RANGE_BROKEN */
+    456                assert(Nvdd);
+   \   00000012   0xF9B5 0x0006      LDRSH    R0,[R5, #+6]
+   \   00000016   0xB948             CBNZ.N   R0,??halConvertValueToVolts_2
+   \   00000018   0xF44F 0x72E4      MOV      R2,#+456
+   \   0000001C   0x.... 0x....      ADR.W    R1,?_1
+   \   00000020   0x.... 0x....      ADR.W    R0,?_0
+   \   00000024   0x.... 0x....      BL       __aeabi_assert
+   \   00000028   0x.... 0x....      BL       __iar_EmptyStepPoint
+   \                     ??halConvertValueToVolts_2: (+1)
+   \   0000002C   0xF9B5 0x0006      LDRSH    R0,[R5, #+6]
+   \   00000030   0xF9B5 0x101C      LDRSH    R1,[R5, #+28]
+   \   00000034   0xEB00 0x72D0      ADD      R2,R0,R0, LSR #+31
+   \   00000038   0x1A61             SUBS     R1,R4,R1
+   \   0000003A   0x1052             ASRS     R2,R2,#+1
+   \   0000003C   0xEB02 0x4101      ADD      R1,R2,R1, LSL #+16
+   \   00000040   0xFB91 0xF4F0      SDIV     R4,R1,R0
+    457                nvalue = value - Nvss;
+    458                /* Convert input value (minus ground) to a fraction of VDD/2. */
+    459                N = ((nvalue << 16) + Nvdd/2) / Nvdd;
+    460                /* Calculate voltage with: V = (N * Vreg/2) / (2^16) */
+    461                /* Mutiplying by Vreg/2*10 makes the result units of 100 uVolts */
+    462                /* (in fixed point E-4 which allows for 13.5 bits vs millivolts */
+    463                /* which is only 10.2 bits). */
+    464                V = (int16_t)((N*((int32_t)halInternalGetVreg())*5) >> 16);
+   \   00000044   0x.... 0x....      BL       halInternalGetVreg
+   \   00000048   0x4360             MULS     R0,R0,R4
+   \   0000004A   0xEB00 0x0080      ADD      R0,R0,R0, LSL #+2
+   \   0000004E   0x1400             ASRS     R0,R0,#+16
+    465                if (V > 12000) {
+   \   00000050   0xF642 0x61E1      MOVW     R1,#+12001
+   \   00000054   0x4288             CMP      R0,R1
+   \   00000056   0xDB03             BLT.N    ??halConvertValueToVolts_3
+    466                  V = 12000;
+   \   00000058   0xF642 0x60E0      MOVW     R0,#+12000
+   \   0000005C   0xBD32             POP      {R1,R4,R5,PC}
+    467                }
+    468           #ifdef ENABLE_ADC_EXTENDED_RANGE_BROKEN    
+    469              }
+    470           #endif /* ENABLE_ADC_EXTENDED_RANGE_BROKEN */   
+    471            } else {
+    472              V = -32768;
+   \                     ??halConvertValueToVolts_1: (+1)
+   \   0000005E   0x....             LDR.N    R0,??DataTable12_5  ;; 0xffff8000
+    473            }
+    474            return V;
+   \                     ??halConvertValueToVolts_3: (+1)
+   \   00000060   0xBD32             POP      {R1,R4,R5,PC}    ;; return
+    475          }
+    476          
+    477          /**
+    478            * @brief  Get ADC channel from GPIO
+    479            * @param  Input output
+    480            * @retval Channel
+    481            */
+
+   \                                 In section .text, align 2, keep-with-next
+    482          uint8_t halGetADCChannelFromGPIO(uint32_t io)
+    483          {
+    484          	switch(io)
+   \                     halGetADCChannelFromGPIO: (+1)
+   \   00000000   0x2804             CMP      R0,#+4
+   \   00000002   0xBF18             IT       NE 
+   \   00000004   0x2805             CMPNE    R0,#+5
+   \   00000006   0xD015             BEQ.N    ??halGetADCChannelFromGPIO_0
+   \   00000008   0x2808             CMP      R0,#+8
+   \   0000000A   0xD010             BEQ.N    ??halGetADCChannelFromGPIO_1
+   \   0000000C   0x280D             CMP      R0,#+13
+   \   0000000E   0xD006             BEQ.N    ??halGetADCChannelFromGPIO_2
+   \   00000010   0x280E             CMP      R0,#+14
+   \   00000012   0xD006             BEQ.N    ??halGetADCChannelFromGPIO_3
+   \   00000014   0x280F             CMP      R0,#+15
+   \   00000016   0xD006             BEQ.N    ??halGetADCChannelFromGPIO_4
+   \   00000018   0x2811             CMP      R0,#+17
+   \   0000001A   0xD006             BEQ.N    ??halGetADCChannelFromGPIO_5
+   \   0000001C   0xE009             B.N      ??halGetADCChannelFromGPIO_6
+    485          	{
+    486          	case PORTB_PIN(5):
+    487          		return ADC_MUX_ADC0;
+   \                     ??halGetADCChannelFromGPIO_2: (+1)
+   \   0000001E   0x2000             MOVS     R0,#+0
+   \   00000020   0x4770             BX       LR
+    488          			
+    489          	case PORTB_PIN(6):
+    490          		return ADC_MUX_ADC1;
+   \                     ??halGetADCChannelFromGPIO_3: (+1)
+   \   00000022   0x2001             MOVS     R0,#+1
+   \   00000024   0x4770             BX       LR
+    491          		
+    492          	case PORTB_PIN(7):
+    493          		return ADC_MUX_ADC2;
+   \                     ??halGetADCChannelFromGPIO_4: (+1)
+   \   00000026   0x2002             MOVS     R0,#+2
+   \   00000028   0x4770             BX       LR
+    494          		
+    495          	case PORTC_PIN(1):
+    496          		return ADC_MUX_ADC3;
+   \                     ??halGetADCChannelFromGPIO_5: (+1)
+   \   0000002A   0x2003             MOVS     R0,#+3
+   \   0000002C   0x4770             BX       LR
+    497          		
+    498          	case PORTA_PIN(4):
+    499          		return ADC_MUX_ADC4;
+    500          		
+    501          	case PORTA_PIN(5):
+    502          		return ADC_MUX_ADC5;
+    503          		
+    504          	case PORTB_PIN(0):
+    505          		return ADC_MUX_VREF;
+   \                     ??halGetADCChannelFromGPIO_1: (+1)
+   \   0000002E   0x200A             MOVS     R0,#+10
+   \   00000030   0x4770             BX       LR
+    506          		
+    507          	default :
+    508          		return 0x0F; /* Invalid analogue source */
+   \                     ??halGetADCChannelFromGPIO_6: (+1)
+   \   00000032   0x200F             MOVS     R0,#+15
+   \                     ??halGetADCChannelFromGPIO_0: (+1)
+   \   00000034   0x4770             BX       LR               ;; return
+    509          			
+    510          	}
+    511          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12:
+   \   00000000   0x........         DC32     adcPendingRequests
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12_1:
+   \   00000000   0x4000A810         DC32     0x4000a810
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12_2:
+   \   00000000   0x4000D004         DC32     0x4000d004
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12_3:
+   \   00000000   0xE000E100         DC32     0xe000e100
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12_4:
+   \   00000000   0x4000A850         DC32     0x4000a850
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12_5:
+   \   00000000   0xFFFF8000         DC32     0xffff8000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ?_0:
+   \   00000000   0x4E 0x76          DC8 "Nvdd"
+   \              0x64 0x64    
+   \              0x00         
+   \   00000005   0x00 0x00          DC8 0, 0, 0
+   \              0x00         
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ?_1:
+   \   00000000   0x43 0x3A          DC8 43H, 3AH, 5CH, 55H, 73H, 65H, 72H, 73H
+   \              0x5C 0x55    
+   \              0x73 0x65    
+   \              0x72 0x73    
+   \   00000008   0x5C 0x4A          DC8 5CH, 4AH, 6FH, 6EH, 5CH, 44H, 6FH, 63H
+   \              0x6F 0x6E    
+   \              0x5C 0x44    
+   \              0x6F 0x63    
+   \   00000010   0x75 0x6D          DC8 75H, 6DH, 65H, 6EH, 74H, 73H, 5CH, 4DH
+   \              0x65 0x6E    
+   \              0x74 0x73    
+   \              0x5C 0x4D    
+   \   00000018   0x4F 0x5F          DC8 4FH, 5FH, 53H, 5FH, 61H, 6EH, 64H, 5FH
+   \              0x53 0x5F    
+   \              0x61 0x6E    
+   \              0x64 0x5F    
+   \   00000020   0x54 0x5C          DC8 54H, 5CH, 43H, 70H, 45H, 35H, 31H, 37H
+   \              0x43 0x70    
+   \              0x45 0x35    
+   \              0x31 0x37    
+   \   00000028   0x30 0x5F          DC8 30H, 5FH, 52H, 54H, 5FH, 53H, 79H, 73H
+   \              0x52 0x54    
+   \              0x5F 0x53    
+   \              0x79 0x73    
+   \   00000030   0x74 0x65          DC8 74H, 65H, 6DH, 73H, 5CH, 4CH, 61H, 62H
+   \              0x6D 0x73    
+   \              0x5C 0x4C    
+   \              0x61 0x62    
+   \   00000038   0x73 0x5C          DC8 73H, 5CH, 63H, 70H, 65H, 2DH, 35H, 31H
+   \              0x63 0x70    
+   \              0x65 0x2D    
+   \              0x35 0x31    
+   \   00000040   0x37 0x30          DC8 37H, 30H, 2DH, 6DH, 6FH, 74H, 65H, 2DH
+   \              0x2D 0x6D    
+   \              0x6F 0x74    
+   \              0x65 0x2D    
+   \   00000048   0x63 0x6F          DC8 63H, 6FH, 64H, 65H, 5CH, 55H, 74H, 69H
+   \              0x64 0x65    
+   \              0x5C 0x55    
+   \              0x74 0x69    
+   \   00000050   0x6C 0x69          DC8 6CH, 69H, 74H, 69H, 65H, 73H, 5CH, 53H
+   \              0x74 0x69    
+   \              0x65 0x73    
+   \              0x5C 0x53    
+   \   00000058   0x54 0x4D          DC8 54H, 4DH, 33H, 32H, 57H, 31H, 30H, 38H
+   \              0x33 0x32    
+   \              0x57 0x31    
+   \              0x30 0x38    
+   \   00000060   0x78 0x78          DC8 78H, 78H, 5FH, 48H, 41H, 4CH, 5FH, 44H
+   \              0x5F 0x48    
+   \              0x41 0x4C    
+   \              0x5F 0x44    
+   \   00000068   0x72 0x69          DC8 72H, 69H, 76H, 65H, 72H, 5CH, 6DH, 69H
+   \              0x76 0x65    
+   \              0x72 0x5C    
+   \              0x6D 0x69    
+   \   00000070   0x63 0x72          DC8 63H, 72H, 6FH, 5CH, 63H, 6FH, 72H, 74H
+   \              0x6F 0x5C    
+   \              0x63 0x6F    
+   \              0x72 0x74    
+   \   00000078   0x65 0x78          DC8 65H, 78H, 6DH, 33H, 5CH, 68H, 61H, 6CH
+   \              0x6D 0x33    
+   \              0x5C 0x68    
+   \              0x61 0x6C    
+   \   00000080   0x5F 0x61          DC8 5FH, 61H, 64H, 63H, 2EH, 63H, 0
+   \              0x64 0x63    
+   \              0x2E 0x63    
+   \              0x00         
+   \   00000087   0x00               DC8 0
+    512          
+    513          /**
+    514            * @}
+    515            */
+    516          
+    517          /**
+    518            * @}
+    519            */ 
+    520          
+    521          /**
+    522            * @}
+    523            */
+    524          
+    525          /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      16   halAdcCalibrate
+        16   -> halReadAdcBlocking
+        16   -> halStartAdcConversion
+       0   halAdcGetClock
+       0   halAdcGetRange
+      16   halAdcIsr
+       0   halAdcSetClock
+       0   halAdcSetRange
+      16   halConvertValueToVolts
+        16   -> __aeabi_assert
+        16   -> __iar_EmptyStepPoint
+        16   -> halAdcCalibrate
+        16   -> halInternalGetVreg
+       0   halGetADCChannelFromGPIO
+      40   halInternalInitAdc
+        40   -> ADC_DMA_ChannelLoadEnable
+        40   -> ADC_DMA_ChannelReset
+        40   -> ADC_DMA_Config
+        40   -> ADC_Init
+        40   -> stCalibrateVref
+      16   halReadAdcBlocking
+        16   -> halRequestAdcData
+      16   halRequestAdcData
+       8   halStartAdcConversion
+         8   -> startNextConversion
+      12   startNextConversion
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable12
+       4  ??DataTable12_1
+       4  ??DataTable12_2
+       4  ??DataTable12_3
+       4  ??DataTable12_4
+       4  ??DataTable12_5
+       8  ?_0
+     136  ?_1
+      30  adcPendingRequests
+          adcPendingConversion
+          adcReadingValid
+          adcCalibrated
+          adcData
+          Nvdd
+          adcStaticConfig
+          adcReadings
+          adcConfig
+          Nvss
+      74  halAdcCalibrate
+      14  halAdcGetClock
+      16  halAdcGetRange
+     102  halAdcIsr
+      22  halAdcSetClock
+      22  halAdcSetRange
+      98  halConvertValueToVolts
+      54  halGetADCChannelFromGPIO
+     110  halInternalInitAdc
+      24  halReadAdcBlocking
+     128  halRequestAdcData
+      86  halStartAdcConversion
+      92  startNextConversion
+
+ 
+    30 bytes in section .bss
+ 1 010 bytes in section .text
+ 
+ 1 010 bytes of CODE memory
+    30 bytes of DATA memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,545 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.30.4.8167/W32 for ARM        21/Feb/2015  16:30:45
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\sys_func.c
+#    Command line =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\sys_func.c
+#        -D USE_STDPERIPH_DRIVER -D USE_MB_SNT_X2 -D STM32W108CB -D
+#        "PLATFORM_HEADER=\"Utilities\STM32W108xx_HAL_Driver/micro/cortexm3/compiler/iar.h\""
+#        -D CORTEXM3 -D CORTEXM3_STM32W108 -D CORTEXM3_STM32W108xB -D
+#        DISABLE_WATCHDOG -D "__SOURCEFILE__=\"sys_func.c\"" -lC
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\
+#        --diag_suppress Pa050 -o
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\stm32w108\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\generic\compiler\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32W108xx_HAL_Driver\micro\cortexm3\bootloader\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\Shared\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\STM32W108xx_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\CMSIS\Device\ST\STM32W108xx\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Libraries\SimpleMAC\Include\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\Common\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\..\..\Utilities\STM32_EVAL\MB851\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\
+#        -I
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\..\..\arm_mote\
+#        -Ohz --use_c++_inline
+#    List file    =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\List\sys_func.lst
+#    Object file  =  
+#        C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\mote_project\EWARM\MB_SnT_X2_Mote\Obj\sys_func.o
+#
+###############################################################################
+
+C:\Users\Jon\Documents\MO_S_and_T\CpE5170_RT_Systems\Labs\cpe-5170-mote-code\Projects\SimpleMAC\arm_mote\sys_func.c
+      1          
+      2          #include "sys_func.h"
+      3          
+
+   \                                 In section .bss, align 1
+      4          error_t sys_last_error;
+   \                     sys_last_error:
+   \   00000000                      DS8 1
+      5          
+      6          #define SYS_MAX_MODULES	20
+      7          
+      8          #define SYS_MOD_FREE	0
+      9          #define SYS_MOD_BUSY	1
+     10          #define SYS_MOD_POWERED	2
+     11          #define SYS_MOD_INIT	3
+     12          #define SYS_MOD_FAILED	255
+     13          
+     14          typedef CODE void ( * XDATA sys_power_up_func_t)(uint8_t *context);
+     15          typedef CODE void ( * XDATA sys_init_func_t)(uint8_t* context);
+     16          
+     17          typedef struct {
+     18          	uint8_t status;
+     19          	const char *name;
+     20          	sys_power_up_func_t	mod_power_up;
+     21          	sys_init_func_t		mod_init;
+     22          	uint8_t *sys_context;
+     23          } sys_module_t;
+     24          
+
+   \                                 In section .bss, align 4
+     25          sys_module_t sys_modules[SYS_MAX_MODULES]={{SYS_MOD_FREE,},};
+   \                     sys_modules:
+   \   00000000                      DS8 400
+
+   \                                 In section .bss, align 1
+     26          uint8_t sys_module_count_ = 0;
+   \                     sys_module_count_:
+   \   00000000                      DS8 1
+     27          
+     28          ///////////////////////////////////////////////
+     29          //Decleration of Variables
+     30          ///////////////////////////////////////////////
+     31          #ifndef _ARM_
+     32            unsigned char XDATA SWRSEF = 0x10;	// software reset
+     33          
+     34          
+     35          #ifdef __KEIL__
+     36          	///////////////////////////////////////////////
+     37          	//Reset Resources
+     38          	sbit XBEE_RESET_NOT = P2 ^ 5;
+     39          	sbit XBEE_DTR_NOT = P2 ^ 6;
+     40          	///////////////////////////////////////////////
+     41          
+     42          	//LED Resources
+     43          	//sbit RLED = P2 ^ 2;
+     44          	//	sbit GLED = P2 ^ 3;
+     45          	sbit YLED = P2 ^ 4;
+     46          #endif
+     47          
+     48          #ifdef __SDCC__
+     49          	///////////////////////////////////////////////
+     50          	//Reset Resources
+     51          	#define XBEE_RESET_NOT P2_5
+     52          	#define XBEE_DTR_NOT P2_6
+     53          	///////////////////////////////////////////////
+     54          	//	#define RLED P2_2
+     55          	//	#define GLED P2_3
+     56          	#define YLED P2_6
+     57          #endif
+     58          
+     59          #endif // _ARM_
+     60          
+     61          
+     62          /**
+     63          * sys_init(config) - handles initialization of system functions and variables
+     64          */
+
+   \                                 In section .text, align 2, keep-with-next
+     65          void sys_init(void *config)
+     66          {
+     67          	if (NULL == config)
+     68          	{
+     69          		// Missing configuration -> use the default settings
+     70          	}
+     71          	sys_last_error = SYS_ERROR_NONE;
+   \                     sys_init: (+1)
+   \   00000000   0x....             LDR.N    R1,??DataTable5
+   \   00000002   0x2000             MOVS     R0,#+0
+   \   00000004   0x7008             STRB     R0,[R1, #+0]
+     72          }
+   \   00000006   0x4770             BX       LR               ;; return
+     73          
+     74          #define SYS_MODULE_SLOT_ERROR	0xFF
+
+   \                                 In section .text, align 2, keep-with-next
+     75          uint8_t sys_get_free_module_slot()
+     76          {
+   \                     sys_get_free_module_slot: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+     77          	assert( SYS_MOD_FREE == sys_modules[sys_module_count_].status);
+   \   00000002   0x....             LDR.N    R4,??DataTable5_1
+   \   00000004   0x....             LDR.N    R0,??DataTable5_2
+   \   00000006   0x7821             LDRB     R1,[R4, #+0]
+   \   00000008   0x2214             MOVS     R2,#+20
+   \   0000000A   0xFB02 0x0001      MLA      R0,R2,R1,R0
+   \   0000000E   0x7800             LDRB     R0,[R0, #+0]
+   \   00000010   0xB140             CBZ.N    R0,??sys_get_free_module_slot_0
+   \   00000012   0x224D             MOVS     R2,#+77
+   \   00000014   0x.... 0x....      ADR.W    R1,?_1
+   \   00000018   0x.... 0x....      ADR.W    R0,?_0
+   \   0000001C   0x.... 0x....      BL       __aeabi_assert
+   \   00000020   0x.... 0x....      BL       __iar_EmptyStepPoint
+     78          	if ( sys_module_count_ < SYS_MAX_MODULES )
+   \                     ??sys_get_free_module_slot_0: (+1)
+   \   00000024   0x7820             LDRB     R0,[R4, #+0]
+   \   00000026   0x2814             CMP      R0,#+20
+   \   00000028   0xDA02             BGE.N    ??sys_get_free_module_slot_1
+     79          		return sys_module_count_++; // increment after returning
+   \   0000002A   0x1C41             ADDS     R1,R0,#+1
+   \   0000002C   0x7021             STRB     R1,[R4, #+0]
+   \   0000002E   0xBD10             POP      {R4,PC}
+     80          	else
+     81          		return SYS_MODULE_SLOT_ERROR;
+   \                     ??sys_get_free_module_slot_1: (+1)
+   \   00000030   0x20FF             MOVS     R0,#+255
+   \   00000032   0xBD10             POP      {R4,PC}          ;; return
+     82          }
+     83          
+     84          
+
+   \                                 In section .text, align 2, keep-with-next
+     85          int8_t sys_add_module( const char *name 
+     86          	, sys_power_up_func_t	mod_power_up
+     87          	, sys_init_func_t		mod_init
+     88          	, uint8_t *sys_context
+     89          		)
+     90          {
+   \                     sys_add_module: (+1)
+   \   00000000   0xB5F8             PUSH     {R3-R7,LR}
+   \   00000002   0x4604             MOV      R4,R0
+   \   00000004   0x460D             MOV      R5,R1
+   \   00000006   0x4616             MOV      R6,R2
+   \   00000008   0x461F             MOV      R7,R3
+     91          	uint8_t i = sys_get_free_module_slot();
+   \   0000000A   0x.... 0x....      BL       sys_get_free_module_slot
+     92          	if( SYS_MODULE_SLOT_ERROR == i) return i;
+   \   0000000E   0x28FF             CMP      R0,#+255
+   \   00000010   0xD009             BEQ.N    ??sys_add_module_0
+     93          	
+     94          	sys_modules[i].status = SYS_MOD_BUSY;
+   \   00000012   0x2114             MOVS     R1,#+20
+   \   00000014   0x4341             MULS     R1,R1,R0
+   \   00000016   0x....             LDR.N    R2,??DataTable5_2
+   \   00000018   0x2301             MOVS     R3,#+1
+   \   0000001A   0x548B             STRB     R3,[R1, R2]
+     95          	sys_modules[i].name = name;
+   \   0000001C   0x1889             ADDS     R1,R1,R2
+   \   0000001E   0x604C             STR      R4,[R1, #+4]
+     96          	sys_modules[i].mod_power_up = mod_power_up;
+   \   00000020   0x608D             STR      R5,[R1, #+8]
+     97          	sys_modules[i].mod_init = mod_init;
+   \   00000022   0x60CE             STR      R6,[R1, #+12]
+     98          	sys_modules[i].sys_context = sys_context;
+   \   00000024   0x610F             STR      R7,[R1, #+16]
+     99          	return i;
+   \                     ??sys_add_module_0: (+1)
+   \   00000026   0xB240             SXTB     R0,R0
+   \   00000028   0xBDF2             POP      {R1,R4-R7,PC}    ;; return
+    100          }
+    101          
+    102          /**
+    103          * sys_reset() - resets the mote
+    104          */
+
+   \                                 In section .text, align 2, keep-with-next
+    105          void sys_reset() 
+    106          { 
+    107          	/* Reset XBee */
+    108          	/*XBEE_RESET_NOT = 0;*/
+    109          
+    110          #ifndef _ARM_
+    111          	// reset 8051
+    112          #ifdef _SFRPAGE_EXIST_
+    113          	SFRPAGE = 0;
+    114          #endif // _SFRPAGE_EXIST_
+    115          	RSTSRC |= SWRSEF;	
+    116          #endif // _ARM_
+    117          }
+   \                     sys_reset: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    118          
+    119          
+    120          
+    121          /**
+    122          * sys_error(e) - handles error anouncing
+    123          */
+
+   \                                 In section .text, align 2, keep-with-next
+    124          void sys_error(error_t e)
+    125          {
+    126          	sys_last_error = e;
+   \                     sys_error: (+1)
+   \   00000000   0x....             LDR.N    R1,??DataTable5
+   \   00000002   0x7008             STRB     R0,[R1, #+0]
+    127          #ifdef _SYS_ERROR_LOCKING_LED_
+    128          	sys_error_led(e);
+    129          #endif // _SYS_ERROR_LOCKING_LED_
+    130          }
+   \   00000004   0x4770             BX       LR               ;; return
+    131          
+    132          
+    133          
+    134          #define LED_LONG_DELAY_TIME 40000
+    135          
+
+   \                                 In section .text, align 2, keep-with-next
+    136          void sys_led_delay()
+    137          {
+    138          	uint16_t i = 0;
+   \                     sys_led_delay: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0xF649 0x4240      MOVW     R2,#+40000
+    139          	while ( i++ < LED_LONG_DELAY_TIME );
+   \                     ??sys_led_delay_0: (+1)
+   \   00000006   0x4601             MOV      R1,R0
+   \   00000008   0x1C48             ADDS     R0,R1,#+1
+   \   0000000A   0xB289             UXTH     R1,R1
+   \   0000000C   0x4291             CMP      R1,R2
+   \   0000000E   0xDBFA             BLT.N    ??sys_led_delay_0
+    140          }
+   \   00000010   0x4770             BX       LR               ;; return
+    141          
+    142          /**
+    143          * sys_error_led(repeat) - emits "repeat" number of LED blink series 
+    144          *    (with decreasing delay between blinks)
+    145          *		NOTE: blocks CPU until finished (except for interrupts)
+    146          */
+
+   \                                 In section .text, align 2, keep-with-next
+    147          void sys_error_led ( uint8_t repeat )
+    148          {
+   \                     sys_error_led: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+   \   00000002   0x4604             MOV      R4,R0
+    149          	uint8_t j = 0;
+   \   00000004   0x2500             MOVS     R5,#+0
+    150          	for ( j = 0; j < repeat; j++ )
+   \   00000006   0xE02A             B.N      ??sys_error_led_0
+    151          	{
+    152          #ifndef _ARM_
+    153          		YLED = 0;
+    154          #endif // _ARM_
+    155          		sys_led_delay();
+   \                     ??sys_error_led_1: (+1)
+   \   00000008   0x.... 0x....      BL       sys_led_delay
+    156          		sys_led_delay();
+   \   0000000C   0x.... 0x....      BL       sys_led_delay
+    157          		sys_led_delay();
+   \   00000010   0x.... 0x....      BL       sys_led_delay
+    158          		sys_led_delay();
+   \   00000014   0x.... 0x....      BL       sys_led_delay
+    159          #ifndef _ARM_
+    160          		YLED = 1;
+    161          #endif // _ARM_
+    162          		sys_led_delay();
+   \   00000018   0x.... 0x....      BL       sys_led_delay
+    163          		sys_led_delay();
+   \   0000001C   0x.... 0x....      BL       sys_led_delay
+    164          		sys_led_delay();
+   \   00000020   0x.... 0x....      BL       sys_led_delay
+    165          		sys_led_delay();
+   \   00000024   0x.... 0x....      BL       sys_led_delay
+    166          #ifndef _ARM_
+    167          		YLED = 0;
+    168          #endif // _ARM_
+    169          		sys_led_delay();
+   \   00000028   0x.... 0x....      BL       sys_led_delay
+    170          		sys_led_delay();
+   \   0000002C   0x.... 0x....      BL       sys_led_delay
+    171          		sys_led_delay();
+   \   00000030   0x.... 0x....      BL       sys_led_delay
+    172          #ifndef _ARM_
+    173          		YLED = 1;
+    174          #endif // _ARM_
+    175          		sys_led_delay();
+   \   00000034   0x.... 0x....      BL       sys_led_delay
+    176          		sys_led_delay();
+   \   00000038   0x.... 0x....      BL       sys_led_delay
+    177          		sys_led_delay();
+   \   0000003C   0x.... 0x....      BL       sys_led_delay
+    178          #ifndef _ARM_
+    179          		YLED = 0;
+    180          #endif // _ARM_
+    181          		sys_led_delay();
+   \   00000040   0x.... 0x....      BL       sys_led_delay
+    182          		sys_led_delay();
+   \   00000044   0x.... 0x....      BL       sys_led_delay
+    183          #ifndef _ARM_
+    184          		YLED = 1;
+    185          #endif // _ARM_
+    186          		sys_led_delay();
+   \   00000048   0x.... 0x....      BL       sys_led_delay
+    187          		sys_led_delay();
+   \   0000004C   0x.... 0x....      BL       sys_led_delay
+    188          #ifndef _ARM_
+    189          		YLED = 0;
+    190          #endif // _ARM_
+    191          		sys_led_delay();
+   \   00000050   0x.... 0x....      BL       sys_led_delay
+    192          #ifndef _ARM_
+    193          		YLED = 1;
+    194          #endif // _ARM_
+    195          		sys_led_delay();
+   \   00000054   0x.... 0x....      BL       sys_led_delay
+    196          #ifndef _ARM_
+    197          		YLED = 0;
+    198          #endif // _ARM_
+    199          		sys_led_delay();
+   \   00000058   0x.... 0x....      BL       sys_led_delay
+    200          	}
+   \   0000005C   0x1C6D             ADDS     R5,R5,#+1
+   \                     ??sys_error_led_0: (+1)
+   \   0000005E   0xB2ED             UXTB     R5,R5
+   \   00000060   0x42A5             CMP      R5,R4
+   \   00000062   0xD3D1             BCC.N    ??sys_error_led_1
+    201          }
+   \   00000064   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5:
+   \   00000000   0x........         DC32     sys_last_error
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5_1:
+   \   00000000   0x........         DC32     sys_module_count_
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5_2:
+   \   00000000   0x........         DC32     sys_modules
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ?_0:
+   \   00000000   0x53 0x59          DC8 53H, 59H, 53H, 5FH, 4DH, 4FH, 44H, 5FH
+   \              0x53 0x5F    
+   \              0x4D 0x4F    
+   \              0x44 0x5F    
+   \   00000008   0x46 0x52          DC8 46H, 52H, 45H, 45H, 20H, 3DH, 3DH, 20H
+   \              0x45 0x45    
+   \              0x20 0x3D    
+   \              0x3D 0x20    
+   \   00000010   0x73 0x79          DC8 73H, 79H, 73H, 5FH, 6DH, 6FH, 64H, 75H
+   \              0x73 0x5F    
+   \              0x6D 0x6F    
+   \              0x64 0x75    
+   \   00000018   0x6C 0x65          DC8 6CH, 65H, 73H, 5BH, 73H, 79H, 73H, 5FH
+   \              0x73 0x5B    
+   \              0x73 0x79    
+   \              0x73 0x5F    
+   \   00000020   0x6D 0x6F          DC8 6DH, 6FH, 64H, 75H, 6CH, 65H, 5FH, 63H
+   \              0x64 0x75    
+   \              0x6C 0x65    
+   \              0x5F 0x63    
+   \   00000028   0x6F 0x75          DC8 6FH, 75H, 6EH, 74H, 5FH, 5DH, 2EH, 73H
+   \              0x6E 0x74    
+   \              0x5F 0x5D    
+   \              0x2E 0x73    
+   \   00000030   0x74 0x61          DC8 74H, 61H, 74H, 75H, 73H, 0
+   \              0x74 0x75    
+   \              0x73 0x00    
+   \   00000036   0x00 0x00          DC8 0, 0
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ?_1:
+   \   00000000   0x43 0x3A          DC8 43H, 3AH, 5CH, 55H, 73H, 65H, 72H, 73H
+   \              0x5C 0x55    
+   \              0x73 0x65    
+   \              0x72 0x73    
+   \   00000008   0x5C 0x4A          DC8 5CH, 4AH, 6FH, 6EH, 5CH, 44H, 6FH, 63H
+   \              0x6F 0x6E    
+   \              0x5C 0x44    
+   \              0x6F 0x63    
+   \   00000010   0x75 0x6D          DC8 75H, 6DH, 65H, 6EH, 74H, 73H, 5CH, 4DH
+   \              0x65 0x6E    
+   \              0x74 0x73    
+   \              0x5C 0x4D    
+   \   00000018   0x4F 0x5F          DC8 4FH, 5FH, 53H, 5FH, 61H, 6EH, 64H, 5FH
+   \              0x53 0x5F    
+   \              0x61 0x6E    
+   \              0x64 0x5F    
+   \   00000020   0x54 0x5C          DC8 54H, 5CH, 43H, 70H, 45H, 35H, 31H, 37H
+   \              0x43 0x70    
+   \              0x45 0x35    
+   \              0x31 0x37    
+   \   00000028   0x30 0x5F          DC8 30H, 5FH, 52H, 54H, 5FH, 53H, 79H, 73H
+   \              0x52 0x54    
+   \              0x5F 0x53    
+   \              0x79 0x73    
+   \   00000030   0x74 0x65          DC8 74H, 65H, 6DH, 73H, 5CH, 4CH, 61H, 62H
+   \              0x6D 0x73    
+   \              0x5C 0x4C    
+   \              0x61 0x62    
+   \   00000038   0x73 0x5C          DC8 73H, 5CH, 63H, 70H, 65H, 2DH, 35H, 31H
+   \              0x63 0x70    
+   \              0x65 0x2D    
+   \              0x35 0x31    
+   \   00000040   0x37 0x30          DC8 37H, 30H, 2DH, 6DH, 6FH, 74H, 65H, 2DH
+   \              0x2D 0x6D    
+   \              0x6F 0x74    
+   \              0x65 0x2D    
+   \   00000048   0x63 0x6F          DC8 63H, 6FH, 64H, 65H, 5CH, 50H, 72H, 6FH
+   \              0x64 0x65    
+   \              0x5C 0x50    
+   \              0x72 0x6F    
+   \   00000050   0x6A 0x65          DC8 6AH, 65H, 63H, 74H, 73H, 5CH, 53H, 69H
+   \              0x63 0x74    
+   \              0x73 0x5C    
+   \              0x53 0x69    
+   \   00000058   0x6D 0x70          DC8 6DH, 70H, 6CH, 65H, 4DH, 41H, 43H, 5CH
+   \              0x6C 0x65    
+   \              0x4D 0x41    
+   \              0x43 0x5C    
+   \   00000060   0x61 0x72          DC8 61H, 72H, 6DH, 5FH, 6DH, 6FH, 74H, 65H
+   \              0x6D 0x5F    
+   \              0x6D 0x6F    
+   \              0x74 0x65    
+   \   00000068   0x5C 0x73          DC8 5CH, 73H, 79H, 73H, 5FH, 66H, 75H, 6EH
+   \              0x79 0x73    
+   \              0x5F 0x66    
+   \              0x75 0x6E    
+   \   00000070   0x63 0x2E          DC8 63H, 2EH, 63H, 0
+   \              0x63 0x00    
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      24   sys_add_module
+        24   -> sys_get_free_module_slot
+       0   sys_error
+      16   sys_error_led
+        16   -> sys_led_delay
+       8   sys_get_free_module_slot
+         8   -> __aeabi_assert
+         8   -> __iar_EmptyStepPoint
+       0   sys_init
+       0   sys_led_delay
+       0   sys_reset
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable5
+       4  ??DataTable5_1
+       4  ??DataTable5_2
+      56  ?_0
+     116  ?_1
+      42  sys_add_module
+       6  sys_error
+     102  sys_error_led
+      52  sys_get_free_module_slot
+       8  sys_init
+       1  sys_last_error
+      18  sys_led_delay
+       1  sys_module_count_
+     400  sys_modules
+       2  sys_reset
+
+ 
+ 402 bytes in section .bss
+ 414 bytes in section .text
+ 
+ 414 bytes of CODE memory
+ 402 bytes of DATA memory
+
+Errors: none
+Warnings: none
