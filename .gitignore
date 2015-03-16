@@ -38,4 +38,22 @@ Thumbs.db
 
 ######################
 *.Identifier
-
+**.lst
+**.s37
+**.out
+**.pbd
+**.pbi
+**.cout
+**.browse
+**.sim
+**.map
+**.pbd.tmp
+**.dep
+**.stack.log.xml
+**.dni
+**.wsdt
+**.dbgdt
+**.dep
+**.wspos
+**.pbd
+**.pbi
