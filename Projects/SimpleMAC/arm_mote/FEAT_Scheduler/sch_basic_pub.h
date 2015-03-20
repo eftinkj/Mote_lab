@@ -14,6 +14,8 @@
 #define SCH_NO_FUNC_ID	0
 
 
+
+
 // loop function
 //typedef void (code *sch_loop_func_t)(void);
 #ifdef __SDCC__
@@ -35,6 +37,17 @@
 //typedef code void (* xdata sch_cb_func_t)(uint8_t tid) TASK_FUNC;
 typedef uint8_t list_index_t;	// index in a queue tables
 typedef uint8_t list_size_t;	// variable to store size of a table/buffer/queue
+
+typedef struct Tasks
+{
+  int releaseTime;      //are we released yet?
+  int period;           //we currently assume that period and deadlineRelative are equal
+  int deadlineAbsolute;
+  //int deadlingRelative;
+  char running;
+  char ready;
+  sch_loop_func_t to_execute;
+} Task;
 
 
 /****************************************************************************
