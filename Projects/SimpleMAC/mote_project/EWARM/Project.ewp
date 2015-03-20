@@ -5098,6 +5098,9 @@
         <name>$PROJ_DIR$\..\..\arm_mote\FEAT_Scheduler\sch_basic_pub.h</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\..\..\arm_mote\FEAT_Scheduler\timer.c</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\..\..\arm_mote\FEAT_Scheduler\timer.cpp</name>
         <excluded>
           <configuration>MB851_TALK</configuration>

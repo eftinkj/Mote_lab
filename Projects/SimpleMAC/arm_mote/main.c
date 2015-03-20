@@ -602,7 +602,6 @@ void main_init()
 */
 int main_arm( void )
 {
-	timer_struct time1;
 ///////////////////////////////////////////////
 // Already called in ARM's "main()" function -> "mote.c" file
   //	main_power_up();
