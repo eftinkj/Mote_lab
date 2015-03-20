@@ -79,16 +79,6 @@ void sch_power_up ( void )
 {
 	uint8_t i;
     
-    GPIO_InitTypeDef  GPIO_InitStructure;
-	/* Configure the GPIO_LED pin */
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT_PP;
-	GPIO_Init(GPIOB, &GPIO_InitStructure);
-	//GPIOB->BSR = GPIO_Pin_3; // Set pin (1)
-	//GPIOB->BRR = GPIO_Pin_3; // Reset pin (0)
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4;
-    GPIO_Init(GPIOB, &GPIO_InitStructure);
-    
 	//sch_timeout_ticks[MAX_TIMEOUTS];
 	for(i=0; i< MAX_TIMEOUTS; i++)
 	{
@@ -143,7 +133,7 @@ uint8_t timeout_idx;
   */
 void sch_loop( void )
 {
-    GPIO_SetBits(GPIOB, GPIO_Pin_3);
+
 
     
     for(current_loop_idx=0; current_loop_idx< MAX_LOOPS; current_loop_idx++)
@@ -183,7 +173,6 @@ void sch_loop( void )
             dummy++;
         }
     
-    GPIO_ResetBits(GPIOB, GPIO_Pin_3);
 }
 
 

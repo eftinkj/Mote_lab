@@ -15,7 +15,7 @@
 ****************************************************************************/
 // main.c for the ARM implementation
 
-
+#include "Feat_Scheduler\\timer.h"
 #include "defs/esnl_pub.h"
 
 #include "common.h"
@@ -602,7 +602,7 @@ void main_init()
 */
 int main_arm( void )
 {
-
+	timer_struct time1;
 ///////////////////////////////////////////////
 // Already called in ARM's "main()" function -> "mote.c" file
   //	main_power_up();
@@ -615,7 +615,8 @@ int main_arm( void )
 #ifndef NO_UART_OUT
 //	printf ("Ended initialization; Loop starts now...\r\n");
 #endif
-	
+	timer_init();
+    timer_start();
 //Main Loop
 ///////////////////////////////////////////////
 	while ( 1 )

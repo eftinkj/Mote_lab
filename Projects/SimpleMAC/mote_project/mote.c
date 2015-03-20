@@ -448,7 +448,7 @@ extern int main_arm( void ); // declaration of main function with scheduler loop
 *******************************************************************************/
 void main( void )
 {
-	uint32_t seed;
+    uint32_t seed;
 	
 	/* Initialization */
 	halInit();
@@ -514,6 +514,8 @@ void main( void )
 	// forwarding the RSSI info is done inside the ISR
 	int8_t rf_en_ = 0;
 	uint8_t chan = ST_RadioGetChannel();
+   
+    
 	while (1)
 	{
 #ifdef ENABLE_ENERGY_SNIFFER
