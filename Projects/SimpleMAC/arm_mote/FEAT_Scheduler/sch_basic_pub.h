@@ -6,6 +6,7 @@
 ****************************************************************************/
 #include "defs/esnl_pub.h"
 #include "HW_LIB/rtc.h"
+#include <stdbool.h>
 
 /****************************************************************************
 **	Constants, definies and typedefs  (PUBLIC)
@@ -44,8 +45,8 @@ typedef struct Tasks
   int period;           //we currently assume that period and deadlineRelative are equal
   int deadlineAbsolute;
   //int deadlingRelative;
-  char running;
-  char ready;
+  bool running;
+  bool ready;
   sch_loop_func_t to_execute;
 } Task;
 
