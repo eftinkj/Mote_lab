@@ -602,6 +602,7 @@ void main_init()
 */
 int main_arm( void )
 {
+    ITStatus int_status;
 ///////////////////////////////////////////////
 // Already called in ARM's "main()" function -> "mote.c" file
   //	main_power_up();
@@ -631,7 +632,16 @@ int main_arm( void )
 	//		Handles timeouts and dynamic loop functions
 	///////////////////////////////////////////////
 	#ifdef _ENABLE_SCH_BASIC_
-		sch_loop( );
+		//if( TIM1_IT->ISR
+        
+        int_status = TIM_GetITStatus(TIM1_IT, TIM_IT_Update);
+        if( int_status == SET )
+        {
+            TIM_ClearITPendingBit( TIM1_IT, TIM_IT_Update );
+            TIM1_IRQHandler();
+        }
+        
+        //sch_loop( );
 	#endif // _ENABLE_SCH_BASIC_
 
 

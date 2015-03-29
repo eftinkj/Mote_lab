@@ -14,5 +14,6 @@ void timer_init();
 void timer_start();
 void timer_stop();
 void timer_set_frame_size();
+void TIM1_IRQHandler( void );
 
 #endif // _TIMER_H_

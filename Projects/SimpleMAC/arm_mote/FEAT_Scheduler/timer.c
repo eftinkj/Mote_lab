@@ -18,6 +18,7 @@ void timer_init()
                          //1 second for 12MHz Peripheral Clk
   
   TIM_TimeBaseInit( TIM1, &init );
+  TIM1->EGR = 0x00000000;
   TIM_UpdateDisableConfig( TIM1, DISABLE );               //Enables update event on timer1 overflow.
   TIM_SelectExternalTriggerClock( TIM1, TIM_EXTRIGPCLK ); //Selecting Peripheral clock as the source 
   TIM_UpdateRequestConfig( TIM1, TIM_UpdateSource_Global );
@@ -29,7 +30,9 @@ void timer_init()
   //priority = NVIC->IP;
   NVIC->IP[16] = 10; //Set the interrupt priority for TIM1 to 10.
   
+  TIM_ITConfig( TIM1_IT, TIM_IT_Trigger, ENABLE );  //Enables timer interrupt for timer1.
   TIM_ITConfig( TIM1_IT, TIM_IT_Update, ENABLE );  //Enables timer interrupt for timer1.
+ 
   TIM_ARRPreloadConfig( TIM1, ENABLE );
   TIM_Cmd( TIM1, ENABLE );
 
