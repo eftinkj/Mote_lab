@@ -460,9 +460,9 @@ void timer_init()
   Init.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&Init);
   
-  timer_set_frame_size( 500 );
+  timer_set_frame_size( 10000 );
   s_cur_time = 0;
-  s_frame_size = 500; //Frame size was initialized to 60us
+  s_frame_size = 10000; //Frame size was initialized to 10ms
 
   /*********************************************/
   /* DEBUGGING                                 */

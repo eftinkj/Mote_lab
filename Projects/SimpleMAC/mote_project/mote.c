@@ -496,7 +496,7 @@ void main( void )
 	printf( "\r\nSimpleMAC (%s) Talk Application (EUI=%x)\r\n", SIMPLEMAC_VERSION_STRING, ST_RadioGetEui64() );
 #endif
 
-   sch_add_loop(processSerialInput, 3200 );     
+   sch_add_loop(processSerialInput, 32000 );     
 // *********************************** Main loop *****************************
 	// This should be end of the road (inside is an infinite loop)
 	

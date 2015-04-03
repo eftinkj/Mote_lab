@@ -93,7 +93,7 @@ void app_init()
 	app_suspendADC();
 #endif // _ENABLE_ADC_MODULE_
 
-	sch_add_loop((sch_loop_func_t)app_loop, 1000 );
+	sch_add_loop((sch_loop_func_t)app_loop, 50000 );
 }
 
 

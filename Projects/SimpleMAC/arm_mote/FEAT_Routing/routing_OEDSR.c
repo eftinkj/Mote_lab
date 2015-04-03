@@ -264,7 +264,7 @@ void routing_init_OEDSR()
 	DAT_OEDSR_counter = 0;
 
 
-	sch_add_loop(( sch_loop_func_t )oedsr_loop, 180 );
+	sch_add_loop(( sch_loop_func_t )oedsr_loop, 48000 );
 }
 
 ///////////////////////////////////////////////

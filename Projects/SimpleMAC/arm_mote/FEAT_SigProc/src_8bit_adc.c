@@ -77,7 +77,7 @@ void src_8bit_adc_init ( void )
 	src_d_mem_p -> context_ = 0xFF;
 //	src_d_mem_p -> receiver = (recv_func_t *)NULL;
 
-	sch_add_loop( (sch_loop_func_t) src_8bit_adc_loop, 4500 );
+	sch_add_loop( (sch_loop_func_t) src_8bit_adc_loop, 45000 );
 
 #ifdef SRC_8BIT_ADC_DEBUG
 	src_8bit_adc_enable();

@@ -157,7 +157,7 @@ void lcd28_init ( void )
 //	I2C_GenerateSTOP(SC2_I2C);
 	
 	
-	sch_add_loop(lcd28_loop, 250);
+	sch_add_loop(lcd28_loop, 57000);
 }
 
 /**
