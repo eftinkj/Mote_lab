@@ -39,15 +39,16 @@
 typedef uint8_t list_index_t;	// index in a queue tables
 typedef uint8_t list_size_t;	// variable to store size of a table/buffer/queue
 
-typedef struct Tasks
+typedef struct
 {
-  int releaseTime;      //are we released yet?
-  int period;           //we currently assume that period and deadlineRelative are equal
-  int deadlineAbsolute;
-  //int deadlingRelative;
-  bool running;
-  bool ready;
-  sch_loop_func_t to_execute;
+  uint64_t releaseTime;      //are we released yet? current time + period
+  uint32_t period;           //we currently assume that period and deadlineRelative are equal
+  uint64_t deadlineAbsolute;//sets the absolute deadline for the task
+  //int deadlineRelative;
+  bool running;	//indicates that the current job is running
+  bool ready;	//indicates that job is ready and released
+  bool validJob; //Is this a valid job?
+  sch_loop_func_t toExecute;  //will be control_loop_idx of some number for each tasks
 } Task;
 
 typedef struct

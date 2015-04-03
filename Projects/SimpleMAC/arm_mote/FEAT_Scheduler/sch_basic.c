@@ -130,20 +130,26 @@ uint8_t sch_test()
 
 uint8_t current_loop_idx;
 uint8_t timeout_idx;
+Task array[] = {};
+
 /**
   * sch_loop() - executes main loop block (BUT DOES NOT LOOP ITSELF!!!)
   */
 void sch_loop( void )
 {
 
+//only call the jobs that have been released
+//periodic, sporadic, and aperiodic
+
 
     
     for(current_loop_idx=0; current_loop_idx< MAX_LOOPS; current_loop_idx++)
 	{
             
-        if (sch_loop_funcs_on[current_loop_idx] == SCH_FUNC_ON)
+        if (array[current_loop_idx].validJob == SCH_FUNC_ON)
 		{
-			(sch_loop_funcs[current_loop_idx])();			
+			if(array[current_loop_idx].ready == true)
+			(array[current_loop_idx].toExecute)();			
 		}      
             
 	}
@@ -282,20 +288,26 @@ uint8_t sch_create_timeout( rtc_tick_t timeout, sch_cb_func_t callback_func, uin
   *		be executed every time in the main loop
   *	RETURNS: loop function ID or "SCH_NO_FUNC_ID" if unsuccesful
   */
-uint8_t sch_add_loop( sch_loop_func_t loop_func)
+uint8_t sch_add_loop( sch_loop_func_t loop_func, unint32_t period) //period is in microseconds
 {
+  
 	uint8_t i = SCH_NO_TIMEOUT_ID;
 	for( i= 0; i < MAX_LOOPS; i++)
 	{
-		if (sch_loop_funcs_on[i] == SCH_FUNC_OFF)
+		if (array[i].validJob == SCH_FUNC_OFF)
 		{
 			break;
 		}
 	}
 	if (MAX_LOOPS > i)
 	{
-		sch_loop_funcs[i] = loop_func;
-		sch_loop_funcs_on[i] = SCH_FUNC_ON;
+                array[i].releaseTime = 0;
+                array[i].period = period;
+                array[i].deadlineAbsolute = 0;
+                array[i].running = false;
+                array[i].ready = false;
+                array[i].validJob = true;
+                array[i].toExecute = loop_func;
 		return i;
 	}
 	// else not found free space
