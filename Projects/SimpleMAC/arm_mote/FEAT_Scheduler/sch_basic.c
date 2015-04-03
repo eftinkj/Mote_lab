@@ -292,6 +292,8 @@ uint8_t sch_add_loop( sch_loop_func_t loop_func, unint32_t period) //period is i
 {
   
 	uint8_t i = SCH_NO_TIMEOUT_ID;
+        bool done;
+        
 	for( i= 0; i < MAX_LOOPS; i++)
 	{
 		if (array[i].validJob == SCH_FUNC_OFF)
@@ -299,6 +301,16 @@ uint8_t sch_add_loop( sch_loop_func_t loop_func, unint32_t period) //period is i
 			break;
 		}
 	}
+        
+        done = false;
+        for (i; i>0 && !done ; i--)
+        {
+          if (array[i-1].period > period)
+            array[i] = array[i-1];
+          else
+            done = true;
+        }
+        
 	if (MAX_LOOPS > i)
 	{
                 array[i].releaseTime = 0;
@@ -308,8 +320,9 @@ uint8_t sch_add_loop( sch_loop_func_t loop_func, unint32_t period) //period is i
                 array[i].ready = false;
                 array[i].validJob = true;
                 array[i].toExecute = loop_func;
-		return i;
+		//return i;
 	}
+        
 	// else not found free space
 	return 	SCH_NO_TIMEOUT_ID;
 }
