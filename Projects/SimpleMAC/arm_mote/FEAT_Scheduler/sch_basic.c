@@ -57,6 +57,9 @@ uint32_t start_time_diff[MAX_TIMEOUTS];
 uint32_t end_time_diff[MAX_TIMEOUTS];
 uint32_t dummy = 0;
 
+uint8_t current_loop_idx;
+uint8_t timeout_idx;
+Task array[MAX_LOOPS] = { 0 };
 
 uint64_t convert_us_ticks( uint32_t us ); //convert microseconds to ticks
 uint64_t convert_ticks_us( uint32_t ticks ); //convert ticks to microseconds
@@ -137,9 +140,7 @@ uint8_t sch_test()
 	return 0;
 }
 
-uint8_t current_loop_idx;
-uint8_t timeout_idx;
-Task array[] = {};
+
 
 /**
   * sch_loop() - executes main loop block (BUT DOES NOT LOOP ITSELF!!!)
@@ -149,16 +150,24 @@ void sch_loop( void )
 
 //only call the jobs that have been released
 //periodic, sporadic, and aperiodic
-
+uint8_t i; //Loop index var
 
     
-    for(current_loop_idx=0; current_loop_idx< MAX_LOOPS; current_loop_idx++)
+    for(i=0; i< MAX_LOOPS; i++)
 	{
             
-        if (array[current_loop_idx].validJob == SCH_FUNC_ON)
+        if (array[i].validJob == SCH_FUNC_ON)
 		{
-			if(array[current_loop_idx].ready == true)
-			(array[current_loop_idx].toExecute)();			
+			if(array[i].ready == true)
+            {
+                ATOMIC
+                (
+                array[i].running = true;
+                array[i].ready = false;
+                )
+                (array[i].toExecute)();	
+                ATOMIC( array[i].running = false; )
+            }
 		}      
             
 	}
@@ -297,9 +306,9 @@ uint8_t sch_create_timeout( rtc_tick_t timeout, sch_cb_func_t callback_func, uin
   *		be executed every time in the main loop
   *	RETURNS: loop function ID or "SCH_NO_FUNC_ID" if unsuccesful
   */
-uint8_t sch_add_loop( sch_loop_func_t loop_func, unint32_t period) //period is in microseconds
+uint8_t sch_add_loop( sch_loop_func_t loop_func, uint32_t period) //period is in microseconds
 {
-  
+    
 	uint8_t i = SCH_NO_TIMEOUT_ID;
         bool done;
         
@@ -310,26 +319,36 @@ uint8_t sch_add_loop( sch_loop_func_t loop_func, unint32_t period) //period is i
 			break;
 		}
 	}
+    
+
+    done = false;
+    
+    if( i != 0 )
+    {
         
-        done = false;
         for (i; i>0 && !done ; i--)
         {
           if (array[i-1].period > period)
             array[i] = array[i-1];
           else
             done = true;
+          
         }
-        
+    }
+    
+    if( done )
+        i++;
+    
 	if (MAX_LOOPS > i)
 	{
                 array[i].releaseTime = 0;
                 array[i].period = period;
-                array[i].deadlineAbsolute = 0;
+                array[i].deadlineAbsolute = 100000000;
                 array[i].running = false;
                 array[i].ready = false;
                 array[i].validJob = true;
                 array[i].toExecute = loop_func;
-		//return i;
+		return i;
 	}
         
 	// else not found free space
@@ -405,6 +424,7 @@ void timer_init()
   uint32_t interrupts;
   uint8_t * priority;
   uint8_t tim1_pri;
+  uint8_t i;
   
   //interrupts = *(NVIC->ISER);
   /*interrupts = NVIC->ISER[0];
@@ -421,6 +441,8 @@ void timer_init()
   TIM1->CNT = 0x0000;                 //Initialize the count to 0.
   TIM1->EGR = TIM1->EGR | 0x01;       //Update the shadow registers (ARR in particular)
   */
+  
+  
   time_val.current_time = 0;
   //Peripheral Clock running at ~12 MHZ
   TIM_TimeBaseInitTypeDef TIM_TimeBaseInitStruct;
@@ -438,10 +460,10 @@ void timer_init()
   Init.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&Init);
   
-  //timer_set_frame_size( 2000000 ); //Set frame size to 2 secs
-  
-  
-  
+  timer_set_frame_size( 500 );
+  s_cur_time = 0;
+  s_frame_size = 500; //Frame size was initialized to 60us
+
   /*********************************************/
   /* DEBUGGING                                 */
   /*********************************************/  
@@ -545,7 +567,12 @@ uint64_t get_current_time()
 //This is based on interrupts in stm32w108xx_it.c
 void TIM1_IRQHandler( void )
 {
+    uint8_t i;  //loop index var
+    
+    //Clear interrupt flag:
     TIM_ClearITPendingBit( TIM1_IT, TIM_IT_Update );
+    
+    //Toggle pin A6 (for debugging)
     if( time_val.flag == 1 )
     {
         time_val.flag = 0;
@@ -556,6 +583,42 @@ void TIM1_IRQHandler( void )
         time_val.flag = 1;
         GPIO_SetBits(GPIOA, GPIO_Pin_6);
     }
+    
+    //Increment current time:
+    s_cur_time = s_cur_time + s_frame_size;
+    
+    //Test for jobs that are currently running or are past their deadline:
+    for( i = 0; i < MAX_LOOPS; i++)
+    {
+        if( array[i].validJob == true )
+        {
+            if( array[i].ready == true && array[i].deadlineAbsolute < s_cur_time ) //If the job was not executed in time:
+            {
+                while(1); //Hold indefinitely
+            }
+            
+            if( array[i].running == true ) //If the job was interrupted while it was running:
+                while(1); //Hold indefinitely
+            
+        }
+    }
+    
+    //Release periodic jobs:
+    for( i = 0; i < MAX_LOOPS; i++ )
+    {
+        if( array[i].validJob == true )
+        {
+            if( array[i].releaseTime < s_cur_time )
+            {
+                array[i].ready = true;
+                array[i].releaseTime = s_cur_time + array[i].period;
+                array[i].deadlineAbsolute = array[i].releaseTime;
+            }
+        }
+        
+    }
+    
+    
     
 }
 

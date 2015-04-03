@@ -113,7 +113,7 @@ void hio_xbee_init()
 		packet[i] = 0x44;
 	}
 
-	sch_add_loop((sch_loop_func_t)hio_xbee_loop);
+	sch_add_loop((sch_loop_func_t)hio_xbee_loop, 1500 );
 
 	// send initial PING to everybody
 	request_debug_packet_ = 1;

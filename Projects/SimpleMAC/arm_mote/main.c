@@ -616,6 +616,7 @@ int main_arm( void )
 #endif
 	timer_init();
     timer_start();
+    INTERRUPTS_ON();
 //Main Loop
 ///////////////////////////////////////////////
 	while ( 1 )

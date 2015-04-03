@@ -131,7 +131,7 @@ void sch_remove_timeout(uint8_t tidx, char*name);
   *		be executed every time in the main loop
   *	RETURNS: loop function ID or "SCH_NO_FUNC_ID" if unsuccesful
   */
-uint8_t sch_add_loop( sch_loop_func_t loop_func);
+uint8_t sch_add_loop( sch_loop_func_t loop_func, uint32_t period);
 
 
 

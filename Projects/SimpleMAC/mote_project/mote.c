@@ -462,7 +462,7 @@ void main( void )
 	uartInit( ); // New version with default config (115200 bps, 8bit, 1stop, no parity)
 #endif // ENABLE_UART
 
-	INTERRUPTS_ON();
+	
 
 	/* init leds */
 	//halInitLed();
@@ -496,7 +496,7 @@ void main( void )
 	printf( "\r\nSimpleMAC (%s) Talk Application (EUI=%x)\r\n", SIMPLEMAC_VERSION_STRING, ST_RadioGetEui64() );
 #endif
 
-   sch_add_loop(processSerialInput);     
+   sch_add_loop(processSerialInput, 3200 );     
 // *********************************** Main loop *****************************
 	// This should be end of the road (inside is an infinite loop)
 	
