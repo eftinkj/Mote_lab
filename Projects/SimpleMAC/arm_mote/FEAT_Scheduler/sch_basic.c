@@ -158,7 +158,7 @@ uint8_t i; //Loop index var
             
         if (array[i].validJob == SCH_FUNC_ON)
 		{
-			if( array[i].ready == true && get_rem_frame_time() > 500 )
+			if( array[i].ready == true && get_rem_frame_time() > 200 )
             {
                 ATOMIC
                 (
@@ -461,9 +461,9 @@ void timer_init()
   Init.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&Init);
   
-  timer_set_frame_size( 10000 );
+  timer_set_frame_size( 5000 );
   s_cur_time = 0;
-  s_frame_size = 10000; //Frame size was initialized to 10ms
+  s_frame_size = 5000; //Frame size was initialized to 10ms
 
   /*********************************************/
   /* DEBUGGING                                 */
