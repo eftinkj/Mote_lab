@@ -54,13 +54,16 @@ typedef struct
 typedef struct
 {
     uint32_t       current_time;
-    uint8_t        flag;
+    uint8_t flag;
 } timer_struct;
 
 void timer_init();
 void timer_start();
 void timer_stop();
-void timer_set_frame_size();
+void timer_set_frame_size(uint32_t frame_sz); //Frame size in microseconds
+uint32_t get_rem_frame_time();
+uint32_t get_exe_frame_time();
+uint64_t get_current_time();
 void TIM1_IRQHandler( void );
 /****************************************************************************
 **	Variables definition (PUBLIC)

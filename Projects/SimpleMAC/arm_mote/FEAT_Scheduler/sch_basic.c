@@ -21,6 +21,9 @@
 #include "..\HW_LIB\RTC.h"
 
 #define P_CLK_FREQ 12000000 //12 MHz
+#define FALSE 0
+#define TRUE 1
+#define US_PER_S 1000000 // 1 Million us per s
 
 
 
@@ -31,6 +34,9 @@
 /****************************************************************************
 **	Variables definition (PRIVATE)
 ****************************************************************************/
+
+static uint64_t s_cur_time;
+static uint32_t s_frame_size;
 
 //extern uint8_t		truck_state_test;
 rtc_tick_t	XDATA	sch_timeout_ticks[MAX_TIMEOUTS];
@@ -51,6 +57,9 @@ uint32_t start_time_diff[MAX_TIMEOUTS];
 uint32_t end_time_diff[MAX_TIMEOUTS];
 uint32_t dummy = 0;
 
+
+uint64_t convert_us_ticks( uint32_t us ); //convert microseconds to ticks
+uint64_t convert_ticks_us( uint32_t ticks ); //convert ticks to microseconds
 
 
 /****************************************************************************
@@ -417,10 +426,10 @@ void timer_init()
   TIM_TimeBaseInitTypeDef TIM_TimeBaseInitStruct;
   NVIC_InitTypeDef Init;
   TIM_TimeBaseInitStruct.TIM_CounterMode = TIM_CounterMode_Up;
-  TIM_TimeBaseInitStruct.TIM_Prescaler = 15;
-  TIM_TimeBaseInitStruct.TIM_Period = 366;
+  TIM_TimeBaseInitStruct.TIM_Prescaler = 0;
+  TIM_TimeBaseInitStruct.TIM_Period = 720;  //Initialize frame size to 60us.
   TIM_TimeBaseInit(TIM1,&TIM_TimeBaseInitStruct);
-  TIM_PrescalerConfig(TIM1, 15, TIM_PSCReloadMode_Immediate);
+  TIM_PrescalerConfig(TIM1, 0, TIM_PSCReloadMode_Immediate);
   TIM_ITConfig(TIM1_IT, TIM_IT_Update, ENABLE);
   TIM_UpdateRequestConfig(TIM1, TIM_UpdateSource_Global);
   TIM_UpdateDisableConfig(TIM1, DISABLE);
@@ -429,7 +438,7 @@ void timer_init()
   Init.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&Init);
   
-  
+  //timer_set_frame_size( 2000000 ); //Set frame size to 2 secs
   
   
   
@@ -459,11 +468,76 @@ void timer_stop()
     TIM_ITConfig( TIM1_IT, TIM_IT_Update, DISABLE );        //Disables timer interrupt for timer1.
 }
 
-void timer_set_frame_size()
+//Set the frame size in microseconds.
+void timer_set_frame_size(uint32_t frame_sz)
 {
-  
+    uint32_t psc; //Prescalar
+    uint32_t frame; //Temp frame size
+    uint64_t tmp;
+    uint8_t i;    //Loop index var.
+    uint8_t done; 
+    
+    tmp = (uint64_t)frame_sz * P_CLK_FREQ / US_PER_S;
+    done = FALSE;
+    psc = 0;
+    frame = frame_sz;
+    
+    
+    while( psc < 17 && done != TRUE )
+    {
+        if( tmp > 65535 )
+        {
+            psc = psc + 1;
+            tmp = tmp >> 1;
+        }
+        else
+        {
+            done = TRUE;
+        }   
+    }
+    
+    if( psc > 15 ) //If the frame size given was too large, do nothing.
+    {
+        return;
+    }
+    
+    TIM1->PSC = psc;
+    TIM1->ARR = tmp;
+    s_frame_size = frame_sz;
+    
+    return;
 }
 
+//Returns the number of us left in the frame.
+uint32_t get_rem_frame_time()
+{
+    uint32_t count;
+    uint32_t rem_count;
+    uint32_t rem_time;
+    
+    count = TIM1->CNT;
+    rem_count = TIM1->ARR - count;
+    rem_time = (uint32_t)convert_ticks_us( rem_count );
+    
+    return rem_time;
+}
+
+//Returns the amount of time the current frame has been executing
+uint32_t get_exe_frame_time()
+{
+    uint32_t count;
+    uint32_t exe_time;
+    
+    count = TIM1->CNT;
+    exe_time = (uint32_t)convert_ticks_us( count );
+    
+    return exe_time;
+}
+
+uint64_t get_current_time()
+{
+    return( s_cur_time + get_exe_frame_time() );
+}
 
 //Never getting into this function.
 //UIF bit in TIM1_ISR is being set, but no interrupt is generated.
@@ -485,6 +559,31 @@ void TIM1_IRQHandler( void )
     
 }
 
+//convert microseconds to ticks
+uint64_t convert_us_ticks( uint32_t us ) 
+{
+    uint32_t psc;
+    uint32_t ticks;
+
+    psc = TIM1->PSC;
+    ticks = us * P_CLK_FREQ / US_PER_S;
+    ticks = ticks >> psc;
+    
+    return ticks;
+}
+
+//convert ticks to microseconds
+uint64_t convert_ticks_us( uint32_t ticks ) 
+{
+    uint32_t psc;
+    uint32_t us;
+    
+    psc = TIM1->PSC;
+    us = ticks * US_PER_S / P_CLK_FREQ;
+    us = us << psc;
+    
+    return us;
+}
 
 #endif // _ENABLE_NEM_UTILITIES_01_
 
