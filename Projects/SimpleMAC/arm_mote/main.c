@@ -15,7 +15,6 @@
 ****************************************************************************/
 // main.c for the ARM implementation
 
-#include "Feat_Scheduler\\timer.h"
 #include "defs/esnl_pub.h"
 
 #include "common.h"
@@ -637,11 +636,11 @@ int main_arm( void )
         int_status = TIM_GetITStatus(TIM1_IT, TIM_IT_Update);
         if( int_status == SET )
         {
-            TIM_ClearITPendingBit( TIM1_IT, TIM_IT_Update );
-            TIM1_IRQHandler();
+            //TIM_ClearITPendingBit( TIM1_IT, TIM_IT_Update );
+            //TIM1_IRQHandler();
         }
         
-        //sch_loop( );
+        sch_loop( );
 	#endif // _ENABLE_SCH_BASIC_
 
 

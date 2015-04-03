@@ -20,6 +20,8 @@
 #include "stm32w108xx_gpio.h"
 #include "..\HW_LIB\RTC.h"
 
+#define P_CLK_FREQ 12000000 //12 MHz
+
 
 
 /****************************************************************************
@@ -361,6 +363,102 @@ void print_timeouts()
 // ############################################################################
 // ############################################################################
 
+timer_struct time_val;
+
+void timer_init()
+{
+  //TIM_TimeBaseInitTypeDef init;
+  uint32_t interrupts;
+  uint8_t * priority;
+  uint8_t tim1_pri;
+  
+  //interrupts = *(NVIC->ISER);
+  /*interrupts = NVIC->ISER[0];
+  interrupts = interrupts | (1 << 16);
+  NVIC->ISER[0] = interrupts;   //Enable NVIC interrupt for TIM1
+  NVIC->IP[16] = 10; //Set the interrupt priority for TIM1 to 10.
+  
+  TIM1_IT->IER = TIM1_IT->IER | 0x01;    //Enable Update Interrupt.
+  TIM1->SMCR = TIM1->SMCR & 0xFFFFFFF8; //Select Peripheral Clk
+  TIM1->ARR = 366;
+  TIM1->PSC = TIM1->PSC | 0x0F; //Set prescalar to 15
+  TIM1->CR1 = TIM1->CR1 & 0xFFFFFF81; //Clear CMS, DIR, OPM, URS, and UDIS bits
+  TIM1->CR1 = TIM1->CR1 | 0x00000081; //Set ARPE and CEN bits.
+  TIM1->CNT = 0x0000;                 //Initialize the count to 0.
+  TIM1->EGR = TIM1->EGR | 0x01;       //Update the shadow registers (ARR in particular)
+  */
+  time_val.current_time = 0;
+  //Peripheral Clock running at ~12 MHZ
+  TIM_TimeBaseInitTypeDef TIM_TimeBaseInitStruct;
+  NVIC_InitTypeDef Init;
+  TIM_TimeBaseInitStruct.TIM_CounterMode = TIM_CounterMode_Up;
+  TIM_TimeBaseInitStruct.TIM_Prescaler = 15;
+  TIM_TimeBaseInitStruct.TIM_Period = 366;
+  TIM_TimeBaseInit(TIM1,&TIM_TimeBaseInitStruct);
+  TIM_PrescalerConfig(TIM1, 15, TIM_PSCReloadMode_Immediate);
+  TIM_ITConfig(TIM1_IT, TIM_IT_Update, ENABLE);
+  TIM_UpdateRequestConfig(TIM1, TIM_UpdateSource_Global);
+  TIM_UpdateDisableConfig(TIM1, DISABLE);
+  TIM_Cmd(TIM1, ENABLE);
+  Init.NVIC_IRQChannel = TIM1_IRQn;
+  Init.NVIC_IRQChannelCmd = ENABLE;
+  NVIC_Init(&Init);
+  
+  
+  
+  
+  
+  /*********************************************/
+  /* DEBUGGING                                 */
+  /*********************************************/  
+      GPIO_InitTypeDef  GPIO_InitStructure;
+	/* Configure the GPIO_LED pin */
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT_PP;
+	GPIO_Init(GPIOA, &GPIO_InitStructure);
+
+    time_val.flag = 0;
+  
+}
+	
+void timer_start()
+{
+    //TIM_SetCounter( TIM1, 0x00000000 );               //Reset the counter.
+    
+    GPIO_ResetBits(GPIOA, GPIO_Pin_6);
+}
+
+
+void timer_stop()
+{
+    TIM_ITConfig( TIM1_IT, TIM_IT_Update, DISABLE );        //Disables timer interrupt for timer1.
+}
+
+void timer_set_frame_size()
+{
+  
+}
+
+
+//Never getting into this function.
+//UIF bit in TIM1_ISR is being set, but no interrupt is generated.
+//URS bit in TIM1_CR1 is '0'
+//This is based on interrupts in stm32w108xx_it.c
+void TIM1_IRQHandler( void )
+{
+    TIM_ClearITPendingBit( TIM1_IT, TIM_IT_Update );
+    if( time_val.flag == 1 )
+    {
+        time_val.flag = 0;
+        GPIO_ResetBits(GPIOA, GPIO_Pin_6);
+    }
+    else
+    {
+        time_val.flag = 1;
+        GPIO_SetBits(GPIOA, GPIO_Pin_6);
+    }
+    
+}
 
 
 #endif // _ENABLE_NEM_UTILITIES_01_

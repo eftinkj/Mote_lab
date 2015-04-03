@@ -50,7 +50,17 @@ typedef struct Tasks
   sch_loop_func_t to_execute;
 } Task;
 
+typedef struct
+{
+    uint32_t       current_time;
+    uint8_t        flag;
+} timer_struct;
 
+void timer_init();
+void timer_start();
+void timer_stop();
+void timer_set_frame_size();
+void TIM1_IRQHandler( void );
 /****************************************************************************
 **	Variables definition (PUBLIC)
 ****************************************************************************/
