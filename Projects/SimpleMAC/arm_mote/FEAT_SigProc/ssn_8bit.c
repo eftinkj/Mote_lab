@@ -83,7 +83,7 @@ void ssn_init ( void )
 	#ifdef SSN_TEST
 		ssn_mem_p-> burst_enabled_ = 10000;//255; // send a burst of a given size	
 	#endif // SSN_TEST
-	sch_add_loop( (sch_loop_func_t) ssn_loop, 5400 );
+	sch_add_loop( (sch_loop_func_t) ssn_loop, 54000 );
 
 	ssn_mem_p-> seq_no_ = 0;
 	

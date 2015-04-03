@@ -101,7 +101,7 @@ void radio_init()
 	stradio_pending_data_ = NULL;
 	stradio_pending_dst_ = 0;
 	
-	sch_add_loop((sch_loop_func_t)radio_loop, 2500 );
+	sch_add_loop((sch_loop_func_t)radio_loop, 25000 );
 	
 
 //	GPIO_PBOUT =

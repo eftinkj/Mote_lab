@@ -158,7 +158,7 @@ uint8_t i; //Loop index var
             
         if (array[i].validJob == SCH_FUNC_ON)
 		{
-			if(array[i].ready == true)
+			if( array[i].ready == true && get_rem_frame_time() > 500 )
             {
                 ATOMIC
                 (
@@ -175,7 +175,8 @@ uint8_t i; //Loop index var
 
 
 	while ( (SCH_NO_TIMEOUT_ID != sch_tout_head )
-		&& (sch_timeout_ticks[sch_tout_head ] < rtc_get_ticks()) )
+		&& (sch_timeout_ticks[sch_tout_head ] < rtc_get_ticks()) 
+            && get_rem_frame_time() > 1000 )
 	{
 
         // Remove from head for the purpose of consistency
